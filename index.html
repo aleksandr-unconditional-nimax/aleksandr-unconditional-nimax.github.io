@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru" itemscope itemtype="https://schema.org/WebPage">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Заявка в поддержку</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta property="og:image" content="">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Заявка в поддержку">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="Заявка в поддержку">
+  <meta itemprop="name" content="Заявка в поддержку">
+  <meta itemprop="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+</head>
+<body class="support-request-body">
+  <section class="support-request">
+    <div class="tabs">
+      <h1>Заявка <br>в поддержку</h1>
+      <h2>Тип контрагента</h2>
+      <input id="tab-1" type="radio" name="tabs" checked=""><label for="tab-1" onclick="" class="btn-tab">Клиент</label>
+      <input id="tab-2" type="radio" name="tabs"><label for="tab-2" onclick="" class="btn-tab">Партнер / Подрядчик</label>
+      <input id="tab-3" type="radio" name="tabs" class="hidden"><label for="tab-3" onclick="" class="btn-tab hidden">Зарегистрироваться</label>
+      <form name="form1" class="tab-content" id="form-1">
+        <fieldset class="item">
+          <legend>Укажите свой ИНН</legend>
+          <input type="text" name="form[inn]" placeholder="ИНН">
+          <label class="icon-search"></label>
+        </fieldset>
+        <fieldset class="item">
+          <legend>Клиент</legend>
+          <input type="text" name="inn" placeholder="">
+        </fieldset>
+        <div class="fieldset item column">
+          <legend>Выберете подразделение из списка</legend>
+          <div class="select" id="select-1">
+            <button type="button" class="select-toggle" name="car" value="ford" data-select="toggle" data-index="1">Выберите из списка</button>
+            <div class="select-dropdown">
+              <ul class="select-options">
+                <li class="select-option" data-select="option" data-value="volkswagen" data-index="0">Подразделение</li>
+                <li class="select-option select-option-selected" data-select="option" data-value="ford" data-index="1">Подразделение 2</li>
+                <li class="select-option" data-select="option" data-value="toyota" data-index="2">Подразделение 3</li>
+                <li class="select-option" data-select="option" data-value="toyota" data-index="2">Подразделение 4</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="fieldset item column">
+          <legend>Выберете контактное лицо из списка</legend>
+          <div class="select" id="select-2">
+            <button type="button" class="select-toggle" name="car" value="ford" data-select="toggle" data-index="1">Выберите из списка</button>
+            <div class="select-dropdown">
+              <ul class="select-options">
+                <li class="select-option" data-select="option" data-value="volkswagen" data-index="0">Контактное лицо</li>
+                <li class="select-option select-option-selected" data-select="option" data-value="ford" data-index="1">Контактное лицо 2</li>
+                <li class="select-option" data-select="option" data-value="toyota" data-index="2">Контактное лицо 3</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <fieldset class="item column">
+          <legend>Или оставьте ваши контактные данные</legend>
+          <input type="text" name="fullname" placeholder="ФИО">
+          <input type="tel" name="phone" placeholder="Контактный телефон">
+          <input type="email" name="email" placeholder="Адрес эл. почты">
+        </fieldset>
+        <fieldset class="item">
+          <legend>Укажите желаемое время по МСК для связи с вами</legend>
+          <input type="time" name="time" placeholder="">
+        </fieldset>
+        <fieldset class="item column">
+          <legend>Выберите желаемый вид работ</legend>
+          <label>
+            <input type="radio" name="typework" value="typework1">
+            <div>Необходима диагностика/анализ/настройка сотрудниками CSI</div>
+          </label>
+          <label>
+            <input type="radio" name="typework" value="typework2">
+            <div>Необходим ремонт оборудования</div>
+          </label>
+          <label>
+            <input type="radio" name="typework" value="typework3">
+            <div>Необходима консультация специалиста CSI</div>
+          </label>
+          <label>
+            <input type="radio" name="typework" value="typework4">
+            <div>Необходима инструкция</div>
+          </label>
+          <button class="btn">Отправить</button>
+        </fieldset>
+      </form>
+      <form name="form2" class="tab-content" id="form-2">
+        <fieldset class="item">
+          <legend>Есть действующий договор подряда?</legend>
+          <label>
+            <input type="radio" name="contract" value="Да">
+            <div>Да</div>
+          </label>
+          <label>
+            <input type="radio" name="contract" value="Нет">
+            <div>Нет</div>
+          </label>
+        </fieldset>
+        <fieldset class="item">
+          <legend>Проблема у клиента по подрядному договору?</legend>
+          <label>
+            <input type="radio" name="contractProblem" value="Да">
+            <div>Да</div>
+          </label>
+          <label>
+            <input type="radio" name="contractProblem" value="Нет">
+            <div>Нет</div>
+          </label>
+        </fieldset>
+        <fieldset class="item">
+          <legend>Пожалуйста подайте дочернюю заявку на консультацию от родительской (заявка по проблеме клиента)</legend>
+        </fieldset>
+        <fieldset class="item">
+          <legend>Укажите свой ИНН</legend>
+          <input type="text" name="inn" placeholder="ИНН">
+          <label class="icon-search"></label>
+        </fieldset>
+        <fieldset class="item">
+          <legend>Контрагент с ИНН ХХХХХХХХХХ не найден, пожалуйста зарегистрируйтесь.</legend>
+          <div class="btn">Зарегистрироваться</div>
+        </fieldset>
+      </form>
+
+      <form name="form3" class="tab-content" id="form-3">
+        <fieldset class="item">
+          <legend>Укажите свой ИНН</legend>
+          <input type="text" name="inn" placeholder="">
+        </fieldset>
+        <fieldset class="item">
+          <legend>Укажите свой КПП</legend>
+          <input type="text" name="kpp" placeholder="">
+        </fieldset>
+        <fieldset class="item">
+          <legend>Укажите название компании</legend>
+          <input type="text" name="namecompany" placeholder="Без кавычек и ООО">
+        </fieldset>
+        <fieldset class="item">
+          <legend>Полное юридическое имя компании</legend>
+          <input type="text" name="fullnamelegally" placeholder="">
+        </fieldset>
+        <!-- <fieldset class="item">
+          <legend>БИК</legend>
+          <input type="text" name="bik" placeholder="">
+        </fieldset>
+        <fieldset class="item">
+          <legend>№ расчетного счета</legend>
+          <input type="text" name="paymentnumber" placeholder="">
+        </fieldset>
+        <fieldset class="item">
+          <legend>№ корреспондентского счета</legend>
+          <input type="text" name="correspondentnumber" placeholder="">
+        </fieldset>
+        <fieldset class="item">
+          <legend>Наименование банка</legend>
+          <input type="text" name="namebank" placeholder="">
+        </fieldset> -->
+        <fieldset class="item">
+          <legend>Юридический адрес</legend>
+          <input type="text" name="namebank" placeholder="">
+        </fieldset>
+        <fieldset class="item">
+          <legend>Фактический адрес</legend>
+          <input type="text" name="namebank" placeholder="">
+        </fieldset>
+        <fieldset class="item">
+          <legend>Контактное лицо</legend>
+          <input type="text" name="namebank" placeholder="">
+        </fieldset>
+        <fieldset class="item">
+          <legend>Email</legend>
+          <input type="email" name="email" placeholder="">
+        </fieldset>
+        <fieldset class="item">
+          <legend>Телефон</legend>
+          <input type="text" name="phone" placeholder="">
+        </fieldset>
+        <fieldset class="item">
+          <legend>Вложить карточку компании с реквизитами</legend>
+          <input type="file" name="phone" placeholder="">
+        </fieldset>
+      </form>
+    </div>
+    <aside>
+      <h4>Порядок отправки</h4>
+      <p>С порядком отправки оборудования в ремонт вы можете ознакомиться на сайте в <a href="#">Гарантия и ремонт</a></p>
+    </aside>
+  </section>
+  <script src="js/form.js"></script>
+</body>
+</html>
