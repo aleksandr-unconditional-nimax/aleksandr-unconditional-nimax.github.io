@@ -72,24 +72,13 @@ step5form2.onclick = function() {
   document.getElementById('tab-3').click()
 };
 
-/*
-let innForm1 = document.getElementsByName('innForm2');
-
-if(innForm1.value.length == 0)
-  innForm1.value = "Empty";
-*/
-
-
-
-
 /* FORM REGISTRATION Step START */
-let fieldsetForm3 = document.querySelectorAll("#form-3 .item");
+let fieldsetForm3 = document.querySelectorAll("#form-3 .item:not(.upload)");
 for(let i=0; i<fieldsetForm3.length; i++){fieldsetForm3[i].onclick = function(){this.nextElementSibling.classList.add('active');}}
 /* FORM REGISTRATION Step END */
 
 
-/* SELECT Style START */
-
+/* SELECT OPTION Style START */
 const CLASS_NAME_SELECT = 'select';
 const CLASS_NAME_ACTIVE = 'select_show';
 const CLASS_NAME_SELECTED = 'select-option-selected';
@@ -97,7 +86,6 @@ const SELECTOR_ACTIVE = '.select_show';
 const SELECTOR_DATA = '[data-select]';
 const SELECTOR_DATA_TOGGLE = '[data-select="toggle"]';
 const SELECTOR_OPTION_SELECTED = '.select-option-selected';
-
 class CustomSelect {
   constructor(target, params) {
     this._elRoot = typeof target === 'string' ? document.querySelector(target) : target;
@@ -222,7 +210,6 @@ CustomSelect.template = params => {
     <ul class="select-options">${items.join('')}</ul>
   </div>`;
 };
-
 document.addEventListener('click', (e) => {
   if (!e.target.closest('.select')) {
     document.querySelectorAll(SELECTOR_ACTIVE).forEach(select => {
@@ -230,12 +217,8 @@ document.addEventListener('click', (e) => {
     });
   }
 });
-
-
-
 const select1 = new CustomSelect('#select-1');
 const select2 = new CustomSelect('#select-2');
-
 /* SELECT Style END */
 
 
@@ -245,73 +228,55 @@ const select2 = new CustomSelect('#select-2');
 
 
 
-// ************************ Drag and drop ***************** //
+/* CUSTOM FILE UPLOADER START */
 let dropArea = document.getElementById("drop-area")
-
-// Prevent default drag behaviors
 ;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
   dropArea.addEventListener(eventName, preventDefaults, false)   
   document.body.addEventListener(eventName, preventDefaults, false)
 })
-
-// Highlight drop area when item is dragged over it
 ;['dragenter', 'dragover'].forEach(eventName => {
   dropArea.addEventListener(eventName, highlight, false)
 })
-
 ;['dragleave', 'drop'].forEach(eventName => {
   dropArea.addEventListener(eventName, unhighlight, false)
 })
-
-// Handle dropped files
 dropArea.addEventListener('drop', handleDrop, false)
-
 function preventDefaults (e) {
   e.preventDefault()
   e.stopPropagation()
 }
-
 function highlight(e) {
   dropArea.classList.add('highlight')
 }
-
 function unhighlight(e) {
   dropArea.classList.remove('active')
 }
-
 function handleDrop(e) {
   var dt = e.dataTransfer
   var files = dt.files
-
   handleFiles(files)
 }
-
 let uploadProgress = []
 let progressBar = document.getElementById('progress-bar')
-
 function initializeProgress(numFiles) {
   progressBar.value = 0
   uploadProgress = []
-
   for(let i = numFiles; i > 0; i--) {
     uploadProgress.push(0)
   }
 }
-
 function updateProgress(fileNumber, percent) {
   uploadProgress[fileNumber] = percent
   let total = uploadProgress.reduce((tot, curr) => tot + curr, 0) / uploadProgress.length
   console.debug('update', fileNumber, percent, total)
   progressBar.value = total
 }
-
 function handleFiles(files) {
   files = [...files]
   initializeProgress(files.length)
   files.forEach(uploadFile)
   files.forEach(previewFile)
 }
-
 function previewFile(file) {
   let reader = new FileReader()
   reader.readAsDataURL(file)
@@ -321,29 +286,24 @@ function previewFile(file) {
     document.getElementById('gallery').appendChild(img)
   }
 }
-
 function uploadFile(file, i) {
-  var url = 'https://api.cloudinary.com/v1_1/joezimim007/image/upload'
+  var url = 'https://aleksandr-unconditional-nimax.github.io/files'
   var xhr = new XMLHttpRequest()
   var formData = new FormData()
   xhr.open('POST', url, true)
   xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
-
-  // Update progress (can be used to show progress indicator)
   xhr.upload.addEventListener("progress", function(e) {
     updateProgress(i, (e.loaded * 100.0 / e.total) || 100)
   })
-
   xhr.addEventListener('readystatechange', function(e) {
     if (xhr.readyState == 4 && xhr.status == 200) {
-      updateProgress(i, 100) // <- Add this
+      updateProgress(i, 100)
     }
     else if (xhr.readyState == 4 && xhr.status != 200) {
-      // Error. Inform the user
     }
   })
-
-  formData.append('upload_preset', 'ujpu6gyk')
+  formData.append('upload_preset', '')
   formData.append('file', file)
   xhr.send(formData)
 }
+/* CUSTOM FILE UPLOADER END */

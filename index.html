@@ -172,9 +172,14 @@
           <legend>Телефон</legend>
           <input type="text" name="phone" placeholder="">
         </fieldset>
-        <fieldset class="item">
+        <fieldset class="item column upload">
           <legend>Вложить карточку компании с реквизитами</legend>
-          <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+          <div id="drop-area">
+            <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
+            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+          </div>
+          <progress id="progress-bar" max=100 value=0></progress>
+          <div id="gallery"></div>
         </fieldset>
       </form>
     </div>
