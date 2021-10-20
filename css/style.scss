@@ -40,14 +40,14 @@ body.support-request-body {
   padding: 0;
 
   &::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.18);
-    background-color: #f5f5f5;
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.18);
+    background-color: var(--color5);
     border-radius: 0;
   }
 
   &::-webkit-scrollbar {
     width: 10px;
-    background-color: #f5f5f5;
+    background-color: var(--color5);
   }
 
   &::-webkit-scrollbar-thumb {
@@ -155,7 +155,7 @@ body.support-request-body {
     border: 1px solid var(--color4);
     border-radius: 12px;
     font-size: 12px;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.08em;
     color: var(--color3);
     text-transform: uppercase;
     min-height: 58px;
@@ -166,13 +166,16 @@ body.support-request-body {
       border-color: var(--color1);
       outline: none;
     }
+    &:required {
+      
+    }
   }
 
   .select {
     position: relative;
     width: 100%;
     font-size: 12px;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.08em;
     color: var(--color3);
     text-transform: uppercase;
     &-toggle {
@@ -231,6 +234,21 @@ body.support-request-body {
       border-bottom-right-radius: 12px;
       z-index: 2;
       background-color: #fff;
+      &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.18);
+        background-color: var(--color5);
+        border-radius: 12px;
+      }
+    
+      &::-webkit-scrollbar {
+        width: 4px;
+        background-color: var(--color5);
+      }
+    
+      &::-webkit-scrollbar-thumb {
+        border-radius: 12px;
+        background: var(--color1);
+      }
     }
     &-options {
       margin: 0;
@@ -278,12 +296,13 @@ body.support-request-body {
     border-radius: 12px;
     font-size: 12px;
     line-height: 1.1;
-    letter-spacing: 0.08px;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     padding: 21px 40px;
     color: white;
     background: var(--color2);
     cursor: pointer;
+    width: max-content;
     transition: 0.3s ease-in-out;
     &:hover,
     &.active{
@@ -366,6 +385,7 @@ body.support-request-body {
     p{
       font-weight: 400;
       font-size: 14px;
+      line-height: 1.5;
       margin-bottom: 60px;
     }
     h4{
@@ -527,10 +547,18 @@ body.support-request-body {
       display: none;
     }
     #gallery {
-      display: flex;
+      display: none;
       align-items: center;
       justify-content: center;
       grid-gap: 20px;
+      background: #F4F8F9;
+      border: 1px dashed #808084;
+      border-radius: 12px;
+      width: 100%;
+      padding: 24px;
+      &.active{
+        display: flex;
+      }
       img {
         width: 45px;
         vertical-align: middle;

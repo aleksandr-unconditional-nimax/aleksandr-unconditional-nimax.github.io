@@ -72,6 +72,7 @@ step5form2.onclick = function() {
   document.getElementById('tab-3').click()
 };
 
+
 /* FORM REGISTRATION Step START */
 let fieldsetForm3 = document.querySelectorAll("#form-3 .item:not(.upload)");
 for(let i=0; i<fieldsetForm3.length; i++){fieldsetForm3[i].onclick = function(){this.nextElementSibling.classList.add('active');}}
@@ -222,12 +223,6 @@ const select2 = new CustomSelect('#select-2');
 /* SELECT Style END */
 
 
-
-
-
-
-
-
 /* CUSTOM FILE UPLOADER START */
 let dropArea = document.getElementById("drop-area")
 ;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
@@ -284,6 +279,7 @@ function previewFile(file) {
     let img = document.createElement('img')
     img.src = reader.result
     document.getElementById('gallery').appendChild(img)
+    document.getElementById('gallery').classList.add('active')
   }
 }
 function uploadFile(file, i) {

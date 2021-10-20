@@ -95,7 +95,7 @@
             <input type="radio" name="typework" value="typework4">
             <div>Необходима инструкция</div>
           </label>
-          <button class="btn">Отправить</button>
+          <button class="btn">Отправить заявку</button>
         </fieldset>
       </form>
       <form name="form2" class="tab-content" id="form-2">
@@ -136,9 +136,10 @@
       </form>
 
       <form name="form3" class="tab-content" id="form-3">
-        <fieldset class="item">
+        <fieldset class="item column">
           <legend>Укажите свой ИНН</legend>
-          <input type="text" name="inn" placeholder="">
+          <input type="text" name="inn" placeholder="" required>
+          <div class="btn">Заполнить по ИНН</div>
         </fieldset>
         <fieldset class="item">
           <legend>Укажите свой КПП</legend>
@@ -146,31 +147,31 @@
         </fieldset>
         <fieldset class="item">
           <legend>Укажите название компании</legend>
-          <input type="text" name="namecompany" placeholder="Без кавычек и ООО">
+          <input type="text" name="namecompany" placeholder="Без кавычек и ООО" required>
         </fieldset>
         <fieldset class="item">
           <legend>Полное юридическое имя компании</legend>
-          <input type="text" name="fullnamelegally" placeholder="">
+          <input type="text" name="fullnamelegally" placeholder="" required>
         </fieldset>
         <fieldset class="item">
           <legend>Юридический адрес</legend>
-          <input type="text" name="namebank" placeholder="">
+          <input type="text" name="legaladdress" placeholder="" required>
         </fieldset>
         <fieldset class="item">
           <legend>Фактический адрес</legend>
-          <input type="text" name="namebank" placeholder="">
+          <input type="text" name="actualaddress" placeholder="" required>
         </fieldset>
         <fieldset class="item">
           <legend>Контактное лицо</legend>
-          <input type="text" name="namebank" placeholder="">
+          <input type="text" name="contactperson" placeholder="Должность, ФИО руководителя" required>
         </fieldset>
         <fieldset class="item">
           <legend>Email</legend>
-          <input type="email" name="email" placeholder="">
+          <input type="email" name="email" placeholder="" required>
         </fieldset>
         <fieldset class="item">
           <legend>Телефон</legend>
-          <input type="text" name="phone" placeholder="">
+          <input type="text" name="phone" placeholder="" required>
         </fieldset>
         <fieldset class="item column upload">
           <legend>Вложить карточку компании с реквизитами</legend>
@@ -180,6 +181,7 @@
           </div>
           <progress id="progress-bar" max=100 value=0></progress>
           <div id="gallery"></div>
+          <button class="btn">Отправить заявку</button>
         </fieldset>
       </form>
     </div>
