@@ -31,16 +31,16 @@
       <input id="tab-2" type="radio" name="tabs"><label for="tab-2" onclick="" class="btn-tab">Партнер / Подрядчик</label>
       <input id="tab-3" type="radio" name="tabs" class="hidden"><label for="tab-3" onclick="" class="btn-tab hidden">Зарегистрироваться</label>
       <form name="form1" class="tab-content" id="form-1">
-        <fieldset class="item">
+        <fieldset class="item item1">
           <legend>Укажите свой ИНН</legend>
           <input type="text" name="form[inn]" placeholder="ИНН">
           <label class="icon-search"></label>
         </fieldset>
-        <fieldset class="item">
+        <fieldset class="item item2">
           <legend>Клиент</legend>
           <input type="text" name="inn" placeholder="">
         </fieldset>
-        <div class="fieldset item column">
+        <div class="fieldset column item item3">
           <legend>Выберете подразделение из списка</legend>
           <div class="select" id="select-1">
             <button type="button" class="select-toggle" name="car" value="ford" data-select="toggle" data-index="1">Выберите из списка</button>
@@ -54,7 +54,7 @@
             </div>
           </div>
         </div>
-        <div class="fieldset item column">
+        <div class="fieldset column item item4">
           <legend>Выберете контактное лицо из списка</legend>
           <div class="select" id="select-2">
             <button type="button" class="select-toggle" name="car" value="ford" data-select="toggle" data-index="1">Выберите из списка</button>
@@ -67,17 +67,17 @@
             </div>
           </div>
         </div>
-        <fieldset class="item column">
+        <fieldset class="item column item5">
           <legend>Или оставьте ваши контактные данные</legend>
           <input type="text" name="fullname" placeholder="ФИО">
           <input type="tel" name="phone" placeholder="Контактный телефон">
           <input type="email" name="email" placeholder="Адрес эл. почты">
         </fieldset>
-        <fieldset class="item">
+        <fieldset class="item item6">
           <legend>Укажите желаемое время по МСК для связи с вами</legend>
           <input type="time" name="time" placeholder="">
         </fieldset>
-        <fieldset class="item column">
+        <fieldset class="item column typework0">
           <legend>Выберите желаемый вид работ</legend>
           <label>
             <input type="radio" name="typework" value="typework1">
@@ -95,11 +95,216 @@
             <input type="radio" name="typework" value="typework4">
             <div>Необходима инструкция</div>
           </label>
+        </fieldset>
+        <fieldset class="item column typework1-1">
+          <legend>Данные работы выполняются на платной основе. Согласны?</legend>
+          <label>
+            <input type="radio" name="tw1-1" value="typework1-1-yes">
+            <div>Да</div>
+          </label>
+          <label>
+            <input type="radio" name="tw1-1" value="typework1-1-no">
+            <div>Нет</div>
+          </label>
+        </fieldset>
+        <fieldset class="item typework1-2">
+          <legend>Спасибо за Ваше обращение в CSI</legend>
+        </fieldset>
+        <fieldset name="typework1" class="item typework1-3">
+          <legend>Опишите проблему </legend>
+          <textarea></textarea>
+        </fieldset>
+        <fieldset name="typework1" class="item typework1-4">
+          <legend>Укажите способ удаленного подключения</legend>
+          <input type="text" name="typework1-4" placeholder="">
+        </fieldset>
+        <fieldset name="typework1" class="item typework1-5">
+          <legend>Укажите данные необходимые данные для подключения</legend>
+          <input type="text" name="typework1-5" placeholder="">
+        </fieldset>
+        <fieldset name="typework1" class="item typework1-6">
+          <legend>Укажите IP- адрес</legend>
+          <input type="text" name="typework1-6" placeholder="">
+        </fieldset>
+        <fieldset name="typework1" class="item typework1-7">
+          <legend>Укажите логин</legend>
+          <input type="text" name="typework1-7" placeholder="">
+        </fieldset>
+        <fieldset name="typework1" class="item typework1-8">
+          <legend>Укажите пароль</legend>
+          <input type="text" name="typework1-8" placeholder="">
+        </fieldset>
+        <fieldset class="item column upload  typework1-9">
+          <div id="drop-area">
+            <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
+            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+          </div>
+          <progress id="progress-bar" max=100 value=0></progress>
+          <div id="gallery"></div>
+          <button class="btn">Отправить заявку</button>
+        </fieldset>
+        <fieldset class="item column typework2-1">
+          <legend>Ремонт (гарантийный/ не гарантийный)</legend>
+          <label>
+            <input type="radio" name="tw2-1" value="typework2-1-yes">
+            <div>Гарантийный</div>
+          </label>
+          <label>
+            <input type="radio" name="tw2-1" value="typework2-1-no">
+            <div>Не гарантийный</div>
+          </label>
+        </fieldset>
+        <fieldset class="item column typework2-2">
+          <legend>С порядком отправки оборудования в ремонт вы можете ознакомиться на сайте в разделе Гарантия - ремонт оборудования </legend>
+        </fieldset>
+        <fieldset name="typework2" class="item column typework2-3">
+          <legend>Выберете тип оборудования </legend>
+          <input type="text" name="typework2-3" placeholder="">
+        </fieldset>
+        <fieldset name="typework2" class="item column typework2-4">
+          <legend>Укажите серийный номер </legend>
+          <input type="text" name="typework2-4" placeholder="">
+        </fieldset>
+        <fieldset name="typework2" class="item column typework2-5">
+          <legend>Кнопка проверить гарантию </legend>
+          <input type="text" name="typework2-5" placeholder="">
+        </fieldset>
+        <fieldset class="item column typework3-1">
+          <legend>Выберете причину обращения</legend>
+          <label>
+            <input type="radio" name="tw3-1" value="typework3-1">
+            <div>Проблема с кассой/прикассовым оборудованием</div>
+          </label>
+          <label>
+            <input type="radio" name="tw3-1" value="typework3-2">
+            <div>Аппаратная проблема с  оборудованием торгового зала (принтер ШК/этикеток, инфокиоск/прайсчекер)</div>
+          </label>
+          <label>
+            <input type="radio" name="tw3-1" value="typework3-3">
+            <div>Проблема с системой видеонаблюдения Призма</div>
+          </label>
+          <label>
+            <input type="radio" name="tw3-1" value="typework3-4">
+            <div>Проблема с программой Set (не зайти в программу, проблема с ценами/акциями на кассах, весах, термопринтерах, проблема с лицензией, не продается алкоголь, не выгружаются чеки и z-отчеты</div>
+          </label>
+          <label>
+            <input type="radio" name="tw3-1" value="typework3-5">
+            <div>Проблема с сервером</div>
+          </label>
+        </fieldset>
+        <fieldset class="item column typework4-1 ">
+          <legend>Ознакомьтесь с инструкциями представленными на портале поддержки продуктов CSI</legend>
+          <label>
+            <input type="radio" name="reason" value="reason1">
+            <div></div>
+          </label>
+        </fieldset>
+        <fieldset class="item column typework3-2">
+          <legend>Выберете оборудование</legend>
+          <label>
+            <input type="radio" name="tw3-2" value="equipment-pack1-1">
+            <div>Фискальный регистратор</div>
+          </label>
+          <label>
+            <input type="radio" name="tw3-2" value="equipment-pack1-2">
+            <div>Сканер</div>
+          </label>
+          <label>
+            <input type="radio" name="tw3-2" value="equipment-pack1-3">
+            <div>Системный блок</div>
+          </label>
+          <label>
+            <input type="radio" name="tw3-2" value="equipment-pack1-4">
+            <div>Клавиатура</div>
+          </label>
+          <label>
+            <input type="radio" name="tw3-1" value="equipment-pack1-5">
+            <div>Денежный ящик</div>
+          </label>
+          <label>
+            <input type="radio" name="tw3-1" value="equipment-pack1-6">
+            <div>Дисплей/монитор</div>
+          </label>
+        </fieldset>
+        <fieldset class="item column typework3-3">
+          <legend>Выберете оборудование</legend>
+          <label>
+            <input type="radio" name="equipmentPack2" value="equipment-pack2-1">
+            <div>Инфокиоск/прайсчекер</div>
+          </label>
+          <label>
+            <input type="radio" name="equipmentPack2" value="equipment-pack2-2">
+            <div>Принтер ШК/этикеток</div>
+          </label>
+        </fieldset>
+        <fieldset class="item typework3-3">
+          <legend>Укажите версию ПО</legend>
+          <input type="text" name="softwareVersion" placeholder="">
+        </fieldset>
+        <fieldset class="item column typework3-4">
+          <legend>Выберете ПО</legend>
+          <label>
+            <input type="radio" name="equipmentPack2" value="equipment-pack2-1">
+            <div>SetRetail/SetCentrum</div>
+          </label>
+          <label>
+            <input type="radio" name="equipmentPack2" value="equipment-pack2-2">
+            <div>Set Prisma</div>
+          </label>
+        </fieldset>
+        <fieldset class="item column typework3-5">
+          <legend>Выберете кассовое ПО/продукт</legend>
+          <label>
+            <input type="radio" name="cashProduct" value="cash-product-1">
+            <div>SR5/6</div>
+          </label>
+          <label>
+            <input type="radio" name="cashProduct" value="cash-product-2">
+            <div>SR10</div>
+          </label>
+          <label>
+            <input type="radio" name="cashProduct" value="cash-product-2">
+            <div>Set Kiosk</div>
+          </label>
+          <label>
+            <input type="radio" name="cashProduct" value="cash-product-2">
+            <div>ЛК ККТ</div>
+          </label>
+          <label>
+            <input type="radio" name="cashProduct" value="cash-product-2">
+            <div>Другое</div>
+          </label>
+          <label>
+            <input type="radio" name="cashProduct" value="cash-product-2">
+            <div>Set Mark</div>
+          </label>
+          <label>
+            <input type="radio" name="cashProduct" value="cash-product-2">
+            <div>Set Kit</div>
+          </label>
+          <label>
+            <input type="radio" name="cashProduct" value="cash-product-2">
+            <div>Set Omni</div>
+          </label>
+          <label>
+            <input type="radio" name="cashProduct" value="cash-product-2">
+            <div>Set Galya</div>
+          </label>
+          <label>
+            <input type="radio" name="cashProduct" value="cash-product-2">
+            <div>ОФД</div>
+          </label>
+          <label>
+            <input type="radio" name="cashProduct" value="cash-product-2">
+            <div>Интеграция с банком</div>
+          </label>
+        </fieldset>
+        <fieldset class="item">
           <button class="btn">Отправить заявку</button>
         </fieldset>
       </form>
       <form name="form2" class="tab-content" id="form-2">
-        <fieldset class="item">
+        <fieldset class="item item1">
           <legend>Есть действующий договор подряда?</legend>
           <label>
             <input type="radio" name="contract" value="Да">
@@ -110,7 +315,7 @@
             <div>Нет</div>
           </label>
         </fieldset>
-        <fieldset class="item">
+        <fieldset class="item item2">
           <legend>Проблема у клиента по подрядному договору?</legend>
           <label>
             <input type="radio" name="contractProblem" value="Да">
@@ -121,59 +326,59 @@
             <div>Нет</div>
           </label>
         </fieldset>
-        <fieldset class="item">
+        <fieldset class="item item3">
           <legend>Пожалуйста подайте дочернюю заявку на консультацию от родительской (заявка по проблеме клиента)</legend>
         </fieldset>
-        <fieldset class="item">
+        <fieldset class="item item4">
           <legend>Укажите свой ИНН</legend>
           <input type="text" name="inn" placeholder="ИНН">
           <label class="icon-search"></label>
         </fieldset>
-        <fieldset class="item">
+        <fieldset class="item item5">
           <legend>Контрагент с ИНН ХХХХХХХХХХ не найден, пожалуйста зарегистрируйтесь.</legend>
           <div class="btn">Зарегистрироваться</div>
         </fieldset>
       </form>
 
       <form name="form3" class="tab-content" id="form-3">
-        <fieldset class="item column">
+        <fieldset class="item column item1">
           <legend>Укажите свой ИНН</legend>
           <input type="text" name="inn" placeholder="" required>
           <div class="btn">Заполнить по ИНН</div>
         </fieldset>
-        <fieldset class="item">
+        <fieldset class="item item2">
           <legend>Укажите свой КПП</legend>
           <input type="text" name="kpp" placeholder="">
         </fieldset>
-        <fieldset class="item">
+        <fieldset class="item item3">
           <legend>Укажите название компании</legend>
           <input type="text" name="namecompany" placeholder="Без кавычек и ООО" required>
         </fieldset>
-        <fieldset class="item">
+        <fieldset class="item item4">
           <legend>Полное юридическое имя компании</legend>
           <input type="text" name="fullnamelegally" placeholder="" required>
         </fieldset>
-        <fieldset class="item">
+        <fieldset class="item item5">
           <legend>Юридический адрес</legend>
           <input type="text" name="legaladdress" placeholder="" required>
         </fieldset>
-        <fieldset class="item">
+        <fieldset class="item item6">
           <legend>Фактический адрес</legend>
           <input type="text" name="actualaddress" placeholder="" required>
         </fieldset>
-        <fieldset class="item">
+        <fieldset class="item item7">
           <legend>Контактное лицо</legend>
           <input type="text" name="contactperson" placeholder="Должность, ФИО руководителя" required>
         </fieldset>
-        <fieldset class="item">
+        <fieldset class="item item8">
           <legend>Email</legend>
           <input type="email" name="email" placeholder="" required>
         </fieldset>
-        <fieldset class="item">
+        <fieldset class="item item9">
           <legend>Телефон</legend>
           <input type="text" name="phone" placeholder="" required>
         </fieldset>
-        <fieldset class="item column upload">
+        <fieldset class="item column upload item10">
           <legend>Вложить карточку компании с реквизитами</legend>
           <div id="drop-area">
             <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
