@@ -32,6 +32,8 @@ let typework4_2 = document.querySelector('#form-1 .typework4-2');
 let typework4_3 = document.querySelector('#form-1 .typework4-3');
 let typework4_4 = document.querySelector('#form-1 .typework4-4');
 let typework4_5 = document.querySelector('#form-1 .typework4-5');
+let typework4_6 = document.querySelector('#form-1 .typework4-6');
+let typework4_7 = document.querySelector('#form-1 .typework4-7');
 
 let step2form2 = document.querySelector('#form-2 .item2');
 let step3form2 = document.querySelector('#form-2 .item3');
@@ -68,6 +70,11 @@ step5form1.onclick = function() {
 step6form1.onclick = function() {
   typework0.classList.add('active');
   setTimeout(() => window.scroll({ top: (typework0.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+};
+
+typework4_6.onclick = function() {
+  typework4_7.classList.add('active');
+  setTimeout(() => window.scroll({ top: (typework4_7.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
 };
 
 let radioForm1 = document.form1;
@@ -121,6 +128,8 @@ const handleChange = ({ target: { value, name } }) => {
       typework3_1.classList.remove('active');
       typework4_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (typework4_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      setTimeout(() => typework4_2.classList.add('active'), 1800);
+      setTimeout(() => window.scroll({ top: (typework4_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 1900);
       break;
     case 'typework1-1-no tw1-1':
       typework1_3.classList.remove('active');
@@ -142,30 +151,26 @@ const handleChange = ({ target: { value, name } }) => {
       break;
     case 'typework3-1 tw3-1':
       typework3_1_1.classList.add('active');
+      setTimeout(() => window.scroll({ top: (typework3_1_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
-    case 'typework3-2 reason':
-      step9form1.classList.remove('active');
-      step11form1.classList.remove('active');
-      step12form1.classList.remove('active');
-      step10form1.classList.add('active');
+    case 'typework4-2-yes tw4-2':
+      typework4_4.classList.remove('active');
+      typework4_3.classList.add('active');
+      setTimeout(() => window.scroll({ top: (typework4_3.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
-    case 'typework3-3 reason':
-      step9form1.classList.remove('active');
-      step10form1.classList.remove('active');
-      step12form1.classList.remove('active');
-      step11form1.classList.add('active');
+    case 'typework4-2-no tw4-2':
+      typework4_3.classList.remove('active');
+      typework4_4.classList.add('active');
+      setTimeout(() => window.scroll({ top: (typework4_4.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
-    case 'typework3-4 reason':
-      step9form1.classList.remove('active');
-      step10form1.classList.remove('active');
-      step11form1.classList.remove('active');
-      step12form1.classList.add('active');
+    case 'typework4-4-yes tw4-4':
+      typework4_6.classList.add('active');
+      setTimeout(() => window.scroll({ top: (typework4_6.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
-    case 'typework3-5 reason':
-      step9form1.classList.remove('active');
-      step10form1.classList.remove('active');
-      step11form1.classList.remove('active');
-      step12form1.classList.add('active');
+    case 'typework4-4-no tw4-4':
+      typework4_6.classList.remove('active');
+      typework4_5.classList.add('active');
+      setTimeout(() => window.scroll({ top: (typework4_5.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
   }
 }

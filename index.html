@@ -315,12 +315,50 @@
             <div>Set Prisma</div>
           </label>
         </fieldset>
-        <fieldset class="item column typework4-1 ">
-          <legend>Ознакомьтесь с инструкциями представленными на портале поддержки продуктов CSI</legend>
+        <fieldset class="item column typework4-1">
+          <legend>Ознакомьтесь с инструкциями представленными на <a href="https://crystals.atlassian.net/wiki/spaces/SR10SUPPORT/overview">портале поддержки продуктов CSI</a></legend>
+        </fieldset>
+        <fieldset class="item column typework4-2">
+          <legend>Вы нашли необходимую документацию?</legend>
           <label>
-            <input type="radio" name="reason" value="reason1">
-            <div></div>
+            <input type="radio" name="tw4-2" value="typework4-2-yes">
+            <div>Да</div>
           </label>
+          <label>
+            <input type="radio" name="tw4-2" value="typework4-2-no">
+            <div>Нет</div>
+          </label>
+        </fieldset>
+        <fieldset class="item column typework4-3">
+          <legend>Спасибо за Ваше обращение в CSI</legend>
+        </fieldset>
+        <fieldset class="item column typework4-4">
+          <legend>Инструкция  может быть создана  в рамках платных работ.</legend>
+          <p>Согласны на выполнение работ на платной основе?</p>
+          <label>
+            <input type="radio" name="tw4-4" value="typework4-4-yes">
+            <div>Да</div>
+          </label>
+          <label>
+            <input type="radio" name="tw4-4" value="typework4-4-no">
+            <div>Нет</div>
+          </label>
+        </fieldset>
+        <fieldset class="item column typework4-5">
+          <legend>Спасибо за Ваше обращение в CSI</legend>
+        </fieldset>
+        <fieldset name="typework4" class="item typework4-6">
+          <legend>Подробно опишите что должна содержать необходимая Вам документация </legend>
+          <textarea></textarea>
+        </fieldset>
+        <fieldset class="item column upload typework4-7">
+          <div id="drop-area">
+            <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
+            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+          </div>
+          <progress id="progress-bar" max=100 value=0></progress>
+          <div id="gallery"></div>
+          <button class="btn">Отправить заявку</button>
         </fieldset>
         <fieldset class="item">
           <button class="btn">Отправить заявку</button>
