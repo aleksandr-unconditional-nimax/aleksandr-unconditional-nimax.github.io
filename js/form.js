@@ -15,8 +15,13 @@ let typework2_1 = document.querySelector('#form-1 .typework2-1');
 let typework2_2 = document.querySelector('#form-1 .typework2-2');
 let typework2_3 = document.querySelector('#form-1 .typework2-3');
 let typework2_4 = document.querySelector('#form-1 .typework2-4');
+let typework2_5 = document.querySelector('#form-1 .typework2-5');
+let typework2_6 = document.querySelector('#form-1 .typework2-6');
+let typework2_7 = document.querySelector('#form-1 .typework2-7');
 
 let typework3_1 = document.querySelector('#form-1 .typework3-1');
+let typework3_1_1 = document.querySelector('#form-1 .typework3-1-1');
+let typework3_1_2 = document.querySelector('#form-1 .typework3-1-2');
 let typework3_2 = document.querySelector('#form-1 .typework3-2');
 let typework3_3 = document.querySelector('#form-1 .typework3-3');
 let typework3_4 = document.querySelector('#form-1 .typework3-4');
@@ -127,11 +132,16 @@ const handleChange = ({ target: { value, name } }) => {
       typework1_3.classList.add('active');
       setTimeout(() => window.scroll({ top: (typework1_3.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
-    case 'typework3-1 reason':
-      step10form1.classList.remove('active');
-      step11form1.classList.remove('active');
-      step12form1.classList.remove('active');
-      step9form1.classList.add('active');
+    case 'typework2-1-no tw2-1':
+      typework2_2.classList.add('active');
+      setTimeout(() => window.scroll({ top: (typework2_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'typework2-1-yes tw2-1':
+      typework2_2.classList.add('active');
+      setTimeout(() => window.scroll({ top: (typework2_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'typework3-1 tw3-1':
+      typework3_1_1.classList.add('active');
       break;
     case 'typework3-2 reason':
       step9form1.classList.remove('active');
@@ -193,6 +203,11 @@ for(let i=0; i<fieldsetTypework1.length; i++){fieldsetTypework1[i].onclick = fun
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM typework1 Steps END */
 
+/* FORM typework2 Steps START */
+let fieldsetTypework2 = document.querySelectorAll("#form-1 fieldset[name='typework2']");
+for(let i=0; i<fieldsetTypework2.length; i++){fieldsetTypework2[i].onclick = function(){this.nextElementSibling.classList.add('active');
+setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
+/* FORM typework2 Steps END */
 
 /* SELECT OPTION Style START */
 const CLASS_NAME_SELECT = 'select';
@@ -302,7 +317,6 @@ class CustomSelect {
     return this._reset();
   }
 }
-
 CustomSelect.template = params => {
   const name = params['name'];
   const options = params['options'];
@@ -336,7 +350,6 @@ document.addEventListener('click', (e) => {
 const select1 = new CustomSelect('#select-1');
 const select2 = new CustomSelect('#select-2');
 /* SELECT Style END */
-
 
 /* CUSTOM FILE UPLOADER START */
 let dropArea = document.getElementById("drop-area")
