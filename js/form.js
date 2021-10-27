@@ -6,11 +6,14 @@ let step5form1 = document.querySelector('#form-1 .item5');
 let step6form1 = document.querySelector('#form-1 .item6');
 
 let typework0 = document.querySelector('#form-1 .typework0');
+
+let typeWork1 = document.querySelectorAll('#form-1 .typeWork1');
 let typework1_1 = document.querySelector('#form-1 .typework1-1');
 let typework1_2 = document.querySelector('#form-1 .typework1-2');
 let typework1_3 = document.querySelector('#form-1 .typework1-3');
 let typework1_4 = document.querySelector('#form-1 .typework1-4');
 
+let typeWork2 = document.querySelectorAll('#form-1 .typeWork2');
 let typework2_1 = document.querySelector('#form-1 .typework2-1');
 let typework2_2 = document.querySelector('#form-1 .typework2-2');
 let typework2_3 = document.querySelector('#form-1 .typework2-3');
@@ -19,6 +22,7 @@ let typework2_5 = document.querySelector('#form-1 .typework2-5');
 let typework2_6 = document.querySelector('#form-1 .typework2-6');
 let typework2_7 = document.querySelector('#form-1 .typework2-7');
 
+let typeWork3 = document.querySelectorAll('#form-1 .typeWork3');
 let typework3_1 = document.querySelector('#form-1 .typework3-1');
 let typework3_1_1 = document.querySelector('#form-1 .typework3-1-1');
 let typework3_1_2 = document.querySelector('#form-1 .typework3-1-2');
@@ -27,6 +31,25 @@ let typework3_3 = document.querySelector('#form-1 .typework3-3');
 let typework3_4 = document.querySelector('#form-1 .typework3-4');
 let typework3_5 = document.querySelector('#form-1 .typework3-5');
 
+let cashproblem = document.querySelector('#form-1 .cash-problem');
+let fiscalRegistrar = document.querySelector('#form-1 .fiscalRegistrar-1');
+let fiscalRegistrar_2= document.querySelector('#form-1 .fiscalRegistrar-2');
+let fiscalRegistrar_3= document.querySelector('#form-1 .fiscalRegistrar-3');
+let fiscalRegistrar_4= document.querySelector('#form-1 .fiscalRegistrar-4');
+let fiscalRegistrar_5= document.querySelector('#form-1 .fiscalRegistrar-5');
+let fiscalRegistrarBranch1 = document.getElementsByName('fiscalRegistrarOther');
+let fiscalRegistrarBranch1_2 = document.getElementsByName('fiscalRegistrarModel');
+let fiscalRegistrar_12= document.querySelector('#form-1 .fiscalRegistrar-12');
+let fiscalRegistrar_final= document.querySelector('#form-1 .fiscalRegistrar-final');
+let fiscalRegistrar_13= document.querySelector('#form-1 .fiscalRegistrar-13');
+let fiscalRegistrar_14= document.querySelector('#form-1 .fiscalRegistrar-14');
+let fiscalRegistrar_15= document.querySelector('#form-1 .fiscalRegistrar-15');
+let fiscalRegistrar_16= document.querySelector('#form-1 .fiscalRegistrar-16');
+let fiscalRegistrar_17= document.querySelector('#form-1 .fiscalRegistrar-17');
+let fiscalRegistrar_18= document.querySelector('#form-1 .fiscalRegistrar-18');
+let fiscalRegistrar_another_driver= document.querySelector('#form-1 .fiscalRegistrar-another-driver');
+
+let typeWork4 = document.querySelectorAll('#form-1 .typeWork4');
 let typework4_1 = document.querySelector('#form-1 .typework4-1');
 let typework4_2 = document.querySelector('#form-1 .typework4-2');
 let typework4_3 = document.querySelector('#form-1 .typework4-3');
@@ -100,32 +123,55 @@ const handleChange = ({ target: { value, name } }) => {
       step3form2.classList.remove('active');
       step4form2.classList.add('active');
       break;
-
     case 'typework1 typework':
-      typework2_1.classList.remove('active');
-      typework3_1.classList.remove('active');
-      typework4_1.classList.remove('active');
+      for(let i = 0; i < typeWork2.length; i++) {
+        typeWork2[i].classList.remove('active');
+      }
+      for(let i = 0; i < typeWork3.length; i++) {
+        typeWork3[i].classList.remove('active');
+      }
+      for(let i = 0; i < typeWork4.length; i++) {
+        typeWork4[i].classList.remove('active');
+      }
       typework1_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (typework1_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typework2 typework':
-      typework1_1.classList.remove('active');
-      typework3_1.classList.remove('active');
-      typework4_1.classList.remove('active');
+      for(let i = 0; i < typeWork1.length; i++) {
+        typeWork1[i].classList.remove('active');
+      }
+      for(let i = 0; i < typeWork3.length; i++) {
+        typeWork3[i].classList.remove('active');
+      }
+      for(let i = 0; i < typeWork4.length; i++) {
+        typeWork4[i].classList.remove('active');
+      }
       typework2_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (typework2_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typework3 typework':
-      typework1_1.classList.remove('active');
-      typework2_1.classList.remove('active');
-      typework4_1.classList.remove('active');
+      for(let i = 0; i < typeWork1.length; i++) {
+        typeWork1[i].classList.remove('active');
+      }
+      for(let i = 0; i < typeWork2.length; i++) {
+        typeWork2[i].classList.remove('active');
+      }
+      for(let i = 0; i < typeWork4.length; i++) {
+        typeWork4[i].classList.remove('active');
+      }
       typework3_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (typework3_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typework4 typework':
-      typework1_1.classList.remove('active');
-      typework2_1.classList.remove('active');
-      typework3_1.classList.remove('active');
+      for(let i = 0; i < typeWork1.length; i++) {
+        typeWork1[i].classList.remove('active');
+      }
+      for(let i = 0; i < typeWork2.length; i++) {
+        typeWork2[i].classList.remove('active');
+      }
+      for(let i = 0; i < typeWork3.length; i++) {
+        typeWork3[i].classList.remove('active');
+      }
       typework4_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (typework4_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       setTimeout(() => typework4_2.classList.add('active'), 1800);
@@ -150,9 +196,73 @@ const handleChange = ({ target: { value, name } }) => {
       setTimeout(() => window.scroll({ top: (typework2_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typework3-1 tw3-1':
-      typework3_1_1.classList.add('active');
-      setTimeout(() => window.scroll({ top: (typework3_1_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      cashproblem.classList.add('active');
+      setTimeout(() => window.scroll({ top: (cashproblem.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
+    case 'fiscalRegistrar cash-problem-step-0':
+      fiscalRegistrar.classList.add('active');
+      setTimeout(() => window.scroll({ top: (fiscalRegistrar.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Другое fiscalRegistrar-1':
+      fiscalRegistrar_4.classList.add('active');
+      let clonedNode = document.querySelector(".text-sidebar").cloneNode(true);
+      document.querySelector("#aside").appendChild(clonedNode);
+      setTimeout(() => window.scroll({ top: (fiscalRegistrar_4.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'ВикиПринт80Ф fiscalRegistrar-1':
+      for(let i = 0; i < fiscalRegistrarBranch1.length; i++) {
+        fiscalRegistrarBranch1[i].classList.remove('active');
+      }
+      fiscalRegistrar_2.classList.add('active');
+      setTimeout(() => window.scroll({ top: (fiscalRegistrar_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Пирит2Ф fiscalRegistrar-1':
+      for(let i = 0; i < fiscalRegistrarBranch1.length; i++) {
+        fiscalRegistrarBranch1[i].classList.remove('active');
+      }
+      fiscalRegistrar_2.classList.add('active');
+      setTimeout(() => window.scroll({ top: (fiscalRegistrar_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Да fiscalRegistrar-12':
+      fiscalRegistrar_13.classList.remove('active');
+      fiscalRegistrar_final.classList.add('active');
+      setTimeout(() => window.scroll({ top: (fiscalRegistrar_final.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Нет fiscalRegistrar-12':
+      fiscalRegistrar_final.classList.remove('active');
+      fiscalRegistrar_13.classList.add('active');
+      setTimeout(() => window.scroll({ top: (fiscalRegistrar_13.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Другое fiscalRegistrar-13':
+      for(let i = 0; i < fiscalRegistrarBranch1_2.length; i++) {
+        fiscalRegistrarBranch1_2[i].classList.remove('active');
+      }
+      fiscalRegistrar_5.classList.add('active');
+      setTimeout(() => window.scroll({ top: (fiscalRegistrar_5.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Проблемасформойчеков fiscalRegistrar-13':
+      fiscalRegistrar_14.classList.add('active');
+      setTimeout(() => window.scroll({ top: (fiscalRegistrar_14.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'ФР+СтороннееПО fiscalRegistrar-14':
+      fiscalRegistrar_15.classList.add('active');
+      setTimeout(() => window.scroll({ top: (fiscalRegistrar_15.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Другойдрайвер fiscalRegistrar-16':
+      fiscalRegistrar_another_driver.classList.add('active');
+      setTimeout(() => window.scroll({ top: (fiscalRegistrar_another_driver.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Да fiscalRegistrar-19':
+      fiscalRegistrar_final.classList.add('active');
+      setTimeout(() => window.scroll({ top: (fiscalRegistrar_final.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Нет fiscalRegistrar-19':
+      fiscalRegistrar_final.classList.remove('active');
+      fiscalRegistrar_20.classList.add('active');
+      setTimeout(() => window.scroll({ top: (fiscalRegistrar_20.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+
+    
     case 'typework4-2-yes tw4-2':
       typework4_4.classList.remove('active');
       typework4_3.classList.add('active');
@@ -195,6 +305,11 @@ step5form2.onclick = function() {
   document.getElementById('tab-3').click()
 };
 
+fiscalRegistrar_3.onclick = function() {
+  fiscalRegistrar_12.classList.add('active');
+  setTimeout(() => window.scroll({ top: (fiscalRegistrar_12.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+};
+
 
 /* FORM REGISTRATION Step START */
 let fieldsetForm3 = document.querySelectorAll("#form-3 .item:not(.upload)");
@@ -213,6 +328,18 @@ let fieldsetTypework2 = document.querySelectorAll("#form-1 fieldset[name='typewo
 for(let i=0; i<fieldsetTypework2.length; i++){fieldsetTypework2[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM typework2 Steps END */
+
+/* FORM fiscalRegistrar Steps START */
+let fieldsetFiscalRegistrarOther = document.querySelectorAll("#form-1 fieldset[name='fiscalRegistrarOther']");
+for(let i=0; i<fieldsetFiscalRegistrarOther.length; i++){fieldsetFiscalRegistrarOther[i].onclick = function(){this.nextElementSibling.classList.add('active');
+setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
+/* FORM fiscalRegistrar Steps END */
+
+/* FORM fiscalRegistrarModel Steps START */
+let fieldsetFiscalRegistrarModel = document.querySelectorAll("#form-1 fieldset[name='fiscalRegistrarModel']");
+for(let i=0; i<fieldsetFiscalRegistrarModel.length; i++){fieldsetFiscalRegistrarModel[i].onclick = function(){this.nextElementSibling.classList.add('active');
+setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
+/* FORM fiscalRegistrar Steps END */
 
 /* SELECT OPTION Style START */
 const CLASS_NAME_SELECT = 'select';
@@ -354,6 +481,7 @@ document.addEventListener('click', (e) => {
 });
 const select1 = new CustomSelect('#select-1');
 const select2 = new CustomSelect('#select-2');
+const select3 = new CustomSelect('#select-3');
 /* SELECT Style END */
 
 /* CUSTOM FILE UPLOADER START */

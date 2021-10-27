@@ -96,7 +96,7 @@
             <div>Необходима инструкция</div>
           </label>
         </fieldset>
-        <fieldset class="item column typework1-1">
+        <fieldset class="item column typeWork1 typework1-1">
           <legend>Данные работы выполняются на платной основе. Согласны?</legend>
           <label>
             <input type="radio" name="tw1-1" value="typework1-1-yes">
@@ -107,34 +107,34 @@
             <div>Нет</div>
           </label>
         </fieldset>
-        <fieldset class="item typework1-2">
+        <fieldset class="item typeWork1 typework1-2">
           <legend>Спасибо за Ваше обращение в CSI</legend>
         </fieldset>
-        <fieldset name="typework1" class="item typework1-3">
+        <fieldset name="typework1" class="item typeWork1 typework1-3">
           <legend>Опишите проблему </legend>
           <textarea></textarea>
         </fieldset>
-        <fieldset name="typework1" class="item typework1-4">
+        <fieldset name="typework1" class="item typeWork1 typework1-4">
           <legend>Укажите способ удаленного подключения</legend>
           <input type="text" name="typework1-4" placeholder="">
         </fieldset>
-        <fieldset name="typework1" class="item typework1-5">
+        <fieldset name="typework1" class="item typeWork1 typework1-5">
           <legend>Укажите данные необходимые данные для подключения</legend>
           <input type="text" name="typework1-5" placeholder="">
         </fieldset>
-        <fieldset name="typework1" class="item typework1-6">
+        <fieldset name="typework1" class="item typeWork1 typework1-6">
           <legend>Укажите IP- адрес</legend>
           <input type="text" name="typework1-6" placeholder="">
         </fieldset>
-        <fieldset name="typework1" class="item typework1-7">
+        <fieldset name="typework1" class="item typeWork1 typework1-7">
           <legend>Укажите логин</legend>
           <input type="text" name="typework1-7" placeholder="">
         </fieldset>
-        <fieldset name="typework1" class="item typework1-8">
+        <fieldset name="typework1" class="item typeWork1 typework1-8">
           <legend>Укажите пароль</legend>
           <input type="text" name="typework1-8" placeholder="">
         </fieldset>
-        <fieldset class="item column upload typework1-9">
+        <fieldset class="item column upload typeWork1 typework1-9">
           <div id="drop-area">
             <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
             <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
@@ -143,7 +143,7 @@
           <div id="gallery"></div>
           <button class="btn">Отправить заявку</button>
         </fieldset>
-        <fieldset class="item column typework2-1">
+        <fieldset class="item column typeWork2 typework2-1">
           <legend>Ремонт (гарантийный/ не гарантийный)</legend>
           <label>
             <input type="radio" name="tw2-1" value="typework2-1-yes">
@@ -154,22 +154,22 @@
             <div>Не гарантийный</div>
           </label>
         </fieldset>
-        <fieldset name="typework2" class="item column typework2-2">
+        <fieldset name="typework2" class="item column typeWork2 typework2-2">
           <legend>Выберете тип оборудования </legend>
           <input type="text" name="typework2-2" placeholder="">
         </fieldset>
-        <fieldset name="typework2" class="item column typework2-3">
+        <fieldset name="typework2" class="item column typeWork2 typework2-3">
           <legend>Укажите серийный номер </legend>
           <input type="text" name="typework2-3" placeholder="">
         </fieldset>
-        <fieldset name="typework2" class="item column typework2-4">
+        <fieldset name="typework2" class="item column typeWork2 typework2-4">
           <legend>Проверить гарантию </legend>
           <input type="text" name="typework2-4" placeholder="">
         </fieldset>
-        <fieldset name="typework2" class="item column typework2-5">
+        <fieldset name="typework2" class="item column typeWork2 typework2-5">
           <button type="button" class="btn">Проверить гарантию </button>
         </fieldset>
-        <fieldset name="typework2" class="item column typework2-6">
+        <fieldset name="typework2" class="item column typeWork2 typework2-6">
           <legend>
             Модель: ХХХ<br>
             Срок гарантии: ХХ.ХХ.ХХ<br>            
@@ -182,7 +182,7 @@
             3
           </p>
         </fieldset>
-        <fieldset class="item column upload typework2-7">
+        <fieldset class="item column upload typeWork2 typework2-7">
           <legend><a href="https://docs.google.com/document/d/1jXUnpIRXHjaLW5BFz-WnQM94aTojTwgR/edit" target="_blank">Заполните бланк РВО</a> и приложите его к заявке</legend>
           <div id="drop-area">
             <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
@@ -192,7 +192,7 @@
           <div id="gallery"></div>
           <button class="btn">Отправить заявку</button>
         </fieldset>
-        <fieldset class="item column typework3-1">
+        <fieldset class="item column typeWork3 typework3-1">
           <legend>Выберете причину обращения</legend>
           <label>
             <input type="radio" name="tw3-1" value="typework3-1">
@@ -215,33 +215,219 @@
             <div>Проблема с сервером</div>
           </label>
         </fieldset>
-        <fieldset class="item column typework3-1-1">
+        <fieldset class="item column typeWork3 cash-problem">
           <legend>Выберете оборудование</legend>
           <label>
-            <input type="radio" name="tw3-1-1" value="typework3-1-1">
+            <input type="radio" name="cash-problem-step-0" value="fiscalRegistrar">
             <div>Фискальный регистратор</div>
           </label>
           <label>
-            <input type="radio" name="tw3-1-1" value="typework3-1-2">
-            <div>Сканер</div>
-          </label>
-          <label>
-            <input type="radio" name="tw3-1-1" value="typework3-1-3">
+            <input type="radio" name="cash-problem-step-0" value="cash-problem-2">
             <div>Системный блок</div>
           </label>
           <label>
-            <input type="radio" name="tw3-1-1" value="typework3-1-4">
+            <input type="radio" name="cash-problem-step-0" value="cash-problem-3">
             <div>Клавиатура</div>
           </label>
           <label>
-            <input type="radio" name="tw3-1-1" value="typework3-1-5">
+            <input type="radio" name="cash-problem-step-0" value="cash-problem-4">
             <div>Денежный ящик</div>
           </label>
           <label>
-            <input type="radio" name="tw3-1-1" value="typework3-1-6">
+            <input type="radio" name="cash-problem-step-0" value="cash-problem-5">
+            <div>Сканер</div>
+          </label>
+          <label>
+            <input type="radio" name="cash-problem-step-0" value="cash-problem-6">
             <div>Дисплей/монитор</div>
           </label>
+          <label>
+            <input type="radio" name="cash-problem-step-0" value="cash-problem-7">
+            <div>Другое</div>
+          </label>
         </fieldset>
+        <fieldset name="" class="item column typeWork3 fiscalRegistrar-1">
+          <legend>Выберете модель ФР</legend>
+          <label>
+            <input type="radio" name="fiscalRegistrar-1" value="ВикиПринт80Ф">
+            <div>Вики Принт 80Ф</div>
+          </label>
+          <label>
+            <input type="radio" name="fiscalRegistrar-1" value="Пирит2Ф">
+            <div>Пирит 2Ф</div>
+          </label>
+          <label>
+            <input type="radio" name="fiscalRegistrar-1" value="Другое">
+            <div>Другое</div>
+          </label>
+        </fieldset>
+        <fieldset name="fiscalRegistrarModel" class="item typeWork3 fiscalRegistrar-2">
+          <legend>Укажите версию прошивки</legend>
+          <input type="text" name="fiscalRegistrar-2" placeholder="">
+        </fieldset>
+        <fieldset class="item column typeWork3 fiscalRegistrar-3">
+          <legend>Ссылка на документацию и актуальную версию прошивки</legend>
+          <p><a href="#">Документация</a></p>
+          <p><a href="#">Актуальная версия прошивки</a></p>
+          <div class="text-sidebar">
+            <p>Ознакомьтесь с документацией и обновите аппарат до актуальной версии прошивки</p>
+          </div>
+        </fieldset>
+        <fieldset name="fiscalRegistrarOther" class="item typeWork3 fiscalRegistrar-4">
+          <legend>Укажите модель ФР</legend>
+          <input type="text" name="fiscalRegistrar-4" placeholder="">
+        </fieldset>
+        <fieldset name="fiscalRegistrarOther" class="item typeWork3 fiscalRegistrar-5">
+          <legend>Укажите зав. № оборудования</legend>
+          <input type="text" name="fiscalRegistrar-5" placeholder="">
+        </fieldset>
+        <fieldset name="fiscalRegistrarOther" class="item typeWork3 fiscalRegistrar-6">
+          <legend>Опишите как должно работать </legend>
+          <textarea></textarea>
+        </fieldset>
+        <fieldset name="fiscalRegistrarOther" class="item typeWork3 fiscalRegistrar-7">
+          <legend>Опишите как воспроизводится проблема </legend>
+          <textarea></textarea>
+        </fieldset>
+        <fieldset name="fiscalRegistrarOther" class="item typeWork3 fiscalRegistrar-8">
+          <legend>Укажите версию ОС </legend>
+          <input type="text" name="fiscalRegistrar-8" placeholder="">
+        </fieldset>
+        <fieldset name="fiscalRegistrarOther" class="item typeWork3 fiscalRegistrar-9">
+          <legend>Опишите конфигурацию кассы (СБ, прикассовое оборудование) </legend>
+          <textarea></textarea>
+        </fieldset>
+        <fieldset name="fiscalRegistrarOther" class="item typeWork3 fiscalRegistrar-10">
+          <legend>Укажите частоту возникновения проблемы </legend>
+          <input type="text" name="fiscalRegistrar-10" placeholder="">
+        </fieldset>
+        <fieldset class="item column upload typeWork3 fiscalRegistrar-11">
+          <div id="drop-area">
+            <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
+            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+          </div>
+          <progress id="progress-bar" max=100 value=0></progress>
+          <div id="gallery"></div>
+          <button class="btn">Отправить заявку</button>
+        </fieldset>
+        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 fiscalRegistrar-12">
+          <legend>Вам помогла документация в решении вопроса?</legend>
+          <label>
+            <input type="radio" name="fiscalRegistrar-12" value="Да">
+            <div>Да</div>
+          </label>
+          <label>
+            <input type="radio" name="fiscalRegistrar-12" value="Нет">
+            <div>Нет</div>
+          </label>
+        </fieldset>
+        <fieldset name="" class="item column typeWork3 fiscalRegistrar-13">
+          <legend>Какая у вас проблема?</legend>
+          <label>
+            <input type="radio" name="fiscalRegistrar-13" value="Другое">
+            <div>Другое</div>
+          </label>
+          <label>
+            <input type="radio" name="fiscalRegistrar-13" value="Проблемасформойчеков">
+            <div>Проблема с формой чеков</div>
+          </label>
+          <label>
+            <input type="radio" name="fiscalRegistrar-13" value="ПроблемасотправкойвОФД">
+            <div>Проблема с отправкой в ОФД</div>
+          </label>
+        </fieldset>
+        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 fiscalRegistrar-14">
+          <legend>Какой тип интеграции?</legend>
+          <label>
+            <input type="radio" name="fiscalRegistrar-12" value="ФР+СтороннееПО">
+            <div>ФР + Стороннее ПО</div>
+          </label>
+          <label>
+            <input type="radio" name="fiscalRegistrar-12" value="ФР+SetRetail10">
+            <div>ФР + Set Retail 10</div>
+          </label>
+        </fieldset>
+        <fieldset name="fiscalRegistrarModel" class="item typeWork3 fiscalRegistrar-15">
+          <legend>Укажите название ПО</legend>
+          <input type="text" name="fiscalRegistrar-15" placeholder="">
+        </fieldset>
+        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 fiscalRegistrar-16">
+          <legend>Какой тип драйвера используется?</legend>
+          <label>
+            <input type="radio" name="fiscalRegistrar-16" value="OPOS">
+            <div>OPOS</div>
+          </label>
+          <label>
+            <input type="radio" name="fiscalRegistrar-16" value="БиблиотекаPiritLib">
+            <div>Библиотека PiritLib</div>
+          </label>
+          <label>
+            <input type="radio" name="fiscalRegistrar-16" value="Драйвер1СNativeAPI">
+            <div>Драйвер 1С Native API</div>
+          </label>
+          <label>
+            <input type="radio" name="fiscalRegistrar-16" value="JPOS">
+            <div>JPOS</div>
+          </label>
+          <label>
+            <input type="radio" name="fiscalRegistrar-16" value="Драйвер1С83">
+            <div>Драйвер 1С 8.3</div>
+          </label>
+          <label>
+            <input type="radio" name="fiscalRegistrar-16" value="Другойдрайвер">
+            <div>Другой драйвер</div>
+          </label>
+        </fieldset>
+        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 fiscalRegistrar-17">
+          <div class="select" id="select-3">
+            <button type="button" class="select-toggle" name="car" value="ford" data-select="toggle" data-index="1">Укажите версию драйвера</button>
+            <div class="select-dropdown">
+              <ul class="select-options">
+                <li class="select-option" data-select="option" data-value="volkswagen" data-index="0">Версия 1</li>
+                <li class="select-option select-option-selected" data-select="option" data-value="ford" data-index="1">Версия 2</li>
+                <li class="select-option" data-select="option" data-value="toyota" data-index="2">Версия 3</li>
+                <li class="select-option" data-select="option" data-value="toyota" data-index="2">Версия 4</li>
+              </ul>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset name="fiscalRegistrarModel" class="item typeWork3 fiscalRegistrar-18">
+          <legend>Ссылка на актуальную версию драйвера</legend>
+          <a href="#">Ссылка</a>
+        </fieldset>
+        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 fiscalRegistrar-19">
+          <legend>Обновление решило проблему?</legend>
+          <label>
+            <input type="radio" name="fiscalRegistrar-19" value="Да">
+            <div>Да</div>
+          </label>
+          <label>
+            <input type="radio" name="fiscalRegistrar-19" value="Нет">
+            <div>Нет</div>
+          </label>
+        </fieldset>
+        <fieldset name="fiscalRegistrarModel" class="item typeWork3 fiscalRegistrar-20">
+          <legend>Опишите проблему</legend>
+          <textarea></textarea>
+        </fieldset>
+        <fieldset class="item column upload typeWork3 fiscalRegistrar-21">
+          <legend>Добавьте скриншоты ошибок</legend>
+          <div id="drop-area">
+            <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
+            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+          </div>
+          <progress id="progress-bar" max=100 value=0></progress>
+          <div id="gallery"></div>
+          <button class="btn">Отправить заявку</button>
+        </fieldset>
+        <fieldset name="fiscalRegistrarModel" class="item typeWork3 fiscalRegistrar-another-driver">
+          <legend>Укажите название драйвера</legend>
+          <input type="text" name="fiscalRegistrar-another-driver" placeholder="">
+        </fieldset>
+        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 fiscalRegistrar-final">
+          <legend>Спасибо за Ваше обращение в CSI</legend>
+        </fieldset>
+
         <fieldset class="item column typework3-2-1">
           <legend>Выберете оборудование</legend>
           <label>
@@ -315,10 +501,10 @@
             <div>Set Prisma</div>
           </label>
         </fieldset>
-        <fieldset class="item column typework4-1">
+        <fieldset class="item column typeWork4 typework4-1">
           <legend>Ознакомьтесь с инструкциями представленными на <a href="https://crystals.atlassian.net/wiki/spaces/SR10SUPPORT/overview">портале поддержки продуктов CSI</a></legend>
         </fieldset>
-        <fieldset class="item column typework4-2">
+        <fieldset class="item column typeWork4 typework4-2">
           <legend>Вы нашли необходимую документацию?</legend>
           <label>
             <input type="radio" name="tw4-2" value="typework4-2-yes">
@@ -329,10 +515,10 @@
             <div>Нет</div>
           </label>
         </fieldset>
-        <fieldset class="item column typework4-3">
+        <fieldset class="item column typeWork4 typework4-3">
           <legend>Спасибо за Ваше обращение в CSI</legend>
         </fieldset>
-        <fieldset class="item column typework4-4">
+        <fieldset class="item column typeWork4 typework4-4">
           <legend>Инструкция  может быть создана  в рамках платных работ.</legend>
           <p>Согласны на выполнение работ на платной основе?</p>
           <label>
@@ -344,14 +530,14 @@
             <div>Нет</div>
           </label>
         </fieldset>
-        <fieldset class="item column typework4-5">
+        <fieldset class="item column typeWork4 typework4-5">
           <legend>Спасибо за Ваше обращение в CSI</legend>
         </fieldset>
-        <fieldset name="typework4" class="item typework4-6">
+        <fieldset name="typework4" class="item typeWork4 typework4-6">
           <legend>Подробно опишите что должна содержать необходимая Вам документация </legend>
           <textarea></textarea>
         </fieldset>
-        <fieldset class="item column upload typework4-7">
+        <fieldset class="item column upload typeWork4 typework4-7">
           <div id="drop-area">
             <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
             <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
@@ -451,7 +637,7 @@
         </fieldset>
       </form>
     </div>
-    <aside>
+    <aside id="aside">
       <h4>Порядок отправки</h4>
       <p>С порядком отправки оборудования в ремонт вы можете ознакомиться на сайте в <a href="#">Гарантия и ремонт</a></p>
     </aside>
