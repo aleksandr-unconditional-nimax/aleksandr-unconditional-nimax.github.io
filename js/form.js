@@ -1,81 +1,83 @@
-let step1form1 = document.querySelector('#form-1 .item1');
-let step2form1 = document.querySelector('#form-1 .item2');
-let step3form1 = document.querySelector('#form-1 .item3');
-let step4form1 = document.querySelector('#form-1 .item4');
-let step5form1 = document.querySelector('#form-1 .item5');
-let step6form1 = document.querySelector('#form-1 .item6');
+const step1form1 = document.querySelector('#form-1 .item1');
+const step2form1 = document.querySelector('#form-1 .item2');
+const step3form1 = document.querySelector('#form-1 .item3');
+const step4form1 = document.querySelector('#form-1 .item4');
+const step5form1 = document.querySelector('#form-1 .item5');
+const step6form1 = document.querySelector('#form-1 .item6');
 
-let typework0 = document.querySelector('.typework0');
+const typework0 = document.querySelector('.typework0');
 
-let typeWork1 = document.querySelectorAll('.typeWork1');
-let typework1_1 = document.querySelector('.typework1-1');
-let typework1_2 = document.querySelector('.typework1-2');
-let typework1_3 = document.querySelector('.typework1-3');
-let typework1_4 = document.querySelector('.typework1-4');
+const typeWork1 = document.querySelectorAll('.typeWork1');
+const typeWork2 = document.querySelectorAll('.typeWork2');
+const typeWork3 = document.querySelectorAll('.typeWork3');
+const typeWork4 = document.querySelectorAll('.typeWork4');
 
-let typeWork2 = document.querySelectorAll('.typeWork2');
-let typework2_1 = document.querySelector('.typework2-1');
-let typework2_2 = document.querySelector('.typework2-2');
-let typework2_3 = document.querySelector('.typework2-3');
-let typework2_4 = document.querySelector('.typework2-4');
-let typework2_5 = document.querySelector('.typework2-5');
-let typework2_6 = document.querySelector('.typework2-6');
-let typework2_7 = document.querySelector('.typework2-7');
+const typework1_1 = document.querySelector('.typework1-1');
+const typework1_2 = document.querySelector('.typework1-2');
+const typework1_3 = document.querySelector('.typework1-3');
+const typework1_4 = document.querySelector('.typework1-4');
 
-let typeWork3 = document.querySelectorAll('.typeWork3');
-let typework3_1 = document.querySelector('.typework3-1');
-let typework3_1_1 = document.querySelector('.typework3-1-1');
-let typework3_1_2 = document.querySelector('.typework3-1-2');
-let typework3_2 = document.querySelector('.typework3-2');
-let typework3_3 = document.querySelector('.typework3-3');
-let typework3_4 = document.querySelector('.typework3-4');
-let typework3_5 = document.querySelector('.typework3-5');
+const typework2_1 = document.querySelector('.typework2-1');
+const typework2_2 = document.querySelector('.typework2-2');
+const typework2_3 = document.querySelector('.typework2-3');
+const typework2_4 = document.querySelector('.typework2-4');
+const typework2_5 = document.querySelector('.typework2-5');
+const typework2_6 = document.querySelector('.typework2-6');
+const typework2_7 = document.querySelector('.typework2-7');
 
-let cashproblem = document.querySelector('.cash-problem');
-let fiscalRegistrar = document.querySelector('.fiscalRegistrar-1');
-let fiscalRegistrar_2= document.querySelector('.fiscalRegistrar-2');
-let fiscalRegistrar_3= document.querySelector('.fiscalRegistrar-3');
-let fiscalRegistrar_4= document.querySelector('.fiscalRegistrar-4');
-let fiscalRegistrar_5= document.querySelector('.fiscalRegistrar-5');
-let fiscalRegistrarBranch1 = document.getElementsByName('fiscalRegistrarOther');
-let fiscalRegistrarBranch1_2 = document.getElementsByName('fiscalRegistrarModel');
-let fiscalRegistrar_12= document.querySelector('.fiscalRegistrar-12');
-let fiscalRegistrar_final= document.querySelector('.fiscalRegistrar-final');
-let fiscalRegistrar_13= document.querySelector('.fiscalRegistrar-13');
-let problemFormChecks_1= document.querySelector('.problemFormChecks-1');
-let problemFormChecks_2= document.querySelector('.problemFormChecks-2');
-let problemFormChecks_3= document.querySelector('.problemFormChecks-3');
-let problemFormChecks_4= document.querySelector('.problemFormChecks-4');
-let problemFormChecks_5= document.querySelector('.problemFormChecks-5');
-let fiscalRegistrar_another_driver= document.querySelector('.fiscalRegistrar-another-driver');
-let problemFormChecks_6= document.querySelector('.problemFormChecks-6');
-let problemFormChecks_7= document.querySelector('.problemFormChecks-7');
-let problemSendOFD_1= document.querySelector('.problemSendOFD-1');
-let problemSendOFD_5= document.querySelector('.problemSendOFD-5');
-let cashHardwareProblem_1= document.querySelector('.cashHardwareProblem-1')
-let cashHardwareProblem_7= document.querySelector('.cashHardwareProblem-7')
-let cashHardwareProblem_8= document.querySelector('.cashHardwareProblem-8')
-let cashHardwareProblem_9= document.querySelector('.cashHardwareProblem-9')
-let equipmentAreaProblem_1= document.querySelector('.equipmentAreaProblem-1')
-let equipmentAreaProblem_2= document.querySelector('.equipmentAreaProblem-2')
-let equipmentAreaProblem_3= document.querySelector('.equipmentAreaProblem-3')
-let prismVideoProblem_1= document.querySelector('.prismVideoProblem-1')
+const typework3_1 = document.querySelector('.typework3-1');
+const typework3_1_1 = document.querySelector('.typework3-1-1');
+const typework3_1_2 = document.querySelector('.typework3-1-2');
+const typework3_2 = document.querySelector('.typework3-2');
+const typework3_3 = document.querySelector('.typework3-3');
+const typework3_4 = document.querySelector('.typework3-4');
+const typework3_5 = document.querySelector('.typework3-5');
 
-let typeWork4 = document.querySelectorAll('.typeWork4');
-let typework4_1 = document.querySelector('.typework4-1');
-let typework4_2 = document.querySelector('.typework4-2');
-let typework4_3 = document.querySelector('.typework4-3');
-let typework4_4 = document.querySelector('.typework4-4');
-let typework4_5 = document.querySelector('.typework4-5');
-let typework4_6 = document.querySelector('.typework4-6');
-let typework4_7 = document.querySelector('.typework4-7');
+const cashproblem = document.querySelector('.cashProblem');
+const fiscalRegistrar = document.querySelector('.fiscalRegistrar-1');
+const fiscalRegistrar_2= document.querySelector('.fiscalRegistrar-2');
+const fiscalRegistrar_3= document.querySelector('.fiscalRegistrar-3');
+const fiscalRegistrar_4= document.querySelector('.fiscalRegistrar-4');
+const fiscalRegistrar_5= document.querySelector('.fiscalRegistrar-5');
+const fiscalRegistrarBranch1 = document.getElementsByName('fiscalRegistrarOther');
+const fiscalRegistrarBranch1_2 = document.getElementsByName('fiscalRegistrarModel');
+const fiscalRegistrar_12= document.querySelector('.fiscalRegistrar-12');
+const fiscalRegistrar_final= document.querySelector('.fiscalRegistrar-final');
+const fiscalRegistrar_13= document.querySelector('.fiscalRegistrar-13');
+const problemFormChecks_1= document.querySelector('.problemFormChecks-1');
+const problemFormChecks_2= document.querySelector('.problemFormChecks-2');
+const problemFormChecks_3= document.querySelector('.problemFormChecks-3');
+const problemFormChecks_4= document.querySelector('.problemFormChecks-4');
+const problemFormChecks_5= document.querySelector('.problemFormChecks-5');
+const fiscalRegistrar_another_driver= document.querySelector('.fiscalRegistrar-another-driver');
+const problemFormChecks_6= document.querySelector('.problemFormChecks-6');
+const problemFormChecks_7= document.querySelector('.problemFormChecks-7');
+const problemSendOFD_1= document.querySelector('.problemSendOFD-1');
+const problemSendOFD_5= document.querySelector('.problemSendOFD-5');
+const cashHardwareProblem_1= document.querySelector('.cashHardwareProblem-1')
+const cashHardwareProblem_7= document.querySelector('.cashHardwareProblem-7')
+const cashHardwareProblem_8= document.querySelector('.cashHardwareProblem-8')
+const cashHardwareProblem_9= document.querySelector('.cashHardwareProblem-9')
+const equipmentAreaProblem_1= document.querySelector('.equipmentAreaProblem-1')
+const equipmentAreaProblem_2= document.querySelector('.equipmentAreaProblem-2')
+const equipmentAreaProblem_3= document.querySelector('.equipmentAreaProblem-3')
+const prismVideoProblem_1= document.querySelector('.prismVideoProblem-1')
+const programSetProblem_1= document.querySelector('.programSetProblem-1')
 
-let step2form2 = document.querySelector('#form-2 .item2');
-let step3form2 = document.querySelector('#form-2 .item3');
-let step4form2 = document.querySelector('#form-2 .item4');
-let step5form2 = document.querySelector('#form-2 .item5');
+const typework4_1 = document.querySelector('.typework4-1');
+const typework4_2 = document.querySelector('.typework4-2');
+const typework4_3 = document.querySelector('.typework4-3');
+const typework4_4 = document.querySelector('.typework4-4');
+const typework4_5 = document.querySelector('.typework4-5');
+const typework4_6 = document.querySelector('.typework4-6');
+const typework4_7 = document.querySelector('.typework4-7');
 
-let offset = 50;
+const step2form2 = document.querySelector('#form-2 .item2');
+const step3form2 = document.querySelector('#form-2 .item3');
+const step4form2 = document.querySelector('#form-2 .item4');
+const step5form2 = document.querySelector('#form-2 .item5');
+
+const offset = 50;
 
 // let itemsFi = document.querySelectorAll("fieldset.item");
 // for(let i=0; i<itemsFi.length; i++){itemsFi[i].onclick = function(){
@@ -220,24 +222,35 @@ const handleChange = ({ target: { value, name } }) => {
       break;
     case 'typework3-1 tw3-1':
       cashproblem.classList.add('active');
-      for(let i = 0; i < equipmentAreaProblem.length; i++) {
-        equipmentAreaProblem[i].classList.remove('active');
+      let hideFieldsets1 = document.querySelectorAll('.typeWork3:not([name="cashProblem"])');
+      for(let i = 1; i < hideFieldsets1.length; i++) {
+        hideFieldsets1[i].classList.remove('active');
       }
       setTimeout(() => window.scroll({ top: (cashproblem.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typework3-2 tw3-1':
       equipmentAreaProblem_1.classList.add('active');
-      for(let i = 0; i < fieldsetFiscalRegistrarOther.length; i++) {
-        fieldsetFiscalRegistrarOther[i].classList.remove('active');
+      let hideFieldsets2 = document.querySelectorAll('.typeWork3:not([name="equipmentAreaProblem"])');
+      for(let i = 1; i < hideFieldsets2.length; i++) {
+        hideFieldsets2[i].classList.remove('active');
       }
       setTimeout(() => window.scroll({ top: (equipmentAreaProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typework3-3 tw3-1':
       prismVideoProblem_1.classList.add('active');
-      for(let i = 0; i < equipmentAreaProblem.length; i++) {
-        equipmentAreaProblem[i].classList.remove('active');
+      let hideFieldsets3 = document.querySelectorAll('.typeWork3:not([name="prismVideoProblem"])');
+      for(let i = 1; i < hideFieldsets3.length; i++) {
+        hideFieldsets3[i].classList.remove('active');
       }
       setTimeout(() => window.scroll({ top: (prismVideoProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'typework3-4 tw3-1':
+      programSetProblem_1.classList.add('active');
+      let hideFieldsets4 = document.querySelectorAll('.typeWork3:not([name="programSetProblem"])');
+      for(let i = 1; i < hideFieldsets4.length; i++) {
+        hideFieldsets4[i].classList.remove('active');
+      }
+      setTimeout(() => window.scroll({ top: (programSetProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'fiscalRegistrar cash-problem-step-0':
       fiscalRegistrar.classList.add('active');
@@ -409,44 +422,50 @@ setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offse
 /* FORM REGISTRATION Step END */
 
 /* FORM typework1 Steps START */
-let fieldsetTypework1 = document.querySelectorAll("#form-1 fieldset[name='typework1']");
+let fieldsetTypework1 = document.querySelectorAll("fieldset[name='typework1']");
 for(let i=0; i<fieldsetTypework1.length; i++){fieldsetTypework1[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM typework1 Steps END */
 
 /* FORM typework2 Steps START */
-let fieldsetTypework2 = document.querySelectorAll("#form-1 fieldset[name='typework2']");
+let fieldsetTypework2 = document.querySelectorAll("fieldset[name='typework2']");
 for(let i=0; i<fieldsetTypework2.length; i++){fieldsetTypework2[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM typework2 Steps END */
 
 /* FORM fiscalRegistrar Steps START */
-let fieldsetFiscalRegistrarOther = document.querySelectorAll("#form-1 fieldset[name='fiscalRegistrarOther']");
+let fieldsetFiscalRegistrarOther = document.querySelectorAll("fieldset[name='fiscalRegistrarOther']");
 for(let i=0; i<fieldsetFiscalRegistrarOther.length; i++){fieldsetFiscalRegistrarOther[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM fiscalRegistrar Steps END */
 
 /* FORM fiscalRegistrarModel Steps START */
-let fieldsetFiscalRegistrarModel = document.querySelectorAll("#form-1 fieldset[name='fiscalRegistrarModel']");
+let fieldsetFiscalRegistrarModel = document.querySelectorAll("fieldset[name='fiscalRegistrarModel']");
 for(let i=0; i<fieldsetFiscalRegistrarModel.length; i++){fieldsetFiscalRegistrarModel[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM fiscalRegistrar Steps END */
 
 /* FORM cashHardwareProblem Steps START */
-let cashHardwareProblem = document.querySelectorAll("#form-1 fieldset[name='cashHardwareProblem']");
+let cashHardwareProblem = document.querySelectorAll("fieldset[name='cashHardwareProblem']");
 for(let i=0; i<cashHardwareProblem.length; i++){cashHardwareProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM cashHardwareProblem Steps END */
 
 /* FORM equipmentAreaProblem Steps START */
-let equipmentAreaProblem = document.querySelectorAll("#form-1 fieldset[name='equipmentAreaProblem']");
+let equipmentAreaProblem = document.querySelectorAll("fieldset[name='equipmentAreaProblem']");
 for(let i=0; i<equipmentAreaProblem.length; i++){equipmentAreaProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM equipmentAreaProblem Steps END */
 
 /* FORM prismVideoProblem Steps START */
-let prismVideoProblem = document.querySelectorAll("#form-1 fieldset[name='prismVideoProblem']");
+let prismVideoProblem = document.querySelectorAll("fieldset[name='prismVideoProblem']");
 for(let i=0; i<prismVideoProblem.length; i++){prismVideoProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
+setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
+/* FORM prismVideoProblem Steps END */
+
+/* FORM prismVideoProblem Steps START */
+let programSetProblem = document.querySelectorAll("fieldset[name='programSetProblem']");
+for(let i=0; i<programSetProblem.length; i++){programSetProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM prismVideoProblem Steps END */
 

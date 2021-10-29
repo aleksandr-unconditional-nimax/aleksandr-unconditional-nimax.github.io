@@ -208,14 +208,10 @@
           </label>
           <label>
             <input type="radio" name="tw3-1" value="typework3-4">
-            <div>Проблема с программой Set (не зайти в программу, проблема с ценами/акциями на кассах, весах, термопринтерах, проблема с лицензией, не продается алкоголь, не выгружаются чеки и z-отчеты</div>
-          </label>
-          <label>
-            <input type="radio" name="tw3-1" value="typework3-5">
-            <div>Проблема с сервером</div>
+            <div>Проблема с программой Set (не зайти в программу, проблема с ценами/акциями на кассах, весах, термопринтерах, проблема с лицензией, не продается алкоголь, не выгружаются чеки и z-отчеты)</div>
           </label>
         </fieldset>
-        <fieldset class="item column typeWork3 cash-problem">
+        <fieldset name="cashProblem" class="item column typeWork3 cashProblem">
           <legend>Выберете оборудование</legend>
           <label>
             <input type="radio" name="cash-problem-step-0" value="fiscalRegistrar">
@@ -246,7 +242,7 @@
             <div>Другое</div>
           </label>
         </fieldset>
-        <fieldset name="" class="item column typeWork3 fiscalRegistrar-1">
+        <fieldset name="cashProblem" class="item column typeWork3 fiscalRegistrar-1">
           <legend>Выберете модель ФР</legend>
           <label>
             <input type="radio" name="fiscalRegistrar-1" value="ВикиПринт80Ф">
@@ -585,7 +581,6 @@
           <div id="gallery"></div>
           <button class="btn">Отправить заявку</button>
         </fieldset>
-
         <fieldset name="prismVideoProblem" class="item typeWork3 prismVideoProblem-1">
           <legend>Укажите версию ПО </legend>
           <input type="text" name="prismVideoProblem-1" value="">
@@ -627,69 +622,63 @@
           <div id="gallery"></div>
           <button class="btn">Отправить заявку</button>
         </fieldset>
-
-        <fieldset class="item typework3-3-1">
-          <legend>Укажите версию ПО</legend>
-          <input type="text" name="softwareVersion" placeholder="">
-        </fieldset>
-        <fieldset class="item column typework3-4-1">
-          <legend>Выберете кассовое ПО/продукт</legend>
+        <fieldset name="programSetProblem" class="item column typework3 programSetProblem-1">
+          <legend>Выберите продукт / сервис</legend>
           <label>
-            <input type="radio" name="tw3-3-1" value="typework3-4-1">
-            <div>SR5/6</div>
-          </label>
-          <label>
-            <input type="radio" name="tw3-3-1" value="typework3-4-2">
-            <div>SR10</div>
-          </label>
-          <label>
-            <input type="radio" name="tw3-3-1" value="typework3-4-3">
-            <div>Set Kiosk</div>
-          </label>
-          <label>
-            <input type="radio" name="tw3-3-1" value="typework3-4-4">
-            <div>ЛК ККТ</div>
-          </label>
-          <label>
-            <input type="radio" name="tw3-3-1" value="typework3-4-5">
-            <div>Другое</div>
-          </label>
-          <label>
-            <input type="radio" name="tw3-3-1" value="typework3-4-6">
-            <div>Set Mark</div>
-          </label>
-          <label>
-            <input type="radio" name="tw3-3-1" value="typework3-4-7">
-            <div>Set Kit</div>
-          </label>
-          <label>
-            <input type="radio" name="tw3-3-1" value="typework3-4-8">
-            <div>Set Omni</div>
-          </label>
-          <label>
-            <input type="radio" name="tw3-3-1" value="typework3-4-9">
+            <input type="radio" name="programSetProblem-1" value="SetGalya">
             <div>Set Galya</div>
           </label>
           <label>
-            <input type="radio" name="tw3-3-1" value="typework3-4-10">
-            <div>ОФД</div>
+            <input type="radio" name="programSetProblem-1" value="SetKit">
+            <div>Set Kit</div>
           </label>
           <label>
-            <input type="radio" name="tw3-3-1" value="typework3-4-11">
-            <div>Интеграция с банком</div>
+            <input type="radio" name="programSetProblem-1" value="SetMark">
+            <div>Set Mark</div>
+          </label>
+          <label>
+            <input type="radio" name="programSetProblem-1" value="SetSCO">
+            <div>Set SCO</div>
+          </label>
+          <label>
+            <input type="radio" name="programSetProblem-1" value="SetTouch">
+            <div>Set Touch</div>
+          </label>
+          <label>
+            <input type="radio" name="programSetProblem-1" value="SetKiosk">
+            <div>Set Kiosk</div>
+          </label>
+          <label>
+            <input type="radio" name="programSetProblem-1" value="SetAgent">
+            <div>Set Agent</div>
+          </label>
+          <label>
+            <input type="radio" name="programSetProblem-1" value="SetRetail">
+            <div>Set Retail</div>
           </label>
         </fieldset>
-        <fieldset class="item column typework3-5-1">
-          <legend>Выберете ПО</legend>
-          <label>
-            <input type="radio" name="equipmentPack2" value="equipment-pack2-1">
-            <div>SetRetail/SetCentrum</div>
-          </label>
-          <label>
-            <input type="radio" name="equipmentPack2" value="equipment-pack2-2">
-            <div>Set Prisma</div>
-          </label>
+        <fieldset name="programSetProblem" class="item column typework3 programSetProblem-2">
+          <legend>Укажите версию ПО</legend>
+          <input type="text" name="programSetProblem-2" placeholder="">
         </fieldset>
+        <fieldset name="programSetProblem" class="item column typework3 programSetProblem-3">
+          <legend>Укажите проблему</legend>
+          <input type="text" name="programSetProblem-3" placeholder="">
+        </fieldset>
+        <fieldset name="programSetProblem" class="item typework3 programSetProblem-4">
+          <legend>Опишите как должно работать</legend>
+          <textarea name="programSetProblem-4"></textarea>
+        </fieldset>
+        <fieldset name="programSetProblem" class="item typework3 programSetProblem-5">
+          <legend>Опишите как воспроизводится проблема</legend>
+          <textarea name="programSetProblem-4"></textarea>
+        </fieldset>
+        <fieldset name="programSetProblem" class="item typework3 programSetProblem-5">
+          <legend>В результате каких действий возникла проблема (Что изменили, когда и где)</legend>
+          <textarea name="programSetProblem-5"></textarea>
+        </fieldset>
+
+
         <fieldset class="item column typeWork4 typework4-1">
           <legend>Ознакомьтесь с инструкциями представленными на <a href="https://crystals.atlassian.net/wiki/spaces/SR10SUPPORT/overview">портале поддержки продуктов CSI</a></legend>
         </fieldset>
