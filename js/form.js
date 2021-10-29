@@ -50,6 +50,16 @@ let problemFormChecks_5= document.querySelector('.problemFormChecks-5');
 let fiscalRegistrar_another_driver= document.querySelector('.fiscalRegistrar-another-driver');
 let problemFormChecks_6= document.querySelector('.problemFormChecks-6');
 let problemFormChecks_7= document.querySelector('.problemFormChecks-7');
+let problemSendOFD_1= document.querySelector('.problemSendOFD-1');
+let problemSendOFD_5= document.querySelector('.problemSendOFD-5');
+let cashHardwareProblem_1= document.querySelector('.cashHardwareProblem-1')
+let cashHardwareProblem_7= document.querySelector('.cashHardwareProblem-7')
+let cashHardwareProblem_8= document.querySelector('.cashHardwareProblem-8')
+let cashHardwareProblem_9= document.querySelector('.cashHardwareProblem-9')
+let equipmentAreaProblem_1= document.querySelector('.equipmentAreaProblem-1')
+let equipmentAreaProblem_2= document.querySelector('.equipmentAreaProblem-2')
+let equipmentAreaProblem_3= document.querySelector('.equipmentAreaProblem-3')
+let prismVideoProblem_1= document.querySelector('.prismVideoProblem-1')
 
 let typeWork4 = document.querySelectorAll('.typeWork4');
 let typework4_1 = document.querySelector('.typework4-1');
@@ -66,6 +76,17 @@ let step4form2 = document.querySelector('#form-2 .item4');
 let step5form2 = document.querySelector('#form-2 .item5');
 
 let offset = 50;
+
+// let itemsFi = document.querySelectorAll("fieldset.item");
+// for(let i=0; i<itemsFi.length; i++){itemsFi[i].onclick = function(){
+//   if(this.classList.contains('active')){
+//     console.log('0');
+//     let children = document.querySelector('.text-sidebar');
+//     let clonedNode = children.cloneNode(true);
+//     document.querySelector("#aside").appendChild(clonedNode);
+//   }
+// }};
+
 
 step1form1.onclick = function() {
   step2form1.classList.add('active');
@@ -199,16 +220,49 @@ const handleChange = ({ target: { value, name } }) => {
       break;
     case 'typework3-1 tw3-1':
       cashproblem.classList.add('active');
+      for(let i = 0; i < equipmentAreaProblem.length; i++) {
+        equipmentAreaProblem[i].classList.remove('active');
+      }
       setTimeout(() => window.scroll({ top: (cashproblem.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'typework3-2 tw3-1':
+      equipmentAreaProblem_1.classList.add('active');
+      for(let i = 0; i < fieldsetFiscalRegistrarOther.length; i++) {
+        fieldsetFiscalRegistrarOther[i].classList.remove('active');
+      }
+      setTimeout(() => window.scroll({ top: (equipmentAreaProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'typework3-3 tw3-1':
+      prismVideoProblem_1.classList.add('active');
+      for(let i = 0; i < equipmentAreaProblem.length; i++) {
+        equipmentAreaProblem[i].classList.remove('active');
+      }
+      setTimeout(() => window.scroll({ top: (prismVideoProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'fiscalRegistrar cash-problem-step-0':
       fiscalRegistrar.classList.add('active');
       setTimeout(() => window.scroll({ top: (fiscalRegistrar.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
+    case 'Системныйблок cash-problem-step-0': 
+    case 'Клавиатура cash-problem-step-0':
+    case 'Денежныйящик cash-problem-step-0':
+      cashHardwareProblem_1.classList.add('active');
+      setTimeout(() => window.scroll({ top: (cashHardwareProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Сканер cash-problem-step-0':
+      cashHardwareProblem_7.classList.add('active');
+      setTimeout(() => window.scroll({ top: (cashHardwareProblem_7.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Дисплей/монитор cash-problem-step-0':
+      cashHardwareProblem_8.classList.add('active');
+      setTimeout(() => window.scroll({ top: (cashHardwareProblem_8.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Другое cash-problem-step-0':
+      cashHardwareProblem_9.classList.add('active');
+      setTimeout(() => window.scroll({ top: (cashHardwareProblem_9.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
     case 'Другое fiscalRegistrar-1':
       fiscalRegistrar_4.classList.add('active');
-      let clonedNode = document.querySelector(".text-sidebar").cloneNode(true);
-      document.querySelector("#aside").appendChild(clonedNode);
       setTimeout(() => window.scroll({ top: (fiscalRegistrar_4.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'ВикиПринт80Ф fiscalRegistrar-1':
@@ -246,6 +300,10 @@ const handleChange = ({ target: { value, name } }) => {
       problemFormChecks_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (problemFormChecks_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
+    case 'ПроблемасотправкойвОФД fiscalRegistrar-13':
+      problemSendOFD_1.classList.add('active');
+      setTimeout(() => window.scroll({ top: (problemSendOFD_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
     case 'ФР+СтороннееПО fiscalRegistrarFormChecks-14':
       problemFormChecks_2.classList.add('active');
       setTimeout(() => window.scroll({ top: (problemFormChecks_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
@@ -262,6 +320,24 @@ const handleChange = ({ target: { value, name } }) => {
       fiscalRegistrar_final.classList.remove('active');
       problemFormChecks_7.classList.add('active');
       setTimeout(() => window.scroll({ top: (problemFormChecks_7.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Да problemSendOFD-4':
+      fiscalRegistrar_final.classList.add('active');
+      setTimeout(() => window.scroll({ top: (fiscalRegistrar_final.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Нет problemSendOFD-4':
+      problemSendOFD_5.classList.add('active');
+      setTimeout(() => window.scroll({ top: (problemSendOFD_5.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Другое equipmentAreaProblem-1':
+      equipmentAreaProblem_2.classList.add('active');
+      setTimeout(() => window.scroll({ top: (equipmentAreaProblem_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Инфокиоск/прайсчекер equipmentAreaProblem-1':
+    case 'ПринтерШК/этикеток equipmentAreaProblem-1':
+      equipmentAreaProblem_2.classList.remove('active');
+      equipmentAreaProblem_3.classList.add('active');
+      setTimeout(() => window.scroll({ top: (equipmentAreaProblem_3.offsetTop - offset), left: 0, behavior: 'smooth' }), 105);
       break;
 
     
@@ -312,6 +388,19 @@ fiscalRegistrar_3.onclick = function() {
   setTimeout(() => window.scroll({ top: (fiscalRegistrar_12.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
 };
 
+cashHardwareProblem_7.onclick = function() {
+  cashHardwareProblem_1.classList.add('active');
+  setTimeout(() => window.scroll({ top: (cashHardwareProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+};
+cashHardwareProblem_8.onclick = function() {
+  cashHardwareProblem_1.classList.add('active');
+  setTimeout(() => window.scroll({ top: (cashHardwareProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+};
+cashHardwareProblem_9.onclick = function() {
+  cashHardwareProblem_1.classList.add('active');
+  setTimeout(() => window.scroll({ top: (cashHardwareProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+};
+
 
 /* FORM REGISTRATION Step START */
 let fieldsetForm3 = document.querySelectorAll("#form-3 .item:not(.upload)");
@@ -342,6 +431,24 @@ let fieldsetFiscalRegistrarModel = document.querySelectorAll("#form-1 fieldset[n
 for(let i=0; i<fieldsetFiscalRegistrarModel.length; i++){fieldsetFiscalRegistrarModel[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM fiscalRegistrar Steps END */
+
+/* FORM cashHardwareProblem Steps START */
+let cashHardwareProblem = document.querySelectorAll("#form-1 fieldset[name='cashHardwareProblem']");
+for(let i=0; i<cashHardwareProblem.length; i++){cashHardwareProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
+setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
+/* FORM cashHardwareProblem Steps END */
+
+/* FORM equipmentAreaProblem Steps START */
+let equipmentAreaProblem = document.querySelectorAll("#form-1 fieldset[name='equipmentAreaProblem']");
+for(let i=0; i<equipmentAreaProblem.length; i++){equipmentAreaProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
+setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
+/* FORM equipmentAreaProblem Steps END */
+
+/* FORM prismVideoProblem Steps START */
+let prismVideoProblem = document.querySelectorAll("#form-1 fieldset[name='prismVideoProblem']");
+for(let i=0; i<prismVideoProblem.length; i++){prismVideoProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
+setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
+/* FORM prismVideoProblem Steps END */
 
 /* SELECT OPTION Style START */
 const CLASS_NAME_SELECT = 'select';

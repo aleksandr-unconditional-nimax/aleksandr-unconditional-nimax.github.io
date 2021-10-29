@@ -222,27 +222,27 @@
             <div>Фискальный регистратор</div>
           </label>
           <label>
-            <input type="radio" name="cash-problem-step-0" value="cash-problem-2">
+            <input type="radio" name="cash-problem-step-0" value="Системныйблок">
             <div>Системный блок</div>
           </label>
           <label>
-            <input type="radio" name="cash-problem-step-0" value="cash-problem-3">
+            <input type="radio" name="cash-problem-step-0" value="Клавиатура">
             <div>Клавиатура</div>
           </label>
           <label>
-            <input type="radio" name="cash-problem-step-0" value="cash-problem-4">
+            <input type="radio" name="cash-problem-step-0" value="Денежныйящик">
             <div>Денежный ящик</div>
           </label>
           <label>
-            <input type="radio" name="cash-problem-step-0" value="cash-problem-5">
+            <input type="radio" name="cash-problem-step-0" value="Сканер">
             <div>Сканер</div>
           </label>
           <label>
-            <input type="radio" name="cash-problem-step-0" value="cash-problem-6">
+            <input type="radio" name="cash-problem-step-0" value="Дисплей/монитор">
             <div>Дисплей/монитор</div>
           </label>
           <label>
-            <input type="radio" name="cash-problem-step-0" value="cash-problem-7">
+            <input type="radio" name="cash-problem-step-0" value="Другое">
             <div>Другое</div>
           </label>
         </fieldset>
@@ -427,18 +427,207 @@
         <fieldset name="fiscalRegistrarModel" class="item column typeWork3 fiscalRegistrar-final">
           <legend>Спасибо за Ваше обращение в CSI</legend>
         </fieldset>
-
-        <fieldset class="item column typework3-2-1">
+        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 problemSendOFD-1">
+          <legend>На какой ОС работаете?</legend>
+          <label>
+            <input type="radio" name="problemSendOFD-1" value="Tinycore">
+            <div>Tinycore</div>
+          </label>
+          <label>
+            <input type="radio" name="problemSendOFD-1" value="Windows">
+            <div>Windows</div>
+          </label>
+          <label>
+            <input type="radio" name="problemSendOFD-1" value="Linux">
+            <div>Linux</div>
+          </label>
+        </fieldset>
+        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 problemSendOFD-2">
+          <legend>Как узнать версию</legend>
+          <input type="text" name="roblemSendOFD-2" placeholder="">
+          <div class="text-sidebar">
+            <p>Ознакомьтесь с документацией и обновите аппарат до актуальной версии прошивки</p>
+          </div>
+        </fieldset>
+        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 problemSendOFD-3">
+          <legend>Ссылка на документацию и актуальную версию программы</legend>
+          <p><a href="#">Документация</a></p>
+          <p><a href="#">Актуальная версия прошивки</a></p>
+        </fieldset>
+        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 problemSendOFD-4">
+          <legend>Обновление помогло?</legend>
+          <label>
+            <input type="radio" name="problemSendOFD-4" value="Да">
+            <div>Да</div>
+          </label>
+          <label>
+            <input type="radio" name="problemSendOFD-4" value="Нет">
+            <div>Нет</div>
+          </label>
+        </fieldset>
+        <fieldset name="fiscalRegistrarModel" class="item typeWork3 problemSendOFD-5">
+          <legend>Опишите проблему </legend>
+          <textarea></textarea>
+        </fieldset>
+        <fieldset class="item column upload typeWork3 problemSendOFD-6">
+          <legend>Добавьте скриншоты ошибок</legend>
+          <div id="drop-area">
+            <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
+            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+          </div>
+          <progress id="progress-bar" max=100 value=0></progress>
+          <div id="gallery"></div>
+          <button class="btn">Отправить заявку</button>
+        </fieldset>
+        <fieldset name="cashHardwareProblem" class="item typeWork3 cashHardwareProblem-7">
+          <label>
+            <input type="radio" name="cashHardwareProblem-7" value="Ручной">
+            <div>Ручной</div>
+          </label>
+          <label>
+            <input type="radio" name="cashHardwareProblem-7" value="Сканер-весыприкассовые">
+            <div>Сканер-весы прикассовые</div>
+          </label>
+        </fieldset>
+        <fieldset name="cashHardwareProblem" class="item typeWork3 cashHardwareProblem-8">
+          <label>
+            <input type="radio" name="cashHardwareProblem-8" value="Кассира">
+            <div>Кассира</div>
+          </label>
+          <label>
+            <input type="radio" name="cashHardwareProblem-8" value="Покупателя">
+            <div>Покупателя</div>
+          </label>
+        </fieldset>
+        <fieldset name="cashHardwareProblem" class="item typeWork3 cashHardwareProblem-9">
+          <legend>Укажите оборудование</legend>
+          <input type="text" name="cashHardwareProblem-9" value="">
+        </fieldset>
+        <fieldset name="cashHardwareProblem" class="item typeWork3 cashHardwareProblem-1">
+          <legend>Укажите модель оборудования </legend>
+          <input type="text" name="cashHardwareProblem-1" value="">
+        </fieldset>
+        <fieldset name="cashHardwareProblem" class="item typeWork3 cashHardwareProblem-2">
+          <legend>Опишите как должно работать </legend>
+          <textarea></textarea>
+        </fieldset>
+        <fieldset name="cashHardwareProblem" class="item typeWork3 cashHardwareProblem-3">
+          <legend>Опишите как воспроизводится проблема </legend>
+          <textarea></textarea>
+        </fieldset>
+        <fieldset name="cashHardwareProblem" class="item typeWork3 cashHardwareProblem-4">
+          <legend>Укажите версию ОС </legend>
+          <input type="text" name="cashHardwareProblem-4" value="">
+        </fieldset>
+        <fieldset name="cashHardwareProblem" class="item typeWork3 cashHardwareProblem-5">
+          <legend>Опишите конфигурацию кассы (СБ, прикассовое оборудование) </legend>
+          <input type="text" name="cashHardwareProblem-5" value="">
+        </fieldset>
+        <fieldset name="cashHardwareProblem" class="item typeWork3 cashHardwareProblem-6">
+          <legend>Укажите частоту возникновения проблемы </legend>
+          <input type="text" name="cashHardwareProblem-6" value="">
+        </fieldset>
+        <fieldset class="item column upload typeWork3 cashHardwareProblem-final">
+          <div id="drop-area">
+            <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
+            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+          </div>
+          <progress id="progress-bar" max=100 value=0></progress>
+          <div id="gallery"></div>
+          <button class="btn">Отправить заявку</button>
+        </fieldset>
+        
+        <fieldset name="equipmentAreaProblem" class="item column typework3 equipmentAreaProblem-1">
           <legend>Выберете оборудование</legend>
           <label>
-            <input type="radio" name="tw3-2-1" value="typework3-2-1">
+            <input type="radio" name="equipmentAreaProblem-1" value="Инфокиоск/прайсчекер">
             <div>Инфокиоск/прайсчекер</div>
           </label>
           <label>
-            <input type="radio" name="tw3-2-1" value="typework3-2-2">
+            <input type="radio" name="equipmentAreaProblem-1" value="ПринтерШК/этикеток">
             <div>Принтер ШК/этикеток</div>
           </label>
+          <label>
+            <input type="radio" name="equipmentAreaProblem-1" value="Другое">
+            <div>Другое</div>
+          </label>
         </fieldset>
+        <fieldset name="equipmentAreaProblem" class="item typework3 equipmentAreaProblem-2">
+          <legend>Укажите наименование оборудования</legend>
+          <input type="text" name="equipmentAreaProblem-2" value="">
+        </fieldset>
+        <fieldset name="equipmentAreaProblem" class="item typework3 equipmentAreaProblem-3">
+          <legend>Укажите модель оборудования</legend>
+          <input type="text" name="equipmentAreaProblem-3" value="">
+        </fieldset>
+        <fieldset name="equipmentAreaProblem" class="item typework3 equipmentAreaProblem-4">
+          <legend>Опишите как должно работать</legend>
+          <textarea name="equipmentAreaProblem-3"></textarea>
+        </fieldset>
+        <fieldset name="equipmentAreaProblem" class="item typework3 equipmentAreaProblem-5">
+          <legend>Опишите как воспроизводится проблема</legend>
+          <textarea name="equipmentAreaProblem-5"></textarea>
+        </fieldset>
+        <fieldset name="equipmentAreaProblem" class="item typework3 equipmentAreaProblem-6">
+          <legend>Укажите версию ОС </legend>
+          <input type="text" name="equipmentAreaProblem-6" value="">
+        </fieldset>
+        <fieldset name="equipmentAreaProblem" class="item typework3 equipmentAreaProblem-7">
+          <legend>Укажите частоту возникновения проблемы </legend>
+          <input type="text" name="equipmentAreaProblem-7" value="">
+        </fieldset>
+        <fieldset class="item column upload typeWork3 cashHardwareProblem-final">
+          <div id="drop-area">
+            <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
+            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+          </div>
+          <progress id="progress-bar" max=100 value=0></progress>
+          <div id="gallery"></div>
+          <button class="btn">Отправить заявку</button>
+        </fieldset>
+
+        <fieldset name="prismVideoProblem" class="item typeWork3 prismVideoProblem-1">
+          <legend>Укажите версию ПО </legend>
+          <input type="text" name="prismVideoProblem-1" value="">
+        </fieldset>
+        <fieldset name="prismVideoProblem" class="item typeWork3 prismVideoProblem-2">
+          <legend>Укажите проблему </legend>
+          <input type="text" name="prismVideoProblem-2" value="">
+        </fieldset>
+        <fieldset name="prismVideoProblem" class="item typework3 prismVideoProblem-3">
+          <legend>Опишите как должно работать</legend>
+          <textarea name="prismVideoProblem-3"></textarea>
+        </fieldset>
+        <fieldset name="prismVideoProblem" class="item typework3 prismVideoProblem-4">
+          <legend>Опишите как воспроизводится проблема</legend>
+          <textarea name="prismVideoProblem-4"></textarea>
+        </fieldset>
+        <fieldset name="prismVideoProblem" class="item typework3 prismVideoProblem-5">
+          <legend>В результате каких действий возникла проблема (Что изменили, когда и где)</legend>
+          <textarea name="prismVideoProblem-5"></textarea>
+        </fieldset>
+        <fieldset name="prismVideoProblem" class="item typeWork3 prismVideoProblem-6">
+          <legend>Укажите версию и/или тип ОС </legend>
+          <input type="text" name="prismVideoProblem-6" value="">
+        </fieldset>
+        <fieldset name="prismVideoProblem" class="item typeWork3 prismVideoProblem-7">
+          <legend>Укажите частоту возникновения проблемы </legend>
+          <input type="text" name="prismVideoProblem-7" value="">
+        </fieldset>
+        <fieldset name="prismVideoProblem" class="item column upload typeWork3 prismVideoProblem-8">
+          <legend>Соберите логи </legend>
+          <p>Укажите ссылку на логи</p>
+          <p>Добавьте логи вложением. Если размер логов превышает 4 МБ - укажите ссылку на файлообменник (Яндекс.Диск, ГуглДрайв и т.д.)</p>
+          <input type="text" name="prismVideoProblem-8" value="">
+          <div id="drop-area">
+            <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
+            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+          </div>
+          <progress id="progress-bar" max=100 value=0></progress>
+          <div id="gallery"></div>
+          <button class="btn">Отправить заявку</button>
+        </fieldset>
+
         <fieldset class="item typework3-3-1">
           <legend>Укажите версию ПО</legend>
           <input type="text" name="softwareVersion" placeholder="">
