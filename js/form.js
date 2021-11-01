@@ -4,19 +4,15 @@ const step3form1 = document.querySelector('#form-1 .item3');
 const step4form1 = document.querySelector('#form-1 .item4');
 const step5form1 = document.querySelector('#form-1 .item5');
 const step6form1 = document.querySelector('#form-1 .item6');
-
 const typework0 = document.querySelector('.typework0');
-
 const typeWork1 = document.querySelectorAll('.typeWork1');
 const typeWork2 = document.querySelectorAll('.typeWork2');
 const typeWork3 = document.querySelectorAll('.typeWork3');
 const typeWork4 = document.querySelectorAll('.typeWork4');
-
 const typework1_1 = document.querySelector('.typework1-1');
 const typework1_2 = document.querySelector('.typework1-2');
 const typework1_3 = document.querySelector('.typework1-3');
 const typework1_4 = document.querySelector('.typework1-4');
-
 const typework2_1 = document.querySelector('.typework2-1');
 const typework2_2 = document.querySelector('.typework2-2');
 const typework2_3 = document.querySelector('.typework2-3');
@@ -24,7 +20,6 @@ const typework2_4 = document.querySelector('.typework2-4');
 const typework2_5 = document.querySelector('.typework2-5');
 const typework2_6 = document.querySelector('.typework2-6');
 const typework2_7 = document.querySelector('.typework2-7');
-
 const typework3_1 = document.querySelector('.typework3-1');
 const typework3_1_1 = document.querySelector('.typework3-1-1');
 const typework3_1_2 = document.querySelector('.typework3-1-2');
@@ -32,7 +27,6 @@ const typework3_2 = document.querySelector('.typework3-2');
 const typework3_3 = document.querySelector('.typework3-3');
 const typework3_4 = document.querySelector('.typework3-4');
 const typework3_5 = document.querySelector('.typework3-5');
-
 const cashproblem = document.querySelector('.cashProblem');
 const fiscalRegistrar = document.querySelector('.fiscalRegistrar-1');
 const fiscalRegistrar_2= document.querySelector('.fiscalRegistrar-2');
@@ -54,16 +48,40 @@ const problemFormChecks_6= document.querySelector('.problemFormChecks-6');
 const problemFormChecks_7= document.querySelector('.problemFormChecks-7');
 const problemSendOFD_1= document.querySelector('.problemSendOFD-1');
 const problemSendOFD_5= document.querySelector('.problemSendOFD-5');
-const cashHardwareProblem_1= document.querySelector('.cashHardwareProblem-1')
-const cashHardwareProblem_7= document.querySelector('.cashHardwareProblem-7')
-const cashHardwareProblem_8= document.querySelector('.cashHardwareProblem-8')
-const cashHardwareProblem_9= document.querySelector('.cashHardwareProblem-9')
-const equipmentAreaProblem_1= document.querySelector('.equipmentAreaProblem-1')
-const equipmentAreaProblem_2= document.querySelector('.equipmentAreaProblem-2')
-const equipmentAreaProblem_3= document.querySelector('.equipmentAreaProblem-3')
-const prismVideoProblem_1= document.querySelector('.prismVideoProblem-1')
-const programSetProblem_1= document.querySelector('.programSetProblem-1')
-
+const cashHardwareProblem_1= document.querySelector('.cashHardwareProblem-1');
+const cashHardwareProblem_7= document.querySelector('.cashHardwareProblem-7');
+const cashHardwareProblem_8= document.querySelector('.cashHardwareProblem-8');
+const cashHardwareProblem_9= document.querySelector('.cashHardwareProblem-9');
+const equipmentAreaProblem_1= document.querySelector('.equipmentAreaProblem-1');
+const equipmentAreaProblem_2= document.querySelector('.equipmentAreaProblem-2');
+const equipmentAreaProblem_3= document.querySelector('.equipmentAreaProblem-3');
+const prismVideoProblem_1= document.querySelector('.prismVideoProblem-1');
+const programSetProblem_1= document.querySelector('.programSetProblem-1');
+const programSetProblem_2= document.querySelector('.programSetProblem-2');
+const programSetProblem_8= document.querySelector('.programSetProblem-8');
+const programSetProblem_9= document.querySelector('.programSetProblem-9');
+const anotherSetProblem_1= document.querySelector('.anotherSetProblem-1');
+const loyaltyProblem_1= document.querySelector('.loyaltyProblem-1');
+const loyaltyProblem_2= document.querySelector('.loyaltyProblem-2');
+const loyaltyProblem_3= document.querySelector('.loyaltyProblem-3');
+const loyaltyProblem_4= document.querySelector('.loyaltyProblem-4');
+const loyaltyProblem_5= document.querySelector('.loyaltyProblem-5');
+const loyaltyProblem_6= document.querySelector('.loyaltyProblem-6');
+const loyaltyProblem_7= document.querySelector('.loyaltyProblem-7');
+const loyaltyProblem_8= document.querySelector('.loyaltyProblem-8');
+const loyaltyProblem_9= document.querySelector('.loyaltyProblem-9');
+const loyaltyProblem_11= document.querySelector('.loyaltyProblem-11');
+const loyaltyProblem_12= document.querySelector('.loyaltyProblem-12');
+const loyaltyProblem_13= document.querySelector('.loyaltyProblem-13');
+const loyaltyProblem_16= document.querySelector('.loyaltyProblem-16');
+const loyaltyProblem_17= document.querySelector('.loyaltyProblem-17');
+const loyaltyProblem_18= document.querySelector('.loyaltyProblem-18');
+const loyaltyProblem_19= document.querySelector('.loyaltyProblem-19');
+const loyaltyProblemThanks= document.querySelector('.loyaltyProblem-thanks');
+const updateProblem_1= document.querySelector('.updateProblem-1');
+const updateProblem_2= document.querySelector('.updateProblem-2');
+const updateProblem_3= document.querySelector('.updateProblem-3');
+const updateProblem_4= document.querySelector('.updateProblem-4');
 const typework4_1 = document.querySelector('.typework4-1');
 const typework4_2 = document.querySelector('.typework4-2');
 const typework4_3 = document.querySelector('.typework4-3');
@@ -71,24 +89,12 @@ const typework4_4 = document.querySelector('.typework4-4');
 const typework4_5 = document.querySelector('.typework4-5');
 const typework4_6 = document.querySelector('.typework4-6');
 const typework4_7 = document.querySelector('.typework4-7');
-
 const step2form2 = document.querySelector('#form-2 .item2');
 const step3form2 = document.querySelector('#form-2 .item3');
 const step4form2 = document.querySelector('#form-2 .item4');
 const step5form2 = document.querySelector('#form-2 .item5');
 
 const offset = 50;
-
-// let itemsFi = document.querySelectorAll("fieldset.item");
-// for(let i=0; i<itemsFi.length; i++){itemsFi[i].onclick = function(){
-//   if(this.classList.contains('active')){
-//     console.log('0');
-//     let children = document.querySelector('.text-sidebar');
-//     let clonedNode = children.cloneNode(true);
-//     document.querySelector("#aside").appendChild(clonedNode);
-//   }
-// }};
-
 
 step1form1.onclick = function() {
   step2form1.classList.add('active');
@@ -352,8 +358,129 @@ const handleChange = ({ target: { value, name } }) => {
       equipmentAreaProblem_3.classList.add('active');
       setTimeout(() => window.scroll({ top: (equipmentAreaProblem_3.offsetTop - offset), left: 0, behavior: 'smooth' }), 105);
       break;
-
-    
+    case 'SetGalya programSetProblem-1':
+    case 'SetKit programSetProblem-1':
+    case 'SetMark programSetProblem-1':
+    case 'SetSCO programSetProblem-1':
+    case 'SetTouch programSetProblem-1':
+    case 'SetKiosk programSetProblem-1':
+    case 'SetAgent programSetProblem-1':
+      programSetProblem_2.classList.add('active');
+      let hideProgramSetProblem2 = document.querySelectorAll('.typework3[name="programSetProblemItems2"]');
+      for(let i = 0; i < hideProgramSetProblem2.length; i++) {
+        hideProgramSetProblem2[i].classList.remove('active');
+      }
+      setTimeout(() => window.scroll({ top: (programSetProblem_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 115);
+      break;
+    case 'SetRetail programSetProblem-1':
+      programSetProblem_9.classList.add('active');
+      let hideProgramSetProblem1 = document.querySelectorAll('.typework3[name="programSetProblemItems1"]');
+      for(let i = 0; i < hideProgramSetProblem1.length; i++) {
+        hideProgramSetProblem1[i].classList.remove('active');
+      }
+      setTimeout(() => window.scroll({ top: (programSetProblem_9.offsetTop - offset), left: 0, behavior: 'smooth' }), 115);
+      break;
+    case 'Другое programSetProblem-10':
+      anotherSetProblem_1.classList.add('active');
+      let hideSetProblem1 = document.querySelectorAll('.typework3[name="loyaltyProblem"], .typework3[name="updateProblem"]');
+      for(let i = 1; i < hideSetProblem1.length; i++) {
+        hideSetProblem1[i].classList.remove('active');
+      }
+      setTimeout(() => window.scroll({ top: (anotherSetProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 120);
+      break;
+    case 'Проблемаслояльностью programSetProblem-10':
+      loyaltyProblem_1.classList.add('active');
+      let hideSetProblem2 = document.querySelectorAll('.typework3[name="anotherSetProblem"], .typework3[name="updateProblem"]');
+      for(let i = 1; i < hideSetProblem2.length; i++) {
+        hideSetProblem2[i].classList.remove('active');
+      }
+      setTimeout(() => window.scroll({ top: (loyaltyProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 120);
+      break;
+    case 'Проблемаприобновлении programSetProblem-10':
+      updateProblem_1.classList.add('active');
+      let hideSetProblem3 = document.querySelectorAll('.typework3[name="loyaltyProblem"], .typework3[name="anotherSetProblem"]');
+      for(let i = 1; i < hideSetProblem3.length; i++) {
+        hideSetProblem3[i].classList.remove('active');
+      }
+      setTimeout(() => window.scroll({ top: (updateProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 120);
+      break;
+    case 'Подарочнаякарта loyaltyProblem-1':
+      loyaltyProblem_2.classList.add('active');
+      setTimeout(() => window.scroll({ top: (loyaltyProblem_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Дисконтная/бонуснаякарта loyaltyProblem-1':
+    case 'Купоны loyaltyProblem-1':
+      loyaltyProblem_8.classList.add('active');
+      setTimeout(() => window.scroll({ top: (loyaltyProblem_8.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Рекламнаяакция loyaltyProblem-1':
+      loyaltyProblem_12.classList.add('active');
+      setTimeout(() => window.scroll({ top: (loyaltyProblem_12.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Нет loyaltyProblem-2':
+      loyaltyProblem_3.classList.add('active');
+      setTimeout(() => window.scroll({ top: (loyaltyProblem_3.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Да loyaltyProblem-2':
+      loyaltyProblem_4.classList.add('active');
+      setTimeout(() => window.scroll({ top: (loyaltyProblem_4.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Нет loyaltyProblem-4':
+      loyaltyProblem_7.classList.add('active');
+      setTimeout(() => window.scroll({ top: (loyaltyProblem_7.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Да loyaltyProblem-4':
+      loyaltyProblem_5.classList.add('active');
+      setTimeout(() => window.scroll({ top: (loyaltyProblem_5.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Нет loyaltyProblem-8':
+      loyaltyProblem_11.classList.add('active');
+      setTimeout(() => window.scroll({ top: (loyaltyProblem_11.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Да loyaltyProblem-8':
+      loyaltyProblem_9.classList.add('active');
+      setTimeout(() => window.scroll({ top: (loyaltyProblem_9.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Нет loyaltyProblem-12':
+      loyaltyProblem_13.classList.add('active');
+      setTimeout(() => window.scroll({ top: (loyaltyProblem_13.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Да loyaltyProblem-12':
+      loyaltyProblem_16.classList.add('active');
+      setTimeout(() => window.scroll({ top: (loyaltyProblem_16.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Нет loyaltyProblem-16':
+      loyaltyProblem_18.classList.add('active');
+      setTimeout(() => window.scroll({ top: (loyaltyProblem_18.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Да loyaltyProblem-16':
+      loyaltyProblem_17.classList.add('active');
+      setTimeout(() => window.scroll({ top: (loyaltyProblem_17.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Нет loyaltyProblem-18':
+      loyaltyProblemThanks.classList.add('active');
+      setTimeout(() => window.scroll({ top: (loyaltyProblemThanks.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Да loyaltyProblem-18':
+      loyaltyProblem_19.classList.add('active');
+      setTimeout(() => window.scroll({ top: (loyaltyProblem_19.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Нет updateProblem-1':
+      updateProblem_2.classList.add('active');
+      setTimeout(() => window.scroll({ top: (updateProblem_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Да updateProblem-1':
+      updateProblem_3.classList.add('active');
+      setTimeout(() => window.scroll({ top: (updateProblem_3.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Нет updateProblem-3':
+      updateProblem_4.classList.add('active');
+      setTimeout(() => window.scroll({ top: (updateProblem_4.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'Да updateProblem-3':
+      updateProblem_4.classList.add('active');
+      setTimeout(() => window.scroll({ top: (updateProblem_4.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
     case 'typework4-2-yes tw4-2':
       typework4_4.classList.remove('active');
       typework4_3.classList.add('active');
@@ -413,6 +540,10 @@ cashHardwareProblem_9.onclick = function() {
   cashHardwareProblem_1.classList.add('active');
   setTimeout(() => window.scroll({ top: (cashHardwareProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
 };
+programSetProblem_8.onclick = function() {
+  programSetProblem_9.classList.add('active');
+  setTimeout(() => window.scroll({ top: (programSetProblem_9.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+};
 
 
 /* FORM REGISTRATION Step START */
@@ -422,52 +553,82 @@ setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offse
 /* FORM REGISTRATION Step END */
 
 /* FORM typework1 Steps START */
-let fieldsetTypework1 = document.querySelectorAll("fieldset[name='typework1']");
+let fieldsetTypework1 = document.querySelectorAll(".item[name='typework1']");
 for(let i=0; i<fieldsetTypework1.length; i++){fieldsetTypework1[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM typework1 Steps END */
 
 /* FORM typework2 Steps START */
-let fieldsetTypework2 = document.querySelectorAll("fieldset[name='typework2']");
+let fieldsetTypework2 = document.querySelectorAll(".item[name='typework2']");
 for(let i=0; i<fieldsetTypework2.length; i++){fieldsetTypework2[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM typework2 Steps END */
 
 /* FORM fiscalRegistrar Steps START */
-let fieldsetFiscalRegistrarOther = document.querySelectorAll("fieldset[name='fiscalRegistrarOther']");
+let fieldsetFiscalRegistrarOther = document.querySelectorAll(".item[name='fiscalRegistrarOther']");
 for(let i=0; i<fieldsetFiscalRegistrarOther.length; i++){fieldsetFiscalRegistrarOther[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM fiscalRegistrar Steps END */
 
 /* FORM fiscalRegistrarModel Steps START */
-let fieldsetFiscalRegistrarModel = document.querySelectorAll("fieldset[name='fiscalRegistrarModel']");
+let fieldsetFiscalRegistrarModel = document.querySelectorAll(".item[name='fiscalRegistrarModel']");
 for(let i=0; i<fieldsetFiscalRegistrarModel.length; i++){fieldsetFiscalRegistrarModel[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM fiscalRegistrar Steps END */
 
 /* FORM cashHardwareProblem Steps START */
-let cashHardwareProblem = document.querySelectorAll("fieldset[name='cashHardwareProblem']");
+let cashHardwareProblem = document.querySelectorAll(".item[name='cashHardwareProblem']");
 for(let i=0; i<cashHardwareProblem.length; i++){cashHardwareProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM cashHardwareProblem Steps END */
 
 /* FORM equipmentAreaProblem Steps START */
-let equipmentAreaProblem = document.querySelectorAll("fieldset[name='equipmentAreaProblem']");
+let equipmentAreaProblem = document.querySelectorAll(".item[name='equipmentAreaProblem']");
 for(let i=0; i<equipmentAreaProblem.length; i++){equipmentAreaProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM equipmentAreaProblem Steps END */
 
 /* FORM prismVideoProblem Steps START */
-let prismVideoProblem = document.querySelectorAll("fieldset[name='prismVideoProblem']");
+let prismVideoProblem = document.querySelectorAll(".item[name='prismVideoProblem']");
 for(let i=0; i<prismVideoProblem.length; i++){prismVideoProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM prismVideoProblem Steps END */
 
-/* FORM prismVideoProblem Steps START */
-let programSetProblem = document.querySelectorAll("fieldset[name='programSetProblem']");
+/* FORM programSetProblem Steps START */
+let programSetProblem = document.querySelectorAll(".item[name='programSetProblem']");
 for(let i=0; i<programSetProblem.length; i++){programSetProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
-/* FORM prismVideoProblem Steps END */
+/* FORM programSetProblem Steps END */
+
+/* FORM programSetProblemItems1 Steps START */
+let programSetProblemItems1 = document.querySelectorAll(".item[name='programSetProblemItems1']");
+for(let i=0; i<programSetProblemItems1.length; i++){programSetProblemItems1[i].onclick = function(){this.nextElementSibling.classList.add('active');
+setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
+/* FORM programSetProblemItems1 Steps END */
+
+/* FORM programSetProblemItems2 Steps START */
+let programSetProblemItems2 = document.querySelectorAll(".item[name='programSetProblemItems2']");
+for(let i=0; i<programSetProblemItems2.length; i++){programSetProblemItems2[i].onclick = function(){this.nextElementSibling.classList.add('active');
+setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
+/* FORM programSetProblemItems2 Steps END */
+
+/* FORM anotherSetProblem Steps START */
+let anotherSetProblem = document.querySelectorAll(".item[name='anotherSetProblem']");
+for(let i=0; i<anotherSetProblem.length; i++){anotherSetProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
+setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
+/* FORM anotherSetProblem Steps END */
+
+/* FORM loyaltyProblem Steps START */
+let loyaltyProblem = document.querySelectorAll(".item[name='loyaltyProblem']");
+for(let i=0; i<loyaltyProblem.length; i++){loyaltyProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
+setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
+/* FORM loyaltyProblem Steps END */
+
+/* FORM updateProblem Steps START */
+let updateProblem = document.querySelectorAll(".item[name='updateProblem']");
+for(let i=0; i<updateProblem.length; i++){updateProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
+setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
+/* FORM loyaltyProblem Steps END */
 
 /* SELECT OPTION Style START */
 const CLASS_NAME_SELECT = 'select';
@@ -610,6 +771,8 @@ document.addEventListener('click', (e) => {
 const select1 = new CustomSelect('#select-1');
 const select2 = new CustomSelect('#select-2');
 const select3 = new CustomSelect('#select-3');
+const select4 = new CustomSelect('#select-4');
+// const select5 = new CustomSelect('#select-5');
 /* SELECT Style END */
 
 /* CUSTOM FILE UPLOADER START */

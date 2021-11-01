@@ -532,7 +532,6 @@
           <div id="gallery"></div>
           <button class="btn">Отправить заявку</button>
         </fieldset>
-        
         <fieldset name="equipmentAreaProblem" class="item column typework3 equipmentAreaProblem-1">
           <legend>Выберете оборудование</legend>
           <label>
@@ -657,27 +656,359 @@
             <div>Set Retail</div>
           </label>
         </fieldset>
-        <fieldset name="programSetProblem" class="item column typework3 programSetProblem-2">
+        <fieldset name="programSetProblemItems1" class="item column typework3 programSetProblem-2">
           <legend>Укажите версию ПО</legend>
           <input type="text" name="programSetProblem-2" placeholder="">
         </fieldset>
-        <fieldset name="programSetProblem" class="item column typework3 programSetProblem-3">
+        <fieldset name="programSetProblemItems1" class="item column typework3 programSetProblem-3">
           <legend>Укажите проблему</legend>
           <input type="text" name="programSetProblem-3" placeholder="">
         </fieldset>
-        <fieldset name="programSetProblem" class="item typework3 programSetProblem-4">
+        <fieldset name="programSetProblemItems1" class="item typework3 programSetProblem-4">
           <legend>Опишите как должно работать</legend>
           <textarea name="programSetProblem-4"></textarea>
         </fieldset>
-        <fieldset name="programSetProblem" class="item typework3 programSetProblem-5">
+        <fieldset name="programSetProblemItems1" class="item typework3 programSetProblem-5">
           <legend>Опишите как воспроизводится проблема</legend>
           <textarea name="programSetProblem-4"></textarea>
         </fieldset>
-        <fieldset name="programSetProblem" class="item typework3 programSetProblem-5">
+        <fieldset name="programSetProblemItems1" class="item typework3 programSetProblem-5">
           <legend>В результате каких действий возникла проблема (Что изменили, когда и где)</legend>
           <textarea name="programSetProblem-5"></textarea>
         </fieldset>
-
+        <fieldset name="programSetProblemItems1" class="item typework3 programSetProblem-6">
+          <legend>Укажите версию и/или тип ОС</legend>
+          <input type="text" name="programSetProblem-6" placeholder="">
+        </fieldset>
+        <fieldset name="programSetProblemItems1" class="item typework3 programSetProblem-7">
+          <legend>Укажите частоту возникновения проблемы</legend>
+          <input type="text" name="programSetProblem-6" placeholder="">
+        </fieldset>
+        <fieldset name="programSetProblemItems1" class="item column upload typeWork3 programSetProblem-8">
+          <legend>Соберите логи </legend>
+          <p>Укажите ссылку на логи</p>
+          <p>Добавьте логи вложением. Если размер логов превышает 4 МБ - укажите ссылку на файлообменник (Яндекс.Диск, ГуглДрайв и т.д.)</p>
+          <input type="text" name="programSetProblem-8" value="">
+          <div id="drop-area">
+            <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
+            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+          </div>
+          <progress id="progress-bar" max=100 value=0></progress>
+          <div id="gallery"></div>
+          <button class="btn">Отправить заявку</button>
+        </fieldset>
+        <div name="programSetProblemItems2" class="fieldset item column typework3 programSetProblem-9">
+          <legend>Укажите версию ПО</legend>
+          <div class="select" id="select-4">
+            <button type="button" class="select-toggle" name="programSetProblem-9" value="" data-select="toggle" data-index="1">Выберите из списка</button>
+            <div class="select-dropdown">
+              <ul class="select-options">
+                <li class="select-option" data-select="option" data-value="programSetProblem-9-1" data-index="1">Set Retail ver 2.1</li>
+                <li class="select-option" data-select="option" data-value="programSetProblem-9-2" data-index="2">Set Retail ver 2.0</li>
+                <li class="select-option" data-select="option" data-value="programSetProblem-9-3" data-index="3">Set Retail ver 1.5</li>
+                <li class="select-option" data-select="option" data-value="programSetProblem-9-4" data-index="4">Set Retail ver 1.2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <fieldset name="" class="item column typework3 programSetProblem-10">
+          <legend>В чем заключается проблема?</legend>
+          <label>
+            <input type="radio" name="programSetProblem-10" value="Проблемаслояльностью">
+            <div>Проблема с лояльностью</div>
+          </label>
+          <label>
+            <input type="radio" name="programSetProblem-10" value="Проблемаприобновлении">
+            <div>Проблема при обновлении</div>
+          </label>
+          <label>
+            <input type="radio" name="programSetProblem-10" value="Другое">
+            <div>Другое</div>
+          </label>
+        </fieldset>
+        <fieldset name="anotherSetProblem" class="item column typework3 anotherSetProblem-1">
+          <legend>Укажите проблему</legend>
+          <input type="text" name="programSetProblem-3" placeholder="">
+        </fieldset>
+        <fieldset name="anotherSetProblem" class="item typework3 anotherSetProblem-2">
+          <legend>Опишите как должно работать</legend>
+          <textarea name="programSetProblem-4"></textarea>
+        </fieldset>
+        <fieldset name="anotherSetProblem" class="item typework3 anotherSetProblem-3">
+          <legend>Опишите как воспроизводится проблема</legend>
+          <textarea name="programSetProblem-4"></textarea>
+        </fieldset>
+        <fieldset name="anotherSetProblem" class="item typework3 anotherSetProblem-4">
+          <legend>В результате каких действий возникла проблема (Что изменили, когда и где)</legend>
+          <textarea name="programSetProblem-5"></textarea>
+        </fieldset>
+        <fieldset name="anotherSetProblem" class="item typework3 anotherSetProblem-5">
+          <legend>Укажите версию и/или тип ОС</legend>
+          <input type="text" name="programSetProblem-6" placeholder="">
+        </fieldset>
+        <fieldset name="anotherSetProblem" class="item typework3 anotherSetProblem-6">
+          <legend>Укажите частоту возникновения проблемы</legend>
+          <input type="text" name="programSetProblem-6" placeholder="">
+        </fieldset>
+        <fieldset name="anotherSetProblem" class="item column upload typeWork3 anotherSetProblem-7">
+          <legend>Соберите логи согласно инструкции </legend>
+          <p>Укажите ссылку на логи</p>
+          <p>Логи сервера (расширенные) (SERVER-FILE)</p>
+          <p>Логи кассы (расширенные) (barcodeScanner, barcodeProcessing, visualization, bank,  keyboard, techProcess, fiscalPrinter,  loyal, touch2, touch2-events (в случае touch-кассы) до уровня TRACE.) Собирать логи ОБЯЗАТЕЛЬНО с помощью SetConsole.</p>
+          <p>Добавьте логи вложением. Если размер логов превышает 4 МБ - укажите ссылку на файлообменник (Яндекс.Диск, ГуглДрайв и т.д.)</p>
+          <input type="text" name="programSetProblem-8" value="">
+          <div id="drop-area">
+            <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
+            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+          </div>
+          <progress id="progress-bar" max=100 value=0></progress>
+          <div id="gallery"></div>
+          <button class="btn">Отправить заявку</button>
+        </fieldset>
+        <fieldset name="" class="item column typework3 loyaltyProblem-1">
+          <legend>В чем заключается проблема?</legend>
+          <label>
+            <input type="radio" name="loyaltyProblem-1" value="Подарочнаякарта">
+            <div>Подарочная карта</div>
+          </label>
+          <label>
+            <input type="radio" name="loyaltyProblem-1" value="Дисконтная/бонуснаякарта">
+            <div>Дисконтная / бонусная карта</div>
+          </label>
+          <label>
+            <input type="radio" name="loyaltyProblem-1" value="Купоны">
+            <div>Купоны</div>
+          </label>
+          <label>
+            <input type="radio" name="loyaltyProblem-1" value="Рекламнаяакция">
+            <div>Рекламная акция</div>
+          </label>
+        </fieldset>
+        <fieldset name="" class="item column typework3 loyaltyProblem-2">
+          <legend>Вы загрузили товар "Подарочная карта"?</legend>
+          <label>
+            <input type="radio" name="loyaltyProblem-2" value="Да">
+            <div>Да</div>
+          </label>
+          <label>
+            <input type="radio" name="loyaltyProblem-2" value="Нет">
+            <div>Нет</div>
+          </label>
+        </fieldset>
+        <fieldset name="" class="item typework3 loyaltyProblem-3">
+          <legend>Загрузите товар "Подарочная карта" <a target="_blank" href="https://crystals.atlassian.net/wiki/spaces/SR10SUPPORT/pages/442171711/SetRetail10">согласно инструкции</a></legend>
+        </fieldset>
+        <fieldset name="" class="item column typework3 loyaltyProblem-4">
+          <legend>Работало ли раньше?</legend>
+          <label>
+            <input type="radio" name="loyaltyProblem-4" value="Да">
+            <div>Да</div>
+          </label>
+          <label>
+            <input type="radio" name="loyaltyProblem-4" value="Нет">
+            <div>Нет</div>
+          </label>
+        </fieldset>
+        <fieldset name="loyaltyProblem" class="item typework3 loyaltyProblem-5">
+          <legend>Опишите как воспроизводится проблема</legend>
+          <textarea name="loyaltyProblem-5"></textarea>
+        </fieldset>
+        <fieldset name="loyaltyProblem" class="item typework3 loyaltyProblem-6">
+          <legend>В результате каких действий возникла проблема (Что изменили, когда и где)</legend>
+          <textarea name="loyaltyProblem-6"></textarea>
+        </fieldset>
+        <fieldset name="loyaltyProblem" class="item typework3 loyaltyProblem-7">
+          <legend>Опишите как должно работать</legend>
+          <textarea name="loyaltyProblem-7"></textarea>
+        </fieldset>
+        <fieldset class="item column upload typeWork3 programSetProblemsFinal-1">
+          <p>Приложите скриншоты параметров созданной Подарочной карты</p>
+          <p>Приложите  XML-файл загруженного товара "подарочная карта"</p>
+          <p>Соберите логи согласно инструкции </p>
+          <p>Укажите ссылку на логи</p>
+          <p>Логи сервера (расширенные) (SERVER-FILE, SET-CARDS-FILE, SET-DISCOUNTS-FILE)</p>
+          <p>Логи кассы (расширенные) (barcodeScanner, barcodeProcessing, visualization, bank,  keyboard, techProcess, loyal, touch2, touch2-events (в случае touch-кассы) до уровня TRACE.)Собирать логи ОБЯЗАТЕЛЬНО с помощью SetConsole.</p>
+          <p>Добавьте логи вложением. Если размер логов превышает 4 МБ - укажите ссылку на файлообменник (Яндекс.Диск, ГуглДрайв и т.д.)</p>
+          <input type="text" name="programSetProblemsFinal" value="">
+          <div id="drop-area">
+            <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
+            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+          </div>
+          <progress id="progress-bar" max=100 value=0></progress>
+          <div id="gallery"></div>
+          <button class="btn">Отправить заявку</button>
+        </fieldset>
+        <fieldset name="" class="item column typework3 loyaltyProblem-8">
+          <legend>Работало ли раньше?</legend>
+          <label>
+            <input type="radio" name="loyaltyProblem-8" value="Да">
+            <div>Да</div>
+          </label>
+          <label>
+            <input type="radio" name="loyaltyProblem-8" value="Нет">
+            <div>Нет</div>
+          </label>
+        </fieldset>
+        <fieldset name="loyaltyProblem" class="item typework3 loyaltyProblem-9">
+          <legend>Опишите сценарий который есть на данный момент</legend>
+          <textarea name="loyaltyProblem-9"></textarea>
+        </fieldset>
+        <fieldset name="loyaltyProblem" class="item typework3 loyaltyProblem-10">
+          <legend>В результате каких действий возникла проблема (Что изменили, когда и где)</legend>
+          <textarea name="loyaltyProblem-10"></textarea>
+        </fieldset>
+        <fieldset name="loyaltyProblem" class="item typework3 loyaltyProblem-11">
+          <legend>Опишите как должно работать</legend>
+          <textarea name="loyaltyProblem-11"></textarea>
+        </fieldset>
+        <fieldset class="item column upload typeWork3 programSetProblemsFinal-2">
+          <legend>Приложите скриншоты параметров дисконтных карт </legend>
+          <p>Соберите логи согласно инструкции </p>
+          <p>Укажите ссылку на логи</p>
+          <p>Логи сервера (расширенные) (SERVER-FILE, SET-CARDS-FILE, SET-DISCOUNTS-FILE)</p>
+          <p>Логи кассы (расширенные) (barcodeScanner, barcodeProcessing, visualization, bank,  keyboard, techProcess, loyal, touch2, touch2-events (в случае touch-кассы) до уровня TRACE.)Собирать логи ОБЯЗАТЕЛЬНО с помощью SetConsole.</p>
+          <p>Добавьте логи вложением. Если размер логов превышает 4 МБ - укажите ссылку на файлообменник (Яндекс.Диск, ГуглДрайв и т.д.)</p>
+          <input type="text" name="programSetProblemsFinal" value="">
+          <div id="drop-area">
+            <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
+            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+          </div>
+          <progress id="progress-bar" max=100 value=0></progress>
+          <div id="gallery"></div>
+          <button class="btn">Отправить заявку</button>
+        </fieldset>
+        <fieldset name="" class="item column typework3 loyaltyProblem-12">
+          <legend>Новая рекламная акция?</legend>
+          <label>
+            <input type="radio" name="loyaltyProblem-12" value="Да">
+            <div>Да</div>
+          </label>
+          <label>
+            <input type="radio" name="loyaltyProblem-12" value="Нет">
+            <div>Нет</div>
+          </label>
+        </fieldset>
+        <fieldset name="loyaltyProblem" class="item typework3 loyaltyProblem-13">
+          <legend>Опишите сценарий который есть на данный момент</legend>
+          <textarea name="loyaltyProblem-13"></textarea>
+        </fieldset>
+        <fieldset name="loyaltyProblem" class="item typework3 loyaltyProblem-14">
+          <legend>В результате каких действий возникла проблема (Что изменили, когда и где)</legend>
+          <textarea name="loyaltyProblem-14"></textarea>
+        </fieldset>
+        <fieldset name="loyaltyProblem" class="item typework3 loyaltyProblem-15">
+          <legend>Опишите как должно работать</legend>
+          <textarea name="loyaltyProblem-15"></textarea>
+        </fieldset>
+        <fieldset class="item column upload typeWork3 programSetProblemsFinal-3">
+          <legend>Приложите скриншоты настройки РА </legend>
+          <p>Соберите логи согласно инструкции </p>
+          <p>Укажите ссылку на логи</p>
+          <p>Логи сервера (расширенные) (SERVER-FILE, SET-CARDS-FILE, SET-DISCOUNTS-FILE)</p>
+          <p>Логи кассы (расширенные) (barcodeScanner, barcodeProcessing, visualization, bank,  keyboard, techProcess, loyal, touch2, touch2-events (в случае touch-кассы) до уровня TRACE.)Собирать логи ОБЯЗАТЕЛЬНО с помощью SetConsole.</p>
+          <p>Добавьте логи вложением. Если размер логов превышает 4 МБ - укажите ссылку на файлообменник (Яндекс.Диск, ГуглДрайв и т.д.)</p>
+          <input type="text" name="programSetProblemsFinal" value="">
+          <div id="drop-area">
+            <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
+            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+          </div>
+          <progress id="progress-bar" max=100 value=0></progress>
+          <div id="gallery"></div>
+          <button class="btn">Отправить заявку</button>
+        </fieldset>
+        <fieldset name="" class="item column typework3 loyaltyProblem-16">
+          <legend>Подобная акция есть на сайте?</legend>
+          <label>
+            <input type="radio" name="loyaltyProblem-16" value="Да">
+            <div>Да</div>
+          </label>
+          <label>
+            <input type="radio" name="loyaltyProblem-16" value="Нет">
+            <div>Нет</div>
+          </label>
+        </fieldset>
+        <fieldset name="loyaltyProblem" class="item typework3 loyaltyProblem-17">
+          <legend>Просьба воспользоваться <a href="https://crystals.atlassian.net/wiki/spaces/SR10SUPPORT/pages/442106165/SetRetail10">примером акции</a></legend>
+        </fieldset>
+        <fieldset class="item column typeWork3 loyaltyProblem-18">
+          <legend>Акция может быть создана по ТЗ в рамках платных работ.</legend>
+          <p>Согласны на выполнение работ на платной основе?</p>
+          <label>
+            <input type="radio" name="loyaltyProblem-18" value="Да">
+            <div>Да</div>
+          </label>
+          <label>
+            <input type="radio" name="loyaltyProblem-18" value="Нет">
+            <div>Нет</div>
+          </label>
+        </fieldset>
+        <fieldset class="item column typeWork3 loyaltyProblem-thanks">
+          <legend>Спасибо за Ваше обращение в CSI</legend>
+        </fieldset>
+        <fieldset name="loyaltyProblem" class="item typework3 loyaltyProblem-19">
+          <legend>Опишите как должно работать</legend>
+          <textarea name="loyaltyProblem-19"></textarea>
+        </fieldset>
+        <fieldset class="item column upload typeWork3 programSetProblemsFinal-4">
+          <legend>Приложите ТЗ на заведение акции</legend>
+          <div id="drop-area">
+            <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
+            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+          </div>
+          <progress id="progress-bar" max=100 value=0></progress>
+          <div id="gallery"></div>
+          <button class="btn">Отправить заявку</button>
+        </fieldset>
+        <fieldset class="item column typeWork3 updateProblem-1">
+          <legend>Патчи скачивали повторно с сайта?</legend>
+          <label>
+            <input type="radio" name="updateProblem-1" value="Да">
+            <div>Да</div>
+          </label>
+          <label>
+            <input type="radio" name="updateProblem-1" value="Нет">
+            <div>Нет</div>
+          </label>
+        </fieldset>
+        <fieldset class="item typework3 updateProblem-2">
+          <legend>Просьба <a target="_blank" href="https://crystals.atlassian.net/wiki/spaces/SR10SUPPORT/pages/1501529094">скачать патчи</a> повторно и повторить попытку обновления</legend>
+        </fieldset>
+        <fieldset name="updateProblem" class="item column typeWork3 updateProblem-3">
+          <legend>Обновление сервера или кассы?</legend>
+          <label>
+            <input type="radio" name="updateProblem-3" value="Сервера">
+            <div>Сервера</div>
+          </label>
+          <label>
+            <input type="radio" name="updateProblem-3" value="Кассы">
+            <div>Кассы</div>
+          </label>
+        </fieldset>
+        <fieldset name="updateProblem" class="item column typework3 updateProblem-4">
+          <legend>Укажите текущую версию</legend>
+          <input type="text" name="updateProblem-4" placeholder="">
+        </fieldset>
+        <fieldset name="updateProblem" class="item typework3 updateProblem-5">
+          <legend>Укажите версию на которую производится обновление</legend>
+          <input type="text" name="updateProblem-5" placeholder="">
+        </fieldset>
+        <fieldset name="anotherSetProblem" class="item column upload typeWork3 updateProblem-6">
+          <legend>Соберите логи </legend>
+          <p>Логи сервера (расширенные) (SERVER-FILE)</p>
+          <p>Лог-файл обновления /var/lib/jboss/acm/logs или %SetRetail10%\acm\logs</p>
+          <p>Лог-файл PostgreSQL /var/lib/pgsql/11/data/log или PostgreSQL\11\data\log</p>
+          <p>Добавьте логи вложением. Если размер логов превышает 4 МБ - укажите ссылку на файлообменник (Яндекс.Диск, ГуглДрайв и т.д.)</p>
+          <p>Укажите ссылку на логи</p>
+          <input type="text" name="updateProblem-6" value="">
+          <div id="drop-area">
+            <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
+            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+          </div>
+          <progress id="progress-bar" max=100 value=0></progress>
+          <div id="gallery"></div>
+          <button class="btn">Отправить заявку</button>
+        </fieldset>
+        
 
         <fieldset class="item column typeWork4 typework4-1">
           <legend>Ознакомьтесь с инструкциями представленными на <a href="https://crystals.atlassian.net/wiki/spaces/SR10SUPPORT/overview">портале поддержки продуктов CSI</a></legend>
