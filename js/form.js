@@ -118,6 +118,7 @@ step4form1.onclick = function() {
 
 step5form1.onclick = function() {
   step6form1.classList.add('active');
+  navForms.classList.add('active');
   setTimeout(() => window.scroll({ top: (step6form1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
 };
 
@@ -323,9 +324,13 @@ const handleChange = ({ target: { value, name } }) => {
       problemSendOFD_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (problemSendOFD_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
-    case 'ФР+СтороннееПО fiscalRegistrarFormChecks-14':
+    case 'ФР+СтороннееПО problemFormChecks-1':
       problemFormChecks_2.classList.add('active');
       setTimeout(() => window.scroll({ top: (problemFormChecks_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    case 'ФР+SetRetail10 problemFormChecks-1':
+      problemFormChecks_7.classList.add('active');
+      setTimeout(() => window.scroll({ top: (problemFormChecks_7.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Другойдрайвер problemFormChecks-3':
       fiscalRegistrar_another_driver.classList.add('active');
@@ -855,3 +860,74 @@ function uploadFile(file, i) {
   xhr.send(formData)
 }
 /* CUSTOM FILE UPLOADER END */
+
+// let itemFieldset = document.querySelectorAll('.item');
+// itemFieldset.onclick = function() {
+
+// };
+
+// titleH.forEach(function() {
+
+const navForms = document.querySelector('.nav');
+let titleH = document.querySelectorAll('.block-title');
+let counter = 0;
+$.each(titleH, function(){
+  $(this).attr('id', 'title'+ ++counter);
+});
+
+let ToC =
+    "<ul>";
+
+let newLine, el, title, link;
+
+$(titleH).each(function() {
+
+  el = $(this);
+  title = el.text();
+  link = "#" + el.attr("id");
+
+  newLine =
+    "<li>" +
+      "<a href='" + link + "'>" +
+        title +
+      "</a>" +
+    "</li>";
+
+  ToC += newLine;
+
+});
+
+ToC +=
+   "</ul>";
+
+$(navForms).prepend(ToC);
+
+window.addEventListener('DOMContentLoaded', () => {
+	const observer = new IntersectionObserver(entries => {
+		entries.forEach(entry => {
+			const id = entry.target.getAttribute('id');
+			if (entry.intersectionRatio > 0) {
+				document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.add('active');
+			} else {
+				document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.remove('active');
+			}
+		});
+	});
+	// Track all sections that have an `id` applied
+	document.querySelectorAll('.block-title[id]').forEach((section) => {
+		observer.observe(section);
+	});
+});
+
+$(function () {
+  $('.nav a[href^="#"]').on('click', function (event) {
+    event.preventDefault();
+    var sc = $(this).attr("href"),
+      dn = $(sc).offset().top -130;
+    $('html, body').animate({
+      scrollTop: dn
+    }, 800);
+  });
+});
+
+// window.scroll({ top: (cashHardwareProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' })

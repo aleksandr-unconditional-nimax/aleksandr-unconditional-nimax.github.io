@@ -124,6 +124,7 @@ body.support-request-body {
     transform: translateX(100vw) translateY(10%);
     transition: transform 0.09s ease-in-out;
     position: absolute;
+    flex-wrap: wrap;
     &.active{
       position: relative;
       transform: translate(0);
@@ -385,8 +386,10 @@ body.support-request-body {
     padding-left: 50px;
     padding-top: clamp(30px, 4vw, 180px);
     height: 100vh;
+    background: var(--color5);
     position: sticky;
     top: 0;
+    z-index: 3;
     p{
       font-weight: 400;
       font-size: 14px;
@@ -591,6 +594,53 @@ body.support-request-body {
   .typework4-1{
     legend{
       margin: 0;
+    }
+  }
+  .block-title{
+    filter: opacity(0);
+    height: 0px;
+    overflow: hidden;
+    visibility: hidden;
+    margin: 0;
+    font-size: 0px;
+    position: absolute;
+  }
+  .nav{
+    display: none;
+    position: sticky;
+    bottom: 89%;
+    grid-column: 1/3;
+    z-index: 2;
+    &.active{
+      display: flex;
+    }
+    ul{
+      display: flex;
+    }
+    li{
+      font-size: clamp(16px, 4vw, 20px);
+      line-height: 1.1;
+      filter: opacity(0.3);
+      display: flex;
+      transition: filter 0.2s ease-in-out;
+      &:hover,
+      &.active{
+        filter: opacity(1);
+      }
+      &::after{
+        content: '';
+        width: 20px;
+        height: 1.5px;
+        background: var(--color2);
+        margin: auto;
+        display: block;
+      }
+    }
+    a{
+      white-space: nowrap;
+      border: 1.5px solid var(--color2);
+      border-radius: 14px;
+      padding: 3px 10px 4px 10px;
     }
   }
 }
