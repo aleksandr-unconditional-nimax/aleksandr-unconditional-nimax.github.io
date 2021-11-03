@@ -576,7 +576,7 @@ setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offse
 /* FORM fiscalRegistrar Steps END */
 
 /* FORM fiscalRegistrarModel Steps START */
-let fieldsetFiscalRegistrarModel = document.querySelectorAll(".item[name='fiscalRegistrarModel']");
+let fieldsetFiscalRegistrarModel = document.querySelectorAll(".item:not([class*='-final'])[name='fiscalRegistrarModel']");
 for(let i=0; i<fieldsetFiscalRegistrarModel.length; i++){fieldsetFiscalRegistrarModel[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM fiscalRegistrar Steps END */
@@ -875,10 +875,11 @@ window.addEventListener('scroll', () => {
   // currentScroll = window.pageYOffset;
   // if (currentScroll > prevScroll + 10) {
   let titleH = document.querySelectorAll('.active .block-title');
-  let counter = 0;
-  $.each(titleH, function(){
-    $(this).attr('id', 'title'+ ++counter);
-  });
+  for(var i = 0; i < titleH.length; i++){
+    (function(i){
+      this.setAttribute("id", 'title'+ ++i);
+    }).call(titleH[i], i);
+  }
   let ToC =
       "<ul>";
   let newLine, el, title, link;
@@ -897,8 +898,6 @@ window.addEventListener('scroll', () => {
   ToC +=
     "</ul>";
   $(navForms).html(ToC);
-  // }
-  
 
   const observer = new IntersectionObserver(entries => {
 		entries.forEach(entry => {
