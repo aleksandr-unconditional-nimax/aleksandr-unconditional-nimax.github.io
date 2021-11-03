@@ -149,6 +149,7 @@
           <button class="btn">Отправить заявку</button>
         </fieldset>
         <fieldset class="item column typeWork2 typework2-1">
+          <h4 class="block-title">Ремонт (гарантийный / не гарантийный)</h4>
           <legend>Ремонт (гарантийный/ не гарантийный)</legend>
           <label>
             <input type="radio" name="tw2-1" value="typework2-1-yes">
@@ -168,6 +169,7 @@
           <input type="text" name="typework2-3" placeholder="">
         </fieldset>
         <fieldset name="typework2" class="item column typeWork2 typework2-4">
+          <h4 class="block-title">Проверить гарантию</h4>
           <legend>Проверить гарантию </legend>
           <input type="text" name="typework2-4" placeholder="">
         </fieldset>
@@ -480,7 +482,7 @@
           <div id="gallery"></div>
           <button class="btn">Отправить заявку</button>
         </fieldset>
-        <fieldset name="cashHardwareProblem" class="item typeWork3 cashHardwareProblem-7">
+        <fieldset name="cashHardwareProblem-choice" class="item typeWork3 cashHardwareProblem-7">
           <label>
             <input type="radio" name="cashHardwareProblem-7" value="Ручной">
             <div>Ручной</div>
@@ -490,7 +492,7 @@
             <div>Сканер-весы прикассовые</div>
           </label>
         </fieldset>
-        <fieldset name="cashHardwareProblem" class="item typeWork3 cashHardwareProblem-8">
+        <fieldset name="cashHardwareProblem-choice" class="item typeWork3 cashHardwareProblem-8">
           <label>
             <input type="radio" name="cashHardwareProblem-8" value="Кассира">
             <div>Кассира</div>
@@ -500,7 +502,7 @@
             <div>Покупателя</div>
           </label>
         </fieldset>
-        <fieldset name="cashHardwareProblem" class="item typeWork3 cashHardwareProblem-9">
+        <fieldset name="cashHardwareProblem-choice" class="item typeWork3 cashHardwareProblem-9">
           <legend>Укажите оборудование</legend>
           <input type="text" name="cashHardwareProblem-9" value="">
         </fieldset>
@@ -689,11 +691,11 @@
           <legend>Укажите частоту возникновения проблемы</legend>
           <input type="text" name="programSetProblem-6" placeholder="">
         </fieldset>
-        <fieldset name="programSetProblemItems1" class="item column upload typeWork3 programSetProblem-8">
+        <fieldset name="programSetProblemItems1" class="item column upload typeWork3 programSetProblem-final">
           <legend>Соберите логи </legend>
           <p>Укажите ссылку на логи</p>
           <p>Добавьте логи вложением. Если размер логов превышает 4 МБ - укажите ссылку на файлообменник (Яндекс.Диск, ГуглДрайв и т.д.)</p>
-          <input type="text" name="programSetProblem-8" value="">
+          <input type="text" name="programSetProblem-final" value="">
           <div id="drop-area">
             <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
             <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
@@ -755,13 +757,13 @@
           <legend>Укажите частоту возникновения проблемы</legend>
           <input type="text" name="programSetProblem-6" placeholder="">
         </fieldset>
-        <fieldset name="anotherSetProblem" class="item column upload typeWork3 anotherSetProblem-7">
+        <fieldset name="anotherSetProblem" class="item column upload typeWork3 anotherSetProblem-final">
           <legend>Соберите логи согласно инструкции </legend>
           <p>Укажите ссылку на логи</p>
           <p>Логи сервера (расширенные) (SERVER-FILE)</p>
           <p>Логи кассы (расширенные) (barcodeScanner, barcodeProcessing, visualization, bank,  keyboard, techProcess, fiscalPrinter,  loyal, touch2, touch2-events (в случае touch-кассы) до уровня TRACE.) Собирать логи ОБЯЗАТЕЛЬНО с помощью SetConsole.</p>
           <p>Добавьте логи вложением. Если размер логов превышает 4 МБ - укажите ссылку на файлообменник (Яндекс.Диск, ГуглДрайв и т.д.)</p>
-          <input type="text" name="programSetProblem-8" value="">
+          <input type="text" name="anotherSetProblem-final" value="">
           <div id="drop-area">
             <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
             <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">

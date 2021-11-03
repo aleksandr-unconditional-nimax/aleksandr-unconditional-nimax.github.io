@@ -58,7 +58,6 @@ const equipmentAreaProblem_3= document.querySelector('.equipmentAreaProblem-3');
 const prismVideoProblem_1= document.querySelector('.prismVideoProblem-1');
 const programSetProblem_1= document.querySelector('.programSetProblem-1');
 const programSetProblem_2= document.querySelector('.programSetProblem-2');
-const programSetProblem_8= document.querySelector('.programSetProblem-8');
 const programSetProblem_9= document.querySelector('.programSetProblem-9');
 const anotherSetProblem_1= document.querySelector('.anotherSetProblem-1');
 const loyaltyProblem_1= document.querySelector('.loyaltyProblem-1');
@@ -338,6 +337,7 @@ const handleChange = ({ target: { value, name } }) => {
       break;
     case 'Да problemFormChecks-6':
       fiscalRegistrar_final.classList.add('active');
+      problemFormChecks_7.classList.remove('active');
       setTimeout(() => window.scroll({ top: (fiscalRegistrar_final.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Нет problemFormChecks-6':
@@ -545,10 +545,10 @@ cashHardwareProblem_9.onclick = function() {
   cashHardwareProblem_1.classList.add('active');
   setTimeout(() => window.scroll({ top: (cashHardwareProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
 };
-programSetProblem_8.onclick = function() {
-  programSetProblem_9.classList.add('active');
-  setTimeout(() => window.scroll({ top: (programSetProblem_9.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
-};
+// programSetProblem_8.onclick = function() {
+//   programSetProblem_9.classList.add('active');
+//   setTimeout(() => window.scroll({ top: (programSetProblem_9.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+// };
 
 
 /* FORM REGISTRATION Step START */
@@ -606,7 +606,7 @@ setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offse
 /* FORM programSetProblem Steps END */
 
 /* FORM programSetProblemItems1 Steps START */
-let programSetProblemItems1 = document.querySelectorAll(".item[name='programSetProblemItems1']");
+let programSetProblemItems1 = document.querySelectorAll(".item:not([class*='-final'])[name='programSetProblemItems1']");
 for(let i=0; i<programSetProblemItems1.length; i++){programSetProblemItems1[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM programSetProblemItems1 Steps END */
@@ -618,7 +618,7 @@ setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offse
 /* FORM programSetProblemItems2 Steps END */
 
 /* FORM anotherSetProblem Steps START */
-let anotherSetProblem = document.querySelectorAll(".item[name='anotherSetProblem']");
+let anotherSetProblem = document.querySelectorAll(".item:not([class*='-final'])[name='anotherSetProblem']");
 for(let i=0; i<anotherSetProblem.length; i++){anotherSetProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM anotherSetProblem Steps END */
@@ -777,7 +777,6 @@ const select1 = new CustomSelect('#select-1');
 const select2 = new CustomSelect('#select-2');
 const select3 = new CustomSelect('#select-3');
 const select4 = new CustomSelect('#select-4');
-// const select5 = new CustomSelect('#select-5');
 /* SELECT Style END */
 
 /* CUSTOM FILE UPLOADER START */
@@ -868,42 +867,40 @@ function uploadFile(file, i) {
 
 // titleH.forEach(function() {
 
+
+
 const navForms = document.querySelector('.nav');
-let titleH = document.querySelectorAll('.block-title');
-let counter = 0;
-$.each(titleH, function(){
-  $(this).attr('id', 'title'+ ++counter);
-});
 
-let ToC =
-    "<ul>";
+window.addEventListener('scroll', () => {
+  // currentScroll = window.pageYOffset;
+  // if (currentScroll > prevScroll + 10) {
+  let titleH = document.querySelectorAll('.active .block-title');
+  let counter = 0;
+  $.each(titleH, function(){
+    $(this).attr('id', 'title'+ ++counter);
+  });
+  let ToC =
+      "<ul>";
+  let newLine, el, title, link;
+  $(titleH).each(function() {
+    el = $(this);
+    title = el.text();
+    link = "#" + el.attr("id");
+    newLine =
+      "<li>" +
+        "<a href='" + link + "'>" +
+          title +
+        "</a>" +
+      "</li>";
+    ToC += newLine;
+  });
+  ToC +=
+    "</ul>";
+  $(navForms).html(ToC);
+  // }
+  
 
-let newLine, el, title, link;
-
-$(titleH).each(function() {
-
-  el = $(this);
-  title = el.text();
-  link = "#" + el.attr("id");
-
-  newLine =
-    "<li>" +
-      "<a href='" + link + "'>" +
-        title +
-      "</a>" +
-    "</li>";
-
-  ToC += newLine;
-
-});
-
-ToC +=
-   "</ul>";
-
-$(navForms).prepend(ToC);
-
-window.addEventListener('DOMContentLoaded', () => {
-	const observer = new IntersectionObserver(entries => {
+  const observer = new IntersectionObserver(entries => {
 		entries.forEach(entry => {
 			const id = entry.target.getAttribute('id');
 			if (entry.intersectionRatio > 0) {
@@ -913,35 +910,33 @@ window.addEventListener('DOMContentLoaded', () => {
 			}
 		});
 	});
-	// Track all sections that have an `id` applied
-	document.querySelectorAll('.block-title[id]').forEach((section) => {
+	document.querySelectorAll('.active .block-title[id]').forEach((section) => {
 		observer.observe(section);
 	});
+
+  $(function () {
+    $('.nav a[href^="#"]').on('click', function (event) {
+      event.preventDefault();
+      var sc = $(this).attr("href"),
+        dn = $(sc).offset().top -130;
+      $('html, body').animate({
+        scrollTop: dn
+      }, 800);
+    });
+  });
+
 });
 
-$(function () {
-  $('.nav a[href^="#"]').on('click', function (event) {
-    event.preventDefault();
-    var sc = $(this).attr("href"),
-      dn = $(sc).offset().top -130;
-    $('html, body').animate({
-      scrollTop: dn
-    }, 800);
-  });
-});
+
 
 // window.scroll({ top: (cashHardwareProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' })
 
 
-
-
-
-
+let prevScroll = window.pageYOffset;
+let currentScroll;
 
 document.addEventListener('DOMContentLoaded', () => {
   const onScrollNav = () => {
-    let prevScroll = window.pageYOffset
-    let currentScroll
     window.addEventListener('scroll', () => {
       currentScroll = window.pageYOffset
       const navHidden = () => navForms.classList.contains('active')
