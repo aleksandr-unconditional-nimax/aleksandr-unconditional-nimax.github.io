@@ -606,25 +606,34 @@ body.support-request-body {
     position: absolute;
   }
   .nav{
-    display: none;
+    display: grid;
     position: sticky;
-    bottom: 89%;
+    bottom: calc(100vh - 90px);
     grid-column: 1/3;
     z-index: 2;
+    pointer-events: none;
+    filter: opacity(0);
+    transition: filter 0.2s ease-in-out;
     &::before{
       content: '';
       background: linear-gradient(to bottom, rgba(244,248,249,1) 0%, rgba(244,248,249,1) 75%, rgba(244,248,249,0) 100%);
       position: absolute;
-      top: -72px;
+      top: -60px;
       left: 0;
       width: 100%;
-      height: 178px;
+      height: 160px;
     }
     &.active{
-      display: flex;
+      pointer-events: auto;
+      filter: opacity(1);
+    }
+    &.hidden{
+      display: none;
     }
     ul{
       display: flex;
+      width: 100%;
+      overflow: hidden;
     }
     li{
       font-size: clamp(16px, 4vw, 20px);

@@ -931,3 +931,28 @@ $(function () {
 });
 
 // window.scroll({ top: (cashHardwareProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' })
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const onScrollNav = () => {
+    let prevScroll = window.pageYOffset
+    let currentScroll
+    window.addEventListener('scroll', () => {
+      currentScroll = window.pageYOffset
+      const navHidden = () => navForms.classList.contains('active')
+      if (currentScroll > prevScroll && !navHidden()) {
+        navForms.classList.add('active')
+      }
+      if (currentScroll < 150 && navHidden()) {
+        navForms.classList.remove('active')
+      }
+      prevScroll = currentScroll
+    })
+  }
+  onScrollNav()
+});
