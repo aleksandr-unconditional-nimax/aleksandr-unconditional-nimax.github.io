@@ -545,11 +545,6 @@ cashHardwareProblem_9.onclick = function() {
   cashHardwareProblem_1.classList.add('active');
   setTimeout(() => window.scroll({ top: (cashHardwareProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
 };
-// programSetProblem_8.onclick = function() {
-//   programSetProblem_9.classList.add('active');
-//   setTimeout(() => window.scroll({ top: (programSetProblem_9.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
-// };
-
 
 /* FORM REGISTRATION Step START */
 let fieldsetForm3 = document.querySelectorAll("#form-3 .item:not(.upload)");
@@ -860,45 +855,24 @@ function uploadFile(file, i) {
 }
 /* CUSTOM FILE UPLOADER END */
 
-// let itemFieldset = document.querySelectorAll('.item');
-// itemFieldset.onclick = function() {
-
-// };
-
-// titleH.forEach(function() {
-
-
-
 const navForms = document.querySelector('.nav');
 
 window.addEventListener('scroll', () => {
-  // currentScroll = window.pageYOffset;
-  // if (currentScroll > prevScroll + 10) {
   let titleH = document.querySelectorAll('.active .block-title');
-  for(var i = 0; i < titleH.length; i++){
+  let ToC = "<ul>";
+  let newLine, el, title, link;
+  for(let i = 0; i < titleH.length; i++){
     (function(i){
       this.setAttribute("id", 'title'+ ++i);
+      el = this;
+      title = el.textContent;
+      link = "#" + el.getAttribute("id");
+      newLine = "<li>" + "<a href='" + link + "'>" + title + "</a>" + "</li>";
+      ToC += newLine;
     }).call(titleH[i], i);
   }
-  let ToC =
-      "<ul>";
-  let newLine, el, title, link;
-  $(titleH).each(function() {
-    el = $(this);
-    title = el.text();
-    link = "#" + el.attr("id");
-    newLine =
-      "<li>" +
-        "<a href='" + link + "'>" +
-          title +
-        "</a>" +
-      "</li>";
-    ToC += newLine;
-  });
-  ToC +=
-    "</ul>";
-  $(navForms).html(ToC);
-
+  ToC += "</ul>";
+  navForms.innerHTML = ToC;
   const observer = new IntersectionObserver(entries => {
 		entries.forEach(entry => {
 			const id = entry.target.getAttribute('id');
@@ -913,6 +887,8 @@ window.addEventListener('scroll', () => {
 		observer.observe(section);
 	});
 
+  let anchorSelector = document.querySelectorAll('.nav a[href^="#"]');
+
   $(function () {
     $('.nav a[href^="#"]').on('click', function (event) {
       event.preventDefault();
@@ -924,11 +900,77 @@ window.addEventListener('scroll', () => {
     });
   });
 
+  // for(let i=0; i<anchorSelector.length; i++){
+  //   anchorSelector[i].onclick = function(e){
+  //     e.preventDefault();
+  //     let destination = $(this.hash);
+  //     let scrollPosition = destination.offset().top -180;
+  //     let animationDuration = 800;
+  //     scrollTo(scrollPosition, 400, animationDuration);
+  //   }
+  // }
+
+  // for(let i=0; i<anchorSelector.length; i++){
+  //   anchorSelector[i].onclick = function(e){
+  //     e.preventDefault();
+  // 		const hash = this.getAttribute('href');
+  //     const V = 0.5;
+  //     // this(hash).getBoundingClientRect().top; 
+  //     // let destination = this.hash;
+  //     const w = window.pageYOffset;
+  //     let scrollPosition = document.querySelector(hash).getBoundingClientRect().top -180;
+  //     console.log(scrollPosition);
+  //     let animationDuration = 800;
+  //     let start = null;
+  //     requestAnimationFrame(step)
+  //     function step(time) {
+  //       if (start === null) start = time;
+  //       let progress = time - start;
+  //       let r = (scrollPosition < 0 ? Math.max(w - progress/V, w + scrollPosition) : Math.min(w + progress/V, w + scrollPosition));
+  //       scrollTo(r,animationDuration);
+  //       if (r != w + scrollPosition) {
+  //         requestAnimationFrame(step)
+  //       } else {
+  //         location.hash = hash
+  //       }
+  //     }
+  //     // scrollTo(scrollPosition, animationDuration);
+  //   }
+  // }
+
+
+  // const scrollTo = function(to, duration) {
+  //   const
+  //   element = document.scrollingElement || document.documentElement,
+  //   start = element.scrollTop,
+  //   change = to - start,
+  //   startDate = +new Date(),
+  //   easeInOutQuad = function(t, b, c, d) {
+  //       t /= d/2;
+  //       if (t < 1) return c/2*t*t + b;
+  //       t--;
+  //       return -c/2 * (t*(t-2) - 1) + b;
+  //   },
+  //   animateScroll = function() {
+  //       const currentDate = +new Date();
+  //       const currentTime = currentDate - startDate;
+  //       element.scrollTop = parseInt(easeInOutQuad(currentTime, start, change, duration));
+  //       if(currentTime < duration) {
+  //           requestAnimationFrame(animateScroll);
+  //       }
+  //       else {
+  //           element.scrollTop = to;
+  //       }
+  //   };
+  //   animateScroll();
+  // };
+  const scrollContainer = document.querySelector("nav ul");
+  scrollContainer.addEventListener("wheel", (evt) => {
+      evt.preventDefault();
+      scrollContainer.scrollLeft += evt.deltaY;
+  });
 });
 
-
-
-// window.scroll({ top: (cashHardwareProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' })
 
 
 let prevScroll = window.pageYOffset;
@@ -950,3 +992,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   onScrollNav()
 });
+
+
+
+
+
+
+

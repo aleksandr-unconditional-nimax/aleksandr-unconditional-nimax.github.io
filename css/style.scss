@@ -389,7 +389,7 @@ body.support-request-body {
     background: var(--color5);
     position: sticky;
     top: 0;
-    z-index: 3;
+    z-index: 4;
     p{
       font-weight: 400;
       font-size: 14px;
@@ -408,23 +408,6 @@ body.support-request-body {
     overflow: hidden;
     padding-top: clamp(26px, 4vw, 50px);
     padding-bottom: 80px;
-    // scroll-snap-type: y mandatory;
-    // height: 80vh;
-    // &::-webkit-scrollbar {
-    //   width: 20px;
-    // }
-    
-    // &::-webkit-scrollbar-track {
-    //   background-color: #e4e4e4;
-    //   border-radius: 100px;
-    // }
-    
-    // &::-webkit-scrollbar-thumb {
-    //   border-radius: 100px;
-    //   border: 5px solid transparent;
-    //   background-clip: content-box;
-    //   background-color: #8070d4;
-    // }
     label {
       display: inline-block;
       user-select: none;
@@ -607,12 +590,11 @@ body.support-request-body {
   }
   .nav{
     display: grid;
-    // position: sticky;
     position: fixed;
-    width: 100%;
+    width: 80%;
     bottom: calc(100vh - 90px);
     grid-column: 1/3;
-    z-index: 2;
+    z-index: 3;
     pointer-events: none;
     filter: opacity(0);
     justify-content: flex-start;
@@ -632,7 +614,7 @@ body.support-request-body {
       position: absolute;
       top: -60px;
       right: 0;
-      width: 38%;
+      width: 18%;
       height: 160px;
     }
     &.active{
@@ -644,10 +626,18 @@ body.support-request-body {
     }
     ul{
       display: flex;
-      // width: 100%;
       width: auto;
-      overflow: scroll;
-      justify-content: flex-end;
+      overflow-x: scroll;
+      position: relative;
+      width: 100%;
+      padding-right: 14vw;
+      // justify-content: flex-end;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
     }
     li{
       font-size: clamp(16px, 4vw, 20px);
