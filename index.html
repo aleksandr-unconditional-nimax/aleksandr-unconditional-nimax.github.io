@@ -420,7 +420,10 @@
           <textarea></textarea>
         </fieldset>
         <fieldset class="item column upload typeWork3 problemFormChecks-8">
-          <legend>Добавьте скриншоты ошибок</legend>
+          <legend>Добавьте скриншоты ошибок <br>Соберите логи драйвера</legend>
+          <p>Укажите ссылку на логи</p>
+          <input type="text" name="problemFormChecks-8" value="">
+          <p>Добавьте логи вложением. Если размер логов превышает 4 МБ - укажите ссылку на файлообменник (Яндекс.Диск, ГуглДрайв и т.д.)</p>
           <div id="drop-area">
             <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
             <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
@@ -453,8 +456,11 @@
           </label>
         </fieldset>
         <fieldset name="fiscalRegistrarModel" class="item column typeWork3 problemSendOFD-2">
+          <legend>Укажите версию ComProxy</legend>
+          <input type="text" name="problemSendOFD-2" placeholder="">
+        </fieldset>
+        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 problemSendOFD-2">
           <legend>Как узнать версию</legend>
-          <input type="text" name="roblemSendOFD-2" placeholder="">
           <div class="text-sidebar">
             <p>Ознакомьтесь с документацией и обновите аппарат до актуальной версии прошивки</p>
           </div>
@@ -480,7 +486,10 @@
           <textarea></textarea>
         </fieldset>
         <fieldset class="item column upload typeWork3 problemSendOFD-6">
-          <legend>Добавьте скриншоты ошибок</legend>
+          <legend>Добавьте скриншоты ошибок <br>Соберите логи ComProxy</legend>
+          <p>Укажите ссылку на логи</p>
+          <input type="text" name="problemSendOFD-6" placeholder="">
+          <p>Добавьте логи вложением. Если размер логов превышает 4 МБ - укажите ссылку на файлообменник (Яндекс.Диск, ГуглДрайв и т.д.)</p>
           <div id="drop-area">
             <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
             <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
