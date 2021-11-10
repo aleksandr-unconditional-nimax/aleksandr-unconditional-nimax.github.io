@@ -331,9 +331,23 @@ const handleChange = ({ target: { value, name } }) => {
       problemFormChecks_7.classList.add('active');
       setTimeout(() => window.scroll({ top: (problemFormChecks_7.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
+    
+    case 'OPOS problemFormChecks-3':
+    case 'БиблиотекаPiritLib problemFormChecks-3':
+    case 'Драйвер1СNativeAPI problemFormChecks-3':
+    case 'JPOS problemFormChecks-3':
+    case 'Драйвер1С83 problemFormChecks-3':
+      problemFormChecks_4.classList.add('active');
+      setTimeout(() => window.scroll({ top: (problemFormChecks_4.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      break;
+    
     case 'Другойдрайвер problemFormChecks-3':
       fiscalRegistrar_another_driver.classList.add('active');
-      setTimeout(() => window.scroll({ top: (fiscalRegistrar_another_driver.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      let fieldsetFiscalListDriversAll = document.querySelectorAll(".item[name='fiscalListDrivers']");
+      for(let i = 0; i < fieldsetFiscalListDriversAll.length; i++) {
+        fieldsetFiscalListDriversAll[i].classList.remove('active');
+      }
+      setTimeout(() => window.scroll({ top: (fiscalRegistrar_another_driver.offsetTop - offset), left: 0, behavior: 'smooth' }), 150);
       break;
     case 'Да problemFormChecks-6':
       fiscalRegistrar_final.classList.add('active');
@@ -571,10 +585,22 @@ setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offse
 /* FORM fiscalRegistrar Steps END */
 
 /* FORM fiscalRegistrarModel Steps START */
-let fieldsetFiscalRegistrarModel = document.querySelectorAll(".item:not([class*='-final'])[name='fiscalRegistrarModel']");
+let fieldsetFiscalRegistrarModel = document.querySelectorAll(".item:not([class*='-final']):not([class*='problemFormChecks-1'])[name='fiscalRegistrarModel']");
 for(let i=0; i<fieldsetFiscalRegistrarModel.length; i++){fieldsetFiscalRegistrarModel[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM fiscalRegistrar Steps END */
+
+/* FORM fiscalListDrivers Steps START */
+let fieldsetFiscalListDrivers = document.querySelectorAll(".item:not([class*='-final']):not([class*='problemFormChecks-6']):not([class*='problemFormChecks-8'])[name='fiscalListDrivers']");
+for(let i=0; i<fieldsetFiscalListDrivers.length; i++){fieldsetFiscalListDrivers[i].onclick = function(){this.nextElementSibling.classList.add('active');
+setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
+/* FORM fiscalListDrivers Steps END */
+
+/* FORM fiscalAnotherDriver Steps START */
+let fieldsetFiscalAnotherDriver = document.querySelectorAll(".item[name='fiscalAnotherDriver']");
+for(let i=0; i<fieldsetFiscalAnotherDriver.length; i++){fieldsetFiscalAnotherDriver[i].onclick = function(){this.nextElementSibling.classList.add('active');
+setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
+/* FORM fiscalAnotherDriver Steps END */
 
 /* FORM cashHardwareProblem Steps START */
 let cashHardwareProblem = document.querySelectorAll(".item[name='cashHardwareProblem']");

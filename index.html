@@ -387,7 +387,7 @@
             <div>Другой драйвер</div>
           </label>
         </fieldset>
-        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 problemFormChecks-4">
+        <fieldset name="fiscalListDrivers" class="item column typeWork3 problemFormChecks-4">
           <div class="select" id="select-3">
             <button type="button" class="select-toggle" name="car" value="ford" data-select="toggle" data-index="1">Укажите версию драйвера</button>
             <div class="select-dropdown">
@@ -400,11 +400,11 @@
             </div>
           </div>
         </fieldset>
-        <fieldset name="fiscalRegistrarModel" class="item typeWork3 problemFormChecks-5">
+        <fieldset name="fiscalListDrivers" class="item typeWork3 problemFormChecks-5">
           <legend>Ссылка на актуальную версию драйвера</legend>
           <a href="#">Ссылка</a>
         </fieldset>
-        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 problemFormChecks-6">
+        <fieldset name="fiscalListDrivers" class="item column typeWork3 problemFormChecks-6">
           <legend>Обновление решило проблему?</legend>
           <label>
             <input type="radio" name="problemFormChecks-6" value="Да">
@@ -415,11 +415,15 @@
             <div>Нет</div>
           </label>
         </fieldset>
-        <fieldset name="fiscalRegistrarModel" class="item typeWork3 problemFormChecks-7">
+        <fieldset name="fiscalAnotherDriver" class="item typeWork3 fiscalRegistrar-another-driver">
+          <legend>Укажите название драйвера</legend>
+          <input type="text" name="fiscalRegistrar-another-driver" placeholder="">
+        </fieldset>
+        <fieldset name="fiscalListDrivers" class="item typeWork3 problemFormChecks-7">
           <legend>Опишите проблему</legend>
           <textarea></textarea>
         </fieldset>
-        <fieldset class="item column upload typeWork3 problemFormChecks-8">
+        <fieldset name="fiscalListDrivers" class="item column upload typeWork3 problemFormChecks-8">
           <legend>Добавьте скриншоты ошибок <br>Соберите логи драйвера</legend>
           <p>Укажите ссылку на логи</p>
           <input type="text" name="problemFormChecks-8" value="">
@@ -432,11 +436,7 @@
           <div id="gallery"></div>
           <button class="btn">Отправить заявку</button>
         </fieldset>
-        <fieldset name="fiscalRegistrarModel" class="item typeWork3 fiscalRegistrar-another-driver">
-          <legend>Укажите название драйвера</legend>
-          <input type="text" name="fiscalRegistrar-another-driver" placeholder="">
-        </fieldset>
-        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 fiscalRegistrar-final">
+        <fieldset name="fiscalListDrivers" class="item column typeWork3 fiscalRegistrar-final">
           <legend>Спасибо за Ваше обращение в CSI</legend>
         </fieldset>
         <fieldset name="fiscalRegistrarModel" class="item column typeWork3 problemSendOFD-1">
