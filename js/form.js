@@ -887,91 +887,35 @@ window.addEventListener('scroll', () => {
 		observer.observe(section);
 	});
 
-  let anchorSelector = document.querySelectorAll('.nav a[href^="#"]');
-
-  $(function () {
-    $('.nav a[href^="#"]').on('click', function (event) {
-      event.preventDefault();
-      var sc = $(this).attr("href"),
-        dn = $(sc).offset().top -130;
-      $('html, body').animate({
-        scrollTop: dn
-      }, 800);
+  /* Anchors scroll START */
+  const anchors = [].slice.call(document.querySelectorAll('.nav a[href*="#"]')),
+        animationTime = 100,
+        framesCount = 100;
+  anchors.forEach(function(item) {
+    item.addEventListener('click', function(e) {
+      e.preventDefault();
+      let coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset;
+      let scroller = setInterval(function() {
+        let scrollBy = coordY / framesCount;
+        if(scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
+          window.scrollBy(0, scrollBy);
+        } else {
+          window.scrollTo({
+            top: coordY -172,
+            behavior: "smooth"
+        });
+          clearInterval(scroller);
+        }
+      }, animationTime / framesCount);
     });
   });
-
-  // for(let i=0; i<anchorSelector.length; i++){
-  //   anchorSelector[i].onclick = function(e){
-  //     e.preventDefault();
-  //     let destination = $(this.hash);
-  //     let scrollPosition = destination.offset().top -180;
-  //     let animationDuration = 800;
-  //     scrollTo(scrollPosition, 400, animationDuration);
-  //   }
-  // }
-
-  // for(let i=0; i<anchorSelector.length; i++){
-  //   anchorSelector[i].onclick = function(e){
-  //     e.preventDefault();
-  // 		const hash = this.getAttribute('href');
-  //     const V = 0.5;
-  //     // this(hash).getBoundingClientRect().top; 
-  //     // let destination = this.hash;
-  //     const w = window.pageYOffset;
-  //     let scrollPosition = document.querySelector(hash).getBoundingClientRect().top -180;
-  //     console.log(scrollPosition);
-  //     let animationDuration = 800;
-  //     let start = null;
-  //     requestAnimationFrame(step)
-  //     function step(time) {
-  //       if (start === null) start = time;
-  //       let progress = time - start;
-  //       let r = (scrollPosition < 0 ? Math.max(w - progress/V, w + scrollPosition) : Math.min(w + progress/V, w + scrollPosition));
-  //       scrollTo(r,animationDuration);
-  //       if (r != w + scrollPosition) {
-  //         requestAnimationFrame(step)
-  //       } else {
-  //         location.hash = hash
-  //       }
-  //     }
-  //     // scrollTo(scrollPosition, animationDuration);
-  //   }
-  // }
-
-
-  // const scrollTo = function(to, duration) {
-  //   const
-  //   element = document.scrollingElement || document.documentElement,
-  //   start = element.scrollTop,
-  //   change = to - start,
-  //   startDate = +new Date(),
-  //   easeInOutQuad = function(t, b, c, d) {
-  //       t /= d/2;
-  //       if (t < 1) return c/2*t*t + b;
-  //       t--;
-  //       return -c/2 * (t*(t-2) - 1) + b;
-  //   },
-  //   animateScroll = function() {
-  //       const currentDate = +new Date();
-  //       const currentTime = currentDate - startDate;
-  //       element.scrollTop = parseInt(easeInOutQuad(currentTime, start, change, duration));
-  //       if(currentTime < duration) {
-  //           requestAnimationFrame(animateScroll);
-  //       }
-  //       else {
-  //           element.scrollTop = to;
-  //       }
-  //   };
-  //   animateScroll();
-  // };
   const scrollContainer = document.querySelector("nav ul");
   scrollContainer.addEventListener("wheel", (evt) => {
       evt.preventDefault();
       scrollContainer.scrollLeft += evt.deltaY;
   });
 });
-
-
+/* Anchors scroll END */
 
 let prevScroll = window.pageYOffset;
 let currentScroll;
@@ -992,10 +936,3 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   onScrollNav()
 });
-
-
-
-
-
-
-

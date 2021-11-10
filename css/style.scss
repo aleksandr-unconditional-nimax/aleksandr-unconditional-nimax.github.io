@@ -408,6 +408,7 @@ body.support-request-body {
     overflow: hidden;
     padding-top: clamp(26px, 4vw, 50px);
     padding-bottom: 80px;
+    scroll-behavior: smooth;
     label {
       display: inline-block;
       user-select: none;
