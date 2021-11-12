@@ -452,26 +452,21 @@ body.support-request-body {
   #tab-1:checked ~ #form-1,
   #tab-1:not(:checked) ~ #form-1,
   #tab-2:checked ~ #form-2,
-  #tab-2:not(:checked) ~ #form-2,
-  #tab-3:checked ~ #form-3,
-  #tab-3:not(:checked) ~ #form-3 {
+  #tab-2:not(:checked) ~ #form-2 {
     will-change: transform, opacity;
   }
   #tab-1 ~ #form-1,
-  #tab-2 ~ #form-2,
-  #tab-3 ~ #form-3 {
+  #tab-2 ~ #form-2 {
     visibility: visible;
     display: grid;
   }
   #tab-1:checked ~ #form-1,
-  #tab-2:checked ~ #form-2,
-  #tab-3:checked ~ #form-3{
+  #tab-2:checked ~ #form-2{
     height: auto;
     animation: grow 0.5s ease both;
   }
   #tab-1:not(:checked) ~ #form-1,
-  #tab-2:not(:checked) ~ #form-2,
-  #tab-3:not(:checked) ~ #form-3 {
+  #tab-2:not(:checked) ~ #form-2 {
     bottom: 0;
     position: absolute;
     animation: leave 0.5s ease both, hide 0.6s ease both;

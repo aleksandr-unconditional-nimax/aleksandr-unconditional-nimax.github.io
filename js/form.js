@@ -88,10 +88,10 @@ const typework4_4 = document.querySelector('.typework4-4');
 const typework4_5 = document.querySelector('.typework4-5');
 const typework4_6 = document.querySelector('.typework4-6');
 const typework4_7 = document.querySelector('.typework4-7');
-const step2form2 = document.querySelector('#form-2 .item2');
-const step3form2 = document.querySelector('#form-2 .item3');
-const step4form2 = document.querySelector('#form-2 .item4');
-const step5form2 = document.querySelector('#form-2 .item5');
+const step2form2 = document.querySelector('#form-2 .item2[name="partnerContractor"]');
+const step3form2 = document.querySelector('#form-2 .item3[name="partnerContractor"]');
+const step4form2 = document.querySelector('#form-2 .item4[name="partnerContractor"]');
+const step5form2 = document.querySelector('#form-2 .item5[name="partnerContractor"]');
 
 const offset = 50;
 
@@ -129,6 +129,7 @@ typework4_6.onclick = function() {
 
 let radioForm1 = document.form1;
 let radioForm2 = document.form2;
+let hidePartnerContractor = document.querySelectorAll('fieldset:not([name="partnerContractor"])');
 
 const handleChange = ({ target: { value, name } }) => {
   const res = `${value} ${name}`;
@@ -137,14 +138,25 @@ const handleChange = ({ target: { value, name } }) => {
       step4form2.classList.remove('active');
       step2form2.classList.add('active');
       step5form2.classList.remove('active');
+      for(let i = 1; i < hidePartnerContractor.length; i++) {
+        hidePartnerContractor[i].classList.remove('active');
+      }
       break;
     case 'Нет contract':
       step2form2.classList.remove('active');
+      step3form2.classList.remove('active');
       step4form2.classList.add('active');
+      for(let i = 1; i < hidePartnerContractor.length; i++) {
+        hidePartnerContractor[i].classList.remove('active');
+      }
       break;
     case 'Да contractProblem':
+      step5form2.classList.remove('active');
       step4form2.classList.remove('active');
       step3form2.classList.add('active');
+      for(let i = 1; i < hidePartnerContractor.length; i++) {
+        hidePartnerContractor[i].classList.remove('active');
+      }
       break;
     case 'Нет contractProblem':
       step3form2.classList.remove('active');
@@ -534,10 +546,6 @@ step4form2.onclick = function() {
   step5form2.classList.add('active');
 };
 
-step5form2.onclick = function() {
-  document.getElementById('tab-3').click()
-};
-
 fiscalRegistrar_3.onclick = function() {
   fiscalRegistrar_12.classList.add('active');
   setTimeout(() => window.scroll({ top: (fiscalRegistrar_12.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
@@ -557,8 +565,8 @@ cashHardwareProblem_9.onclick = function() {
 };
 
 /* FORM REGISTRATION Step START */
-let fieldsetForm3 = document.querySelectorAll("#form-3 .item:not(.upload)");
-for(let i=0; i<fieldsetForm3.length; i++){fieldsetForm3[i].onclick = function(){this.nextElementSibling.classList.add('active');
+let fieldsetForm2 = document.querySelectorAll("#form-2 .item:not(.upload):not([class*='-final'])");
+for(let i=0; i<fieldsetForm2.length; i++){fieldsetForm2[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM REGISTRATION Step END */
 
