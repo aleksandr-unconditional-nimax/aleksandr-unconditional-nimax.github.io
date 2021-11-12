@@ -107,12 +107,8 @@ step2form1.onclick = function() {
 
 step3form1.onclick = function() {
   step4form1.classList.add('active');
-  setTimeout(() => window.scroll({ top: (step4form1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
-};
-
-step4form1.onclick = function() {
   step5form1.classList.add('active');
-  setTimeout(() => window.scroll({ top: (step5form1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+  setTimeout(() => window.scroll({ top: (step4form1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
 };
 
 step5form1.onclick = function() {
