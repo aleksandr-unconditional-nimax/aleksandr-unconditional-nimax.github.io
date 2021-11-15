@@ -130,6 +130,7 @@ typework4_6.onclick = function() {
 let radioForm1 = document.form1;
 let radioForm2 = document.form2;
 let hidePartnerContractor = document.querySelectorAll('fieldset:not([name="partnerContractor"])');
+let hideCashHardwareProblemChoice = document.querySelectorAll('.typeWork3:not([name="cashHardwareProblem-choice"])');
 
 const handleChange = ({ target: { value, name } }) => {
   const res = `${value} ${name}`;
@@ -217,6 +218,9 @@ const handleChange = ({ target: { value, name } }) => {
       setTimeout(() => window.scroll({ top: (typework4_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 1900);
       break;
     case 'typework1-1-no tw1-1':
+      for(let i = 1; i < typeWork1.length; i++) {
+        typeWork1[i].classList.remove('active');
+      }
       typework1_3.classList.remove('active');
       typework1_2.classList.add('active');
       setTimeout(() => window.scroll({ top: (typework1_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
@@ -268,24 +272,47 @@ const handleChange = ({ target: { value, name } }) => {
       break;
     case 'fiscalRegistrar cash-problem-step-0':
       fiscalRegistrar.classList.add('active');
+      let hideFiscalRegistrar = document.querySelectorAll('.typeWork3:not([name="cashProblem"])');
+      for(let i = 1; i < hideFiscalRegistrar.length; i++) {
+        hideFiscalRegistrar[i].classList.remove('active');
+      }
       setTimeout(() => window.scroll({ top: (fiscalRegistrar.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Системныйблок cash-problem-step-0': 
     case 'Клавиатура cash-problem-step-0':
     case 'Денежныйящик cash-problem-step-0':
       cashHardwareProblem_1.classList.add('active');
+      let hideCashHardwareProblem = document.querySelectorAll('.typeWork3:not([name="cashHardwareProblem"])');
+      for(let i = 2; i < hideCashHardwareProblem.length; i++) {
+        hideCashHardwareProblem[i].classList.remove('active');
+      }
       setTimeout(() => window.scroll({ top: (cashHardwareProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Сканер cash-problem-step-0':
       cashHardwareProblem_7.classList.add('active');
+      cashHardwareProblem_8.classList.remove('active');
+      cashHardwareProblem_9.classList.remove('active');
+      for(let i = 2; i < hideCashHardwareProblemChoice.length; i++) {
+        hideCashHardwareProblemChoice[i].classList.remove('active');
+      }
       setTimeout(() => window.scroll({ top: (cashHardwareProblem_7.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Дисплей/монитор cash-problem-step-0':
       cashHardwareProblem_8.classList.add('active');
+      cashHardwareProblem_7.classList.remove('active');
+      cashHardwareProblem_9.classList.remove('active');
+      for(let i = 2; i < hideCashHardwareProblemChoice.length; i++) {
+        hideCashHardwareProblemChoice[i].classList.remove('active');
+      }
       setTimeout(() => window.scroll({ top: (cashHardwareProblem_8.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Другое cash-problem-step-0':
       cashHardwareProblem_9.classList.add('active');
+      cashHardwareProblem_8.classList.remove('active');
+      cashHardwareProblem_7.classList.remove('active');
+      for(let i = 2; i < hideCashHardwareProblemChoice.length; i++) {
+        hideCashHardwareProblemChoice[i].classList.remove('active');
+      }
       setTimeout(() => window.scroll({ top: (cashHardwareProblem_9.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Другое fiscalRegistrar-1':
