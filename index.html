@@ -21,6 +21,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+  <link href="https://cdnout.com/timepicker/css/base.css" rel="stylesheet" media="all">
 </head>
 <body class="support-request-body">
   <section class="support-request">
@@ -76,7 +77,7 @@
         <fieldset class="item item6">
           <h4 class="block-title">Время для связи</h4>
           <legend>Укажите желаемое время по МСК для связи с вами</legend>
-          <input type="time" name="time" min="09:00" max="18:00" step="1800" placeholder="">
+          <input class="time" type="time" name="time" min="09:00" step="10800" placeholder="">
         </fieldset>
         <fieldset class="item column typework0">
           <h4 class="block-title">Вид работ</h4>
@@ -1198,6 +1199,8 @@
     </aside>
     <nav class="nav"></nav>
   </section>
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  <script src="https://cdnout.com/timepicker"></script>
   <script src="js/form.js"></script>
 </body>
 </html>
