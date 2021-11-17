@@ -46,6 +46,7 @@ const problemFormChecks_5= document.querySelector('.problemFormChecks-5');
 const fiscalRegistrar_another_driver= document.querySelector('.fiscalRegistrar-another-driver');
 const problemFormChecks_6= document.querySelector('.problemFormChecks-6');
 const problemFormChecks_7= document.querySelector('.problemFormChecks-7');
+const problemFormChecks_8= document.querySelector('.problemFormChecks-8');
 const problemSendOFD_1= document.querySelector('.problemSendOFD-1');
 const problemSendOFD_5= document.querySelector('.problemSendOFD-5');
 const cashHardwareProblem_1= document.querySelector('.cashHardwareProblem-1');
@@ -387,6 +388,7 @@ const handleChange = ({ target: { value, name } }) => {
     case 'Да problemFormChecks-6':
       fiscalRegistrar_final.classList.add('active');
       problemFormChecks_7.classList.remove('active');
+      problemFormChecks_8.classList.remove('active');
       setTimeout(() => window.scroll({ top: (fiscalRegistrar_final.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Нет problemFormChecks-6':
