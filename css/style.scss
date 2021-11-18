@@ -170,6 +170,7 @@ body.support-request-body {
     }
   }
   input[type=time]{
+    background: white;
     &::before{
       content: '';
       width: 60px;
