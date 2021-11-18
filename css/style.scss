@@ -754,13 +754,18 @@ body.support-request-body {
 }
 
 @media(max-width:400px){
-  .support-request input[type=time]::before{
-    z-index: 9;
-    background: white;
-    height: calc(100% - 2px);
-    top: 1px;
-    right: 2px;
-    border-radius: 12px
+  .support-request {
+    input[type=time]::before{
+      z-index: 9;
+      background: white;
+      height: calc(100% - 2px);
+      top: 1px;
+      right: 2px;
+      border-radius: 12px;
+    }
+    .btn-tab{
+      padding: 14px;
+    }
   }
   .ui-timepicker-standard{
     display: none !important;
