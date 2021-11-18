@@ -201,7 +201,6 @@ body.support-request-body {
       user-select: none;
       justify-content: space-between;
       background: white;
-  
       border: 1px solid var(--color4);
       border-radius: 12px;
       font-size: 12px;
@@ -222,6 +221,21 @@ body.support-request-body {
         outline: none;
       }
     }
+    &-time{
+      &::after{
+        content: '';
+        width: 15px;
+        height: 15px;
+        background-image: url("data:image/svg+xml,%3Csvg fill='%23000000' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24px' height='24px'%3E%3Cpath d='M 12 2 C 6.4889971 2 2 6.4889971 2 12 C 2 17.511003 6.4889971 22 12 22 C 17.511003 22 22 17.511003 22 12 C 22 6.4889971 17.511003 2 12 2 z M 12 4 C 16.430123 4 20 7.5698774 20 12 C 20 16.430123 16.430123 20 12 20 C 7.5698774 20 4 16.430123 4 12 C 4 7.5698774 7.5698774 4 12 4 z M 11 6 L 11 12.414062 L 15.292969 16.707031 L 16.707031 15.292969 L 13 11.585938 L 13 6 L 11 6 z'/%3E%3C/svg%3E");
+        background-size: 15px 15px;
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
     &_show {
       .select-toggle{
         border-bottom-left-radius: 0;
@@ -235,6 +249,17 @@ body.support-request-body {
       }
       .select__backdrop {
         display: block;
+      }
+      &#select-time{
+        .select-dropdown {
+          width: 173px;
+        }
+        .select-toggle{
+          border-bottom-right-radius: 12px;
+        }
+        .select-option {
+          min-height: 31px;
+        }
       }
     }
     &-dropdown {
@@ -682,117 +707,6 @@ body.support-request-body {
       border-radius: 14px;
       padding: 3px 10px 4px 10px;
     }
-  }
-}
-
-.ui-timepicker-standard{
-  z-index: 1 !important;
-  width: 135px !important;
-  transform: translateY(5px);
-  border: 1px solid var(--color4) !important;
-  border-radius: 12px;
-  .ui-menu-item{
-    &:nth-child(1){
-      .ui-corner-all{
-        &::after{
-          content: '- 12:00';
-          display: inline-block;
-          margin-left: 5px;
-        }
-      }
-    }
-    &:nth-child(2){
-      .ui-corner-all{
-        &::after{
-          content: '- 15:00';
-          display: inline-block;
-          margin-left: 5px;
-        }
-      }
-    }
-    &:nth-child(3){
-      .ui-corner-all{
-        &::after{
-          content: '- 18:00';
-          display: inline-block;
-          margin-left: 5px;
-        }
-      }
-    }
-    &:nth-child(4){
-      .ui-corner-all{
-        &::after{
-          content: '- 21:00';
-          display: inline-block;
-          margin-left: 5px;
-        }
-      }
-    }
-    &:nth-child(5){
-      .ui-corner-all{
-        &::after{
-          content: '- 00:00';
-          display: inline-block;
-          margin-left: 5px;
-        }
-      }
-    }
-    &:nth-child(6){
-      .ui-corner-all{
-        &::after{
-          content: '- 03:00';
-          display: inline-block;
-          margin-left: 5px;
-        }
-      }
-    }
-    &:nth-child(7){
-      .ui-corner-all{
-        &::after{
-          content: '- 06:00';
-          display: inline-block;
-          margin-left: 5px;
-        }
-      }
-    }
-    &:nth-child(8){
-      .ui-corner-all{
-        &::after{
-          content: '- 09:00';
-          display: inline-block;
-          margin-left: 5px;
-        }
-      }
-    }
-  }
-
-  .ui-timepicker-viewport{
-    &::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.18);
-      background-color: var(--color5);
-      border-radius: 0;
-    }
-
-    &::-webkit-scrollbar {
-      width: 5px;
-      background-color: var(--color5);
-    }
-
-    &::-webkit-scrollbar-thumb {
-      border-radius: 0;
-      background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.44, var(--color1)),color-stop(0.72, var(--color1)),color-stop(0.86, var(--color1)));
-    }
-  }
-  a{
-    font-size: 12px;
-    border-radius: 12px;
-    border-color: white !important;
-    &:hover{
-      background: var(--color5);
-    }
-  }
-  *{
-    max-width: 100%;
   }
 }
 

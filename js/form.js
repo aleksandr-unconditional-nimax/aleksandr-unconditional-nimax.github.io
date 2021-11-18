@@ -831,6 +831,7 @@ const select1 = new CustomSelect('#select-1');
 const select2 = new CustomSelect('#select-2');
 const select3 = new CustomSelect('#select-3');
 const select4 = new CustomSelect('#select-4');
+const selectTime = new CustomSelect('#select-time');
 /* SELECT Style END */
 
 /* CUSTOM FILE UPLOADER START */
@@ -994,17 +995,4 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
   onScrollNav()
-});
-
-
-
-$(document).ready(function(){
-  $('input.time').timepicker({
-    timeFormat: 'HH:mm',
-    interval: 180,
-    startTime: '09:00',
-    dynamic: false,
-    dropdown: true,
-    scrollbar: true
-  });
 });

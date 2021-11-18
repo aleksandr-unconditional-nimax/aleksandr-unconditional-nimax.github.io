@@ -74,11 +74,25 @@
           <input type="tel" name="phone" placeholder="Контактный телефон">
           <input type="email" name="email" placeholder="Адрес эл. почты">
         </fieldset>
-        <fieldset class="item item6">
+        <div class="fieldset item item6">
           <h4 class="block-title">Время для связи</h4>
           <legend>Укажите желаемое время по МСК для связи с вами</legend>
-          <input class="time" type="time" name="time" min="09:00" step="10800" placeholder="">
-        </fieldset>
+          <div class="select" id="select-time">
+            <button type="button" class="select-toggle select-time" name="" value="" data-select="toggle" data-index="1"></button>
+            <div class="select-dropdown">
+              <ul class="select-options">
+                <li class="select-option" data-select="option" data-value="09:00 - 12:00" data-index="0">09:00 - 12:00</li>
+                <li class="select-option" data-select="option" data-value="12:00 - 15:00" data-index="1">12:00 - 15:00</li>
+                <li class="select-option" data-select="option" data-value="15:00 - 18:00" data-index="2">15:00 - 18:00</li>
+                <li class="select-option" data-select="option" data-value="18:00 - 21:00" data-index="0">18:00 - 21:00</li>
+                <li class="select-option" data-select="option" data-value="21:00 - 00:00" data-index="1">21:00 - 00:00</li>
+                <li class="select-option" data-select="option" data-value="00:00 - 03:00" data-index="2">00:00 - 03:00</li>
+                <li class="select-option" data-select="option" data-value="03:00 - 06:00" data-index="0">03:00 - 06:00</li>
+                <li class="select-option" data-select="option" data-value="06:00 - 09:00" data-index="1">06:00 - 09:00</li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <fieldset class="item column typework0">
           <h4 class="block-title">Вид работ</h4>
           <legend>Выберите желаемый вид работ</legend>
@@ -1199,8 +1213,6 @@
     </aside>
     <nav class="nav"></nav>
   </section>
-  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-  <script src="https://cdnout.com/timepicker"></script>
   <script src="js/form.js"></script>
 </body>
 </html>
