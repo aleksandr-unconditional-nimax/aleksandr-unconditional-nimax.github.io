@@ -687,10 +687,84 @@ body.support-request-body {
 
 .ui-timepicker-standard{
   z-index: 1 !important;
-  width: 115px !important;
+  width: 135px !important;
   transform: translateY(5px);
   border: 1px solid var(--color4) !important;
   border-radius: 12px;
+  .ui-menu-item{
+    &:nth-child(1){
+      .ui-corner-all{
+        &::after{
+          content: '- 12:00';
+          display: inline-block;
+          margin-left: 5px;
+        }
+      }
+    }
+    &:nth-child(2){
+      .ui-corner-all{
+        &::after{
+          content: '- 15:00';
+          display: inline-block;
+          margin-left: 5px;
+        }
+      }
+    }
+    &:nth-child(3){
+      .ui-corner-all{
+        &::after{
+          content: '- 18:00';
+          display: inline-block;
+          margin-left: 5px;
+        }
+      }
+    }
+    &:nth-child(4){
+      .ui-corner-all{
+        &::after{
+          content: '- 21:00';
+          display: inline-block;
+          margin-left: 5px;
+        }
+      }
+    }
+    &:nth-child(5){
+      .ui-corner-all{
+        &::after{
+          content: '- 00:00';
+          display: inline-block;
+          margin-left: 5px;
+        }
+      }
+    }
+    &:nth-child(6){
+      .ui-corner-all{
+        &::after{
+          content: '- 03:00';
+          display: inline-block;
+          margin-left: 5px;
+        }
+      }
+    }
+    &:nth-child(7){
+      .ui-corner-all{
+        &::after{
+          content: '- 06:00';
+          display: inline-block;
+          margin-left: 5px;
+        }
+      }
+    }
+    &:nth-child(8){
+      .ui-corner-all{
+        &::after{
+          content: '- 09:00';
+          display: inline-block;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
 
   .ui-timepicker-viewport{
     &::-webkit-scrollbar-track {
