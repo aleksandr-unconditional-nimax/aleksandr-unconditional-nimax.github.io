@@ -4,29 +4,29 @@ const step3form1 = document.querySelector('#form-1 .item3');
 const step4form1 = document.querySelector('#form-1 .item4');
 const step5form1 = document.querySelector('#form-1 .item5');
 const step6form1 = document.querySelector('#form-1 .item6');
-const typework0 = document.querySelector('.typework0');
+const typeWork0 = document.querySelector('.typeWork0');
 const typeWork1 = document.querySelectorAll('.typeWork1');
 const typeWork2 = document.querySelectorAll('.typeWork2');
 const typeWork3 = document.querySelectorAll('.typeWork3');
 const typeWork4 = document.querySelectorAll('.typeWork4');
-const typework1_1 = document.querySelector('.typework1-1');
-const typework1_2 = document.querySelector('.typework1-2');
-const typework1_3 = document.querySelector('.typework1-3');
-const typework1_4 = document.querySelector('.typework1-4');
-const typework2_1 = document.querySelector('.typework2-1');
-const typework2_2 = document.querySelector('.typework2-2');
-const typework2_3 = document.querySelector('.typework2-3');
-const typework2_4 = document.querySelector('.typework2-4');
-const typework2_5 = document.querySelector('.typework2-5');
-const typework2_6 = document.querySelector('.typework2-6');
-const typework2_7 = document.querySelector('.typework2-7');
-const typework3_1 = document.querySelector('.typework3-1');
-const typework3_1_1 = document.querySelector('.typework3-1-1');
-const typework3_1_2 = document.querySelector('.typework3-1-2');
-const typework3_2 = document.querySelector('.typework3-2');
-const typework3_3 = document.querySelector('.typework3-3');
-const typework3_4 = document.querySelector('.typework3-4');
-const typework3_5 = document.querySelector('.typework3-5');
+const typeWork1_1 = document.querySelector('.typeWork1-1');
+const typeWork1_2 = document.querySelector('.typeWork1-2');
+const typeWork1_3 = document.querySelector('.typeWork1-3');
+const typeWork1_4 = document.querySelector('.typeWork1-4');
+const typeWork2_1 = document.querySelector('.typeWork2-1');
+const typeWork2_2 = document.querySelector('.typeWork2-2');
+const typeWork2_3 = document.querySelector('.typeWork2-3');
+const typeWork2_4 = document.querySelector('.typeWork2-4');
+const typeWork2_5 = document.querySelector('.typeWork2-5');
+const typeWork2_6 = document.querySelector('.typeWork2-6');
+const typeWork2_7 = document.querySelector('.typeWork2-7');
+const typeWork3_1 = document.querySelector('.typeWork3-1');
+const typeWork3_1_1 = document.querySelector('.typeWork3-1-1');
+const typeWork3_1_2 = document.querySelector('.typeWork3-1-2');
+const typeWork3_2 = document.querySelector('.typeWork3-2');
+const typeWork3_3 = document.querySelector('.typeWork3-3');
+const typeWork3_4 = document.querySelector('.typeWork3-4');
+const typeWork3_5 = document.querySelector('.typeWork3-5');
 const cashproblem = document.querySelector('.cashProblem');
 const fiscalRegistrar = document.querySelector('.fiscalRegistrar-1');
 const fiscalRegistrar_2= document.querySelector('.fiscalRegistrar-2');
@@ -82,13 +82,13 @@ const updateProblem_1= document.querySelector('.updateProblem-1');
 const updateProblem_2= document.querySelector('.updateProblem-2');
 const updateProblem_3= document.querySelector('.updateProblem-3');
 const updateProblem_4= document.querySelector('.updateProblem-4');
-const typework4_1 = document.querySelector('.typework4-1');
-const typework4_2 = document.querySelector('.typework4-2');
-const typework4_3 = document.querySelector('.typework4-3');
-const typework4_4 = document.querySelector('.typework4-4');
-const typework4_5 = document.querySelector('.typework4-5');
-const typework4_6 = document.querySelector('.typework4-6');
-const typework4_7 = document.querySelector('.typework4-7');
+const typeWork4_1 = document.querySelector('.typeWork4-1');
+const typeWork4_2 = document.querySelector('.typeWork4-2');
+const typeWork4_3 = document.querySelector('.typeWork4-3');
+const typeWork4_4 = document.querySelector('.typeWork4-4');
+const typeWork4_5 = document.querySelector('.typeWork4-5');
+const typeWork4_6 = document.querySelector('.typeWork4-6');
+const typeWork4_7 = document.querySelector('.typeWork4-7');
 const step2form2 = document.querySelector('#form-2 .item2[name="partnerContractor"]');
 const step3form2 = document.querySelector('#form-2 .item3[name="partnerContractor"]');
 const step4form2 = document.querySelector('#form-2 .item4[name="partnerContractor"]');
@@ -119,13 +119,13 @@ step5form1.onclick = function() {
 };
 
 step6form1.onclick = function() {
-  typework0.classList.add('active');
-  setTimeout(() => window.scroll({ top: (typework0.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+  typeWork0.classList.add('active');
+  setTimeout(() => window.scroll({ top: (typeWork0.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
 };
 
-typework4_6.onclick = function() {
-  typework4_7.classList.add('active');
-  setTimeout(() => window.scroll({ top: (typework4_7.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+typeWork4_6.onclick = function() {
+  typeWork4_7.classList.add('active');
+  setTimeout(() => window.scroll({ top: (typeWork4_7.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
 };
 
 let radioForm1 = document.form1;
@@ -164,7 +164,7 @@ const handleChange = ({ target: { value, name } }) => {
       step3form2.classList.remove('active');
       step4form2.classList.add('active');
       break;
-    case 'typework1 typework':
+    case 'typeWork1 typeWork':
       for(let i = 0; i < typeWork2.length; i++) {
         typeWork2[i].classList.remove('active');
       }
@@ -174,10 +174,10 @@ const handleChange = ({ target: { value, name } }) => {
       for(let i = 0; i < typeWork4.length; i++) {
         typeWork4[i].classList.remove('active');
       }
-      typework1_1.classList.add('active');
-      setTimeout(() => window.scroll({ top: (typework1_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      typeWork1_1.classList.add('active');
+      setTimeout(() => window.scroll({ top: (typeWork1_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
-    case 'typework2 typework':
+    case 'typeWork2 typeWork':
       for(let i = 0; i < typeWork1.length; i++) {
         typeWork1[i].classList.remove('active');
       }
@@ -187,10 +187,10 @@ const handleChange = ({ target: { value, name } }) => {
       for(let i = 0; i < typeWork4.length; i++) {
         typeWork4[i].classList.remove('active');
       }
-      typework2_1.classList.add('active');
-      setTimeout(() => window.scroll({ top: (typework2_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      typeWork2_1.classList.add('active');
+      setTimeout(() => window.scroll({ top: (typeWork2_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
-    case 'typework3 typework':
+    case 'typeWork3 typeWork':
       for(let i = 0; i < typeWork1.length; i++) {
         typeWork1[i].classList.remove('active');
       }
@@ -200,10 +200,10 @@ const handleChange = ({ target: { value, name } }) => {
       for(let i = 0; i < typeWork4.length; i++) {
         typeWork4[i].classList.remove('active');
       }
-      typework3_1.classList.add('active');
-      setTimeout(() => window.scroll({ top: (typework3_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      typeWork3_1.classList.add('active');
+      setTimeout(() => window.scroll({ top: (typeWork3_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
-    case 'typework4 typework':
+    case 'typeWork4 typeWork':
       for(let i = 0; i < typeWork1.length; i++) {
         typeWork1[i].classList.remove('active');
       }
@@ -213,41 +213,42 @@ const handleChange = ({ target: { value, name } }) => {
       for(let i = 0; i < typeWork3.length; i++) {
         typeWork3[i].classList.remove('active');
       }
-      typework4_1.classList.add('active');
-      setTimeout(() => window.scroll({ top: (typework4_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
-      setTimeout(() => typework4_2.classList.add('active'), 1800);
-      setTimeout(() => window.scroll({ top: (typework4_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 1900);
+      typeWork4_1.classList.add('active');
+      setTimeout(() => window.scroll({ top: (typeWork4_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      setTimeout(() => typeWork4_2.classList.add('active'), 1800);
+      setTimeout(() => window.scroll({ top: (typeWork4_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 1900);
       break;
-    case 'typework1-1-no tw1-1':
+    case 'typeWork1-1-no tw1-1':
       for(let i = 1; i < typeWork1.length; i++) {
         typeWork1[i].classList.remove('active');
       }
-      typework1_3.classList.remove('active');
-      typework1_2.classList.add('active');
-      setTimeout(() => window.scroll({ top: (typework1_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      typeWork1_3.classList.remove('active');
+      typeWork1_2.classList.add('active');
+      setTimeout(() => window.scroll({ top: (typeWork1_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
-    case 'typework1-1-yes tw1-1':
-      typework1_2.classList.remove('active');
-      typework1_3.classList.add('active');
-      setTimeout(() => window.scroll({ top: (typework1_3.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+    case 'typeWork1-1-yes tw1-1':
+      typeWork1_2.classList.remove('active');
+      typeWork1_3.classList.add('active');
+      setTimeout(() => window.scroll({ top: (typeWork1_3.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
-    case 'typework2-1-no tw2-1':
-      typework2_2.classList.add('active');
-      setTimeout(() => window.scroll({ top: (typework2_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+    case 'typeWork2-1-no tw2-1':
+      typeWork2_2.classList.add('active');
+      setTimeout(() => window.scroll({ top: (typeWork2_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
-    case 'typework2-1-yes tw2-1':
-      typework2_2.classList.add('active');
-      setTimeout(() => window.scroll({ top: (typework2_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+    case 'typeWork2-1-yes tw2-1':
+      typeWork2_2.classList.add('active');
+      setTimeout(() => window.scroll({ top: (typeWork2_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
-    case 'typework3-1 tw3-1':
+    case 'typeWork3-1 tw3-1':
       cashproblem.classList.add('active');
       let hideFieldsets1 = document.querySelectorAll('.typeWork3:not([name="cashProblem"])');
       for(let i = 1; i < hideFieldsets1.length; i++) {
+        console.log(hideFieldsets1[i]);
         hideFieldsets1[i].classList.remove('active');
       }
       setTimeout(() => window.scroll({ top: (cashproblem.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
-    case 'typework3-2 tw3-1':
+    case 'typeWork3-2 tw3-1':
       equipmentAreaProblem_1.classList.add('active');
       let hideFieldsets2 = document.querySelectorAll('.typeWork3:not([name="equipmentAreaProblem"])');
       for(let i = 1; i < hideFieldsets2.length; i++) {
@@ -255,7 +256,7 @@ const handleChange = ({ target: { value, name } }) => {
       }
       setTimeout(() => window.scroll({ top: (equipmentAreaProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
-    case 'typework3-3 tw3-1':
+    case 'typeWork3-3 tw3-1':
       prismVideoProblem_1.classList.add('active');
       let hideFieldsets3 = document.querySelectorAll('.typeWork3:not([name="prismVideoProblem"])');
       for(let i = 1; i < hideFieldsets3.length; i++) {
@@ -263,7 +264,7 @@ const handleChange = ({ target: { value, name } }) => {
       }
       setTimeout(() => window.scroll({ top: (prismVideoProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
-    case 'typework3-4 tw3-1':
+    case 'typeWork3-4 tw3-1':
       programSetProblem_1.classList.add('active');
       let hideFieldsets4 = document.querySelectorAll('.typeWork3:not([name="programSetProblem"])');
       for(let i = 1; i < hideFieldsets4.length; i++) {
@@ -422,7 +423,7 @@ const handleChange = ({ target: { value, name } }) => {
     case 'SetKiosk programSetProblem-1':
     case 'SetAgent programSetProblem-1':
       programSetProblem_2.classList.add('active');
-      let hideProgramSetProblem2 = document.querySelectorAll('.typework3[name="programSetProblemItems2"]');
+      let hideProgramSetProblem2 = document.querySelectorAll('.typeWork3[name="programSetProblemItems2"]');
       for(let i = 0; i < hideProgramSetProblem2.length; i++) {
         hideProgramSetProblem2[i].classList.remove('active');
       }
@@ -430,7 +431,7 @@ const handleChange = ({ target: { value, name } }) => {
       break;
     case 'SetRetail programSetProblem-1':
       programSetProblem_9.classList.add('active');
-      let hideProgramSetProblem1 = document.querySelectorAll('.typework3[name="programSetProblemItems1"]');
+      let hideProgramSetProblem1 = document.querySelectorAll('.typeWork3[name="programSetProblemItems1"]');
       for(let i = 0; i < hideProgramSetProblem1.length; i++) {
         hideProgramSetProblem1[i].classList.remove('active');
       }
@@ -438,7 +439,7 @@ const handleChange = ({ target: { value, name } }) => {
       break;
     case 'Другое programSetProblem-10':
       anotherSetProblem_1.classList.add('active');
-      let hideSetProblem1 = document.querySelectorAll('.typework3[name="loyaltyProblem"], .typework3[name="updateProblem"]');
+      let hideSetProblem1 = document.querySelectorAll('.typeWork3[name="loyaltyProblem"], .typeWork3[name="updateProblem"]');
       for(let i = 1; i < hideSetProblem1.length; i++) {
         hideSetProblem1[i].classList.remove('active');
       }
@@ -446,7 +447,7 @@ const handleChange = ({ target: { value, name } }) => {
       break;
     case 'Проблемаслояльностью programSetProblem-10':
       loyaltyProblem_1.classList.add('active');
-      let hideSetProblem2 = document.querySelectorAll('.typework3[name="anotherSetProblem"], .typework3[name="updateProblem"]');
+      let hideSetProblem2 = document.querySelectorAll('.typeWork3[name="anotherSetProblem"], .typeWork3[name="updateProblem"]');
       for(let i = 1; i < hideSetProblem2.length; i++) {
         hideSetProblem2[i].classList.remove('active');
       }
@@ -454,7 +455,7 @@ const handleChange = ({ target: { value, name } }) => {
       break;
     case 'Проблемаприобновлении programSetProblem-10':
       updateProblem_1.classList.add('active');
-      let hideSetProblem3 = document.querySelectorAll('.typework3[name="loyaltyProblem"], .typework3[name="anotherSetProblem"]');
+      let hideSetProblem3 = document.querySelectorAll('.typeWork3[name="loyaltyProblem"], .typeWork3[name="anotherSetProblem"]');
       for(let i = 1; i < hideSetProblem3.length; i++) {
         hideSetProblem3[i].classList.remove('active');
       }
@@ -537,24 +538,24 @@ const handleChange = ({ target: { value, name } }) => {
       updateProblem_4.classList.add('active');
       setTimeout(() => window.scroll({ top: (updateProblem_4.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
-    case 'typework4-2-yes tw4-2':
-      typework4_4.classList.remove('active');
-      typework4_3.classList.add('active');
-      setTimeout(() => window.scroll({ top: (typework4_3.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+    case 'typeWork4-2-yes tw4-2':
+      typeWork4_4.classList.remove('active');
+      typeWork4_3.classList.add('active');
+      setTimeout(() => window.scroll({ top: (typeWork4_3.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
-    case 'typework4-2-no tw4-2':
-      typework4_3.classList.remove('active');
-      typework4_4.classList.add('active');
-      setTimeout(() => window.scroll({ top: (typework4_4.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+    case 'typeWork4-2-no tw4-2':
+      typeWork4_3.classList.remove('active');
+      typeWork4_4.classList.add('active');
+      setTimeout(() => window.scroll({ top: (typeWork4_4.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
-    case 'typework4-4-yes tw4-4':
-      typework4_6.classList.add('active');
-      setTimeout(() => window.scroll({ top: (typework4_6.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+    case 'typeWork4-4-yes tw4-4':
+      typeWork4_6.classList.add('active');
+      setTimeout(() => window.scroll({ top: (typeWork4_6.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
-    case 'typework4-4-no tw4-4':
-      typework4_6.classList.remove('active');
-      typework4_5.classList.add('active');
-      setTimeout(() => window.scroll({ top: (typework4_5.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+    case 'typeWork4-4-no tw4-4':
+      typeWork4_6.classList.remove('active');
+      typeWork4_5.classList.add('active');
+      setTimeout(() => window.scroll({ top: (typeWork4_5.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
   }
 }
@@ -599,17 +600,17 @@ for(let i=0; i<fieldsetForm2.length; i++){fieldsetForm2[i].onclick = function(){
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM REGISTRATION Step END */
 
-/* FORM typework1 Steps START */
-let fieldsetTypework1 = document.querySelectorAll(".item[name='typework1']");
+/* FORM typeWork1 Steps START */
+let fieldsetTypework1 = document.querySelectorAll(".item[name='typeWork1']");
 for(let i=0; i<fieldsetTypework1.length; i++){fieldsetTypework1[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
-/* FORM typework1 Steps END */
+/* FORM typeWork1 Steps END */
 
-/* FORM typework2 Steps START */
-let fieldsetTypework2 = document.querySelectorAll(".item[name='typework2']");
+/* FORM typeWork2 Steps START */
+let fieldsetTypework2 = document.querySelectorAll(".item[name='typeWork2']");
 for(let i=0; i<fieldsetTypework2.length; i++){fieldsetTypework2[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
-/* FORM typework2 Steps END */
+/* FORM typeWork2 Steps END */
 
 /* FORM fiscalRegistrar Steps START */
 let fieldsetFiscalRegistrarOther = document.querySelectorAll(".item[name='fiscalRegistrarOther']");
@@ -648,7 +649,7 @@ setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offse
 /* FORM equipmentAreaProblem Steps END */
 
 /* FORM prismVideoProblem Steps START */
-let prismVideoProblem = document.querySelectorAll(".item[name='prismVideoProblem']");
+let prismVideoProblem = document.querySelectorAll(".item[name='prismVideoProblem']:not([class*='-final']");
 for(let i=0; i<prismVideoProblem.length; i++){prismVideoProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM prismVideoProblem Steps END */
