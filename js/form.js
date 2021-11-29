@@ -447,7 +447,7 @@ const handleChange = ({ target: { value, name } }) => {
     case 'Другое programSetProblem-10':
       anotherSetProblem_1.classList.add('active');
       let hideSetProblem1 = document.querySelectorAll('.typeWork3[name="loyaltyProblem"], .typeWork3[name="updateProblem"]');
-      for(let i = 1; i < hideSetProblem1.length; i++) {
+      for(let i = 0; i < hideSetProblem1.length; i++) {
         hideSetProblem1[i].classList.remove('active');
       }
       setTimeout(() => window.scroll({ top: (anotherSetProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 120);
@@ -455,7 +455,7 @@ const handleChange = ({ target: { value, name } }) => {
     case 'Проблемаслояльностью programSetProblem-10':
       loyaltyProblem_1.classList.add('active');
       let hideSetProblem2 = document.querySelectorAll('.typeWork3[name="anotherSetProblem"], .typeWork3[name="updateProblem"]');
-      for(let i = 1; i < hideSetProblem2.length; i++) {
+      for(let i = 0; i < hideSetProblem2.length; i++) {
         hideSetProblem2[i].classList.remove('active');
       }
       setTimeout(() => window.scroll({ top: (loyaltyProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 120);
@@ -463,7 +463,7 @@ const handleChange = ({ target: { value, name } }) => {
     case 'Проблемаприобновлении programSetProblem-10':
       updateProblem_1.classList.add('active');
       let hideSetProblem3 = document.querySelectorAll('.typeWork3[name="loyaltyProblem"], .typeWork3[name="anotherSetProblem"]');
-      for(let i = 1; i < hideSetProblem3.length; i++) {
+      for(let i = 0; i < hideSetProblem3.length; i++) {
         hideSetProblem3[i].classList.remove('active');
       }
       setTimeout(() => window.scroll({ top: (updateProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 120);
@@ -531,9 +531,14 @@ const handleChange = ({ target: { value, name } }) => {
       break;
     case 'Нет updateProblem-1':
       updateProblem_2.classList.add('active');
+      let updateProblemAll = document.querySelectorAll('.typeWork3[name="updateProblem"]');
+      for(let i = 2; i < updateProblemAll.length; i++) {
+        updateProblemAll[i].classList.remove('active');
+      }
       setTimeout(() => window.scroll({ top: (updateProblem_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Да updateProblem-1':
+      updateProblem_2.classList.remove('active');
       updateProblem_3.classList.add('active');
       setTimeout(() => window.scroll({ top: (updateProblem_3.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
@@ -690,14 +695,14 @@ setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offse
 /* FORM anotherSetProblem Steps END */
 
 /* FORM loyaltyProblem Steps START */
-let loyaltyProblem = document.querySelectorAll(".item[name='loyaltyProblem']");
-for(let i=0; i<loyaltyProblem.length; i++){loyaltyProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
+let loyaltyProblem = document.querySelectorAll(".item[name='loyaltyProblem']:not([class*='Final-'])");
+for(let i=4; i<loyaltyProblem.length; i++){loyaltyProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM loyaltyProblem Steps END */
 
 /* FORM updateProblem Steps START */
-let updateProblem = document.querySelectorAll(".item[name='updateProblem']");
-for(let i=0; i<updateProblem.length; i++){updateProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
+let updateProblem = document.querySelectorAll(".item[name='updateProblem']:not([class*='-final'])");
+for(let i=2; i<updateProblem.length; i++){updateProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM loyaltyProblem Steps END */
 
