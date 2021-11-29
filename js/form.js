@@ -84,11 +84,10 @@ const updateProblem_3= document.querySelector('.updateProblem-3');
 const updateProblem_4= document.querySelector('.updateProblem-4');
 const typeWork4_1 = document.querySelector('.typeWork4-1');
 const typeWork4_2 = document.querySelector('.typeWork4-2');
-const typeWork4_3 = document.querySelector('.typeWork4-3');
 const typeWork4_4 = document.querySelector('.typeWork4-4');
-const typeWork4_5 = document.querySelector('.typeWork4-5');
 const typeWork4_6 = document.querySelector('.typeWork4-6');
 const typeWork4_7 = document.querySelector('.typeWork4-7');
+const typeWork4_final = document.querySelector('.typeWork4-final');
 const step2form2 = document.querySelector('#form-2 .item2[name="partnerContractor"]');
 const step3form2 = document.querySelector('#form-2 .item3[name="partnerContractor"]');
 const step4form2 = document.querySelector('#form-2 .item4[name="partnerContractor"]');
@@ -548,24 +547,26 @@ const handleChange = ({ target: { value, name } }) => {
       break;
     case 'typeWork4-2-yes tw4-2':
       typeWork4_4.classList.remove('active');
-      typeWork4_3.classList.add('active');
-      setTimeout(() => window.scroll({ top: (typeWork4_3.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      typeWork4_7.classList.remove('active');
+      typeWork4_6.classList.remove('active');
+      typeWork4_final.classList.add('active');
+      setTimeout(() => window.scroll({ top: (typeWork4_final.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typeWork4-2-no tw4-2':
-      typeWork4_3.classList.remove('active');
+      typeWork4_final.classList.remove('active');
       typeWork4_4.classList.add('active');
       setTimeout(() => window.scroll({ top: (typeWork4_4.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typeWork4-4-yes tw4-4':
-      typeWork4_5.classList.remove('active');
+      typeWork4_final.classList.remove('active');
       typeWork4_6.classList.add('active');
       setTimeout(() => window.scroll({ top: (typeWork4_6.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typeWork4-4-no tw4-4':
       typeWork4_7.classList.remove('active');
       typeWork4_6.classList.remove('active');
-      typeWork4_5.classList.add('active');
-      setTimeout(() => window.scroll({ top: (typeWork4_5.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      typeWork4_final.classList.add('active');
+      setTimeout(() => window.scroll({ top: (typeWork4_final.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
   }
 }
