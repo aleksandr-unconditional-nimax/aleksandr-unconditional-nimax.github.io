@@ -557,10 +557,12 @@ const handleChange = ({ target: { value, name } }) => {
       setTimeout(() => window.scroll({ top: (typeWork4_4.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typeWork4-4-yes tw4-4':
+      typeWork4_5.classList.remove('active');
       typeWork4_6.classList.add('active');
       setTimeout(() => window.scroll({ top: (typeWork4_6.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typeWork4-4-no tw4-4':
+      typeWork4_7.classList.remove('active');
       typeWork4_6.classList.remove('active');
       typeWork4_5.classList.add('active');
       setTimeout(() => window.scroll({ top: (typeWork4_5.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
