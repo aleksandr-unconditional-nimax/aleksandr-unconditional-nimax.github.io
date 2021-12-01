@@ -60,6 +60,7 @@ const prismVideoProblem_1= document.querySelector('.prismVideoProblem-1');
 const programSetProblem_1= document.querySelector('.programSetProblem-1');
 const programSetProblem_2= document.querySelector('.programSetProblem-2');
 const programSetProblem_9= document.querySelector('.programSetProblem-9');
+const programSetProblem_10= document.querySelector('.programSetProblem-10');
 const anotherSetProblem_1= document.querySelector('.anotherSetProblem-1');
 const loyaltyProblem_1= document.querySelector('.loyaltyProblem-1');
 const loyaltyProblem_2= document.querySelector('.loyaltyProblem-2');
@@ -430,7 +431,8 @@ const handleChange = ({ target: { value, name } }) => {
     case 'SetKiosk programSetProblem-1':
     case 'SetAgent programSetProblem-1':
       programSetProblem_2.classList.add('active');
-      let hideProgramSetProblem2 = document.querySelectorAll('.typeWork3[name="programSetProblemItems2"]');
+      programSetProblem_10.classList.remove('active');
+      let hideProgramSetProblem2 = document.querySelectorAll('.typeWork3[name="programSetProblemItems2"],.typeWork3[name="loyaltyProblem"],.typeWork3[name="anotherSetProblem"],.typeWork3[name="updateProblem"]');
       for(let i = 0; i < hideProgramSetProblem2.length; i++) {
         hideProgramSetProblem2[i].classList.remove('active');
       }
@@ -442,7 +444,7 @@ const handleChange = ({ target: { value, name } }) => {
       for(let i = 0; i < hideProgramSetProblem1.length; i++) {
         hideProgramSetProblem1[i].classList.remove('active');
       }
-      setTimeout(() => window.scroll({ top: (programSetProblem_9.offsetTop - offset), left: 0, behavior: 'smooth' }), 115);
+      setTimeout(() => window.scroll({ top: (programSetProblem_9.offsetTop - offset), left: 0, behavior: 'smooth' }), 125);
       break;
     case 'Другое programSetProblem-10':
       anotherSetProblem_1.classList.add('active');
