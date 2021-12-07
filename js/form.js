@@ -79,6 +79,7 @@ const loyaltyProblem_17= document.querySelector('.loyaltyProblem-17');
 const loyaltyProblem_18= document.querySelector('.loyaltyProblem-18');
 const loyaltyProblem_19= document.querySelector('.loyaltyProblem-19');
 const loyaltyProblemThanks= document.querySelector('.loyaltyProblem-thanks');
+const programSetProblemsFinal_4= document.querySelector('.programSetProblemsFinal-4');
 const updateProblem_1= document.querySelector('.updateProblem-1');
 const updateProblem_2= document.querySelector('.updateProblem-2');
 const updateProblem_3= document.querySelector('.updateProblem-3');
@@ -140,6 +141,7 @@ let radioForm1 = document.form1;
 let radioForm2 = document.form2;
 let hidePartnerContractor = document.querySelectorAll('fieldset:not([name="partnerContractor"])');
 let hideCashHardwareProblemChoice = document.querySelectorAll('.typeWork3:not([name="cashHardwareProblem-choice"])');
+let loyaltyProblemAll = document.querySelectorAll('.typeWork3[name="loyaltyProblem"]');
 
 const handleChange = ({ target: { value, name } }) => {
   const res = `${value} ${name}`;
@@ -485,9 +487,13 @@ const handleChange = ({ target: { value, name } }) => {
       break;
     case 'Нет loyaltyProblem-2':
       loyaltyProblem_3.classList.add('active');
+      for(let i = 3; i < loyaltyProblemAll.length; i++) {
+        loyaltyProblemAll[i].classList.remove('active');
+      }
       setTimeout(() => window.scroll({ top: (loyaltyProblem_3.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Да loyaltyProblem-2':
+      loyaltyProblem_3.classList.remove('active');
       loyaltyProblem_4.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_4.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
@@ -516,18 +522,26 @@ const handleChange = ({ target: { value, name } }) => {
       setTimeout(() => window.scroll({ top: (loyaltyProblem_16.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Нет loyaltyProblem-16':
+      loyaltyProblem_17.classList.remove('active');
       loyaltyProblem_18.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_18.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Да loyaltyProblem-16':
+      loyaltyProblem_18.classList.remove('active');
+      loyaltyProblem_19.classList.remove('active');
+      programSetProblemsFinal_4.remove('active');
+      loyaltyProblemThanks.remove('active');
       loyaltyProblem_17.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_17.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Нет loyaltyProblem-18':
+      loyaltyProblem_19.classList.remove('active');
+      programSetProblemsFinal_4.classList.remove('active')
       loyaltyProblemThanks.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblemThanks.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Да loyaltyProblem-18':
+      loyaltyProblemThanks.classList.remove('active');
       loyaltyProblem_19.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_19.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
