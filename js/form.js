@@ -346,9 +346,13 @@ const handleChange = ({ target: { value, name } }) => {
       setTimeout(() => window.scroll({ top: (fiscalRegistrar_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Да fiscalRegistrar-12':
+      let hideFiscalRegistrar_1 = document.querySelectorAll(".fiscalRegistrar-12 ~ fieldset:not(.fiscalRegistrar-final)");
+      for(let i = 0; i < hideFiscalRegistrar_1.length; i++) {
+        hideFiscalRegistrar_1[i].classList.remove('active');
+      }
       fiscalRegistrar_13.classList.remove('active');
       fiscalRegistrar_final.classList.add('active');
-      setTimeout(() => window.scroll({ top: (fiscalRegistrar_final.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      setTimeout(() => window.scroll({ top: (fiscalRegistrar_final.offsetTop - offset), left: 0, behavior: 'smooth' }), 150);
       break;
     case 'Нет fiscalRegistrar-12':
       fiscalRegistrar_final.classList.remove('active');
@@ -510,10 +514,19 @@ const handleChange = ({ target: { value, name } }) => {
       setTimeout(() => window.scroll({ top: (loyaltyProblem_4.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Нет loyaltyProblem-4':
+      let hideLoyaltyProblem_4 = document.querySelectorAll(".loyaltyProblem-4 ~ fieldset:not(.loyaltyProblem-7)");
+      for(let i = 0; i < hideLoyaltyProblem_4.length; i++) {
+        hideLoyaltyProblem_4[i].classList.remove('active');
+      }
+      loyaltyProblem_5.classList.remove('active');
       loyaltyProblem_7.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_7.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Да loyaltyProblem-4':
+      let hideLoyaltyProblem_5 = document.querySelectorAll(".loyaltyProblem-4 ~ fieldset:not(.loyaltyProblem-5)");
+      for(let i = 0; i < hideLoyaltyProblem_5.length; i++) {
+        hideLoyaltyProblem_5[i].classList.remove('active');
+      }
       loyaltyProblem_5.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_5.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
@@ -663,7 +676,7 @@ setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offse
 /* FORM fiscalRegistrar Steps END */
 
 /* FORM fiscalRegistrarModel Steps START */
-let fieldsetFiscalRegistrarModel = document.querySelectorAll(".item:not([class*='-final']):not([class*='problemFormChecks-1'])[name='fiscalRegistrarModel']");
+let fieldsetFiscalRegistrarModel = document.querySelectorAll(".item:not([class*='-final']):not([class*='problemFormChecks-1'])[name='fiscalRegistrarModel']:not(.fiscalRegistrar-12)");
 for(let i=0; i<fieldsetFiscalRegistrarModel.length; i++){fieldsetFiscalRegistrarModel[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM fiscalRegistrar Steps END */
