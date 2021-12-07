@@ -423,7 +423,7 @@ const handleChange = ({ target: { value, name } }) => {
     case 'ПринтерШК/этикеток equipmentAreaProblem-1':
       equipmentAreaProblem_2.classList.remove('active');
       equipmentAreaProblem_3.classList.add('active');
-      setTimeout(() => window.scroll({ top: (equipmentAreaProblem_3.offsetTop - offset), left: 0, behavior: 'smooth' }), 105);
+      setTimeout(() => window.scroll({ top: (equipmentAreaProblem_3.offsetTop - offset), left: 0, behavior: 'smooth' }), 140);
       break;
     case 'SetGalya programSetProblem-1':
     case 'SetKit programSetProblem-1':
@@ -473,15 +473,27 @@ const handleChange = ({ target: { value, name } }) => {
       setTimeout(() => window.scroll({ top: (updateProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 120);
       break;
     case 'Подарочнаякарта loyaltyProblem-1':
+      let hideLoyaltyProblem_1 = document.querySelectorAll(".loyaltyProblem-1 ~ fieldset:not(.loyaltyProblem-2)");
+      for(let i = 0; i < hideLoyaltyProblem_1.length; i++) {
+        hideLoyaltyProblem_1[i].classList.remove('active');
+      }
       loyaltyProblem_2.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Дисконтная/бонуснаякарта loyaltyProblem-1':
     case 'Купоны loyaltyProblem-1':
+      let hideLoyaltyProblem_2 = document.querySelectorAll(".loyaltyProblem-1 ~ fieldset:not(.loyaltyProblem-8)");
+      for(let i = 0; i < hideLoyaltyProblem_2.length; i++) {
+        hideLoyaltyProblem_2[i].classList.remove('active');
+      }
       loyaltyProblem_8.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_8.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Рекламнаяакция loyaltyProblem-1':
+      let hideLoyaltyProblem_3 = document.querySelectorAll(".loyaltyProblem-1 ~ fieldset:not(.loyaltyProblem-12)");
+      for(let i = 0; i < hideLoyaltyProblem_3.length; i++) {
+        hideLoyaltyProblem_3[i].classList.remove('active');
+      }
       loyaltyProblem_12.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_12.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
