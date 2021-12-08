@@ -33,8 +33,6 @@ const fiscalRegistrar_2= document.querySelector('.fiscalRegistrar-2');
 const fiscalRegistrar_3= document.querySelector('.fiscalRegistrar-3');
 const fiscalRegistrar_4= document.querySelector('.fiscalRegistrar-4');
 const fiscalRegistrar_5= document.querySelector('.fiscalRegistrar-5');
-const fiscalRegistrarBranch1 = document.getElementsByName('fiscalRegistrarOther');
-const fiscalRegistrarBranch1_2 = document.getElementsByName('fiscalRegistrarModel');
 const fiscalRegistrar_12= document.querySelector('.fiscalRegistrar-12');
 const fiscalRegistrar_final= document.querySelector('.fiscalRegistrar-final');
 const fiscalRegistrar_13= document.querySelector('.fiscalRegistrar-13');
@@ -142,6 +140,13 @@ let radioForm2 = document.form2;
 let hidePartnerContractor = document.querySelectorAll('fieldset:not([name="partnerContractor"])');
 let hideCashHardwareProblemChoice = document.querySelectorAll('.typeWork3:not([name="cashHardwareProblem-choice"])');
 let loyaltyProblemAll = document.querySelectorAll('.typeWork3[name="loyaltyProblem"]');
+let hideLoyaltyProblem_1 = document.querySelectorAll(".loyaltyProblem-1 ~ fieldset");
+let hideLoyaltyProblem_4 = document.querySelectorAll(".loyaltyProblem-4 ~ fieldset");
+let hideLoyaltyProblem_8 = document.querySelectorAll(".loyaltyProblem-8 ~ fieldset");
+let hideLoyaltyProblem_12 = document.querySelectorAll(".loyaltyProblem-12 ~ fieldset");
+let hideFiscalRegistrar_1 = document.querySelectorAll(".fiscalRegistrar-1 ~ fieldset");
+let hideFiscalRegistrar_12 = document.querySelectorAll(".fiscalRegistrar-12 ~ fieldset");
+let hideFiscalRegistrar_13 = document.querySelectorAll(".fiscalRegistrar-13 ~ fieldset");
 
 const handleChange = ({ target: { value, name } }) => {
   const res = `${value} ${name}`;
@@ -253,7 +258,6 @@ const handleChange = ({ target: { value, name } }) => {
       cashproblem.classList.add('active');
       let hideFieldsets1 = document.querySelectorAll('.typeWork3:not([name="cashProblem"])');
       for(let i = 1; i < hideFieldsets1.length; i++) {
-        console.log(hideFieldsets1[i]);
         hideFieldsets1[i].classList.remove('active');
       }
       setTimeout(() => window.scroll({ top: (cashproblem.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
@@ -328,29 +332,30 @@ const handleChange = ({ target: { value, name } }) => {
       setTimeout(() => window.scroll({ top: (cashHardwareProblem_9.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Другое fiscalRegistrar-1':
+      for(let i = 0; i < hideFiscalRegistrar_1.length; i++) {
+        hideFiscalRegistrar_1[i].classList.remove('active');
+      }
       fiscalRegistrar_4.classList.add('active');
       setTimeout(() => window.scroll({ top: (fiscalRegistrar_4.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'ВикиПринт80Ф fiscalRegistrar-1':
-      for(let i = 0; i < fiscalRegistrarBranch1.length; i++) {
-        fiscalRegistrarBranch1[i].classList.remove('active');
+      for(let i = 0; i < hideFiscalRegistrar_1.length; i++) {
+        hideFiscalRegistrar_1[i].classList.remove('active');
       }
       fiscalRegistrar_2.classList.add('active');
       setTimeout(() => window.scroll({ top: (fiscalRegistrar_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Пирит2Ф fiscalRegistrar-1':
-      for(let i = 0; i < fiscalRegistrarBranch1.length; i++) {
-        fiscalRegistrarBranch1[i].classList.remove('active');
+      for(let i = 0; i < hideFiscalRegistrar_1.length; i++) {
+        hideFiscalRegistrar_1[i].classList.remove('active');
       }
       fiscalRegistrar_2.classList.add('active');
       setTimeout(() => window.scroll({ top: (fiscalRegistrar_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Да fiscalRegistrar-12':
-      let hideFiscalRegistrar_1 = document.querySelectorAll(".fiscalRegistrar-12 ~ fieldset:not(.fiscalRegistrar-final)");
-      for(let i = 0; i < hideFiscalRegistrar_1.length; i++) {
-        hideFiscalRegistrar_1[i].classList.remove('active');
+      for(let i = 0; i < hideFiscalRegistrar_12.length; i++) {
+        hideFiscalRegistrar_12[i].classList.remove('active');
       }
-      fiscalRegistrar_13.classList.remove('active');
       fiscalRegistrar_final.classList.add('active');
       setTimeout(() => window.scroll({ top: (fiscalRegistrar_final.offsetTop - offset), left: 0, behavior: 'smooth' }), 150);
       break;
@@ -360,17 +365,23 @@ const handleChange = ({ target: { value, name } }) => {
       setTimeout(() => window.scroll({ top: (fiscalRegistrar_13.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Другое fiscalRegistrar-13':
-      for(let i = 0; i < fiscalRegistrarBranch1_2.length; i++) {
-        fiscalRegistrarBranch1_2[i].classList.remove('active');
+      for(let i = 0; i < hideFiscalRegistrar_13.length; i++) {
+        hideFiscalRegistrar_13[i].classList.remove('active');
       }
       fiscalRegistrar_5.classList.add('active');
       setTimeout(() => window.scroll({ top: (fiscalRegistrar_5.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Проблемасформойчеков fiscalRegistrar-13':
+      for(let i = 0; i < hideFiscalRegistrar_13.length; i++) {
+        hideFiscalRegistrar_13[i].classList.remove('active');
+      }
       problemFormChecks_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (problemFormChecks_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'ПроблемасотправкойвОФД fiscalRegistrar-13':
+      for(let i = 0; i < hideFiscalRegistrar_13.length; i++) {
+        hideFiscalRegistrar_13[i].classList.remove('active');
+      }
       problemSendOFD_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (problemSendOFD_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
@@ -477,7 +488,6 @@ const handleChange = ({ target: { value, name } }) => {
       setTimeout(() => window.scroll({ top: (updateProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 120);
       break;
     case 'Подарочнаякарта loyaltyProblem-1':
-      let hideLoyaltyProblem_1 = document.querySelectorAll(".loyaltyProblem-1 ~ fieldset:not(.loyaltyProblem-2)");
       for(let i = 0; i < hideLoyaltyProblem_1.length; i++) {
         hideLoyaltyProblem_1[i].classList.remove('active');
       }
@@ -486,17 +496,15 @@ const handleChange = ({ target: { value, name } }) => {
       break;
     case 'Дисконтная/бонуснаякарта loyaltyProblem-1':
     case 'Купоны loyaltyProblem-1':
-      let hideLoyaltyProblem_2 = document.querySelectorAll(".loyaltyProblem-1 ~ fieldset:not(.loyaltyProblem-8)");
-      for(let i = 0; i < hideLoyaltyProblem_2.length; i++) {
-        hideLoyaltyProblem_2[i].classList.remove('active');
+      for(let i = 0; i < hideLoyaltyProblem_1.length; i++) {
+        hideLoyaltyProblem_1[i].classList.remove('active');
       }
       loyaltyProblem_8.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_8.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Рекламнаяакция loyaltyProblem-1':
-      let hideLoyaltyProblem_3 = document.querySelectorAll(".loyaltyProblem-1 ~ fieldset:not(.loyaltyProblem-12)");
-      for(let i = 0; i < hideLoyaltyProblem_3.length; i++) {
-        hideLoyaltyProblem_3[i].classList.remove('active');
+      for(let i = 0; i < hideLoyaltyProblem_1.length; i++) {
+        hideLoyaltyProblem_1[i].classList.remove('active');
       }
       loyaltyProblem_12.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_12.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
@@ -514,35 +522,44 @@ const handleChange = ({ target: { value, name } }) => {
       setTimeout(() => window.scroll({ top: (loyaltyProblem_4.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Нет loyaltyProblem-4':
-      let hideLoyaltyProblem_4 = document.querySelectorAll(".loyaltyProblem-4 ~ fieldset:not(.loyaltyProblem-7)");
       for(let i = 0; i < hideLoyaltyProblem_4.length; i++) {
         hideLoyaltyProblem_4[i].classList.remove('active');
       }
-      loyaltyProblem_5.classList.remove('active');
       loyaltyProblem_7.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_7.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Да loyaltyProblem-4':
-      let hideLoyaltyProblem_5 = document.querySelectorAll(".loyaltyProblem-4 ~ fieldset:not(.loyaltyProblem-5)");
-      for(let i = 0; i < hideLoyaltyProblem_5.length; i++) {
-        hideLoyaltyProblem_5[i].classList.remove('active');
+      for(let i = 0; i < hideLoyaltyProblem_4.length; i++) {
+        hideLoyaltyProblem_4[i].classList.remove('active');
       }
       loyaltyProblem_5.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_5.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Нет loyaltyProblem-8':
+      for(let i = 0; i < hideLoyaltyProblem_8.length; i++) {
+        hideLoyaltyProblem_8[i].classList.remove('active');
+      }
       loyaltyProblem_11.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_11.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Да loyaltyProblem-8':
+      for(let i = 0; i < hideLoyaltyProblem_8.length; i++) {
+        hideLoyaltyProblem_8[i].classList.remove('active');
+      }
       loyaltyProblem_9.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_9.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Нет loyaltyProblem-12':
+      for(let i = 0; i < hideLoyaltyProblem_12.length; i++) {
+        hideLoyaltyProblem_12[i].classList.remove('active');
+      }
       loyaltyProblem_13.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_13.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Да loyaltyProblem-12':
+      for(let i = 0; i < hideLoyaltyProblem_12.length; i++) {
+        hideLoyaltyProblem_12[i].classList.remove('active');
+      }
       loyaltyProblem_16.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_16.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
@@ -554,8 +571,8 @@ const handleChange = ({ target: { value, name } }) => {
     case 'Да loyaltyProblem-16':
       loyaltyProblem_18.classList.remove('active');
       loyaltyProblem_19.classList.remove('active');
-      programSetProblemsFinal_4.remove('active');
-      loyaltyProblemThanks.remove('active');
+      programSetProblemsFinal_4.classList.remove('active');
+      loyaltyProblemThanks.classList.remove('active');
       loyaltyProblem_17.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_17.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
@@ -563,7 +580,7 @@ const handleChange = ({ target: { value, name } }) => {
       loyaltyProblem_19.classList.remove('active');
       programSetProblemsFinal_4.classList.remove('active')
       loyaltyProblemThanks.classList.add('active');
-      setTimeout(() => window.scroll({ top: (loyaltyProblemThanks.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      setTimeout(() => window.scroll({ top: (loyaltyProblemThanks.offsetTop - offset), left: 0, behavior: 'smooth' }), 120);
       break;
     case 'Да loyaltyProblem-18':
       loyaltyProblemThanks.classList.remove('active');
