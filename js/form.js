@@ -147,6 +147,7 @@ let hideLoyaltyProblem_12 = document.querySelectorAll(".loyaltyProblem-12 ~ fiel
 let hideFiscalRegistrar_1 = document.querySelectorAll(".fiscalRegistrar-1 ~ fieldset");
 let hideFiscalRegistrar_12 = document.querySelectorAll(".fiscalRegistrar-12 ~ fieldset");
 let hideFiscalRegistrar_13 = document.querySelectorAll(".fiscalRegistrar-13 ~ fieldset");
+let hideProblemSendOFD_4 = document.querySelectorAll(".problemSendOFD-4 ~ fieldset");
 
 const handleChange = ({ target: { value, name } }) => {
   const res = `${value} ${name}`;
@@ -423,10 +424,16 @@ const handleChange = ({ target: { value, name } }) => {
       setTimeout(() => window.scroll({ top: (problemFormChecks_7.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Да problemSendOFD-4':
+      for(let i = 0; i < hideProblemSendOFD_4.length; i++) {
+        hideProblemSendOFD_4[i].classList.remove('active');
+      }
       fiscalRegistrar_final.classList.add('active');
       setTimeout(() => window.scroll({ top: (fiscalRegistrar_final.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Нет problemSendOFD-4':
+      for(let i = 0; i < hideProblemSendOFD_4.length; i++) {
+        hideProblemSendOFD_4[i].classList.remove('active');
+      }
       problemSendOFD_5.classList.add('active');
       setTimeout(() => window.scroll({ top: (problemSendOFD_5.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
