@@ -12,21 +12,10 @@ const typeWork4 = document.querySelectorAll('.typeWork4');
 const typeWork1_1 = document.querySelector('.typeWork1-1');
 const typeWork1_2 = document.querySelector('.typeWork1-2');
 const typeWork1_3 = document.querySelector('.typeWork1-3');
-const typeWork1_4 = document.querySelector('.typeWork1-4');
 const typeWork2_1 = document.querySelector('.typeWork2-1');
 const typeWork2_2 = document.querySelector('.typeWork2-2');
-const typeWork2_3 = document.querySelector('.typeWork2-3');
-const typeWork2_4 = document.querySelector('.typeWork2-4');
-const typeWork2_5 = document.querySelector('.typeWork2-5');
-const typeWork2_6 = document.querySelector('.typeWork2-6');
-const typeWork2_7 = document.querySelector('.typeWork2-7');
+const typeWork2_final = document.querySelector('.typeWork2-final');
 const typeWork3_1 = document.querySelector('.typeWork3-1');
-const typeWork3_1_1 = document.querySelector('.typeWork3-1-1');
-const typeWork3_1_2 = document.querySelector('.typeWork3-1-2');
-const typeWork3_2 = document.querySelector('.typeWork3-2');
-const typeWork3_3 = document.querySelector('.typeWork3-3');
-const typeWork3_4 = document.querySelector('.typeWork3-4');
-const typeWork3_5 = document.querySelector('.typeWork3-5');
 const cashproblem = document.querySelector('.cashProblem');
 const fiscalRegistrar = document.querySelector('.fiscalRegistrar-1');
 const fiscalRegistrar_2= document.querySelector('.fiscalRegistrar-2');
@@ -38,11 +27,8 @@ const fiscalRegistrar_final= document.querySelector('.fiscalRegistrar-final');
 const fiscalRegistrar_13= document.querySelector('.fiscalRegistrar-13');
 const problemFormChecks_1= document.querySelector('.problemFormChecks-1');
 const problemFormChecks_2= document.querySelector('.problemFormChecks-2');
-const problemFormChecks_3= document.querySelector('.problemFormChecks-3');
 const problemFormChecks_4= document.querySelector('.problemFormChecks-4');
-const problemFormChecks_5= document.querySelector('.problemFormChecks-5');
 const fiscalRegistrar_another_driver= document.querySelector('.fiscalRegistrar-another-driver');
-const problemFormChecks_6= document.querySelector('.problemFormChecks-6');
 const problemFormChecks_7= document.querySelector('.problemFormChecks-7');
 const problemFormChecks_8= document.querySelector('.problemFormChecks-8');
 const problemSendOFD_1= document.querySelector('.problemSendOFD-1');
@@ -65,7 +51,6 @@ const loyaltyProblem_2= document.querySelector('.loyaltyProblem-2');
 const loyaltyProblem_3= document.querySelector('.loyaltyProblem-3');
 const loyaltyProblem_4= document.querySelector('.loyaltyProblem-4');
 const loyaltyProblem_5= document.querySelector('.loyaltyProblem-5');
-const loyaltyProblem_6= document.querySelector('.loyaltyProblem-6');
 const loyaltyProblem_7= document.querySelector('.loyaltyProblem-7');
 const loyaltyProblem_8= document.querySelector('.loyaltyProblem-8');
 const loyaltyProblem_9= document.querySelector('.loyaltyProblem-9');
@@ -140,6 +125,8 @@ let radioForm2 = document.form2;
 let hidePartnerContractor = document.querySelectorAll('fieldset:not([name="partnerContractor"])');
 let hideCashHardwareProblemChoice = document.querySelectorAll('.typeWork3:not([name="cashHardwareProblem-choice"])');
 let loyaltyProblemAll = document.querySelectorAll('.typeWork3[name="loyaltyProblem"]');
+let hideTypeWork_2 = document.querySelectorAll(".typeWork2-1 ~ fieldset");
+let hideProblemFormChecks_1 = document.querySelectorAll(".problemFormChecks-1 ~ fieldset");
 let hideLoyaltyProblem_1 = document.querySelectorAll(".loyaltyProblem-1 ~ fieldset");
 let hideLoyaltyProblem_4 = document.querySelectorAll(".loyaltyProblem-4 ~ fieldset");
 let hideLoyaltyProblem_8 = document.querySelectorAll(".loyaltyProblem-8 ~ fieldset");
@@ -248,10 +235,14 @@ const handleChange = ({ target: { value, name } }) => {
       setTimeout(() => window.scroll({ top: (typeWork1_3.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typeWork2-1-no tw2-1':
-      typeWork2_2.classList.add('active');
-      setTimeout(() => window.scroll({ top: (typeWork2_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+      for(let i = 0; i < hideTypeWork_2.length; i++) {
+        hideTypeWork_2[i].classList.remove('active');
+      }
+      typeWork2_final.classList.add('active');
+      setTimeout(() => window.scroll({ top: (typeWork2_final.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typeWork2-1-yes tw2-1':
+      typeWork2_final.classList.remove('active');
       typeWork2_2.classList.add('active');
       setTimeout(() => window.scroll({ top: (typeWork2_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
@@ -387,10 +378,16 @@ const handleChange = ({ target: { value, name } }) => {
       setTimeout(() => window.scroll({ top: (problemSendOFD_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'ФР+СтороннееПО problemFormChecks-1':
+      for(let i = 0; i < hideProblemFormChecks_1.length; i++) {
+        hideProblemFormChecks_1[i].classList.remove('active');
+      }
       problemFormChecks_2.classList.add('active');
       setTimeout(() => window.scroll({ top: (problemFormChecks_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'ФР+SetRetail10 problemFormChecks-1':
+      for(let i = 0; i < hideProblemFormChecks_1.length; i++) {
+        hideProblemFormChecks_1[i].classList.remove('active');
+      }
       problemFormChecks_7.classList.add('active');
       setTimeout(() => window.scroll({ top: (problemFormChecks_7.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
@@ -688,7 +685,7 @@ setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offse
 /* FORM typeWork1 Steps END */
 
 /* FORM typeWork2 Steps START */
-let fieldsetTypework2 = document.querySelectorAll(".item[name='typeWork2']");
+let fieldsetTypework2 = document.querySelectorAll(".item[name='typeWork2']:not([class*='-final'])");
 for(let i=0; i<fieldsetTypework2.length; i++){fieldsetTypework2[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM typeWork2 Steps END */
