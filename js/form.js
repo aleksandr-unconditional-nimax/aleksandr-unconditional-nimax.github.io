@@ -84,18 +84,15 @@ step1form1.onclick = function() {
   step2form1.classList.add('active');
   setTimeout(() => window.scroll({ top: (step2form1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
 };
-
 step2form1.onclick = function() {
   step3form1.classList.add('active');
   setTimeout(() => window.scroll({ top: (step3form1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
 };
-
 step3form1.onclick = function() {
   step4form1.classList.add('active');
   step5form1.classList.add('active');
   setTimeout(() => window.scroll({ top: (step4form1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
 };
-
 let select2Li = document.querySelectorAll('#select-2 .select-option');
 select2Li.forEach(el => {
   el.addEventListener('click', () => {
@@ -103,18 +100,15 @@ select2Li.forEach(el => {
     setTimeout(() => window.scroll({ top: (step6form1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
   })
 })
-
 step5form1.onclick = function() {
   step6form1.classList.add('active');
   navForms.classList.add('active');
   setTimeout(() => window.scroll({ top: (step6form1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
 };
-
 step6form1.onclick = function() {
   typeWork0.classList.add('active');
   setTimeout(() => window.scroll({ top: (typeWork0.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
 };
-
 typeWork4_6.onclick = function() {
   typeWork4_7.classList.add('active');
   setTimeout(() => window.scroll({ top: (typeWork4_7.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
@@ -122,115 +116,74 @@ typeWork4_6.onclick = function() {
 
 let radioForm1 = document.form1;
 let radioForm2 = document.form2;
-let hidePartnerContractor = document.querySelectorAll('fieldset:not([name="partnerContractor"])');
+let hidePartnerContractor = document.querySelectorAll('.item1[name="partnerContractor"] ~ fieldset');
 let hideCashHardwareProblemChoice = document.querySelectorAll('.typeWork3:not([name="cashHardwareProblem-choice"])');
 let loyaltyProblemAll = document.querySelectorAll('.typeWork3[name="loyaltyProblem"]');
 let hideTypeWork_2 = document.querySelectorAll(".typeWork2-1 ~ fieldset");
 let hideFieldsets1 = document.querySelectorAll(".typeWork3-1 ~ fieldset");
 let hideCashProblem = document.querySelectorAll(".cashProblem ~ fieldset");
 let hideProblemFormChecks_1 = document.querySelectorAll(".problemFormChecks-1 ~ fieldset");
-let hideProgramSetProblem1 = document.querySelectorAll(".programSetProblem-1 ~ .item");
+let hideProgramSetProblem1 = document.querySelectorAll(".programSetProblem-1 ~ .item", ".programSetProblem-1 ~ fieldset");
 let hideSetProblem1 = document.querySelectorAll(".programSetProblem-10 ~ fieldset");
 let hideLoyaltyProblem_1 = document.querySelectorAll(".loyaltyProblem-1 ~ fieldset");
 let hideLoyaltyProblem_4 = document.querySelectorAll(".loyaltyProblem-4 ~ fieldset");
 let hideLoyaltyProblem_8 = document.querySelectorAll(".loyaltyProblem-8 ~ fieldset");
 let hideLoyaltyProblem_12 = document.querySelectorAll(".loyaltyProblem-12 ~ fieldset");
 let hideLoyaltyProblem_16 = document.querySelectorAll(".loyaltyProblem-16 ~ fieldset");
+let hideLoyaltyProblem_18 = document.querySelectorAll(".loyaltyProblem-18 ~ fieldset");
+let hideUpdateProblem = document.querySelectorAll(".updateProblem-1 ~ fieldset");
 let hideFiscalRegistrar_1 = document.querySelectorAll(".fiscalRegistrar-1 ~ fieldset");
 let hideFiscalRegistrar_12 = document.querySelectorAll(".fiscalRegistrar-12 ~ fieldset");
 let hideFiscalRegistrar_13 = document.querySelectorAll(".fiscalRegistrar-13 ~ fieldset");
 let hideFiscalRegistrarDriver = document.querySelectorAll(".problemFormChecks-3 ~ fieldset");
 let hideProblemSendOFD_4 = document.querySelectorAll(".problemSendOFD-4 ~ fieldset");
+let hideTypeWork = document.querySelectorAll(".typeWork0 ~ .item", ".typeWork0 ~ fieldset");
+let hideTypeWork_4_2 = document.querySelectorAll(".typeWork4-2 ~ fieldset");
+let hideTypeWork_4_4 = document.querySelectorAll(".typeWork4-4 ~ fieldset");
 
 const handleChange = ({ target: { value, name } }) => {
   const res = `${value} ${name}`;
   switch (res) {
     case 'Да contract':
-      step4form2.classList.remove('active');
+      for(let i = 0; i < hidePartnerContractor.length; i++) {hidePartnerContractor[i].classList.remove('active');}
       step2form2.classList.add('active');
-      step5form2.classList.remove('active');
-      for(let i = 1; i < hidePartnerContractor.length; i++) {
-        hidePartnerContractor[i].classList.remove('active');
-      }
       break;
     case 'Нет contract':
-      step2form2.classList.remove('active');
-      step3form2.classList.remove('active');
+      for(let i = 0; i < hidePartnerContractor.length; i++) {hidePartnerContractor[i].classList.remove('active');}
       step4form2.classList.add('active');
-      for(let i = 1; i < hidePartnerContractor.length; i++) {
-        hidePartnerContractor[i].classList.remove('active');
-      }
       break;
     case 'Да contractProblem':
-      step5form2.classList.remove('active');
-      step4form2.classList.remove('active');
+      for(let i = 1; i < hidePartnerContractor.length; i++) {hidePartnerContractor[i].classList.remove('active');}
       step3form2.classList.add('active');
-      for(let i = 1; i < hidePartnerContractor.length; i++) {
-        hidePartnerContractor[i].classList.remove('active');
-      }
       break;
     case 'Нет contractProblem':
-      step3form2.classList.remove('active');
+      for(let i = 1; i < hidePartnerContractor.length; i++) {hidePartnerContractor[i].classList.remove('active');}
       step4form2.classList.add('active');
       break;
     case 'typeWork1 typeWork':
-      for(let i = 0; i < typeWork2.length; i++) {
-        typeWork2[i].classList.remove('active');
-      }
-      for(let i = 0; i < typeWork3.length; i++) {
-        typeWork3[i].classList.remove('active');
-      }
-      for(let i = 0; i < typeWork4.length; i++) {
-        typeWork4[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideTypeWork.length; i++) {hideTypeWork[i].classList.remove('active');}
       typeWork1_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (typeWork1_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typeWork2 typeWork':
-      for(let i = 0; i < typeWork1.length; i++) {
-        typeWork1[i].classList.remove('active');
-      }
-      for(let i = 0; i < typeWork3.length; i++) {
-        typeWork3[i].classList.remove('active');
-      }
-      for(let i = 0; i < typeWork4.length; i++) {
-        typeWork4[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideTypeWork.length; i++) {hideTypeWork[i].classList.remove('active');}
       typeWork2_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (typeWork2_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typeWork3 typeWork':
-      for(let i = 0; i < typeWork1.length; i++) {
-        typeWork1[i].classList.remove('active');
-      }
-      for(let i = 0; i < typeWork2.length; i++) {
-        typeWork2[i].classList.remove('active');
-      }
-      for(let i = 0; i < typeWork4.length; i++) {
-        typeWork4[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideTypeWork.length; i++) {hideTypeWork[i].classList.remove('active');}
       typeWork3_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (typeWork3_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typeWork4 typeWork':
-      for(let i = 0; i < typeWork1.length; i++) {
-        typeWork1[i].classList.remove('active');
-      }
-      for(let i = 0; i < typeWork2.length; i++) {
-        typeWork2[i].classList.remove('active');
-      }
-      for(let i = 0; i < typeWork3.length; i++) {
-        typeWork3[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideTypeWork.length; i++) {hideTypeWork[i].classList.remove('active');}
       typeWork4_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (typeWork4_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       setTimeout(() => typeWork4_2.classList.add('active'), 1800);
       setTimeout(() => window.scroll({ top: (typeWork4_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 1900);
       break;
     case 'typeWork1-1-no tw1-1':
-      for(let i = 1; i < typeWork1.length; i++) {
-        typeWork1[i].classList.remove('active');
-      }
+      for(let i = 1; i < typeWork1.length; i++) {typeWork1[i].classList.remove('active');}
       typeWork1_3.classList.remove('active');
       typeWork1_2.classList.add('active');
       setTimeout(() => window.scroll({ top: (typeWork1_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
@@ -241,9 +194,7 @@ const handleChange = ({ target: { value, name } }) => {
       setTimeout(() => window.scroll({ top: (typeWork1_3.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typeWork2-1-no tw2-1':
-      for(let i = 0; i < hideTypeWork_2.length; i++) {
-        hideTypeWork_2[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideTypeWork_2.length; i++) {hideTypeWork_2[i].classList.remove('active');}
       typeWork2_final.classList.add('active');
       setTimeout(() => window.scroll({ top: (typeWork2_final.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
@@ -253,95 +204,69 @@ const handleChange = ({ target: { value, name } }) => {
       setTimeout(() => window.scroll({ top: (typeWork2_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typeWork3-1 tw3-1':
-      for(let i = 0; i < hideFieldsets1.length; i++) {
-        hideFieldsets1[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideFieldsets1.length; i++) {hideFieldsets1[i].classList.remove('active');}
       cashproblem.classList.add('active');
       setTimeout(() => window.scroll({ top: (cashproblem.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typeWork3-2 tw3-1':
-      for(let i = 0; i < hideFieldsets1.length; i++) {
-        hideFieldsets1[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideFieldsets1.length; i++) {hideFieldsets1[i].classList.remove('active');}
       equipmentAreaProblem_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (equipmentAreaProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typeWork3-3 tw3-1':
-      for(let i = 0; i < hideFieldsets1.length; i++) {
-        hideFieldsets1[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideFieldsets1.length; i++) {hideFieldsets1[i].classList.remove('active');}
       prismVideoProblem_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (prismVideoProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typeWork3-4 tw3-1':
-      for(let i = 0; i < hideFieldsets1.length; i++) {
-        hideFieldsets1[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideFieldsets1.length; i++) {hideFieldsets1[i].classList.remove('active');}
       programSetProblem_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (programSetProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'fiscalRegistrar cash-problem-step-0':
-      for(let i = 0; i < hideCashProblem.length; i++) {
-        hideCashProblem[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideCashProblem.length; i++) {hideCashProblem[i].classList.remove('active');}
       fiscalRegistrar.classList.add('active');
       setTimeout(() => window.scroll({ top: (fiscalRegistrar.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Системныйблок cash-problem-step-0': 
     case 'Клавиатура cash-problem-step-0':
     case 'Денежныйящик cash-problem-step-0':
-      for(let i = 0; i < hideCashProblem.length; i++) {
-        hideCashProblem[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideCashProblem.length; i++) {hideCashProblem[i].classList.remove('active');}
       cashHardwareProblem_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (cashHardwareProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Сканер cash-problem-step-0':
-      for(let i = 0; i < hideCashProblem.length; i++) {
-        hideCashProblem[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideCashProblem.length; i++) {hideCashProblem[i].classList.remove('active');}
       cashHardwareProblem_7.classList.add('active');
       setTimeout(() => window.scroll({ top: (cashHardwareProblem_7.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Дисплей/монитор cash-problem-step-0':
-      for(let i = 0; i < hideCashProblem.length; i++) {
-        hideCashProblem[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideCashProblem.length; i++) {hideCashProblem[i].classList.remove('active');}
       cashHardwareProblem_8.classList.add('active');
       setTimeout(() => window.scroll({ top: (cashHardwareProblem_8.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Другое cash-problem-step-0':
-      for(let i = 0; i < hideCashProblem.length; i++) {
-        hideCashProblem[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideCashProblem.length; i++) {hideCashProblem[i].classList.remove('active');}
       cashHardwareProblem_9.classList.add('active');
       setTimeout(() => window.scroll({ top: (cashHardwareProblem_9.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Другое fiscalRegistrar-1':
-      for(let i = 0; i < hideFiscalRegistrar_1.length; i++) {
-        hideFiscalRegistrar_1[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideFiscalRegistrar_1.length; i++) {hideFiscalRegistrar_1[i].classList.remove('active');}
       fiscalRegistrar_4.classList.add('active');
       setTimeout(() => window.scroll({ top: (fiscalRegistrar_4.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'ВикиПринт80Ф fiscalRegistrar-1':
-      for(let i = 0; i < hideFiscalRegistrar_1.length; i++) {
-        hideFiscalRegistrar_1[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideFiscalRegistrar_1.length; i++) {hideFiscalRegistrar_1[i].classList.remove('active');}
       fiscalRegistrar_2.classList.add('active');
       setTimeout(() => window.scroll({ top: (fiscalRegistrar_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Пирит2Ф fiscalRegistrar-1':
-      for(let i = 0; i < hideFiscalRegistrar_1.length; i++) {
-        hideFiscalRegistrar_1[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideFiscalRegistrar_1.length; i++) {hideFiscalRegistrar_1[i].classList.remove('active');}
       fiscalRegistrar_2.classList.add('active');
       setTimeout(() => window.scroll({ top: (fiscalRegistrar_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Да fiscalRegistrar-12':
-      for(let i = 0; i < hideFiscalRegistrar_12.length; i++) {
-        hideFiscalRegistrar_12[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideFiscalRegistrar_12.length; i++) {hideFiscalRegistrar_12[i].classList.remove('active');}
       fiscalRegistrar_final.classList.add('active');
       setTimeout(() => window.scroll({ top: (fiscalRegistrar_final.offsetTop - offset), left: 0, behavior: 'smooth' }), 150);
       break;
@@ -351,37 +276,27 @@ const handleChange = ({ target: { value, name } }) => {
       setTimeout(() => window.scroll({ top: (fiscalRegistrar_13.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Другое fiscalRegistrar-13':
-      for(let i = 0; i < hideFiscalRegistrar_13.length; i++) {
-        hideFiscalRegistrar_13[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideFiscalRegistrar_13.length; i++) {hideFiscalRegistrar_13[i].classList.remove('active');}
       fiscalRegistrar_5.classList.add('active');
       setTimeout(() => window.scroll({ top: (fiscalRegistrar_5.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Проблемасформойчеков fiscalRegistrar-13':
-      for(let i = 0; i < hideFiscalRegistrar_13.length; i++) {
-        hideFiscalRegistrar_13[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideFiscalRegistrar_13.length; i++) {hideFiscalRegistrar_13[i].classList.remove('active');}
       problemFormChecks_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (problemFormChecks_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'ПроблемасотправкойвОФД fiscalRegistrar-13':
-      for(let i = 0; i < hideFiscalRegistrar_13.length; i++) {
-        hideFiscalRegistrar_13[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideFiscalRegistrar_13.length; i++) {hideFiscalRegistrar_13[i].classList.remove('active');}
       problemSendOFD_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (problemSendOFD_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'ФР+СтороннееПО problemFormChecks-1':
-      for(let i = 0; i < hideProblemFormChecks_1.length; i++) {
-        hideProblemFormChecks_1[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideProblemFormChecks_1.length; i++) {hideProblemFormChecks_1[i].classList.remove('active');}
       problemFormChecks_2.classList.add('active');
       setTimeout(() => window.scroll({ top: (problemFormChecks_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'ФР+SetRetail10 problemFormChecks-1':
-      for(let i = 0; i < hideProblemFormChecks_1.length; i++) {
-        hideProblemFormChecks_1[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideProblemFormChecks_1.length; i++) {hideProblemFormChecks_1[i].classList.remove('active');}
       problemFormChecks_7.classList.add('active');
       setTimeout(() => window.scroll({ top: (problemFormChecks_7.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
@@ -390,16 +305,12 @@ const handleChange = ({ target: { value, name } }) => {
     case 'Драйвер1СNativeAPI problemFormChecks-3':
     case 'JPOS problemFormChecks-3':
     case 'Драйвер1С83 problemFormChecks-3':
-      for(let i = 0; i < hideFiscalRegistrarDriver.length; i++) {
-        hideFiscalRegistrarDriver[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideFiscalRegistrarDriver.length; i++) {hideFiscalRegistrarDriver[i].classList.remove('active');}
       problemFormChecks_4.classList.add('active');
       setTimeout(() => window.scroll({ top: (problemFormChecks_4.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Другойдрайвер problemFormChecks-3':
-      for(let i = 0; i < hideFiscalRegistrarDriver.length; i++) {
-        hideFiscalRegistrarDriver[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideFiscalRegistrarDriver.length; i++) {hideFiscalRegistrarDriver[i].classList.remove('active');}
       fiscalRegistrar_another_driver.classList.add('active');
       setTimeout(() => window.scroll({ top: (fiscalRegistrar_another_driver.offsetTop - offset), left: 0, behavior: 'smooth' }), 150);
       break;
@@ -415,16 +326,12 @@ const handleChange = ({ target: { value, name } }) => {
       setTimeout(() => window.scroll({ top: (problemFormChecks_7.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Да problemSendOFD-4':
-      for(let i = 0; i < hideProblemSendOFD_4.length; i++) {
-        hideProblemSendOFD_4[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideProblemSendOFD_4.length; i++) {hideProblemSendOFD_4[i].classList.remove('active');}
       fiscalRegistrar_final.classList.add('active');
       setTimeout(() => window.scroll({ top: (fiscalRegistrar_final.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Нет problemSendOFD-4':
-      for(let i = 0; i < hideProblemSendOFD_4.length; i++) {
-        hideProblemSendOFD_4[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideProblemSendOFD_4.length; i++) {hideProblemSendOFD_4[i].classList.remove('active');}
       problemSendOFD_5.classList.add('active');
       setTimeout(() => window.scroll({ top: (problemSendOFD_5.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
@@ -445,67 +352,49 @@ const handleChange = ({ target: { value, name } }) => {
     case 'SetTouch programSetProblem-1':
     case 'SetKiosk programSetProblem-1':
     case 'SetAgent programSetProblem-1':
-      for(let i = 0; i < hideProgramSetProblem1.length; i++) {
-        hideProgramSetProblem1[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideProgramSetProblem1.length; i++) {hideProgramSetProblem1[i].classList.remove('active');}
       programSetProblem_2.classList.add('active');
       setTimeout(() => window.scroll({ top: (programSetProblem_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 115);
       break;
     case 'SetRetail programSetProblem-1':
-      for(let i = 0; i < hideProgramSetProblem1.length; i++) {
-        hideProgramSetProblem1[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideProgramSetProblem1.length; i++) {hideProgramSetProblem1[i].classList.remove('active');}
       programSetProblem_9.classList.add('active');
-      setTimeout(() => window.scroll({ top: (programSetProblem_9.offsetTop - offset), left: 0, behavior: 'smooth' }), 125);
+      setTimeout(() => window.scroll({ top: (programSetProblem_9.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Другое programSetProblem-10':
-      for(let i = 0; i < hideSetProblem1.length; i++) {
-        hideSetProblem1[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideSetProblem1.length; i++) {hideSetProblem1[i].classList.remove('active');}
       anotherSetProblem_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (anotherSetProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 120);
       break;
     case 'Проблемаслояльностью programSetProblem-10':
-      for(let i = 0; i < hideSetProblem1.length; i++) {
-        hideSetProblem1[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideSetProblem1.length; i++) {hideSetProblem1[i].classList.remove('active');}
       loyaltyProblem_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 120);
       break;
     case 'Проблемаприобновлении programSetProblem-10':
-      for(let i = 0; i < hideSetProblem1.length; i++) {
-        hideSetProblem1[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideSetProblem1.length; i++) {hideSetProblem1[i].classList.remove('active');}
       updateProblem_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (updateProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 120);
       break;
     case 'Подарочнаякарта loyaltyProblem-1':
-      for(let i = 0; i < hideLoyaltyProblem_1.length; i++) {
-        hideLoyaltyProblem_1[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideLoyaltyProblem_1.length; i++) {hideLoyaltyProblem_1[i].classList.remove('active');}
       loyaltyProblem_2.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Дисконтная/бонуснаякарта loyaltyProblem-1':
     case 'Купоны loyaltyProblem-1':
-      for(let i = 0; i < hideLoyaltyProblem_1.length; i++) {
-        hideLoyaltyProblem_1[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideLoyaltyProblem_1.length; i++) {hideLoyaltyProblem_1[i].classList.remove('active');}
       loyaltyProblem_8.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_8.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Рекламнаяакция loyaltyProblem-1':
-      for(let i = 0; i < hideLoyaltyProblem_1.length; i++) {
-        hideLoyaltyProblem_1[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideLoyaltyProblem_1.length; i++) {hideLoyaltyProblem_1[i].classList.remove('active');}
       loyaltyProblem_12.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_12.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Нет loyaltyProblem-2':
       loyaltyProblem_3.classList.add('active');
-      for(let i = 3; i < loyaltyProblemAll.length; i++) {
-        loyaltyProblemAll[i].classList.remove('active');
-      }
+      for(let i = 3; i < loyaltyProblemAll.length; i++) {loyaltyProblemAll[i].classList.remove('active');}
       setTimeout(() => window.scroll({ top: (loyaltyProblem_3.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Да loyaltyProblem-2':
@@ -514,82 +403,62 @@ const handleChange = ({ target: { value, name } }) => {
       setTimeout(() => window.scroll({ top: (loyaltyProblem_4.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Нет loyaltyProblem-4':
-      for(let i = 0; i < hideLoyaltyProblem_4.length; i++) {
-        hideLoyaltyProblem_4[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideLoyaltyProblem_4.length; i++) {hideLoyaltyProblem_4[i].classList.remove('active');}
       loyaltyProblem_7.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_7.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Да loyaltyProblem-4':
-      for(let i = 0; i < hideLoyaltyProblem_4.length; i++) {
-        hideLoyaltyProblem_4[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideLoyaltyProblem_4.length; i++) {hideLoyaltyProblem_4[i].classList.remove('active');}
       loyaltyProblem_5.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_5.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Нет loyaltyProblem-8':
-      for(let i = 0; i < hideLoyaltyProblem_8.length; i++) {
-        hideLoyaltyProblem_8[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideLoyaltyProblem_8.length; i++) {hideLoyaltyProblem_8[i].classList.remove('active');}
       loyaltyProblem_11.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_11.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Да loyaltyProblem-8':
-      for(let i = 0; i < hideLoyaltyProblem_8.length; i++) {
-        hideLoyaltyProblem_8[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideLoyaltyProblem_8.length; i++) {hideLoyaltyProblem_8[i].classList.remove('active');}
       loyaltyProblem_9.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_9.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Нет loyaltyProblem-12':
-      for(let i = 0; i < hideLoyaltyProblem_12.length; i++) {
-        hideLoyaltyProblem_12[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideLoyaltyProblem_12.length; i++) {hideLoyaltyProblem_12[i].classList.remove('active');}
       loyaltyProblem_13.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_13.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Да loyaltyProblem-12':
-      for(let i = 0; i < hideLoyaltyProblem_12.length; i++) {
-        hideLoyaltyProblem_12[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideLoyaltyProblem_12.length; i++) {hideLoyaltyProblem_12[i].classList.remove('active');}
       loyaltyProblem_16.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_16.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Нет loyaltyProblem-16':
-      for(let i = 0; i < hideLoyaltyProblem_16.length; i++) {
-        hideLoyaltyProblem_16[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideLoyaltyProblem_16.length; i++) {hideLoyaltyProblem_16[i].classList.remove('active');}
       loyaltyProblem_18.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_18.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Да loyaltyProblem-16':
-      for(let i = 0; i < hideLoyaltyProblem_16.length; i++) {
-        hideLoyaltyProblem_16[i].classList.remove('active');
-      }
+      for(let i = 0; i < hideLoyaltyProblem_16.length; i++) {hideLoyaltyProblem_16[i].classList.remove('active');}
       loyaltyProblem_17.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_17.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Нет loyaltyProblem-18':
-      loyaltyProblem_19.classList.remove('active');
-      programSetProblemsFinal_4.classList.remove('active')
+      for(let i = 0; i < hideLoyaltyProblem_18.length; i++) {hideLoyaltyProblem_18[i].classList.remove('active');}
       loyaltyProblemThanks.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblemThanks.offsetTop - offset), left: 0, behavior: 'smooth' }), 120);
       break;
     case 'Да loyaltyProblem-18':
-      loyaltyProblemThanks.classList.remove('active');
+      for(let i = 0; i < hideLoyaltyProblem_18.length; i++) {hideLoyaltyProblem_18[i].classList.remove('active');}
       loyaltyProblem_19.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_19.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Нет updateProblem-1':
+      for(let i = 0; i < hideUpdateProblem.length; i++) {hideUpdateProblem[i].classList.remove('active');}
       updateProblem_2.classList.add('active');
-      let updateProblemAll = document.querySelectorAll('.typeWork3[name="updateProblem"]');
-      for(let i = 2; i < updateProblemAll.length; i++) {
-        updateProblemAll[i].classList.remove('active');
-      }
       setTimeout(() => window.scroll({ top: (updateProblem_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Да updateProblem-1':
-      updateProblem_2.classList.remove('active');
+      for(let i = 0; i < hideUpdateProblem.length; i++) {hideUpdateProblem[i].classList.remove('active');}
       updateProblem_3.classList.add('active');
       setTimeout(() => window.scroll({ top: (updateProblem_3.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
@@ -602,25 +471,22 @@ const handleChange = ({ target: { value, name } }) => {
       setTimeout(() => window.scroll({ top: (updateProblem_4.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typeWork4-2-yes tw4-2':
-      typeWork4_4.classList.remove('active');
-      typeWork4_7.classList.remove('active');
-      typeWork4_6.classList.remove('active');
+      for(let i = 0; i < hideTypeWork_4_2.length; i++) {hideTypeWork_4_2[i].classList.remove('active');}
       typeWork4_final.classList.add('active');
       setTimeout(() => window.scroll({ top: (typeWork4_final.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typeWork4-2-no tw4-2':
-      typeWork4_final.classList.remove('active');
+      for(let i = 0; i < hideTypeWork_4_2.length; i++) {hideTypeWork_4_2[i].classList.remove('active');}
       typeWork4_4.classList.add('active');
       setTimeout(() => window.scroll({ top: (typeWork4_4.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typeWork4-4-yes tw4-4':
-      typeWork4_final.classList.remove('active');
+      for(let i = 0; i < hideTypeWork_4_4.length; i++) {hideTypeWork_4_4[i].classList.remove('active');}
       typeWork4_6.classList.add('active');
       setTimeout(() => window.scroll({ top: (typeWork4_6.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typeWork4-4-no tw4-4':
-      typeWork4_7.classList.remove('active');
-      typeWork4_6.classList.remove('active');
+      for(let i = 0; i < hideTypeWork_4_4.length; i++) {hideTypeWork_4_4[i].classList.remove('active');}
       typeWork4_final.classList.add('active');
       setTimeout(() => window.scroll({ top: (typeWork4_final.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
@@ -632,7 +498,6 @@ const arr1 = Array.from(radioForm1).map(i => {
     i.addEventListener('change', handleChange)
   }
 })
-
 const arr2 = Array.from(radioForm2).map(i => {
   if (i.type === 'text' || i.type === 'radio') {
     i.addEventListener('change', handleChange)
@@ -661,95 +526,66 @@ cashHardwareProblem_9.onclick = function() {
   setTimeout(() => window.scroll({ top: (cashHardwareProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
 };
 
-/* FORM REGISTRATION Step START */
 let fieldsetForm2 = document.querySelectorAll("#form-2 .item:not(.upload):not([class*='-final'])");
 for(let i=0; i<fieldsetForm2.length; i++){fieldsetForm2[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
-/* FORM REGISTRATION Step END */
 
-/* FORM typeWork1 Steps START */
 let fieldsetTypework1 = document.querySelectorAll(".item[name='typeWork1']");
 for(let i=0; i<fieldsetTypework1.length; i++){fieldsetTypework1[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
-/* FORM typeWork1 Steps END */
 
-/* FORM typeWork2 Steps START */
 let fieldsetTypework2 = document.querySelectorAll(".item[name='typeWork2']:not([class*='-final'])");
 for(let i=0; i<fieldsetTypework2.length; i++){fieldsetTypework2[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
-/* FORM typeWork2 Steps END */
 
-/* FORM fiscalRegistrar Steps START */
 let fieldsetFiscalRegistrarOther = document.querySelectorAll(".item[name='fiscalRegistrarOther']");
 for(let i=0; i<fieldsetFiscalRegistrarOther.length; i++){fieldsetFiscalRegistrarOther[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
-/* FORM fiscalRegistrar Steps END */
 
-/* FORM fiscalRegistrarModel Steps START */
 let fieldsetFiscalRegistrarModel = document.querySelectorAll(".item:not([class*='-final']):not([class*='problemFormChecks-1'])[name='fiscalRegistrarModel']:not(.fiscalRegistrar-12):not(.problemFormChecks-3)");
 for(let i=0; i<fieldsetFiscalRegistrarModel.length; i++){fieldsetFiscalRegistrarModel[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
-/* FORM fiscalRegistrar Steps END */
 
-/* FORM fiscalListDrivers Steps START */
 let fieldsetFiscalListDrivers = document.querySelectorAll(".item:not([class*='-final']):not([class*='problemFormChecks-6']):not([class*='problemFormChecks-8'])[name='fiscalListDrivers']");
 for(let i=0; i<fieldsetFiscalListDrivers.length; i++){fieldsetFiscalListDrivers[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
-/* FORM fiscalListDrivers Steps END */
 
-/* FORM fiscalAnotherDriver Steps START */
 let fieldsetFiscalAnotherDriver = document.querySelectorAll(".item[name='fiscalAnotherDriver']");
 for(let i=0; i<fieldsetFiscalAnotherDriver.length; i++){fieldsetFiscalAnotherDriver[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
-/* FORM fiscalAnotherDriver Steps END */
 
-/* FORM cashHardwareProblem Steps START */
 let cashHardwareProblem = document.querySelectorAll(".item[name='cashHardwareProblem']");
 for(let i=0; i<cashHardwareProblem.length; i++){cashHardwareProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
-/* FORM cashHardwareProblem Steps END */
 
-/* FORM equipmentAreaProblem Steps START */
 let equipmentAreaProblem = document.querySelectorAll(".item[name='equipmentAreaProblem']");
 for(let i=0; i<equipmentAreaProblem.length; i++){equipmentAreaProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
-/* FORM equipmentAreaProblem Steps END */
 
-/* FORM prismVideoProblem Steps START */
 let prismVideoProblem = document.querySelectorAll(".item[name='prismVideoProblem']:not([class*='-final']");
 for(let i=0; i<prismVideoProblem.length; i++){prismVideoProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
-/* FORM prismVideoProblem Steps END */
 
-/* FORM programSetProblemItems1 Steps START */
 let programSetProblemItems1 = document.querySelectorAll(".item:not([class*='-final'])[name='programSetProblemItems1']");
 for(let i=0; i<programSetProblemItems1.length; i++){programSetProblemItems1[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
-/* FORM programSetProblemItems1 Steps END */
 
-/* FORM programSetProblemItems2 Steps START */
 let programSetProblemItems2 = document.querySelectorAll(".item[name='programSetProblemItems2']");
 for(let i=0; i<programSetProblemItems2.length; i++){programSetProblemItems2[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
-/* FORM programSetProblemItems2 Steps END */
 
-/* FORM anotherSetProblem Steps START */
 let anotherSetProblem = document.querySelectorAll(".item:not([class*='-final'])[name='anotherSetProblem']");
 for(let i=0; i<anotherSetProblem.length; i++){anotherSetProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
-/* FORM anotherSetProblem Steps END */
 
-/* FORM loyaltyProblem Steps START */
 let loyaltyProblem = document.querySelectorAll(".item[name='loyaltyProblem']:not([class*='Final-']):not([class*='-final'])");
 for(let i=4; i<loyaltyProblem.length; i++){loyaltyProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
-/* FORM loyaltyProblem Steps END */
 
-/* FORM updateProblem Steps START */
 let updateProblem = document.querySelectorAll(".item[name='updateProblem']:not([class*='-final'])");
 for(let i=2; i<updateProblem.length; i++){updateProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
-/* FORM loyaltyProblem Steps END */
+
 
 /* SELECT OPTION Style START */
 const CLASS_NAME_SELECT = 'select';
@@ -897,15 +733,15 @@ const selectTime = new CustomSelect('#select-time');
 /* SELECT Style END */
 
 /* CUSTOM FILE UPLOADER START */
-let dropArea = document.getElementById("drop-area")
-;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+let dropArea = document.getElementById("drop-area");
+['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
   dropArea.addEventListener(eventName, preventDefaults, false)   
   document.body.addEventListener(eventName, preventDefaults, false)
-})
-;['dragenter', 'dragover'].forEach(eventName => {
+});
+['dragenter', 'dragover'].forEach(eventName => {
   dropArea.addEventListener(eventName, highlight, false)
-})
-;['dragleave', 'drop'].forEach(eventName => {
+});
+['dragleave', 'drop'].forEach(eventName => {
   dropArea.addEventListener(eventName, unhighlight, false)
 })
 dropArea.addEventListener('drop', handleDrop, false)
@@ -978,7 +814,6 @@ function uploadFile(file, i) {
 /* CUSTOM FILE UPLOADER END */
 
 const navForms = document.querySelector('.nav');
-
 window.addEventListener('scroll', () => {
   let titleH = document.querySelectorAll('.active .block-title');
   let ToC = "<ul>";
@@ -1008,7 +843,6 @@ window.addEventListener('scroll', () => {
 	document.querySelectorAll('.active .block-title[id]').forEach((section) => {
 		observer.observe(section);
 	});
-
   /* Anchors scroll START */
   const anchors = [].slice.call(document.querySelectorAll('.nav a[href*="#"]')),
         animationTime = 100,
