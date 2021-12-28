@@ -58,7 +58,7 @@ const loyaltyProblem_11= document.querySelector('.loyaltyProblem-11');
 const loyaltyProblem_12= document.querySelector('.loyaltyProblem-12');
 const loyaltyProblem_13= document.querySelector('.loyaltyProblem-13');
 const loyaltyProblem_16= document.querySelector('.loyaltyProblem-16');
-const loyaltyProblem_17= document.querySelector('.loyaltyProblem-17');
+const loyaltyProblem_17= document.querySelector('.loyaltyProblem-17-final');
 const loyaltyProblem_18= document.querySelector('.loyaltyProblem-18');
 const loyaltyProblem_19= document.querySelector('.loyaltyProblem-19');
 const loyaltyProblemThanks= document.querySelector('.loyaltyProblem-thanks');
@@ -126,6 +126,8 @@ let hidePartnerContractor = document.querySelectorAll('fieldset:not([name="partn
 let hideCashHardwareProblemChoice = document.querySelectorAll('.typeWork3:not([name="cashHardwareProblem-choice"])');
 let loyaltyProblemAll = document.querySelectorAll('.typeWork3[name="loyaltyProblem"]');
 let hideTypeWork_2 = document.querySelectorAll(".typeWork2-1 ~ fieldset");
+let hideFieldsets1 = document.querySelectorAll(".typeWork3-1 ~ fieldset");
+let hideCashProblem = document.querySelectorAll(".cashProblem ~ fieldset");
 let hideProblemFormChecks_1 = document.querySelectorAll(".problemFormChecks-1 ~ fieldset");
 let hideProgramSetProblem1 = document.querySelectorAll(".programSetProblem-1 ~ .item");
 let hideSetProblem1 = document.querySelectorAll(".programSetProblem-10 ~ fieldset");
@@ -133,9 +135,11 @@ let hideLoyaltyProblem_1 = document.querySelectorAll(".loyaltyProblem-1 ~ fields
 let hideLoyaltyProblem_4 = document.querySelectorAll(".loyaltyProblem-4 ~ fieldset");
 let hideLoyaltyProblem_8 = document.querySelectorAll(".loyaltyProblem-8 ~ fieldset");
 let hideLoyaltyProblem_12 = document.querySelectorAll(".loyaltyProblem-12 ~ fieldset");
+let hideLoyaltyProblem_16 = document.querySelectorAll(".loyaltyProblem-16 ~ fieldset");
 let hideFiscalRegistrar_1 = document.querySelectorAll(".fiscalRegistrar-1 ~ fieldset");
 let hideFiscalRegistrar_12 = document.querySelectorAll(".fiscalRegistrar-12 ~ fieldset");
 let hideFiscalRegistrar_13 = document.querySelectorAll(".fiscalRegistrar-13 ~ fieldset");
+let hideFiscalRegistrarDriver = document.querySelectorAll(".problemFormChecks-3 ~ fieldset");
 let hideProblemSendOFD_4 = document.querySelectorAll(".problemSendOFD-4 ~ fieldset");
 
 const handleChange = ({ target: { value, name } }) => {
@@ -249,80 +253,68 @@ const handleChange = ({ target: { value, name } }) => {
       setTimeout(() => window.scroll({ top: (typeWork2_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typeWork3-1 tw3-1':
-      cashproblem.classList.add('active');
-      let hideFieldsets1 = document.querySelectorAll('.typeWork3:not([name="cashProblem"])');
-      for(let i = 1; i < hideFieldsets1.length; i++) {
+      for(let i = 0; i < hideFieldsets1.length; i++) {
         hideFieldsets1[i].classList.remove('active');
       }
+      cashproblem.classList.add('active');
       setTimeout(() => window.scroll({ top: (cashproblem.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typeWork3-2 tw3-1':
-      equipmentAreaProblem_1.classList.add('active');
-      let hideFieldsets2 = document.querySelectorAll('.typeWork3:not([name="equipmentAreaProblem"])');
-      for(let i = 1; i < hideFieldsets2.length; i++) {
-        hideFieldsets2[i].classList.remove('active');
+      for(let i = 0; i < hideFieldsets1.length; i++) {
+        hideFieldsets1[i].classList.remove('active');
       }
+      equipmentAreaProblem_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (equipmentAreaProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typeWork3-3 tw3-1':
-      prismVideoProblem_1.classList.add('active');
-      let hideFieldsets3 = document.querySelectorAll('.typeWork3:not([name="prismVideoProblem"])');
-      for(let i = 1; i < hideFieldsets3.length; i++) {
-        hideFieldsets3[i].classList.remove('active');
+      for(let i = 0; i < hideFieldsets1.length; i++) {
+        hideFieldsets1[i].classList.remove('active');
       }
+      prismVideoProblem_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (prismVideoProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'typeWork3-4 tw3-1':
-      programSetProblem_1.classList.add('active');
-      let hideFieldsets4 = document.querySelectorAll('.typeWork3:not([name="programSetProblem"])');
-      for(let i = 1; i < hideFieldsets4.length; i++) {
-        hideFieldsets4[i].classList.remove('active');
+      for(let i = 0; i < hideFieldsets1.length; i++) {
+        hideFieldsets1[i].classList.remove('active');
       }
+      programSetProblem_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (programSetProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'fiscalRegistrar cash-problem-step-0':
-      fiscalRegistrar.classList.add('active');
-      let hideFiscalRegistrar = document.querySelectorAll('.typeWork3:not([name="cashProblem"])');
-      for(let i = 1; i < hideFiscalRegistrar.length; i++) {
-        hideFiscalRegistrar[i].classList.remove('active');
+      for(let i = 0; i < hideCashProblem.length; i++) {
+        hideCashProblem[i].classList.remove('active');
       }
+      fiscalRegistrar.classList.add('active');
       setTimeout(() => window.scroll({ top: (fiscalRegistrar.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Системныйблок cash-problem-step-0': 
     case 'Клавиатура cash-problem-step-0':
     case 'Денежныйящик cash-problem-step-0':
-      cashHardwareProblem_1.classList.add('active');
-      let hideCashHardwareProblem = document.querySelectorAll('.typeWork3:not([name="cashHardwareProblem"])');
-      for(let i = 2; i < hideCashHardwareProblem.length; i++) {
-        hideCashHardwareProblem[i].classList.remove('active');
+      for(let i = 0; i < hideCashProblem.length; i++) {
+        hideCashProblem[i].classList.remove('active');
       }
+      cashHardwareProblem_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (cashHardwareProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Сканер cash-problem-step-0':
-      cashHardwareProblem_7.classList.add('active');
-      cashHardwareProblem_8.classList.remove('active');
-      cashHardwareProblem_9.classList.remove('active');
-      for(let i = 2; i < hideCashHardwareProblemChoice.length; i++) {
-        hideCashHardwareProblemChoice[i].classList.remove('active');
+      for(let i = 0; i < hideCashProblem.length; i++) {
+        hideCashProblem[i].classList.remove('active');
       }
+      cashHardwareProblem_7.classList.add('active');
       setTimeout(() => window.scroll({ top: (cashHardwareProblem_7.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Дисплей/монитор cash-problem-step-0':
-      cashHardwareProblem_8.classList.add('active');
-      cashHardwareProblem_7.classList.remove('active');
-      cashHardwareProblem_9.classList.remove('active');
-      for(let i = 2; i < hideCashHardwareProblemChoice.length; i++) {
-        hideCashHardwareProblemChoice[i].classList.remove('active');
+      for(let i = 0; i < hideCashProblem.length; i++) {
+        hideCashProblem[i].classList.remove('active');
       }
+      cashHardwareProblem_8.classList.add('active');
       setTimeout(() => window.scroll({ top: (cashHardwareProblem_8.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Другое cash-problem-step-0':
-      cashHardwareProblem_9.classList.add('active');
-      cashHardwareProblem_8.classList.remove('active');
-      cashHardwareProblem_7.classList.remove('active');
-      for(let i = 2; i < hideCashHardwareProblemChoice.length; i++) {
-        hideCashHardwareProblemChoice[i].classList.remove('active');
+      for(let i = 0; i < hideCashProblem.length; i++) {
+        hideCashProblem[i].classList.remove('active');
       }
+      cashHardwareProblem_9.classList.add('active');
       setTimeout(() => window.scroll({ top: (cashHardwareProblem_9.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Другое fiscalRegistrar-1':
@@ -393,22 +385,22 @@ const handleChange = ({ target: { value, name } }) => {
       problemFormChecks_7.classList.add('active');
       setTimeout(() => window.scroll({ top: (problemFormChecks_7.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
-    
     case 'OPOS problemFormChecks-3':
     case 'БиблиотекаPiritLib problemFormChecks-3':
     case 'Драйвер1СNativeAPI problemFormChecks-3':
     case 'JPOS problemFormChecks-3':
     case 'Драйвер1С83 problemFormChecks-3':
+      for(let i = 0; i < hideFiscalRegistrarDriver.length; i++) {
+        hideFiscalRegistrarDriver[i].classList.remove('active');
+      }
       problemFormChecks_4.classList.add('active');
       setTimeout(() => window.scroll({ top: (problemFormChecks_4.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
-    
     case 'Другойдрайвер problemFormChecks-3':
-      fiscalRegistrar_another_driver.classList.add('active');
-      let fieldsetFiscalListDriversAll = document.querySelectorAll(".item[name='fiscalListDrivers']");
-      for(let i = 0; i < fieldsetFiscalListDriversAll.length; i++) {
-        fieldsetFiscalListDriversAll[i].classList.remove('active');
+      for(let i = 0; i < hideFiscalRegistrarDriver.length; i++) {
+        hideFiscalRegistrarDriver[i].classList.remove('active');
       }
+      fiscalRegistrar_another_driver.classList.add('active');
       setTimeout(() => window.scroll({ top: (fiscalRegistrar_another_driver.offsetTop - offset), left: 0, behavior: 'smooth' }), 150);
       break;
     case 'Да problemFormChecks-6':
@@ -564,15 +556,16 @@ const handleChange = ({ target: { value, name } }) => {
       setTimeout(() => window.scroll({ top: (loyaltyProblem_16.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Нет loyaltyProblem-16':
-      loyaltyProblem_17.classList.remove('active');
+      for(let i = 0; i < hideLoyaltyProblem_16.length; i++) {
+        hideLoyaltyProblem_16[i].classList.remove('active');
+      }
       loyaltyProblem_18.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_18.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Да loyaltyProblem-16':
-      loyaltyProblem_18.classList.remove('active');
-      loyaltyProblem_19.classList.remove('active');
-      programSetProblemsFinal_4.classList.remove('active');
-      loyaltyProblemThanks.classList.remove('active');
+      for(let i = 0; i < hideLoyaltyProblem_16.length; i++) {
+        hideLoyaltyProblem_16[i].classList.remove('active');
+      }
       loyaltyProblem_17.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_17.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
@@ -693,7 +686,7 @@ setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offse
 /* FORM fiscalRegistrar Steps END */
 
 /* FORM fiscalRegistrarModel Steps START */
-let fieldsetFiscalRegistrarModel = document.querySelectorAll(".item:not([class*='-final']):not([class*='problemFormChecks-1'])[name='fiscalRegistrarModel']:not(.fiscalRegistrar-12)");
+let fieldsetFiscalRegistrarModel = document.querySelectorAll(".item:not([class*='-final']):not([class*='problemFormChecks-1'])[name='fiscalRegistrarModel']:not(.fiscalRegistrar-12):not(.problemFormChecks-3)");
 for(let i=0; i<fieldsetFiscalRegistrarModel.length; i++){fieldsetFiscalRegistrarModel[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM fiscalRegistrar Steps END */
@@ -747,7 +740,7 @@ setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offse
 /* FORM anotherSetProblem Steps END */
 
 /* FORM loyaltyProblem Steps START */
-let loyaltyProblem = document.querySelectorAll(".item[name='loyaltyProblem']:not([class*='Final-'])");
+let loyaltyProblem = document.querySelectorAll(".item[name='loyaltyProblem']:not([class*='Final-']):not([class*='-final'])");
 for(let i=4; i<loyaltyProblem.length; i++){loyaltyProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM loyaltyProblem Steps END */
