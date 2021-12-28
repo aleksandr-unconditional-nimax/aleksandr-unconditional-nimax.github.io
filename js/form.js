@@ -127,6 +127,8 @@ let hideCashHardwareProblemChoice = document.querySelectorAll('.typeWork3:not([n
 let loyaltyProblemAll = document.querySelectorAll('.typeWork3[name="loyaltyProblem"]');
 let hideTypeWork_2 = document.querySelectorAll(".typeWork2-1 ~ fieldset");
 let hideProblemFormChecks_1 = document.querySelectorAll(".problemFormChecks-1 ~ fieldset");
+let hideProgramSetProblem1 = document.querySelectorAll(".programSetProblem-1 ~ .item");
+let hideSetProblem1 = document.querySelectorAll(".programSetProblem-10 ~ fieldset");
 let hideLoyaltyProblem_1 = document.querySelectorAll(".loyaltyProblem-1 ~ fieldset");
 let hideLoyaltyProblem_4 = document.querySelectorAll(".loyaltyProblem-4 ~ fieldset");
 let hideLoyaltyProblem_8 = document.querySelectorAll(".loyaltyProblem-8 ~ fieldset");
@@ -451,44 +453,38 @@ const handleChange = ({ target: { value, name } }) => {
     case 'SetTouch programSetProblem-1':
     case 'SetKiosk programSetProblem-1':
     case 'SetAgent programSetProblem-1':
-      programSetProblem_2.classList.add('active');
-      programSetProblem_10.classList.remove('active');
-      let hideProgramSetProblem2 = document.querySelectorAll('.typeWork3[name="programSetProblemItems2"],.typeWork3[name="loyaltyProblem"],.typeWork3[name="anotherSetProblem"],.typeWork3[name="updateProblem"]');
-      for(let i = 0; i < hideProgramSetProblem2.length; i++) {
-        hideProgramSetProblem2[i].classList.remove('active');
-      }
-      setTimeout(() => window.scroll({ top: (programSetProblem_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 115);
-      break;
-    case 'SetRetail programSetProblem-1':
-      programSetProblem_9.classList.add('active');
-      let hideProgramSetProblem1 = document.querySelectorAll('.typeWork3[name="programSetProblemItems1"]');
       for(let i = 0; i < hideProgramSetProblem1.length; i++) {
         hideProgramSetProblem1[i].classList.remove('active');
       }
+      programSetProblem_2.classList.add('active');
+      setTimeout(() => window.scroll({ top: (programSetProblem_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 115);
+      break;
+    case 'SetRetail programSetProblem-1':
+      for(let i = 0; i < hideProgramSetProblem1.length; i++) {
+        hideProgramSetProblem1[i].classList.remove('active');
+      }
+      programSetProblem_9.classList.add('active');
       setTimeout(() => window.scroll({ top: (programSetProblem_9.offsetTop - offset), left: 0, behavior: 'smooth' }), 125);
       break;
     case 'Другое programSetProblem-10':
-      anotherSetProblem_1.classList.add('active');
-      let hideSetProblem1 = document.querySelectorAll('.typeWork3[name="loyaltyProblem"], .typeWork3[name="updateProblem"]');
       for(let i = 0; i < hideSetProblem1.length; i++) {
         hideSetProblem1[i].classList.remove('active');
       }
+      anotherSetProblem_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (anotherSetProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 120);
       break;
     case 'Проблемаслояльностью programSetProblem-10':
-      loyaltyProblem_1.classList.add('active');
-      let hideSetProblem2 = document.querySelectorAll('.typeWork3[name="anotherSetProblem"], .typeWork3[name="updateProblem"]');
-      for(let i = 0; i < hideSetProblem2.length; i++) {
-        hideSetProblem2[i].classList.remove('active');
+      for(let i = 0; i < hideSetProblem1.length; i++) {
+        hideSetProblem1[i].classList.remove('active');
       }
+      loyaltyProblem_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (loyaltyProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 120);
       break;
     case 'Проблемаприобновлении programSetProblem-10':
-      updateProblem_1.classList.add('active');
-      let hideSetProblem3 = document.querySelectorAll('.typeWork3[name="loyaltyProblem"], .typeWork3[name="anotherSetProblem"]');
-      for(let i = 0; i < hideSetProblem3.length; i++) {
-        hideSetProblem3[i].classList.remove('active');
+      for(let i = 0; i < hideSetProblem1.length; i++) {
+        hideSetProblem1[i].classList.remove('active');
       }
+      updateProblem_1.classList.add('active');
       setTimeout(() => window.scroll({ top: (updateProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 120);
       break;
     case 'Подарочнаякарта loyaltyProblem-1':
@@ -731,12 +727,6 @@ let prismVideoProblem = document.querySelectorAll(".item[name='prismVideoProblem
 for(let i=0; i<prismVideoProblem.length; i++){prismVideoProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 /* FORM prismVideoProblem Steps END */
-
-/* FORM programSetProblem Steps START */
-let programSetProblem = document.querySelectorAll(".item[name='programSetProblem']");
-for(let i=0; i<programSetProblem.length; i++){programSetProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
-setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
-/* FORM programSetProblem Steps END */
 
 /* FORM programSetProblemItems1 Steps START */
 let programSetProblemItems1 = document.querySelectorAll(".item:not([class*='-final'])[name='programSetProblemItems1']");
