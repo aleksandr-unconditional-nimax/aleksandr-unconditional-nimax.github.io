@@ -814,19 +814,24 @@ function uploadFile(file, i) {
 /* CUSTOM FILE UPLOADER END */
 
 const navForms = document.querySelector('.nav');
+let titleH = document.querySelectorAll('h4.block-title');
+for(let i = 0; i < titleH.length; i++){
+  (function(i){
+    this.setAttribute("id", 'title'+ ++i);
+  }).call(titleH[i], i);
+}
 window.addEventListener('scroll', () => {
-  let titleH = document.querySelectorAll('.active .block-title');
+  let titleActive = document.querySelectorAll('.active .block-title');
   let ToC = "<ul>";
   let newLine, el, title, link;
-  for(let i = 0; i < titleH.length; i++){
+  for(let i = 0; i < titleActive.length; i++){
     (function(i){
-      this.setAttribute("id", 'title'+ ++i);
       el = this;
       title = el.textContent;
       link = "#" + el.getAttribute("id");
       newLine = "<li>" + "<a href='" + link + "'>" + title + "</a>" + "</li>";
       ToC += newLine;
-    }).call(titleH[i], i);
+    }).call(titleActive[i], i);
   }
   ToC += "</ul>";
   navForms.innerHTML = ToC;
