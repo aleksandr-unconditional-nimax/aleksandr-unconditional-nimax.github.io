@@ -67,6 +67,7 @@ const updateProblem_1= document.querySelector('.updateProblem-1');
 const updateProblem_2= document.querySelector('.updateProblem-2');
 const updateProblem_3= document.querySelector('.updateProblem-3');
 const updateProblem_4= document.querySelector('.updateProblem-4');
+const updateProblem_4_2= document.querySelector('.updateProblem-4-2');
 const typeWork4_1 = document.querySelector('.typeWork4-1');
 const typeWork4_2 = document.querySelector('.typeWork4-2');
 const typeWork4_4 = document.querySelector('.typeWork4-4');
@@ -132,6 +133,7 @@ let hideLoyaltyProblem_12 = document.querySelectorAll(".loyaltyProblem-12 ~ fiel
 let hideLoyaltyProblem_16 = document.querySelectorAll(".loyaltyProblem-16 ~ fieldset");
 let hideLoyaltyProblem_18 = document.querySelectorAll(".loyaltyProblem-18 ~ fieldset");
 let hideUpdateProblem = document.querySelectorAll(".updateProblem-1 ~ fieldset");
+let hideUpdateProblem_3 = document.querySelectorAll(".updateProblem-3 ~ fieldset");
 let hideFiscalRegistrar_1 = document.querySelectorAll(".fiscalRegistrar-1 ~ fieldset");
 let hideFiscalRegistrar_12 = document.querySelectorAll(".fiscalRegistrar-12 ~ fieldset");
 let hideFiscalRegistrar_13 = document.querySelectorAll(".fiscalRegistrar-13 ~ fieldset");
@@ -140,6 +142,14 @@ let hideProblemSendOFD_4 = document.querySelectorAll(".problemSendOFD-4 ~ fields
 let hideTypeWork = document.querySelectorAll(".typeWork0 ~ .item", ".typeWork0 ~ fieldset");
 let hideTypeWork_4_2 = document.querySelectorAll(".typeWork4-2 ~ fieldset");
 let hideTypeWork_4_4 = document.querySelectorAll(".typeWork4-4 ~ fieldset");
+
+let fieldsetItems = document.querySelectorAll('fieldset.item input[type="radio"]');
+let clearInputs = document.querySelectorAll('fieldset.item ~ fieldset.item input[type="text"]');
+fieldsetItems.forEach((n, i, a) => {
+  n.addEventListener('click', () => {
+    for(let i = 0; i < clearInputs.length; i++) {clearInputs[i].value = "";}
+  })
+});
 
 const handleChange = ({ target: { value, name } }) => {
   const res = `${value} ${name}`;
@@ -462,13 +472,15 @@ const handleChange = ({ target: { value, name } }) => {
       updateProblem_3.classList.add('active');
       setTimeout(() => window.scroll({ top: (updateProblem_3.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
-    case 'Нет updateProblem-3':
+    case 'Сервера updateProblem-3':
+      for(let i = 0; i < hideUpdateProblem_3.length; i++) {hideUpdateProblem_3[i].classList.remove('active');}
       updateProblem_4.classList.add('active');
       setTimeout(() => window.scroll({ top: (updateProblem_4.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
-    case 'Да updateProblem-3':
-      updateProblem_4.classList.add('active');
-      setTimeout(() => window.scroll({ top: (updateProblem_4.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+    case 'Кассы updateProblem-3':
+      for(let i = 0; i < hideUpdateProblem_3.length; i++) {hideUpdateProblem_3[i].classList.remove('active');}
+      updateProblem_4_2.classList.add('active');
+      setTimeout(() => window.scroll({ top: (updateProblem_4_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 110);
       break;
     case 'typeWork4-2-yes tw4-2':
       for(let i = 0; i < hideTypeWork_4_2.length; i++) {hideTypeWork_4_2[i].classList.remove('active');}
@@ -582,7 +594,7 @@ let loyaltyProblem = document.querySelectorAll(".item[name='loyaltyProblem']:not
 for(let i=4; i<loyaltyProblem.length; i++){loyaltyProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 
-let updateProblem = document.querySelectorAll(".item[name='updateProblem']:not([class*='-final'])");
+let updateProblem = document.querySelectorAll(".item[name='updateProblem']:not([class*='-final']):not(.updateProblem-3)");
 for(let i=2; i<updateProblem.length; i++){updateProblem[i].onclick = function(){this.nextElementSibling.classList.add('active');
 setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
 

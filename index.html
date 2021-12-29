@@ -1068,6 +1068,30 @@
           <div id="gallery"></div>
           <button class="btn">Отправить заявку</button>
         </fieldset>
+        <fieldset name="updateProblem" class="item column typeWork3 updateProblem-4-2">
+          <legend>Укажите текущую версию</legend>
+          <input type="text" name="updateProblem-4-2" placeholder="">
+        </fieldset>
+        <fieldset name="updateProblem" class="item typeWork3 updateProblem-5-2">
+          <legend>Укажите версию на которую производится обновление</legend>
+          <input type="text" name="updateProblem-5-2" placeholder="">
+        </fieldset>
+        <fieldset name="updateProblem" class="item column upload typeWork3 updateProblem-final-2">
+          <legend>Соберите логи </legend>
+          <p>Логи сервера (расширенные) (SERVER-FILE)</p>
+          <p>Лог-файл обновления /home/tc/storage/crystal-conf/logs/ccm.log</p>
+          <p>Логи кассы (расширенные) (visualization, keyboard, techProcess, touch2, touch2-events (в случае touch-кассы) до уровня TRACE.) Собирать логи ОБЯЗАТЕЛЬНО с помощью SetConsole.</p>
+          <p>Добавьте логи вложением. Если размер логов превышает 4 МБ - укажите ссылку на файлообменник (Яндекс.Диск, ГуглДрайв и т.д.)</p>
+          <p>Укажите ссылку на логи</p>
+          <input type="text" name="updateProblem-6-2" value="">
+          <div id="drop-area">
+            <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
+            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+          </div>
+          <progress id="progress-bar" max=100 value=0></progress>
+          <div id="gallery"></div>
+          <button class="btn">Отправить заявку</button>
+        </fieldset>
         <fieldset class="item column typeWork4 typeWork4-1">
           <h4 class="block-title">Ознакомьтесь с инструкциями</h4>
           <legend>Ознакомьтесь с инструкциями представленными на <a href="https://crystals.atlassian.net/wiki/spaces/SR10SUPPORT/overview">портале поддержки продуктов CSI</a></legend>
