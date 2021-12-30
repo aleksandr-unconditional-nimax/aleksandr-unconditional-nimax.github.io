@@ -144,7 +144,7 @@ let hideTypeWork_4_2 = document.querySelectorAll(".typeWork4-2 ~ fieldset");
 let hideTypeWork_4_4 = document.querySelectorAll(".typeWork4-4 ~ fieldset");
 
 let fieldsetItems = document.querySelectorAll('fieldset.item input[type="radio"]');
-let clearInputs = document.querySelectorAll('fieldset.item ~ fieldset.item input[type="text"]');
+let clearInputs = document.querySelectorAll('fieldset.item ~ fieldset.item input[type="text"], fieldset.item ~ fieldset.item textarea');
 fieldsetItems.forEach((n, i, a) => {
   n.addEventListener('click', () => {
     for(let i = 0; i < clearInputs.length; i++) {clearInputs[i].value = "";}
