@@ -121,7 +121,7 @@ let hidePartnerContractor = document.querySelectorAll('.item1[name="partnerContr
 let hideCashHardwareProblemChoice = document.querySelectorAll('.typeWork3:not([name="cashHardwareProblem-choice"])');
 let loyaltyProblemAll = document.querySelectorAll('.typeWork3[name="loyaltyProblem"]');
 let hideTypeWork_2 = document.querySelectorAll(".typeWork2-1 ~ fieldset");
-let hideFieldsets1 = document.querySelectorAll(".typeWork3-1 ~ fieldset");
+let hideFieldsets1 = document.querySelectorAll(".typeWork3-1 ~ .item");
 let hideCashProblem = document.querySelectorAll(".cashProblem ~ fieldset");
 let hideProblemFormChecks_1 = document.querySelectorAll(".problemFormChecks-1 ~ fieldset");
 let hideProgramSetProblem1 = document.querySelectorAll(".programSetProblem-1 ~ .item", ".programSetProblem-1 ~ fieldset");
