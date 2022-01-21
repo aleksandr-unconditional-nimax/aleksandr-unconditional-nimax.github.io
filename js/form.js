@@ -863,7 +863,7 @@ window.addEventListener('scroll', () => {
   /* Anchors scroll START */
   const anchors = [].slice.call(document.querySelectorAll('.nav a[href*="#"]')),
         animationTime = 81,
-        framesCount = 81;
+        framesCount = 45;
   anchors.forEach(function(item) {
     item.addEventListener('click', function(e) {
       e.preventDefault();
@@ -874,8 +874,8 @@ window.addEventListener('scroll', () => {
           window.scrollBy(0, scrollBy);
         } else {
           window.scrollTo({
-            top: coordY -172,
-            behavior: "smooth"
+            top: coordY -189,
+            // behavior: "smooth"
         });
           clearInterval(scroller);
         }

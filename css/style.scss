@@ -683,7 +683,7 @@ body.support-request-body {
       line-height: 1.1;
       filter: opacity(0.3);
       display: flex;
-      transition: filter 0.2s ease-in-out;
+      transition: filter 0.1s ease-in-out;
       &:last-child{
         &::after{
           display: none;
@@ -725,10 +725,10 @@ body.support-request-body {
     .nav{
       grid-column: auto;
       width: 100%;
-      bottom: calc(100vh - 75px);
+      bottom: calc(100vh - 120px);
       &::before{
-        top: -20px;
-        height: 95px;
+        top: -60px;
+        height: calc(100% + 70px);
       }
       &::after{
         display: none;
