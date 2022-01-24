@@ -826,14 +826,14 @@ function uploadFile(file, i) {
 /* CUSTOM FILE UPLOADER END */
 
 const navForms = document.querySelector('.nav');
-let titleH = document.querySelectorAll('h4.block-title');
+let titleH = document.querySelectorAll('h4.title-anchor');
 for(let i = 0; i < titleH.length; i++){
   (function(i){
     this.setAttribute("id", 'title'+ ++i);
   }).call(titleH[i], i);
 }
 window.addEventListener('scroll', () => {
-  let titleActive = document.querySelectorAll('.active .block-title');
+  let titleActive = document.querySelectorAll('.active .title-anchor');
   let ToC = "<ul>";
   let newLine, el, title, link;
   for(let i = 0; i < titleActive.length; i++){
@@ -857,7 +857,7 @@ window.addEventListener('scroll', () => {
 			}
 		});
 	});
-	document.querySelectorAll('.active .block-title[id]').forEach((section) => {
+	document.querySelectorAll('.active .title-anchor[id]').forEach((section) => {
 		observer.observe(section);
 	});
   /* Anchors scroll START */
