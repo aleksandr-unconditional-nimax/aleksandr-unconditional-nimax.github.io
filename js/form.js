@@ -837,8 +837,7 @@ for(let i = 0; i < titleH.length; i++){
 let fieldsetItem = document.querySelectorAll('.item');
 fieldsetItem.forEach((n, i, a) => {
   n.addEventListener('click', () => {
-    let fieldsetItemTitle = document.querySelectorAll('.item .title-anchor');
-    fieldsetItemTitle.forEach(elem => {
+    n.querySelectorAll('.title-anchor').forEach(elem => {
       let id = elem.getAttribute('id');
       if (n.classList.contains('active')) {
         document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.add('visible');
@@ -890,9 +889,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('scroll', () => {
   let titleActive = document.querySelectorAll('.active .title-anchor');
-  // titleActive.forEach((n, i, a) => {
-  //   n.classList.add('visible');
-  // });
+  titleActive.forEach((n, i, a) => {
+    n.classList.add('visible');
+  });
   // for(let i = 0; i < titleActive.length; i++){
   //   (function(i){
   //     this.classList.add('visible')
