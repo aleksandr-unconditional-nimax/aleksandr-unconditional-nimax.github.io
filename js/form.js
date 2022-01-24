@@ -159,21 +159,22 @@ fieldsetItem.forEach((n, i, a) => {
       }
       if (typeof(clearRadio) != 'undefined' && clearRadio != null){
         clearRadio.forEach(el => {
+          // el.preventDefault();
           el.checked = false;
         });
-        // for(let i = 0; i < clearRadio.length; i++) {clearRadio[i].classList.add('ss2');}
       }
     }
-    else {
-      if (typeof(clearRadio) != 'undefined' && clearRadio != null){
-        clearRadio.forEach(el => {
-          console.log(el);
-          el.classList.add('ww');
-          el.checked = false;
-        });
-        // for(let i = 0; i < clearRadio.length; i++) {clearRadio[i].classList.add('ss2');}
-      }
-    }
+    // else {
+    //   if (typeof(clearRadio) != 'undefined' && clearRadio != null){
+    //     clearRadio.forEach(el => {
+    //       el.preventDefault();
+    //       console.log(el);
+    //       el.classList.add('ww');
+    //       el.checked = false;
+    //     });
+    //     // for(let i = 0; i < clearRadio.length; i++) {clearRadio[i].classList.add('ss2');}
+    //   }
+    // }
   });
 });
 
@@ -917,8 +918,8 @@ window.addEventListener('scroll', () => {
 	});
   /* Anchors scroll START */
   const anchors = [].slice.call(document.querySelectorAll('.nav a[href*="#"]')),
-        animationTime = 180,
-        framesCount = 10;
+        animationTime = 10,
+        framesCount = 180;
   anchors.forEach(function(item) {
     item.addEventListener('click', function(e) {
       e.preventDefault();
