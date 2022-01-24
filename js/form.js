@@ -143,13 +143,16 @@ let hideTypeWork = document.querySelectorAll(".typeWork0 ~ .item", ".typeWork0 ~
 let hideTypeWork_4_2 = document.querySelectorAll(".typeWork4-2 ~ fieldset");
 let hideTypeWork_4_4 = document.querySelectorAll(".typeWork4-4 ~ fieldset");
 
-let fieldsetItems = document.querySelectorAll('fieldset.item input[type="radio"]');
+let fieldsetItem = document.querySelectorAll('.item');
+let fieldsetItems = document.querySelectorAll('.item input[type="radio"]');
 let clearInputs = document.querySelectorAll('fieldset.item ~ fieldset.item input[type="text"], fieldset.item ~ fieldset.item textarea');
-fieldsetItems.forEach((n, i, a) => {
-  n.addEventListener('click', () => {
-    for(let i = 0; i < clearInputs.length; i++) {clearInputs[i].value = "";}
-  })
-});
+let clearRadio = document.querySelectorAll('fieldset.item ~ fieldset.item input[type="radio"]');
+
+// fieldsetItems.forEach((n, i, a) => {
+//   n.addEventListener('click', () => {
+//     for(let i = 0; i < clearInputs.length; i++) {clearInputs[i].value = "";}
+//   })
+// });
 
 const handleChange = ({ target: { value, name } }) => {
   const res = `${value} ${name}`;
@@ -833,8 +836,6 @@ for(let i = 0; i < titleH.length; i++){
   }).call(titleH[i], i);
 }
 
-
-let fieldsetItem = document.querySelectorAll('.item');
 fieldsetItem.forEach((n, i, a) => {
   n.addEventListener('click', () => {
     n.querySelectorAll('.title-anchor').forEach(elem => {
@@ -846,27 +847,6 @@ fieldsetItem.forEach((n, i, a) => {
         document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.remove('visible');
       }
     });
-
-    // const observer = new IntersectionObserver(entries => {
-    //   entries.forEach(entry => {
-    //     const id = entry.target.getAttribute('id');
-    //     if (entry.classList.contains('active')) {
-    //       document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.add('visible');
-    //     } else {
-    //       document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.remove('t');
-    //     }
-    //   });
-    // });
-    // document.querySelectorAll('.active .title-anchor[id]').forEach((section) => {
-    //   observer.observe(section);
-    // });
-
-
-    // let allVisibleLi = document.querySelectorAll('nav li.visible');
-    // // let last = selected[selected.length-1];
-    // // last.classList.add('last');
-    // for(var i=0; i< allVisibleLi.length; i++);
-    // allVisibleLi[(i-1)].className+=' last';
   })
 });
 
@@ -888,28 +868,17 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('scroll', () => {
-  let titleActive = document.querySelectorAll('.active .title-anchor');
-  titleActive.forEach((n, i, a) => {
-    n.classList.add('visible');
+  let fieldsetItem = document.querySelectorAll('.item');
+  fieldsetItem.forEach((n, i, a) => {
+    n.querySelectorAll('.title-anchor').forEach(elem => {
+      let id = elem.getAttribute('id');
+      if (n.classList.contains('active')) { } 
+      else {
+        document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.remove('visible');
+      }
+    });
   });
-  // for(let i = 0; i < titleActive.length; i++){
-  //   (function(i){
-  //     this.classList.add('visible')
-  //   }).call(titleActive[i], i);
-  // }
-  // let ToC = "<ul>";
-  // let newLine, el, title, link;
-  // for(let i = 0; i < titleActive.length; i++){
-  //   (function(i){
-  //     el = this;
-  //     title = el.textContent;
-  //     link = "#" + el.getAttribute("id");
-  //     newLine = "<li>" + "<a href='" + link + "'>" + title + "</a>" + "</li>";
-  //     ToC += newLine;
-  //   }).call(titleActive[i], i);
-  // }
-  // ToC += "</ul>";
-  // navForms.innerHTML = ToC;
+
   const observer = new IntersectionObserver(entries => {
 		entries.forEach(entry => {
 			const id = entry.target.getAttribute('id');
@@ -925,8 +894,8 @@ window.addEventListener('scroll', () => {
 	});
   /* Anchors scroll START */
   const anchors = [].slice.call(document.querySelectorAll('.nav a[href*="#"]')),
-        animationTime = 81,
-        framesCount = 45;
+        animationTime = 180,
+        framesCount = 10;
   anchors.forEach(function(item) {
     item.addEventListener('click', function(e) {
       e.preventDefault();
@@ -938,7 +907,7 @@ window.addEventListener('scroll', () => {
         } else {
           window.scrollTo({
             top: coordY -189,
-            // behavior: "smooth"
+            behavior: "smooth"
         });
           clearInterval(scroller);
         }
@@ -946,6 +915,7 @@ window.addEventListener('scroll', () => {
     });
   });
   const scrollContainer = document.querySelector("nav ul");
+  scrollContainer.scrollLeft = scrollContainer.scrollWidth;
   scrollContainer.addEventListener("wheel", (evt) => {
       evt.preventDefault();
       scrollContainer.scrollLeft += evt.deltaY;

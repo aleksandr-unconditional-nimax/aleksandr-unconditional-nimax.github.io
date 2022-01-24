@@ -669,13 +669,22 @@ body.support-request-body {
       position: relative;
       width: 100%;
       padding-right: 14vw;
-      // justify-content: flex-end;
       -ms-overflow-style: none;
       scrollbar-width: none;
       z-index: 2;
       &::-webkit-scrollbar {
-        width: 0px;
+        width: 2px;
         background: transparent;
+      }
+      &::after{
+        content: '';
+        width: 20px;
+        min-width: 20px;
+        height: 20px;
+        background: var(--color5);
+        margin: auto auto auto -20px;
+        display: block;
+        position: relative;
       }
     }
     li{
