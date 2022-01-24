@@ -145,14 +145,37 @@ let hideTypeWork_4_4 = document.querySelectorAll(".typeWork4-4 ~ fieldset");
 
 let fieldsetItem = document.querySelectorAll('.item');
 let fieldsetItems = document.querySelectorAll('.item input[type="radio"]');
-let clearInputs = document.querySelectorAll('fieldset.item ~ fieldset.item input[type="text"], fieldset.item ~ fieldset.item textarea');
-let clearRadio = document.querySelectorAll('fieldset.item ~ fieldset.item input[type="radio"]');
 
-// fieldsetItems.forEach((n, i, a) => {
-//   n.addEventListener('click', () => {
-//     for(let i = 0; i < clearInputs.length; i++) {clearInputs[i].value = "";}
-//   })
-// });
+fieldsetItem.forEach((n, i, a) => {
+  n.addEventListener('click', () => {
+    if (n.classList.contains('active')) {
+      let next = n.nextElementSibling;
+      let clearInputs = next.querySelectorAll('input[type="text"]');
+      let clearRadio = next.querySelectorAll('input[type="radio"]');
+      if (typeof(clearInputs) != 'undefined' && clearInputs != null){
+        clearInputs.forEach(el => {
+          el.value = "";
+        });
+      }
+      if (typeof(clearRadio) != 'undefined' && clearRadio != null){
+        clearRadio.forEach(el => {
+          el.checked = false;
+        });
+        // for(let i = 0; i < clearRadio.length; i++) {clearRadio[i].classList.add('ss2');}
+      }
+    }
+    else {
+      if (typeof(clearRadio) != 'undefined' && clearRadio != null){
+        clearRadio.forEach(el => {
+          console.log(el);
+          el.classList.add('ww');
+          el.checked = false;
+        });
+        // for(let i = 0; i < clearRadio.length; i++) {clearRadio[i].classList.add('ss2');}
+      }
+    }
+  });
+});
 
 const handleChange = ({ target: { value, name } }) => {
   const res = `${value} ${name}`;
