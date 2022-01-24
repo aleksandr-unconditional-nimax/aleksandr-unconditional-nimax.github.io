@@ -832,21 +832,85 @@ for(let i = 0; i < titleH.length; i++){
     this.setAttribute("id", 'title'+ ++i);
   }).call(titleH[i], i);
 }
-window.addEventListener('scroll', () => {
-  let titleActive = document.querySelectorAll('.active .title-anchor');
+
+
+let fieldsetItem = document.querySelectorAll('.item');
+fieldsetItem.forEach((n, i, a) => {
+  n.addEventListener('click', () => {
+    let fieldsetItemTitle = document.querySelectorAll('.item .title-anchor');
+    fieldsetItemTitle.forEach(elem => {
+      let id = elem.getAttribute('id');
+      if (n.classList.contains('active')) {
+        document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.add('visible');
+      } 
+      else {
+        document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.remove('visible');
+      }
+    });
+
+    // const observer = new IntersectionObserver(entries => {
+    //   entries.forEach(entry => {
+    //     const id = entry.target.getAttribute('id');
+    //     if (entry.classList.contains('active')) {
+    //       document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.add('visible');
+    //     } else {
+    //       document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.remove('t');
+    //     }
+    //   });
+    // });
+    // document.querySelectorAll('.active .title-anchor[id]').forEach((section) => {
+    //   observer.observe(section);
+    // });
+
+
+    // let allVisibleLi = document.querySelectorAll('nav li.visible');
+    // // let last = selected[selected.length-1];
+    // // last.classList.add('last');
+    // for(var i=0; i< allVisibleLi.length; i++);
+    // allVisibleLi[(i-1)].className+=' last';
+  })
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  let titleAnchor = document.querySelectorAll('.title-anchor');
   let ToC = "<ul>";
   let newLine, el, title, link;
-  for(let i = 0; i < titleActive.length; i++){
+  for(let i = 0; i < titleAnchor.length; i++){
     (function(i){
       el = this;
       title = el.textContent;
       link = "#" + el.getAttribute("id");
       newLine = "<li>" + "<a href='" + link + "'>" + title + "</a>" + "</li>";
       ToC += newLine;
-    }).call(titleActive[i], i);
+    }).call(titleAnchor[i], i);
   }
   ToC += "</ul>";
   navForms.innerHTML = ToC;
+});
+
+window.addEventListener('scroll', () => {
+  let titleActive = document.querySelectorAll('.active .title-anchor');
+  // titleActive.forEach((n, i, a) => {
+  //   n.classList.add('visible');
+  // });
+  // for(let i = 0; i < titleActive.length; i++){
+  //   (function(i){
+  //     this.classList.add('visible')
+  //   }).call(titleActive[i], i);
+  // }
+  // let ToC = "<ul>";
+  // let newLine, el, title, link;
+  // for(let i = 0; i < titleActive.length; i++){
+  //   (function(i){
+  //     el = this;
+  //     title = el.textContent;
+  //     link = "#" + el.getAttribute("id");
+  //     newLine = "<li>" + "<a href='" + link + "'>" + title + "</a>" + "</li>";
+  //     ToC += newLine;
+  //   }).call(titleActive[i], i);
+  // }
+  // ToC += "</ul>";
+  // navForms.innerHTML = ToC;
   const observer = new IntersectionObserver(entries => {
 		entries.forEach(entry => {
 			const id = entry.target.getAttribute('id');

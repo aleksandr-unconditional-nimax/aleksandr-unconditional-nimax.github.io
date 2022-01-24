@@ -682,9 +682,9 @@ body.support-request-body {
       font-size: clamp(16px, 4vw, 20px);
       line-height: 1.1;
       filter: opacity(0.3);
-      display: flex;
+      display: none;
       transition: filter 0.1s ease-in-out;
-      &:last-child{
+      &.last{
         &::after{
           display: none;
         }
@@ -692,6 +692,9 @@ body.support-request-body {
       &:hover,
       &.active{
         filter: opacity(1);
+      }
+      &.visible{
+        display: flex;
       }
       &::after{
         content: '';
