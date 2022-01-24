@@ -939,7 +939,7 @@ window.addEventListener('scroll', () => {
     });
   });
   const scrollContainer = document.querySelector("nav ul");
-  scrollContainer.scrollLeft = scrollContainer.scrollWidth;
+  // scrollContainer.scrollLeft = scrollContainer.scrollWidth;
   scrollContainer.addEventListener("wheel", (evt) => {
       evt.preventDefault();
       scrollContainer.scrollLeft += evt.deltaY;
