@@ -143,12 +143,38 @@ let hideTypeWork = document.querySelectorAll(".typeWork0 ~ .item", ".typeWork0 ~
 let hideTypeWork_4_2 = document.querySelectorAll(".typeWork4-2 ~ fieldset");
 let hideTypeWork_4_4 = document.querySelectorAll(".typeWork4-4 ~ fieldset");
 
-let fieldsetItems = document.querySelectorAll('fieldset.item input[type="radio"]');
-let clearInputs = document.querySelectorAll('fieldset.item ~ fieldset.item input[type="text"], fieldset.item ~ fieldset.item textarea');
+let fieldsetItem = document.querySelectorAll('.item');
+let fieldsetItems = document.querySelectorAll('.item input[type="radio"]');
+
+fieldsetItem.forEach((n, i, a) => {
+  n.addEventListener('click', () => {
+    const scrollContainer = document.querySelector("nav ul");
+    scrollContainer.scrollLeft = scrollContainer.scrollWidth;
+  })
+});
+
 fieldsetItems.forEach((n, i, a) => {
   n.addEventListener('click', () => {
-    for(let i = 0; i < clearInputs.length; i++) {clearInputs[i].value = "";}
-  })
+    if (n.closest('.item').classList.contains('active')) {
+      let parent = n.closest('.item');
+      let nextSibling = parent.nextElementSibling;  
+      while(nextSibling) {
+        let clearInputs = nextSibling.querySelectorAll('input[type="text"], textarea');
+        let clearRadio = nextSibling.querySelectorAll('input[type="radio"]');
+        if (typeof(clearInputs) != 'undefined' && clearInputs != null){
+          clearInputs.forEach(el => {
+            el.value = "";
+          });
+        }
+        if (typeof(clearRadio) != 'undefined' && clearRadio != null){
+          clearRadio.forEach(el => {
+            el.checked = false;
+          });
+        }
+        nextSibling = nextSibling.nextElementSibling;
+      }
+    }
+  });
 });
 
 const handleChange = ({ target: { value, name } }) => {
@@ -826,44 +852,77 @@ function uploadFile(file, i) {
 /* CUSTOM FILE UPLOADER END */
 
 const navForms = document.querySelector('.nav');
-let titleH = document.querySelectorAll('h4.block-title');
+let titleH = document.querySelectorAll('h4.title-anchor');
 for(let i = 0; i < titleH.length; i++){
   (function(i){
     this.setAttribute("id", 'title'+ ++i);
   }).call(titleH[i], i);
 }
-window.addEventListener('scroll', () => {
-  let titleActive = document.querySelectorAll('.active .block-title');
+
+fieldsetItem.forEach((n, i, a) => {
+  n.addEventListener('click', () => {
+    n.querySelectorAll('.title-anchor').forEach(elem => {
+      let id = elem.getAttribute('id');
+      if (n.classList.contains('active')) {
+        document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.add('visible');
+        const el = document.querySelector(`nav li a[href="#${id}"]`).parentElement;
+        el.scrollIntoView({block: "center", inline: "center"});
+      } 
+      else {
+        document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.remove('visible');
+      }
+    });
+  })
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  let titleAnchor = document.querySelectorAll('.title-anchor');
   let ToC = "<ul>";
   let newLine, el, title, link;
-  for(let i = 0; i < titleActive.length; i++){
+  for(let i = 0; i < titleAnchor.length; i++){
     (function(i){
       el = this;
       title = el.textContent;
       link = "#" + el.getAttribute("id");
       newLine = "<li>" + "<a href='" + link + "'>" + title + "</a>" + "</li>";
       ToC += newLine;
-    }).call(titleActive[i], i);
+    }).call(titleAnchor[i], i);
   }
   ToC += "</ul>";
   navForms.innerHTML = ToC;
+});
+
+window.addEventListener('scroll', () => {
+  let fieldsetItem = document.querySelectorAll('.item');
+  fieldsetItem.forEach((n, i, a) => {
+    n.querySelectorAll('.title-anchor').forEach(elem => {
+      let id = elem.getAttribute('id');
+      if (n.classList.contains('active')) { } 
+      else {
+        document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.remove('visible');
+      }
+    });
+  });
+
   const observer = new IntersectionObserver(entries => {
 		entries.forEach(entry => {
 			const id = entry.target.getAttribute('id');
 			if (entry.intersectionRatio > 0) {
 				document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.add('active');
+        const el = document.querySelector(`nav li a[href="#${id}"]`).parentElement;
+        el.scrollIntoView({behavior: "smooth"});
 			} else {
 				document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.remove('active');
 			}
 		});
 	});
-	document.querySelectorAll('.active .block-title[id]').forEach((section) => {
+	document.querySelectorAll('.active .title-anchor[id]').forEach((section) => {
 		observer.observe(section);
 	});
   /* Anchors scroll START */
   const anchors = [].slice.call(document.querySelectorAll('.nav a[href*="#"]')),
-        animationTime = 81,
-        framesCount = 45;
+        animationTime = 10,
+        framesCount = 180;
   anchors.forEach(function(item) {
     item.addEventListener('click', function(e) {
       e.preventDefault();
@@ -875,7 +934,7 @@ window.addEventListener('scroll', () => {
         } else {
           window.scrollTo({
             top: coordY -189,
-            // behavior: "smooth"
+            behavior: "smooth"
         });
           clearInterval(scroller);
         }
@@ -883,9 +942,10 @@ window.addEventListener('scroll', () => {
     });
   });
   const scrollContainer = document.querySelector("nav ul");
+  // scrollContainer.scrollLeft = scrollContainer.scrollWidth;
   scrollContainer.addEventListener("wheel", (evt) => {
       evt.preventDefault();
-      scrollContainer.scrollLeft += evt.deltaY;
+      scrollContainer.scrollLeft += 0.005 * evt.deltaY;
   });
 });
 /* Anchors scroll END */
