@@ -945,7 +945,7 @@ window.addEventListener('scroll', () => {
   // scrollContainer.scrollLeft = scrollContainer.scrollWidth;
   scrollContainer.addEventListener("wheel", (evt) => {
       evt.preventDefault();
-      scrollContainer.scrollLeft += 0.005 * evt.deltaY;
+      scrollContainer.scrollLeft += 0.1 * evt.deltaY;
   });
 });
 /* Anchors scroll END */
