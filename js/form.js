@@ -125,6 +125,7 @@ let hideFieldsets1 = document.querySelectorAll(".typeWork3-1 ~ .item");
 let hideCashProblem = document.querySelectorAll(".cashProblem ~ fieldset");
 let hideProblemFormChecks_1 = document.querySelectorAll(".problemFormChecks-1 ~ fieldset");
 let hideProgramSetProblem1 = document.querySelectorAll(".programSetProblem-1 ~ .item", ".programSetProblem-1 ~ fieldset");
+let hideEqAreaProblem = document.querySelectorAll(".equipmentAreaProblem-1 ~ fieldset"); 
 let hideSetProblem1 = document.querySelectorAll(".programSetProblem-10 ~ fieldset");
 let hideLoyaltyProblem_1 = document.querySelectorAll(".loyaltyProblem-1 ~ fieldset");
 let hideLoyaltyProblem_4 = document.querySelectorAll(".loyaltyProblem-4 ~ fieldset");
@@ -372,12 +373,13 @@ const handleChange = ({ target: { value, name } }) => {
       setTimeout(() => window.scroll({ top: (problemSendOFD_5.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Другое equipmentAreaProblem-1':
+      for(let i = 0; i < hideEqAreaProblem.length; i++) {hideEqAreaProblem[i].classList.remove('active');}
       equipmentAreaProblem_2.classList.add('active');
       setTimeout(() => window.scroll({ top: (equipmentAreaProblem_2.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
       break;
     case 'Инфокиоск/прайсчекер equipmentAreaProblem-1':
     case 'ПринтерШК/этикеток equipmentAreaProblem-1':
-      equipmentAreaProblem_2.classList.remove('active');
+      for(let i = 0; i < hideEqAreaProblem.length; i++) {hideEqAreaProblem[i].classList.remove('active');}
       equipmentAreaProblem_3.classList.add('active');
       setTimeout(() => window.scroll({ top: (equipmentAreaProblem_3.offsetTop - offset), left: 0, behavior: 'smooth' }), 140);
       break;
