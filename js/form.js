@@ -3,6 +3,7 @@ const step2form1 = document.querySelector('#form-1 .item2');
 const step3form1 = document.querySelector('#form-1 .item3');
 const step4form1 = document.querySelector('#form-1 .item4');
 const step5form1 = document.querySelector('#form-1 .item5');
+const step5form1email = document.querySelector('#form-1 .item5 input[type="email"]');
 const step6form1 = document.querySelector('#form-1 .item6');
 const typeWork0 = document.querySelector('.typeWork0');
 const typeWork1 = document.querySelectorAll('.typeWork1');
@@ -98,13 +99,17 @@ let select2Li = document.querySelectorAll('#select-2 .select-option');
 select2Li.forEach(el => {
   el.addEventListener('click', () => {
     step6form1.classList.add('active');
-    setTimeout(() => window.scroll({ top: (step6form1.offsetTop - 100), left: 0, behavior: 'smooth' }), 100);
+    setTimeout(() => window.scroll({ top: (step6form1.offsetTop - 150), left: 0, behavior: 'smooth' }), 100);
   })
 })
 step5form1.onclick = function() {
   step6form1.classList.add('active');
   navForms.classList.add('active');
   // setTimeout(() => window.scroll({ top: (step6form1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+};
+step5form1email.onclick = function() {
+  step6form1.classList.add('active');
+  setTimeout(() => window.scroll({ top: (step6form1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
 };
 step6form1.onclick = function() {
   typeWork0.classList.add('active');
