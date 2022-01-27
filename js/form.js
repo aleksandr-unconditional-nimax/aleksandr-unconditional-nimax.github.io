@@ -104,7 +104,7 @@ select2Li.forEach(el => {
 step5form1.onclick = function() {
   step6form1.classList.add('active');
   navForms.classList.add('active');
-  setTimeout(() => window.scroll({ top: (step6form1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+  // setTimeout(() => window.scroll({ top: (step6form1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
 };
 step6form1.onclick = function() {
   typeWork0.classList.add('active');
