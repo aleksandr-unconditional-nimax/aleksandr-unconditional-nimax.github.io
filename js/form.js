@@ -943,12 +943,26 @@ window.addEventListener('scroll', () => {
       }, animationTime / framesCount);
     });
   });
+  // const scrollContainer = document.querySelector("nav ul");
+  // // scrollContainer.scrollLeft = scrollContainer.scrollWidth;
+  // scrollContainer.addEventListener("wheel", (evt) => {
+  //     evt.preventDefault();
+  //     scrollContainer.scrollLeft += 0.1 * evt.deltaY;
+  // });
   const scrollContainer = document.querySelector("nav ul");
-  // scrollContainer.scrollLeft = scrollContainer.scrollWidth;
-  scrollContainer.addEventListener("wheel", (evt) => {
-      evt.preventDefault();
-      scrollContainer.scrollLeft += 0.1 * evt.deltaY;
-  });
+  let sumDelta = 0;
+  let startLeft = 0;
+  let targetLeft = 0;
+  scrollContainer.addEventListener('wheel', (e) => {
+      if (scrollContainer.scrollLeft === targetLeft) sumDelta = 0
+      if (sumDelta === 0) startLeft = scrollContainer.scrollLeft
+      sumDelta -= e.deltaY
+      const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+      const left = Math.min(maxScrollLeft, Math.max(0, startLeft - sumDelta));
+      targetLeft = left
+      scrollContainer.scrollTo({left, behavior: "smooth"})
+      e.preventDefault();
+  })
 });
 /* Anchors scroll END */
 
