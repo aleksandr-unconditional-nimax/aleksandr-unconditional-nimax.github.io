@@ -923,7 +923,7 @@ window.addEventListener('scroll', () => {
 	});
   /* Anchors scroll START */
   const anchors = [].slice.call(document.querySelectorAll('.nav a[href*="#"]')),
-        animationTime = 10,
+        animationTime = 1,
         framesCount = 180;
   anchors.forEach(function(item) {
     item.addEventListener('click', function(e) {
@@ -935,7 +935,7 @@ window.addEventListener('scroll', () => {
           window.scrollBy(0, scrollBy);
         } else {
           window.scrollTo({
-            top: coordY -189,
+            top: coordY,
             behavior: "smooth"
         });
           clearInterval(scroller);
