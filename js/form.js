@@ -937,8 +937,10 @@ window.addEventListener('scroll', () => {
       let scroller = setInterval(function() {
         let scrollBy = coordY / framesCount;
         if(scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
+          e.preventDefault();
           window.scrollBy(0, scrollBy);
         } else {
+          e.preventDefault();
           window.scrollTo({
             top: coordY -189,
             behavior: "smooth"
