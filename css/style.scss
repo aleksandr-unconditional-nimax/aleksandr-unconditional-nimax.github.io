@@ -767,7 +767,8 @@ body.support-request-body {
       grid-column: auto;
       width: 100%;
       max-width: 95%;
-      bottom: calc(100vh - 110px);
+      bottom: unset;
+      top: 22px;
       &::before{
         top: -70px;
         height: calc(100% + 78px);
