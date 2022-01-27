@@ -98,7 +98,7 @@ let select2Li = document.querySelectorAll('#select-2 .select-option');
 select2Li.forEach(el => {
   el.addEventListener('click', () => {
     step6form1.classList.add('active');
-    setTimeout(() => window.scroll({ top: (step6form1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+    setTimeout(() => window.scroll({ top: (step6form1.offsetTop - 100), left: 0, behavior: 'smooth' }), 100);
   })
 })
 step5form1.onclick = function() {
