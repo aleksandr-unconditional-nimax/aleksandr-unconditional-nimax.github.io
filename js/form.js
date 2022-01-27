@@ -935,7 +935,7 @@ window.addEventListener('scroll', () => {
           window.scrollBy(0, scrollBy);
         } else {
           window.scrollTo({
-            top: coordY,
+            top: coordY -189,
             behavior: "smooth"
         });
           clearInterval(scroller);
