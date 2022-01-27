@@ -685,7 +685,7 @@ class CustomSelect {
   }
   _changeValue(option) {
     if (option.classList.contains(CLASS_NAME_SELECTED)) {
-      return;
+      this.hide();
     }
     this._update(option);
     this.hide();
