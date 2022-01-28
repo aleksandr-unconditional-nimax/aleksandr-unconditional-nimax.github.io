@@ -120,7 +120,8 @@ body.support-request-body {
 
   fieldset,.fieldset{
     border: none;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
     grid-gap: 30px;
     transform: translateX(100vw) translateY(10%);
     transition: transform 0.09s ease-in-out;
