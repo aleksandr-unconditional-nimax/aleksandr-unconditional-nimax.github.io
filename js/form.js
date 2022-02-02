@@ -84,16 +84,22 @@ const offset = 50;
 
 step1form1.onclick = function() {
   step2form1.classList.add('active');
-  setTimeout(() => window.scroll({ top: (step2form1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+  if (w.matches) {
+    setTimeout(() => window.scroll({ top: (step2form1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+  }
 };
 step2form1.onclick = function() {
   step3form1.classList.add('active');
-  setTimeout(() => window.scroll({ top: (step3form1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+  if (w.matches) {
+    setTimeout(() => window.scroll({ top: (step3form1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+  }
 };
 step3form1.onclick = function() {
   step4form1.classList.add('active');
   step5form1.classList.add('active');
-  setTimeout(() => window.scroll({ top: (step4form1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+  if (w.matches) {
+    setTimeout(() => window.scroll({ top: (step4form1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+  }
 };
 let select2Li = document.querySelectorAll('#select-2 .select-option');
 select2Li.forEach(el => {
@@ -109,15 +115,21 @@ step5form1.onclick = function() {
 };
 step5form1email.onclick = function() {
   step6form1.classList.add('active');
-  setTimeout(() => window.scroll({ top: (step6form1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+  if (w.matches) {
+    setTimeout(() => window.scroll({ top: (step6form1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+  }
 };
 step6form1.onclick = function() {
   typeWork0.classList.add('active');
-  setTimeout(() => window.scroll({ top: (typeWork0.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+  if (w.matches) {
+    setTimeout(() => window.scroll({ top: (typeWork0.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+  }
 };
 typeWork4_6.onclick = function() {
   typeWork4_7.classList.add('active');
-  setTimeout(() => window.scroll({ top: (typeWork4_7.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+  if (w.matches) {
+    setTimeout(() => window.scroll({ top: (typeWork4_7.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
+  }
 };
 
 let radioForm1 = document.form1;
@@ -148,9 +160,9 @@ let hideProblemSendOFD_4 = document.querySelectorAll(".problemSendOFD-4 ~ fields
 let hideTypeWork = document.querySelectorAll(".typeWork0 ~ .item", ".typeWork0 ~ fieldset");
 let hideTypeWork_4_2 = document.querySelectorAll(".typeWork4-2 ~ fieldset");
 let hideTypeWork_4_4 = document.querySelectorAll(".typeWork4-4 ~ fieldset");
-
 let fieldsetItem = document.querySelectorAll('.item');
 let fieldsetItems = document.querySelectorAll('.item input[type="radio"]');
+let w = window.matchMedia("(min-width: 768px)");
 
 fieldsetItem.forEach((n, i, a) => {
   n.addEventListener('click', () => {
