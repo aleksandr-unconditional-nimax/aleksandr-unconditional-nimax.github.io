@@ -627,7 +627,7 @@ body.support-request-body {
   .nav{
     display: grid;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     max-width: calc(1024px + 30px);
     bottom: calc(100vh - 90px);
     grid-column: 1/3;
@@ -667,6 +667,8 @@ body.support-request-body {
     ul{
       display: flex;
       width: auto;
+      overflow: scroll;
+      overflow-y: hidden;
       overflow-x: scroll;
       position: relative;
       width: 100%;
