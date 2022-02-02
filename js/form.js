@@ -594,7 +594,9 @@ setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offse
 
 let fieldsetTypework2 = document.querySelectorAll(".item[name='typeWork2']:not([class*='-final'])");
 for(let i=0; i<fieldsetTypework2.length; i++){fieldsetTypework2[i].onclick = function(){this.nextElementSibling.classList.add('active');
-setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
+if (w.matches) {
+  setTimeout(() => window.scroll({ top: (this.nextElementSibling.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);}}
+}
 
 let fieldsetFiscalRegistrarOther = document.querySelectorAll(".item[name='fiscalRegistrarOther']");
 for(let i=0; i<fieldsetFiscalRegistrarOther.length; i++){fieldsetFiscalRegistrarOther[i].onclick = function(){this.nextElementSibling.classList.add('active');
@@ -963,12 +965,6 @@ window.addEventListener('scroll', () => {
       }, animationTime / framesCount);
     });
   });
-  // const scrollContainer = document.querySelector("nav ul");
-  // // scrollContainer.scrollLeft = scrollContainer.scrollWidth;
-  // scrollContainer.addEventListener("wheel", (evt) => {
-  //     evt.preventDefault();
-  //     scrollContainer.scrollLeft += 0.1 * evt.deltaY;
-  // });
   if (document.getElementsByClassName("bread").length){
     const scrollContainer = document.querySelector(".bread");
     let sumDelta = 0;
@@ -984,9 +980,6 @@ window.addEventListener('scroll', () => {
         scrollContainer.scrollTo({left, behavior: "smooth"})
         e.preventDefault();
     });
-    // scrollContainer.addEventListener('touchmove', function() {
-    //   scrollContainer.trigger('wheel');
-    // });
   }
 });
 /* Anchors scroll END */
