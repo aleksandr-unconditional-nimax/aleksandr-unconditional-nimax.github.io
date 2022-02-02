@@ -897,7 +897,7 @@ fieldsetItem.forEach((n, i, a) => {
 
 document.addEventListener('DOMContentLoaded', () => {
   let titleAnchor = document.querySelectorAll('.title-anchor');
-  let ToC = "<ul>";
+  let ToC = "<ul class='bread'>";
   let newLine, el, title, link;
   for(let i = 0; i < titleAnchor.length; i++){
     (function(i){
@@ -969,20 +969,22 @@ window.addEventListener('scroll', () => {
   //     evt.preventDefault();
   //     scrollContainer.scrollLeft += 0.1 * evt.deltaY;
   // });
-  const scrollContainer = document.querySelector("nav ul");
-  let sumDelta = 0;
-  let startLeft = 0;
-  let targetLeft = 0;
-  scrollContainer.addEventListener('wheel', (e) => {
-      if (scrollContainer.scrollLeft === targetLeft) sumDelta = 0
-      if (sumDelta === 0) startLeft = scrollContainer.scrollLeft
-      sumDelta -= e.deltaY
-      const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-      const left = Math.min(maxScrollLeft, Math.max(0, startLeft - sumDelta));
-      targetLeft = left
-      scrollContainer.scrollTo({left, behavior: "smooth"})
-      e.preventDefault();
-  })
+  if (document.getElementsByClassName("bread").length){
+    const scrollContainer = document.querySelector(".bread");
+    let sumDelta = 0;
+    let startLeft = 0;
+    let targetLeft = 0;
+    scrollContainer.addEventListener('wheel', (e) => {
+        if (scrollContainer.scrollLeft === targetLeft) sumDelta = 0
+        if (sumDelta === 0) startLeft = scrollContainer.scrollLeft
+        sumDelta -= e.deltaY
+        const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+        const left = Math.min(maxScrollLeft, Math.max(0, startLeft - sumDelta));
+        targetLeft = left
+        scrollContainer.scrollTo({left, behavior: "smooth"})
+        e.preventDefault();
+    })
+  }
 });
 /* Anchors scroll END */
 
