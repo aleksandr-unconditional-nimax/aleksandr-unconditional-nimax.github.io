@@ -983,7 +983,10 @@ window.addEventListener('scroll', () => {
         targetLeft = left
         scrollContainer.scrollTo({left, behavior: "smooth"})
         e.preventDefault();
-    })
+    });
+    // scrollContainer.addEventListener('touchmove', function() {
+    //   scrollContainer.trigger('wheel');
+    // });
   }
 });
 /* Anchors scroll END */
