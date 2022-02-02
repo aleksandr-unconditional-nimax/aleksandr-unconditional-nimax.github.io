@@ -910,20 +910,22 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   ToC += "</ul>";
   navForms.innerHTML = ToC;
+
+  window.addEventListener('scroll', () => {
+    let fieldsetItem = document.querySelectorAll('.item');
+    fieldsetItem.forEach((n, i, a) => {
+      n.querySelectorAll('.title-anchor').forEach(elem => {
+        let id = elem.getAttribute('id');
+        if (n.classList.contains('active')) { } 
+        else {
+          document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.remove('visible');
+        }
+      });
+    });
+  });
 });
 
 window.addEventListener('scroll', () => {
-  let fieldsetItem = document.querySelectorAll('.item');
-  fieldsetItem.forEach((n, i, a) => {
-    n.querySelectorAll('.title-anchor').forEach(elem => {
-      let id = elem.getAttribute('id');
-      if (n.classList.contains('active')) { } 
-      else {
-        document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.remove('visible');
-      }
-    });
-  });
-
   const observer = new IntersectionObserver(entries => {
 		entries.forEach(entry => {
 			const id = entry.target.getAttribute('id');
