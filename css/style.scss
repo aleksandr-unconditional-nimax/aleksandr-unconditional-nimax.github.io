@@ -636,7 +636,7 @@ body.support-request-body {
     pointer-events: none;
     opacity: 0;
     justify-content: flex-start;
-    z-index: 9;
+    z-index: 3;
     transition: opacity 0.2s ease-in-out;
     &::before{
       content: '';
@@ -776,6 +776,7 @@ body.support-request-body {
       max-width: 95%;
       bottom: unset;
       top: 22px;
+      z-index: 9;
       &::before{
         top: -70px;
         height: calc(100% + 78px);

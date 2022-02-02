@@ -82,6 +82,8 @@ const step5form2 = document.querySelector('#form-2 .item5[name="partnerContracto
 
 const offset = 50;
 
+let w = window.matchMedia("(min-width: 810px)");
+
 step1form1.onclick = function() {
   step2form1.classList.add('active');
   if (w.matches) {
@@ -162,7 +164,6 @@ let hideTypeWork_4_2 = document.querySelectorAll(".typeWork4-2 ~ fieldset");
 let hideTypeWork_4_4 = document.querySelectorAll(".typeWork4-4 ~ fieldset");
 let fieldsetItem = document.querySelectorAll('.item');
 let fieldsetItems = document.querySelectorAll('.item input[type="radio"]');
-let w = window.matchMedia("(min-width: 768px)");
 
 fieldsetItem.forEach((n, i, a) => {
   n.addEventListener('click', () => {
@@ -994,7 +995,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (currentScroll > prevScroll && !navHidden()) {
         navForms.classList.add('active')
       }
-      if (currentScroll < 150 && navHidden()) {
+      if (currentScroll < 50 && navHidden()) {
         navForms.classList.remove('active')
       }
       prevScroll = currentScroll
