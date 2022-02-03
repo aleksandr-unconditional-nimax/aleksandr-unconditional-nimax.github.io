@@ -113,7 +113,6 @@ select2Li.forEach(el => {
 step5form1.onclick = function() {
   step6form1.classList.add('active');
   navForms.classList.add('active');
-  // setTimeout(() => window.scroll({ top: (step6form1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
 };
 step5form1email.onclick = function() {
   step6form1.classList.add('active');
@@ -958,6 +957,7 @@ window.addEventListener('scroll', () => {
         } else {
           window.scrollTo({
             top: coordY -189,
+            left: 0,
             behavior: "smooth"
         });
           clearInterval(scroller);
