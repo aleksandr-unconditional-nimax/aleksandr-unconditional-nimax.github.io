@@ -943,26 +943,20 @@ window.addEventListener('scroll', () => {
 		observer.observe(section);
 	});
   /* Anchors scroll START */
-  const anchors = [].slice.call(document.querySelectorAll('.nav a[href*="#"]')),
-        animationTime = 1,
-        framesCount = 350;
+  const anchors = [].slice.call(document.querySelectorAll('.nav a[href*="#"]'));
   anchors.forEach(function(item) {
     item.addEventListener('click', function(e) {
       e.preventDefault();
-      let coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset;
+      const yOffset = -189;
+      let coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset + yOffset;
       let scroller = setInterval(function() {
-        let scrollBy = coordY / framesCount;
-        if(scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
-          window.scrollBy(0, scrollBy);
-        } else {
-          window.scrollTo({
-            top: coordY -189,
-            left: 0,
-            behavior: "smooth"
+        window.scrollTo({
+          top: coordY,
+          left: 0,
+          behavior: "smooth"
         });
-          clearInterval(scroller);
-        }
-      }, animationTime / framesCount);
+        clearInterval(scroller);
+      });
     });
   });
   if (document.getElementsByClassName("bread").length){
