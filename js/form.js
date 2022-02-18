@@ -942,21 +942,35 @@ window.addEventListener('scroll', () => {
 	document.querySelectorAll('.active .title-anchor[id]').forEach((section) => {
 		observer.observe(section);
 	});
+
   /* Anchors scroll START */
   const anchors = [].slice.call(document.querySelectorAll('.nav a[href*="#"]'));
+  // const animationTime = 350;
+  const framesCount = 1;
   anchors.forEach(function(item) {
     item.addEventListener('click', function(e) {
       e.preventDefault();
       const yOffset = -189;
       let coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset + yOffset;
-      let scroller = setInterval(function() {
-        window.scrollTo({
-          top: coordY,
-          left: 0,
-          behavior: "smooth"
+      if (w.matches) {
+        let scroller = setInterval(function() {
+          window.scrollTo({
+            top: coordY,
+            left: 0,
+            behavior: "smooth"
+          });
+          clearInterval(scroller);
         });
-        clearInterval(scroller);
-      });
+      }
+      else {
+        let scroller = setInterval(function() {
+          window.scrollTo({
+            top: coordY,
+            left: 0
+          });
+          clearInterval(scroller);
+        });
+      };
     });
   });
   if (document.getElementsByClassName("bread").length){
