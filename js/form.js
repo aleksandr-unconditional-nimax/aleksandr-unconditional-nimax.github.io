@@ -964,10 +964,11 @@ window.addEventListener('scroll', () => {
         let scroller = setInterval(function() {
           window.scrollTo({
             top: coordY,
-            left: 0
+            left: 0,
+            behavior: "smooth"
           });
           clearInterval(scroller);
-        });
+        }, 5);
       };
     });
   });
