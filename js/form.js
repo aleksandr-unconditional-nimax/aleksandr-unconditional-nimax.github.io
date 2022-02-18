@@ -945,8 +945,6 @@ window.addEventListener('scroll', () => {
 
   /* Anchors scroll START */
   const anchors = [].slice.call(document.querySelectorAll('.nav a[href*="#"]'));
-  // const animationTime = 350;
-  const framesCount = 1;
   anchors.forEach(function(item) {
     item.addEventListener('click', function(e) {
       e.preventDefault();
