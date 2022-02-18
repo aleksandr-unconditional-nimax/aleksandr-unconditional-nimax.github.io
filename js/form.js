@@ -141,6 +141,8 @@ let loyaltyProblemAll = document.querySelectorAll('.typeWork3[name="loyaltyProbl
 let hideTypeWork_2 = document.querySelectorAll(".typeWork2-1 ~ fieldset");
 let hideFieldsets1 = document.querySelectorAll(".typeWork3-1 ~ .item");
 let hideCashProblem = document.querySelectorAll(".cashProblem ~ fieldset");
+let hideCashProblem_7 = document.querySelectorAll(".cashHardwareProblem-7 ~ .item");
+let hideCashProblem_8 = document.querySelectorAll(".cashHardwareProblem-8 ~ .item");
 let hideProblemFormChecks_1 = document.querySelectorAll(".problemFormChecks-1 ~ fieldset");
 let hideProgramSetProblem1 = document.querySelectorAll(".programSetProblem-1 ~ .item", ".programSetProblem-1 ~ fieldset");
 let hideEqAreaProblem = document.querySelectorAll(".equipmentAreaProblem-1 ~ fieldset"); 
@@ -571,10 +573,12 @@ fiscalRegistrar_3.onclick = function() {
 };
 
 cashHardwareProblem_7.onclick = function() {
+  for(let i = 0; i < hideCashProblem_7.length; i++) {hideCashProblem_7[i].classList.remove('active');}
   cashHardwareProblem_1.classList.add('active');
   setTimeout(() => window.scroll({ top: (cashHardwareProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
 };
 cashHardwareProblem_8.onclick = function() {
+  for(let i = 0; i < hideCashProblem_8.length; i++) {hideCashProblem_8[i].classList.remove('active');}
   cashHardwareProblem_1.classList.add('active');
   setTimeout(() => window.scroll({ top: (cashHardwareProblem_1.offsetTop - offset), left: 0, behavior: 'smooth' }), 100);
 };
@@ -968,7 +972,7 @@ window.addEventListener('scroll', () => {
             behavior: "smooth"
           });
           clearInterval(scroller);
-        }, 5);
+        }, 0);
       };
     });
   });
