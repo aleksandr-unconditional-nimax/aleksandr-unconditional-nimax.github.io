@@ -166,14 +166,14 @@ let hideTypeWork_4_4 = document.querySelectorAll(".typeWork4-4 ~ fieldset");
 let fieldsetItem = document.querySelectorAll('.item');
 let fieldsetItems = document.querySelectorAll('.item input[type="radio"]');
 
-fieldsetItem.forEach((n, i, a) => {
+fieldsetItem.forEach((n) => {
   n.addEventListener('click', () => {
     const scrollContainer = document.querySelector("nav ul");
     scrollContainer.scrollLeft = scrollContainer.scrollWidth;
   })
 });
 
-fieldsetItems.forEach((n, i, a) => {
+fieldsetItems.forEach((n) => {
   n.addEventListener('click', () => {
     if (n.closest('.item').classList.contains('active')) {
       let parent = n.closest('.item');
