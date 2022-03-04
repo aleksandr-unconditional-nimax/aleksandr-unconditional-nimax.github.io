@@ -30,13 +30,13 @@
       <input id="tab-1" type="radio" name="tabs" checked=""><label for="tab-1" onclick="" class="btn-tab">Клиент</label>
       <input id="tab-2" type="radio" name="tabs"><label for="tab-2" onclick="" class="btn-tab">Партнер / Подрядчик</label>
       <form name="form1" class="tab-content" id="form-1">
-        <fieldset class="item item1">
+        <fieldset class="item item1" title="ИНН">
           <h4 class="title-anchor">ИНН</h4>
           <legend>Укажите свой ИНН</legend>
           <input type="text" name="form[inn]" placeholder="ИНН">
           <label class="icon-search"></label>
         </fieldset>
-        <fieldset class="item item2">
+        <fieldset class="item item2" title="Клиент">
           <h4 class="title-anchor">Клиент</h4>
           <legend>Клиент</legend>
           <input type="text" name="inn" placeholder="">
@@ -44,7 +44,7 @@
         <div class="fieldset column item item3">
           <legend>Выберете подразделение из списка</legend>
           <div class="select" id="select-1">
-            <button type="button" class="select-toggle" name="car" value="ford" data-select="toggle" data-index="1">Выберите из списка</button>
+            <button type="button" class="select-toggle" name="subdivision" value="" data-select="toggle" data-index="1">Выберите из списка</button>
             <div class="select-dropdown">
               <ul class="select-options">
                 <li class="select-option" data-select="option" data-value="" data-index="0">Подразделение</li>
@@ -58,7 +58,7 @@
         <div class="fieldset column item item4">
           <legend>Выберете контактное лицо из списка</legend>
           <div class="select" id="select-2">
-            <button type="button" class="select-toggle" name="car" value="ford" data-select="toggle" data-index="1">Выберите из списка</button>
+            <button type="button" class="select-toggle" name="contactperson" value="" data-select="toggle" data-index="1">Выберите из списка</button>
             <div class="select-dropdown">
               <ul class="select-options">
                 <li class="select-option" data-select="option" data-value="" data-index="0">Контактное лицо</li>
@@ -68,7 +68,7 @@
             </div>
           </div>
         </div>
-        <fieldset class="item column item5">
+        <fieldset class="item column item5" title="Контактные данные">
           <h4 class="title-anchor">Оставьте ваши контактные данные</h4>
           <legend>Или оставьте ваши контактные данные</legend>
           <input type="text" name="fullname" placeholder="ФИО">
@@ -94,7 +94,7 @@
             </div>
           </div>
         </div>
-        <fieldset class="item column typeWork0">
+        <fieldset class="item column typeWork0" title="Вид работ">
           <h4 class="title-anchor">Вид работ</h4>
           <legend>Выберите желаемый вид работ</legend>
           <label>
@@ -114,7 +114,7 @@
             <div>Необходима инструкция</div>
           </label>
         </fieldset>
-        <fieldset class="item column typeWork1 typeWork1-1">
+        <fieldset class="item column typeWork1 typeWork1-1" title="Работы выполняются на платной основе">
           <legend>Данные работы выполняются на платной основе. Согласны?</legend>
           <label>
             <input type="radio" name="tw1-1" value="typeWork1-1-yes">
@@ -125,37 +125,37 @@
             <div>Нет</div>
           </label>
         </fieldset>
-        <fieldset class="item typeWork1 typeWork1-2">
+        <fieldset class="item typeWork1 typeWork1-2" title="Спасибо за обращение">
           <legend>Спасибо за Ваше обращение в CSI</legend>
         </fieldset>
-        <fieldset name="typeWork1" class="item typeWork1 typeWork1-3">
+        <fieldset name="typeWork1" class="item typeWork1 typeWork1-3" title="Опишите проблему">
           <h4 class="title-anchor">Опишите проблему</h4>
           <legend>Опишите проблему </legend>
           <textarea></textarea>
         </fieldset>
-        <fieldset name="typeWork1" class="item typeWork1 typeWork1-4">
+        <fieldset name="typeWork1" class="item typeWork1 typeWork1-4" title="Способ удаленного подключения">
           <legend>Укажите способ удаленного подключения</legend>
           <input type="text" name="typeWork1-4" placeholder="">
         </fieldset>
-        <fieldset name="typeWork1" class="item typeWork1 typeWork1-5">
+        <fieldset name="typeWork1" class="item typeWork1 typeWork1-5" title="Данные для подключения">
           <h4 class="title-anchor">Данные для подключения</h4>
           <legend>Укажите данные необходимые для подключения</legend>
           <input type="text" name="typeWork1-5" placeholder="">
         </fieldset>
-        <fieldset name="typeWork1" class="item typeWork1 typeWork1-6">
+        <fieldset name="typeWork1" class="item typeWork1 typeWork1-6" title="IP-адрес">
           <legend>Укажите IP- адрес</legend>
           <input type="text" name="typeWork1-6" placeholder="">
         </fieldset>
-        <fieldset name="typeWork1" class="item typeWork1 typeWork1-7">
+        <fieldset name="typeWork1" class="item typeWork1 typeWork1-7" title="Укажите логин">
           <h4 class="title-anchor">Введите доступы</h4>
           <legend>Укажите логин</legend>
           <input type="text" name="typeWork1-7" placeholder="">
         </fieldset>
-        <fieldset name="typeWork1" class="item typeWork1 typeWork1-8">
+        <fieldset name="typeWork1" class="item typeWork1 typeWork1-8" title="Укажите логин">
           <legend>Укажите пароль</legend>
           <input type="text" name="typeWork1-8" placeholder="">
         </fieldset>
-        <fieldset class="item column upload typeWork1 typeWork1-9">
+        <fieldset class="item column upload typeWork1 typeWork1-9" title="">
           <div id="drop-area">
             <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
             <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
@@ -164,7 +164,7 @@
           <div id="gallery"></div>
           <button class="btn">Отправить заявку</button>
         </fieldset>
-        <fieldset class="item column typeWork2 typeWork2-1">
+        <fieldset class="item column typeWork2 typeWork2-1" title="">
           <h4 class="title-anchor">Ремонт (гарантийный / не гарантийный)</h4>
           <legend>Ремонт (гарантийный/ не гарантийный)</legend>
           <label>
@@ -176,19 +176,19 @@
             <div>Не гарантийный</div>
           </label>
         </fieldset>
-        <fieldset name="typeWork2" class="item column typeWork2 typeWork2-2">
+        <fieldset name="typeWork2" class="item column typeWork2 typeWork2-2" title="">
           <legend>Выберете тип оборудования </legend>
           <input type="text" name="typeWork2-2" placeholder="">
         </fieldset>
-        <fieldset name="typeWork2" class="item column typeWork2 typeWork2-3">
+        <fieldset name="typeWork2" class="item column typeWork2 typeWork2-3" title="">
           <h4 class="title-anchor">Серийный номер</h4>
           <legend>Укажите серийный номер </legend>
           <input type="text" name="typeWork2-3" placeholder="">
         </fieldset>
-        <fieldset name="typeWork2" class="item column typeWork2 typeWork2-5">
+        <fieldset name="typeWork2" class="item column typeWork2 typeWork2-5" title="">
           <button type="button" class="btn">Проверить гарантию </button>
         </fieldset>
-        <fieldset name="typeWork2" class="item column typeWork2 typeWork2-6">
+        <fieldset name="typeWork2" class="item column typeWork2 typeWork2-6" title="">
           <legend>
             Модель: ХХХ<br>
             Срок гарантии: ХХ.ХХ.ХХ<br>            
@@ -201,7 +201,7 @@
             3
           </p>
         </fieldset>
-        <fieldset class="item column upload typeWork2 typeWork2-7">
+        <fieldset class="item column upload typeWork2 typeWork2-7" title="">
           <legend><a href="https://docs.google.com/document/d/1jXUnpIRXHjaLW5BFz-WnQM94aTojTwgR/edit" target="_blank">Заполните бланк РВО</a> и приложите его к заявке</legend>
           <div id="drop-area">
             <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
@@ -211,11 +211,11 @@
           <div id="gallery"></div>
           <button class="btn">Отправить заявку</button>
         </fieldset>
-        <fieldset name="typeWork2" class="item column typeWork2 typeWork2-final">
+        <fieldset name="typeWork2" class="item column typeWork2 typeWork2-final" title="">
           <legend>Порядок отправки</legend>
           <p>С порядком отправки оборудования в ремонт вы можете ознакомиться на сайте в <a href="#">Гарантия и ремонт</a></p>
         </fieldset>
-        <fieldset class="item column typeWork3 typeWork3-1">
+        <fieldset class="item column typeWork3 typeWork3-1" title="">
           <h4 class="title-anchor">Выберете причину обращения</h4>
           <legend>Выберете причину обращения</legend>
           <label>
@@ -235,7 +235,7 @@
             <div>Проблема с программой Set (не зайти в программу, проблема с ценами/акциями на кассах, весах, термопринтерах, проблема с лицензией, не продается алкоголь, не выгружаются чеки и z-отчеты)</div>
           </label>
         </fieldset>
-        <fieldset name="cashProblem" class="item column typeWork3 cashProblem">
+        <fieldset name="cashProblem" class="item column typeWork3 cashProblem" title="">
           <h4 class="title-anchor">Выберете оборудование</h4>
           <legend>Выберете оборудование</legend>
           <label>
@@ -267,7 +267,7 @@
             <div>Другое</div>
           </label>
         </fieldset>
-        <fieldset name="cashProblem" class="item column typeWork3 fiscalRegistrar-1">
+        <fieldset name="cashProblem" class="item column typeWork3 fiscalRegistrar-1" title="">
           <h4 class="title-anchor">Выберете модель ФР</h4>
           <legend>Выберете модель ФР</legend>
           <label>
@@ -283,16 +283,16 @@
             <div>Другое</div>
           </label>
         </fieldset>
-        <fieldset name="fiscalRegistrarModel" class="item typeWork3 fiscalRegistrar-2">
+        <fieldset name="fiscalRegistrarModel" class="item typeWork3 fiscalRegistrar-2" title="">
           <legend>Укажите версию прошивки</legend>
           <input type="text" name="fiscalRegistrar-2" placeholder="">
         </fieldset>
-        <fieldset class="item column typeWork3 fiscalRegistrar-3">
+        <fieldset class="item column typeWork3 fiscalRegistrar-3" title="">
           <legend>Ознакомьтесь с документацией и обновите аппарат до актуальной версии прошивки</legend>
           <p><a href="#">Документация</a></p>
           <p><a href="#">Актуальная версия прошивки</a></p>
         </fieldset>
-        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 fiscalRegistrar-12">
+        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 fiscalRegistrar-12" title="">
           <legend>Вам помогла документация в решении вопроса?</legend>
           <label>
             <input type="radio" name="fiscalRegistrar-12" value="Да">
@@ -303,7 +303,7 @@
             <div>Нет</div>
           </label>
         </fieldset>
-        <fieldset name="" class="item column typeWork3 fiscalRegistrar-13">
+        <fieldset name="" class="item column typeWork3 fiscalRegistrar-13" title="">
           <h4 class="title-anchor">Какая у вас проблема?</h4>
           <legend>Какая у вас проблема?</legend>
           <label>
@@ -319,40 +319,40 @@
             <div>Другое</div>
           </label>
         </fieldset>
-        <fieldset name="fiscalRegistrarOther" class="item typeWork3 fiscalRegistrar-4">
+        <fieldset name="fiscalRegistrarOther" class="item typeWork3 fiscalRegistrar-4" title="">
           <legend>Укажите модель ФР</legend>
           <input type="text" name="fiscalRegistrar-4" placeholder="">
         </fieldset>
-        <fieldset name="fiscalRegistrarOther" class="item typeWork3 fiscalRegistrar-4-2">
+        <fieldset name="fiscalRegistrarOther" class="item typeWork3 fiscalRegistrar-4-2" title="">
           <legend>Укажите версию прошивки</legend>
           <input type="text" name="fiscalRegistrar-4-2" placeholder="">
         </fieldset>
-        <fieldset name="fiscalRegistrarOther" class="item typeWork3 fiscalRegistrar-5">
+        <fieldset name="fiscalRegistrarOther" class="item typeWork3 fiscalRegistrar-5" title="">
           <legend>Укажите зав. № оборудования</legend>
           <input type="text" name="fiscalRegistrar-5" placeholder="">
         </fieldset>
-        <fieldset name="fiscalRegistrarOther" class="item typeWork3 fiscalRegistrar-6">
+        <fieldset name="fiscalRegistrarOther" class="item typeWork3 fiscalRegistrar-6" title="">
           <h4 class="title-anchor">Как должно работать</h4>
           <legend>Опишите как должно работать </legend>
           <textarea></textarea>
         </fieldset>
-        <fieldset name="fiscalRegistrarOther" class="item typeWork3 fiscalRegistrar-7">
+        <fieldset name="fiscalRegistrarOther" class="item typeWork3 fiscalRegistrar-7" title="">
           <legend>Опишите как воспроизводится проблема </legend>
           <textarea></textarea>
         </fieldset>
-        <fieldset name="fiscalRegistrarOther" class="item typeWork3 fiscalRegistrar-8">
+        <fieldset name="fiscalRegistrarOther" class="item typeWork3 fiscalRegistrar-8" title="">
           <legend>Укажите версию ОС </legend>
           <input type="text" name="fiscalRegistrar-8" placeholder="">
         </fieldset>
-        <fieldset name="fiscalRegistrarOther" class="item typeWork3 fiscalRegistrar-9">
+        <fieldset name="fiscalRegistrarOther" class="item typeWork3 fiscalRegistrar-9" title="">
           <legend>Опишите конфигурацию кассы (СБ, прикассовое оборудование) </legend>
           <textarea></textarea>
         </fieldset>
-        <fieldset name="fiscalRegistrarOther" class="item typeWork3 fiscalRegistrar-10">
+        <fieldset name="fiscalRegistrarOther" class="item typeWork3 fiscalRegistrar-10" title="">
           <legend>Укажите частоту возникновения проблемы </legend>
           <input type="text" name="fiscalRegistrar-10" placeholder="">
         </fieldset>
-        <fieldset class="item column upload typeWork3 fiscalRegistrar-11">
+        <fieldset class="item column upload typeWork3 fiscalRegistrar-11" title="">
           <div id="drop-area">
             <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
             <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
@@ -361,7 +361,7 @@
           <div id="gallery"></div>
           <button class="btn">Отправить заявку</button>
         </fieldset>
-        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 problemFormChecks-1">
+        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 problemFormChecks-1" title="">
           <h4 class="title-anchor">Какой тип интеграции?</h4>
           <legend>Какой тип интеграции?</legend>
           <label>
@@ -373,11 +373,11 @@
             <div>ФР + Set Retail 10</div>
           </label>
         </fieldset>
-        <fieldset name="fiscalRegistrarModel" class="item typeWork3 problemFormChecks-2">
+        <fieldset name="fiscalRegistrarModel" class="item typeWork3 problemFormChecks-2" title="">
           <legend>Укажите название ПО</legend>
           <input type="text" name="problemFormChecks-2" placeholder="">
         </fieldset>
-        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 problemFormChecks-3">
+        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 problemFormChecks-3" title="">
           <h4 class="title-anchor">Какой тип драйвера?</h4>
           <legend>Какой тип драйвера используется?</legend>
           <label>
@@ -405,7 +405,7 @@
             <div>Другой драйвер</div>
           </label>
         </fieldset>
-        <fieldset name="fiscalListDrivers" class="item column typeWork3 problemFormChecks-4">
+        <fieldset name="fiscalListDrivers" class="item column typeWork3 problemFormChecks-4" title="">
           <div class="select" id="select-3">
             <button type="button" class="select-toggle" name="" value="" data-select="toggle" data-index="1">Укажите версию драйвера</button>
             <div class="select-dropdown">
@@ -418,11 +418,11 @@
             </div>
           </div>
         </fieldset>
-        <fieldset name="fiscalListDrivers" class="item typeWork3 problemFormChecks-5">
+        <fieldset name="fiscalListDrivers" class="item typeWork3 problemFormChecks-5" title="">
           <legend>Обновите драйвер до актуальной версии</legend>
           <a href="#">Ссылка</a>
         </fieldset>
-        <fieldset name="fiscalListDrivers" class="item column typeWork3 problemFormChecks-6">
+        <fieldset name="fiscalListDrivers" class="item column typeWork3 problemFormChecks-6" title="">
           <legend>Обновление решило проблему?</legend>
           <label>
             <input type="radio" name="problemFormChecks-6" value="Да">
@@ -433,7 +433,7 @@
             <div>Нет</div>
           </label>
         </fieldset>
-        <fieldset name="fiscalAnotherDriver" class="item typeWork3 fiscalRegistrar-another-driver">
+        <fieldset name="fiscalAnotherDriver" class="item typeWork3 fiscalRegistrar-another-driver" title="">
           <h4 class="title-anchor">Укажите название драйвера</h4>
           <legend>Укажите название драйвера</legend>
           <input type="text" name="fiscalRegistrar-another-driver" placeholder="">
@@ -442,7 +442,7 @@
           <legend>Опишите проблему</legend>
           <textarea></textarea>
         </fieldset>
-        <fieldset name="fiscalListDrivers" class="item column upload typeWork3 problemFormChecks-8">
+        <fieldset name="fiscalListDrivers" class="item column upload typeWork3 problemFormChecks-8" title="">
           <legend>Добавьте скриншоты ошибок <br>Соберите логи драйвера</legend>
           <p>Укажите ссылку на логи</p>
           <input type="text" name="problemFormChecks-8" value="">
@@ -455,7 +455,7 @@
           <div id="gallery"></div>
           <button class="btn">Отправить заявку</button>
         </fieldset>
-        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 problemSendOFD-1">
+        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 problemSendOFD-1" title="">
           <h4 class="title-anchor">Какая ОС?</h4>
           <legend>На какой ОС работаете?</legend>
           <label>
@@ -471,11 +471,11 @@
             <div>Linux</div>
           </label>
         </fieldset>
-        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 problemSendOFD-2">
+        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 problemSendOFD-2" title="">
           <legend>Укажите версию ComProxy</legend>
           <input type="text" name="problemSendOFD-2" placeholder="">
         </fieldset>
-        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 problemSendOFD-2">
+        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 problemSendOFD-2" title="">
           <legend>Как узнать версию</legend>
           <div class="text-sidebar">
             <p>Ознакомьтесь с документацией и обновите программу до актуальной версии</p>
@@ -484,7 +484,7 @@
           <p><a href="#">Документация</a></p>
           <p><a href="#">Актуальная версия прошивки</a></p>
         </fieldset>
-        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 problemSendOFD-4">
+        <fieldset name="fiscalRegistrarModel" class="item column typeWork3 problemSendOFD-4" title="">
           <legend>Обновление помогло?</legend>
           <label>
             <input type="radio" name="problemSendOFD-4" value="Да">
@@ -495,17 +495,17 @@
             <div>Нет</div>
           </label>
         </fieldset>
-        <fieldset name="fiscalListDrivers" class="item column typeWork3 fiscalRegistrar-final">
+        <fieldset name="fiscalListDrivers" class="item column typeWork3 fiscalRegistrar-final" title="">
           <legend>Спасибо за Ваше обращение в CSI</legend>
         </fieldset>
-        <fieldset class="item column typeWork3 fiscalRegistrar-final">
+        <fieldset class="item column typeWork3 fiscalRegistrar-final" title="">
           <legend>Спасибо за Ваше обращение в CSI</legend>
         </fieldset>
-        <fieldset name="fiscalRegistrarModel" class="item typeWork3 problemSendOFD-5">
+        <fieldset name="fiscalRegistrarModel" class="item typeWork3 problemSendOFD-5" title="">
           <legend>Опишите проблему </legend>
           <textarea></textarea>
         </fieldset>
-        <fieldset class="item column upload typeWork3 problemSendOFD-6">
+        <fieldset class="item column upload typeWork3 problemSendOFD-6" title="">
           <legend>Добавьте скриншоты ошибок <br>Соберите логи ComProxy</legend>
           <p>Укажите ссылку на логи</p>
           <input type="text" name="problemSendOFD-6" placeholder="">
@@ -518,7 +518,7 @@
           <div id="gallery"></div>
           <button class="btn">Отправить заявку</button>
         </fieldset>
-        <fieldset name="cashHardwareProblem-choice" class="item typeWork3 cashHardwareProblem-7">
+        <fieldset name="cashHardwareProblem-choice" class="item typeWork3 cashHardwareProblem-7" title="">
           <legend>Тип оборудования</legend>
           <label>
             <input type="radio" name="cashHardwareProblem-7" value="Ручной">
@@ -529,7 +529,7 @@
             <div>Сканер-весы прикассовые</div>
           </label>
         </fieldset>
-        <fieldset name="cashHardwareProblem-choice" class="item typeWork3 cashHardwareProblem-8">
+        <fieldset name="cashHardwareProblem-choice" class="item typeWork3 cashHardwareProblem-8" title="">
           <legend>Тип оборудования</legend>
           <label>
             <input type="radio" name="cashHardwareProblem-8" value="Кассира">
@@ -540,36 +540,36 @@
             <div>Покупателя</div>
           </label>
         </fieldset>
-        <fieldset name="cashHardwareProblem-choice" class="item typeWork3 cashHardwareProblem-9">
+        <fieldset name="cashHardwareProblem-choice" class="item typeWork3 cashHardwareProblem-9" title="">
           <legend>Укажите оборудование</legend>
           <input type="text" name="cashHardwareProblem-9" value="">
         </fieldset>
-        <fieldset name="cashHardwareProblem" class="item typeWork3 cashHardwareProblem-1">
+        <fieldset name="cashHardwareProblem" class="item typeWork3 cashHardwareProblem-1" title="">
           <legend>Укажите модель оборудования </legend>
           <input type="text" name="cashHardwareProblem-1" value="">
         </fieldset>
-        <fieldset name="cashHardwareProblem" class="item typeWork3 cashHardwareProblem-2">
+        <fieldset name="cashHardwareProblem" class="item typeWork3 cashHardwareProblem-2" title="">
           <h4 class="title-anchor">Как должно работать</h4>
           <legend>Опишите как должно работать </legend>
           <textarea></textarea>
         </fieldset>
-        <fieldset name="cashHardwareProblem" class="item typeWork3 cashHardwareProblem-3">
+        <fieldset name="cashHardwareProblem" class="item typeWork3 cashHardwareProblem-3" title="">
           <legend>Опишите как воспроизводится проблема </legend>
           <textarea></textarea>
         </fieldset>
-        <fieldset name="cashHardwareProblem" class="item typeWork3 cashHardwareProblem-4">
+        <fieldset name="cashHardwareProblem" class="item typeWork3 cashHardwareProblem-4" title="">
           <legend>Укажите версию ОС </legend>
           <input type="text" name="cashHardwareProblem-4" value="">
         </fieldset>
-        <fieldset name="cashHardwareProblem" class="item typeWork3 cashHardwareProblem-5">
+        <fieldset name="cashHardwareProblem" class="item typeWork3 cashHardwareProblem-5" title="">
           <legend>Опишите конфигурацию кассы (СБ, прикассовое оборудование) </legend>
           <input type="text" name="cashHardwareProblem-5" value="">
         </fieldset>
-        <fieldset name="cashHardwareProblem" class="item typeWork3 cashHardwareProblem-6">
+        <fieldset name="cashHardwareProblem" class="item typeWork3 cashHardwareProblem-6" title="">
           <legend>Укажите частоту возникновения проблемы </legend>
           <input type="text" name="cashHardwareProblem-6" value="">
         </fieldset>
-        <fieldset class="item column upload typeWork3 cashHardwareProblem-final">
+        <fieldset class="item column upload typeWork3 cashHardwareProblem-final" title="">
           <div id="drop-area">
             <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
             <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
@@ -578,7 +578,7 @@
           <div id="gallery"></div>
           <button class="btn">Отправить заявку</button>
         </fieldset>
-        <fieldset name="equipmentAreaProblem" class="item column typeWork3 equipmentAreaProblem-1">
+        <fieldset name="equipmentAreaProblem" class="item column typeWork3 equipmentAreaProblem-1" title="">
           <h4 class="title-anchor">Выберете оборудование</h4>
           <legend>Выберете оборудование</legend>
           <label>
@@ -594,33 +594,33 @@
             <div>Другое</div>
           </label>
         </fieldset>
-        <fieldset name="equipmentAreaProblem" class="item typeWork3 equipmentAreaProblem-2">
+        <fieldset name="equipmentAreaProblem" class="item typeWork3 equipmentAreaProblem-2" title="">
           <legend>Укажите наименование оборудования</legend>
           <input type="text" name="equipmentAreaProblem-2" value="">
         </fieldset>
-        <fieldset name="equipmentAreaProblem" class="item typeWork3 equipmentAreaProblem-3">
+        <fieldset name="equipmentAreaProblem" class="item typeWork3 equipmentAreaProblem-3" title="">
           <h4 class="title-anchor">Модель оборудования</h4>
           <legend>Укажите модель оборудования</legend>
           <input type="text" name="equipmentAreaProblem-3" value="">
         </fieldset>
-        <fieldset name="equipmentAreaProblem" class="item typeWork3 equipmentAreaProblem-4">
+        <fieldset name="equipmentAreaProblem" class="item typeWork3 equipmentAreaProblem-4" title="">
           <legend>Опишите как должно работать</legend>
           <textarea name="equipmentAreaProblem-3"></textarea>
         </fieldset>
-        <fieldset name="equipmentAreaProblem" class="item typeWork3 equipmentAreaProblem-5">
+        <fieldset name="equipmentAreaProblem" class="item typeWork3 equipmentAreaProblem-5" title="">
           <h4 class="title-anchor">Как вопроизводится проблема</h4>
           <legend>Опишите как воспроизводится проблема</legend>
           <textarea name="equipmentAreaProblem-5"></textarea>
         </fieldset>
-        <fieldset name="equipmentAreaProblem" class="item typeWork3 equipmentAreaProblem-6">
+        <fieldset name="equipmentAreaProblem" class="item typeWork3 equipmentAreaProblem-6" title="">
           <legend>Укажите версию ОС </legend>
           <input type="text" name="equipmentAreaProblem-6" value="">
         </fieldset>
-        <fieldset name="equipmentAreaProblem" class="item typeWork3 equipmentAreaProblem-7">
+        <fieldset name="equipmentAreaProblem" class="item typeWork3 equipmentAreaProblem-7" title="">
           <legend>Укажите частоту возникновения проблемы </legend>
           <input type="text" name="equipmentAreaProblem-7" value="">
         </fieldset>
-        <fieldset class="item column upload typeWork3 cashHardwareProblem-final">
+        <fieldset class="item column upload typeWork3 cashHardwareProblem-final" title="">
           <div id="drop-area">
             <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
             <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
@@ -629,37 +629,37 @@
           <div id="gallery"></div>
           <button class="btn">Отправить заявку</button>
         </fieldset>
-        <fieldset name="prismVideoProblem" class="item typeWork3 prismVideoProblem-1">
+        <fieldset name="prismVideoProblem" class="item typeWork3 prismVideoProblem-1" title="">
           <legend>Укажите версию ПО </legend>
           <input type="text" name="prismVideoProblem-1" value="">
         </fieldset>
-        <fieldset name="prismVideoProblem" class="item typeWork3 prismVideoProblem-2">
+        <fieldset name="prismVideoProblem" class="item typeWork3 prismVideoProblem-2" title="">
           <legend>Укажите проблему </legend>
           <input type="text" name="prismVideoProblem-2" value="">
         </fieldset>
-        <fieldset name="prismVideoProblem" class="item typeWork3 prismVideoProblem-3">
+        <fieldset name="prismVideoProblem" class="item typeWork3 prismVideoProblem-3" title="">
           <h4 class="title-anchor">Как должно работать</h4>
           <legend>Опишите как должно работать</legend>
           <textarea name="prismVideoProblem-3"></textarea>
         </fieldset>
-        <fieldset name="prismVideoProblem" class="item typeWork3 prismVideoProblem-4">
+        <fieldset name="prismVideoProblem" class="item typeWork3 prismVideoProblem-4" title="">
           <legend>Опишите как воспроизводится проблема</legend>
           <textarea name="prismVideoProblem-4"></textarea>
         </fieldset>
-        <fieldset name="prismVideoProblem" class="item typeWork3 prismVideoProblem-5">
+        <fieldset name="prismVideoProblem" class="item typeWork3 prismVideoProblem-5" title="">
           <legend>В результате каких действий возникла проблема (Что изменили, когда и где)</legend>
           <textarea name="prismVideoProblem-5"></textarea>
         </fieldset>
-        <fieldset name="prismVideoProblem" class="item typeWork3 prismVideoProblem-6">
+        <fieldset name="prismVideoProblem" class="item typeWork3 prismVideoProblem-6" title="">
           <h4 class="title-anchor">Укажите версию</h4>
           <legend>Укажите версию и/или тип ОС </legend>
           <input type="text" name="prismVideoProblem-6" value="">
         </fieldset>
-        <fieldset name="prismVideoProblem" class="item typeWork3 prismVideoProblem-7">
+        <fieldset name="prismVideoProblem" class="item typeWork3 prismVideoProblem-7" title="">
           <legend>Укажите частоту возникновения проблемы </legend>
           <input type="text" name="prismVideoProblem-7" value="">
         </fieldset>
-        <fieldset name="prismVideoProblem" class="item column upload typeWork3 prismVideoProblem-final">
+        <fieldset name="prismVideoProblem" class="item column upload typeWork3 prismVideoProblem-final" title="">
           <legend>Соберите логи </legend>
           <p>Укажите ссылку на логи</p>
           <p>Добавьте логи вложением. Если размер логов превышает 4 МБ - укажите ссылку на файлообменник (Яндекс.Диск, ГуглДрайв и т.д.)</p>
@@ -672,7 +672,7 @@
           <div id="gallery"></div>
           <button class="btn">Отправить заявку</button>
         </fieldset>
-        <fieldset name="programSetProblem" class="item column typeWork3 programSetProblem-1">
+        <fieldset name="programSetProblem" class="item column typeWork3 programSetProblem-1" title="">
           <h4 class="title-anchor">Продукт / сервис</h4>
           <legend>Выберите продукт / сервис</legend>
           <label>
@@ -708,38 +708,38 @@
             <div>Set Retail</div>
           </label>
         </fieldset>
-        <fieldset name="programSetProblemItems1" class="item column typeWork3 programSetProblem-2">
+        <fieldset name="programSetProblemItems1" class="item column typeWork3 programSetProblem-2" title="">
           <legend>Укажите версию ПО</legend>
           <input type="text" name="programSetProblem-2" placeholder="">
         </fieldset>
-        <fieldset name="programSetProblemItems1" class="item column typeWork3 programSetProblem-3">
+        <fieldset name="programSetProblemItems1" class="item column typeWork3 programSetProblem-3" title="">
           <h4 class="title-anchor">Укажите проблему</h4>
           <legend>Укажите проблему</legend>
           <input type="text" name="programSetProblem-3" placeholder="">
         </fieldset>
-        <fieldset name="programSetProblemItems1" class="item typeWork3 programSetProblem-4">
+        <fieldset name="programSetProblemItems1" class="item typeWork3 programSetProblem-4" title="">
           <legend>Опишите как должно работать</legend>
           <textarea name="programSetProblem-4"></textarea>
         </fieldset>
-        <fieldset name="programSetProblemItems1" class="item typeWork3 programSetProblem-5">
+        <fieldset name="programSetProblemItems1" class="item typeWork3 programSetProblem-5" title="">
           <h4 class="title-anchor">Как воспроизводится проблема</h4>
           <legend>Опишите как воспроизводится проблема</legend>
           <textarea name="programSetProblem-4"></textarea>
         </fieldset>
-        <fieldset name="programSetProblemItems1" class="item typeWork3 programSetProblem-5">
+        <fieldset name="programSetProblemItems1" class="item typeWork3 programSetProblem-5" title="">
           <legend>В результате каких действий возникла проблема (Что изменили, когда и где)</legend>
           <textarea name="programSetProblem-5"></textarea>
         </fieldset>
-        <fieldset name="programSetProblemItems1" class="item typeWork3 programSetProblem-6">
+        <fieldset name="programSetProblemItems1" class="item typeWork3 programSetProblem-6" title="">
           <h4 class="title-anchor">Укажите версию и/или тип ОС</h4>
           <legend>Укажите версию и/или тип ОС</legend>
           <input type="text" name="programSetProblem-6" placeholder="">
         </fieldset>
-        <fieldset name="programSetProblemItems1" class="item typeWork3 programSetProblem-7">
+        <fieldset name="programSetProblemItems1" class="item typeWork3 programSetProblem-7" title="">
           <legend>Укажите частоту возникновения проблемы</legend>
           <input type="text" name="programSetProblem-6" placeholder="">
         </fieldset>
-        <fieldset name="programSetProblemItems1" class="item column upload typeWork3 programSetProblem-final">
+        <fieldset name="programSetProblemItems1" class="item column upload typeWork3 programSetProblem-final" title="">
           <h4 class="title-anchor">Соберите логи / Прикрепите файл</h4>
           <legend>Соберите логи </legend>
           <p>Укажите ссылку на логи</p>
@@ -753,7 +753,7 @@
           <div id="gallery"></div>
           <button class="btn">Отправить заявку</button>
         </fieldset>
-        <div name="programSetProblemItems2" class="fieldset item column typeWork3 programSetProblem-9">
+        <div name="programSetProblemItems2" class="fieldset item column typeWork3 programSetProblem-9" title="">
           <h4 class="title-anchor">Укажите версию ПО</h4>
           <legend>Укажите версию ПО</legend>
           <div class="select" id="select-4">
@@ -768,7 +768,7 @@
             </div>
           </div>
         </div>
-        <fieldset name="" class="item column typeWork3 programSetProblem-10">
+        <fieldset name="" class="item column typeWork3 programSetProblem-10" title="">
           <h4 class="title-anchor">В чем заключается проблема?</h4>
           <legend>В чем заключается проблема?</legend>
           <label>
@@ -784,33 +784,33 @@
             <div>Другое</div>
           </label>
         </fieldset>
-        <fieldset name="anotherSetProblem" class="item column typeWork3 anotherSetProblem-1">
+        <fieldset name="anotherSetProblem" class="item column typeWork3 anotherSetProblem-1" title="">
           <legend>Укажите проблему</legend>
           <input type="text" name="programSetProblem-3" placeholder="">
         </fieldset>
-        <fieldset name="anotherSetProblem" class="item typeWork3 anotherSetProblem-2">
+        <fieldset name="anotherSetProblem" class="item typeWork3 anotherSetProblem-2" title="">
           <h4 class="title-anchor">Как должно работать</h4>
           <legend>Опишите как должно работать</legend>
           <textarea name="programSetProblem-4"></textarea>
         </fieldset>
-        <fieldset name="anotherSetProblem" class="item typeWork3 anotherSetProblem-3">
+        <fieldset name="anotherSetProblem" class="item typeWork3 anotherSetProblem-3" title="">
           <legend>Опишите как воспроизводится проблема</legend>
           <textarea name="programSetProblem-4"></textarea>
         </fieldset>
-        <fieldset name="anotherSetProblem" class="item typeWork3 anotherSetProblem-4">
+        <fieldset name="anotherSetProblem" class="item typeWork3 anotherSetProblem-4" title="">
           <legend>В результате каких действий возникла проблема (Что изменили, когда и где)</legend>
           <textarea name="programSetProblem-5"></textarea>
         </fieldset>
-        <fieldset name="anotherSetProblem" class="item typeWork3 anotherSetProblem-5">
+        <fieldset name="anotherSetProblem" class="item typeWork3 anotherSetProblem-5" title="">
           <h4 class="title-anchor">Укажите версию</h4>
           <legend>Укажите версию и/или тип ОС</legend>
           <input type="text" name="programSetProblem-6" placeholder="">
         </fieldset>
-        <fieldset name="anotherSetProblem" class="item typeWork3 anotherSetProblem-6">
+        <fieldset name="anotherSetProblem" class="item typeWork3 anotherSetProblem-6" title="">
           <legend>Укажите частоту возникновения проблемы</legend>
           <input type="text" name="programSetProblem-6" placeholder="">
         </fieldset>
-        <fieldset name="anotherSetProblem" class="item column upload typeWork3 anotherSetProblem-final">
+        <fieldset name="anotherSetProblem" class="item column upload typeWork3 anotherSetProblem-final" title="">
           <h4 class="title-anchor">Соберите логи согласно инструкции</h4>
           <legend>Соберите логи согласно инструкции </legend>
           <p>Укажите ссылку на логи</p>
@@ -826,7 +826,7 @@
           <div id="gallery"></div>
           <button class="btn">Отправить заявку</button>
         </fieldset>
-        <fieldset name="loyaltyProblem" class="item column typeWork3 loyaltyProblem-1">
+        <fieldset name="loyaltyProblem" class="item column typeWork3 loyaltyProblem-1" title="">
           <h4 class="title-anchor">С чем связана проблема</h4>
           <legend>С чем связана проблема</legend>
           <label>
@@ -846,7 +846,7 @@
             <div>Рекламная акция</div>
           </label>
         </fieldset>
-        <fieldset name="loyaltyProblem" class="item column typeWork3 loyaltyProblem-2">
+        <fieldset name="loyaltyProblem" class="item column typeWork3 loyaltyProblem-2" title="">
           <legend>Вы загрузили товар "Подарочная карта"?</legend>
           <label>
             <input type="radio" name="loyaltyProblem-2" value="Да">
@@ -857,10 +857,10 @@
             <div>Нет</div>
           </label>
         </fieldset>
-        <fieldset name="loyaltyProblem" class="item typeWork3 loyaltyProblem-3">
+        <fieldset name="loyaltyProblem" class="item typeWork3 loyaltyProblem-3" title="">
           <legend>Загрузите товар "Подарочная карта" <a target="_blank" href="https://crystals.atlassian.net/wiki/spaces/SR10SUPPORT/pages/442171711/SetRetail10">согласно инструкции</a></legend>
         </fieldset>
-        <fieldset name="loyaltyProblem" class="item column typeWork3 loyaltyProblem-4">
+        <fieldset name="loyaltyProblem" class="item column typeWork3 loyaltyProblem-4" title="">
           <h4 class="title-anchor">Работало ли раньше?</h4>
           <legend>Работало ли раньше?</legend>
           <label>
@@ -872,20 +872,20 @@
             <div>Нет</div>
           </label>
         </fieldset>
-        <fieldset name="loyaltyProblem" class="item typeWork3 loyaltyProblem-5">
+        <fieldset name="loyaltyProblem" class="item typeWork3 loyaltyProblem-5" title="">
           <legend>Опишите как воспроизводится проблема</legend>
           <textarea name="loyaltyProblem-5"></textarea>
         </fieldset>
-        <fieldset name="loyaltyProblem" class="item typeWork3 loyaltyProblem-6">
+        <fieldset name="loyaltyProblem" class="item typeWork3 loyaltyProblem-6" title="">
           <legend>В результате каких действий возникла проблема (Что изменили, когда и где)</legend>
           <textarea name="loyaltyProblem-6"></textarea>
         </fieldset>
-        <fieldset name="loyaltyProblem" class="item typeWork3 loyaltyProblem-7">
+        <fieldset name="loyaltyProblem" class="item typeWork3 loyaltyProblem-7" title="">
           <h4 class="title-anchor">Опишите как должно работать</h4>
           <legend>Опишите как должно работать</legend>
           <textarea name="loyaltyProblem-7"></textarea>
         </fieldset>
-        <fieldset name="loyaltyProblem" class="item column upload typeWork3 programSetProblemsFinal-1">
+        <fieldset name="loyaltyProblem" class="item column upload typeWork3 programSetProblemsFinal-1" title="">
           <p>Приложите скриншоты параметров созданной Подарочной карты</p>
           <p>Приложите  XML-файл загруженного товара "подарочная карта"</p>
           <p>Соберите логи согласно инструкции </p>
@@ -902,7 +902,7 @@
           <div id="gallery"></div>
           <button class="btn">Отправить заявку</button>
         </fieldset>
-        <fieldset name="" class="item column typeWork3 loyaltyProblem-8">
+        <fieldset name="" class="item column typeWork3 loyaltyProblem-8" title="">
           <h4 class="title-anchor">Работало ли раньше?</h4>
           <legend>Работало ли раньше?</legend>
           <label>
@@ -914,19 +914,19 @@
             <div>Нет</div>
           </label>
         </fieldset>
-        <fieldset name="loyaltyProblem" class="item typeWork3 loyaltyProblem-9">
+        <fieldset name="loyaltyProblem" class="item typeWork3 loyaltyProblem-9" title="">
           <legend>Опишите сценарий который есть на данный момент</legend>
           <textarea name="loyaltyProblem-9"></textarea>
         </fieldset>
-        <fieldset name="loyaltyProblem" class="item typeWork3 loyaltyProblem-10">
+        <fieldset name="loyaltyProblem" class="item typeWork3 loyaltyProblem-10" title="">
           <legend>В результате каких действий возникла проблема (Что изменили, когда и где)</legend>
           <textarea name="loyaltyProblem-10"></textarea>
         </fieldset>
-        <fieldset name="loyaltyProblem" class="item typeWork3 loyaltyProblem-11">
+        <fieldset name="loyaltyProblem" class="item typeWork3 loyaltyProblem-11" title="">
           <legend>Опишите как должно работать</legend>
           <textarea name="loyaltyProblem-11"></textarea>
         </fieldset>
-        <fieldset class="item column upload typeWork3 programSetProblemsFinal-2">
+        <fieldset class="item column upload typeWork3 programSetProblemsFinal-2" title="">
           <h4 class="title-anchor">Приложите скриншоты параметров дисконтных карт</h4>
           <legend>Приложите скриншоты параметров дисконтных карт </legend>
           <p>Соберите логи согласно инструкции </p>
@@ -943,7 +943,7 @@
           <div id="gallery"></div>
           <button class="btn">Отправить заявку</button>
         </fieldset>
-        <fieldset name="" class="item column typeWork3 loyaltyProblem-12">
+        <fieldset name="" class="item column typeWork3 loyaltyProblem-12" title="">
           <h4 class="title-anchor">Новая рекламная акция?</h4>
           <legend>Новая рекламная акция?</legend>
           <label>
@@ -955,20 +955,20 @@
             <div>Нет</div>
           </label>
         </fieldset>
-        <fieldset name="loyaltyProblem" class="item typeWork3 loyaltyProblem-13">
+        <fieldset name="loyaltyProblem" class="item typeWork3 loyaltyProblem-13" title="">
           <legend>Опишите сценарий который есть на данный момент</legend>
           <textarea name="loyaltyProblem-13"></textarea>
         </fieldset>
-        <fieldset name="loyaltyProblem" class="item typeWork3 loyaltyProblem-14">
+        <fieldset name="loyaltyProblem" class="item typeWork3 loyaltyProblem-14" title="">
           <legend>В результате каких действий возникла проблема (Что изменили, когда и где)</legend>
           <textarea name="loyaltyProblem-14"></textarea>
         </fieldset>
-        <fieldset name="loyaltyProblem" class="item typeWork3 loyaltyProblem-15">
+        <fieldset name="loyaltyProblem" class="item typeWork3 loyaltyProblem-15" title="">
           <h4 class="title-anchor">Опишите как должно работать</h4>
           <legend>Опишите как должно работать</legend>
           <textarea name="loyaltyProblem-15"></textarea>
         </fieldset>
-        <fieldset class="item column upload typeWork3 programSetProblemsFinal-3">
+        <fieldset class="item column upload typeWork3 programSetProblemsFinal-3" title="">
           <h4 class="title-anchor">Приложите скриншоты настройки РА / Соберите логи</h4>
           <legend>Приложите скриншоты настройки РА </legend>
           <p>Соберите логи согласно инструкции </p>
@@ -985,7 +985,7 @@
           <div id="gallery"></div>
           <button class="btn">Отправить заявку</button>
         </fieldset>
-        <fieldset name="" class="item column typeWork3 loyaltyProblem-16">
+        <fieldset name="" class="item column typeWork3 loyaltyProblem-16" title="">
           <legend>Подобная акция есть на сайте?</legend>
           <label>
             <input type="radio" name="loyaltyProblem-16" value="Да">
@@ -996,10 +996,10 @@
             <div>Нет</div>
           </label>
         </fieldset>
-        <fieldset name="loyaltyProblem" class="item typeWork3 loyaltyProblem-17-final">
+        <fieldset name="loyaltyProblem" class="item typeWork3 loyaltyProblem-17-final" title="">
           <legend>Просьба воспользоваться <a href="https://crystals.atlassian.net/wiki/spaces/SR10SUPPORT/pages/442106165/SetRetail10">примером акции</a></legend>
         </fieldset>
-        <fieldset class="item column typeWork3 loyaltyProblem-18">
+        <fieldset class="item column typeWork3 loyaltyProblem-18" title="">
           <h4 class="title-anchor">Согласны на выполнение работ на платной основе?</h4>
           <legend>Акция может быть создана по ТЗ в рамках платных работ.</legend>
           <p>Согласны на выполнение работ на платной основе?</p>
@@ -1012,14 +1012,14 @@
             <div>Нет</div>
           </label>
         </fieldset>
-        <fieldset class="item column typeWork3 loyaltyProblem-thanks">
+        <fieldset class="item column typeWork3 loyaltyProblem-thanks" title="">
           <legend>Спасибо за Ваше обращение в CSI</legend>
         </fieldset>
-        <fieldset name="loyaltyProblem" class="item typeWork3 loyaltyProblem-19">
+        <fieldset name="loyaltyProblem" class="item typeWork3 loyaltyProblem-19" title="">
           <legend>Опишите как должно работать</legend>
           <textarea name="loyaltyProblem-19"></textarea>
         </fieldset>
-        <fieldset class="item column upload typeWork3 programSetProblemsFinal-4">
+        <fieldset class="item column upload typeWork3 programSetProblemsFinal-4" title="">
           <legend>Приложите ТЗ на заведение акции</legend>
           <div id="drop-area">
             <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
@@ -1029,7 +1029,7 @@
           <div id="gallery"></div>
           <button class="btn">Отправить заявку</button>
         </fieldset>
-        <fieldset name="updateProblem" class="item column typeWork3 updateProblem-1">
+        <fieldset name="updateProblem" class="item column typeWork3 updateProblem-1" title="">
           <legend>Патчи скачивали повторно с сайта?</legend>
           <label>
             <input type="radio" name="updateProblem-1" value="Да">
@@ -1040,10 +1040,10 @@
             <div>Нет</div>
           </label>
         </fieldset>
-        <fieldset name="updateProblem" class="item typeWork3 updateProblem-2">
+        <fieldset name="updateProblem" class="item typeWork3 updateProblem-2" title="">
           <legend>Просьба <a target="_blank" href="https://crystals.atlassian.net/wiki/spaces/SR10SUPPORT/pages/1501529094">скачать патчи</a> повторно и повторить попытку обновления</legend>
         </fieldset>
-        <fieldset name="updateProblem" class="item column typeWork3 updateProblem-3">
+        <fieldset name="updateProblem" class="item column typeWork3 updateProblem-3" title="">
           <h4 class="title-anchor">Обновление сервера или кассы?</h4>
           <legend>Обновление сервера или кассы?</legend>
           <label>
@@ -1055,16 +1055,16 @@
             <div>Кассы</div>
           </label>
         </fieldset>
-        <fieldset name="updateProblem" class="item column typeWork3 updateProblem-4">
+        <fieldset name="updateProblem" class="item column typeWork3 updateProblem-4" title="">
           <legend>Укажите текущую версию</legend>
           <input type="text" name="updateProblem-4" placeholder="">
         </fieldset>
-        <fieldset name="updateProblem" class="item typeWork3 updateProblem-5">
+        <fieldset name="updateProblem" class="item typeWork3 updateProblem-5" title="">
           <h4 class="title-anchor">Укажите версию на которую производится обновление</h4>
           <legend>Укажите версию на которую производится обновление</legend>
           <input type="text" name="updateProblem-5" placeholder="">
         </fieldset>
-        <fieldset name="updateProblem" class="item column upload typeWork3 updateProblem-final">
+        <fieldset name="updateProblem" class="item column upload typeWork3 updateProblem-final" title="">
           <legend>Соберите логи </legend>
           <p>Логи сервера (расширенные) (SERVER-FILE)</p>
           <p>Лог-файл обновления /var/lib/jboss/acm/logs или %SetRetail10%\acm\logs</p>
@@ -1080,15 +1080,15 @@
           <div id="gallery"></div>
           <button class="btn">Отправить заявку</button>
         </fieldset>
-        <fieldset name="updateProblem" class="item column typeWork3 updateProblem-4-2">
+        <fieldset name="updateProblem" class="item column typeWork3 updateProblem-4-2" title="">
           <legend>Укажите текущую версию</legend>
           <input type="text" name="updateProblem-4-2" placeholder="">
         </fieldset>
-        <fieldset name="updateProblem" class="item typeWork3 updateProblem-5-2">
+        <fieldset name="updateProblem" class="item typeWork3 updateProblem-5-2" title="">
           <legend>Укажите версию на которую производится обновление</legend>
           <input type="text" name="updateProblem-5-2" placeholder="">
         </fieldset>
-        <fieldset name="updateProblem" class="item column upload typeWork3 updateProblem-final-2">
+        <fieldset name="updateProblem" class="item column upload typeWork3 updateProblem-final-2" title="">
           <legend>Соберите логи </legend>
           <p>Логи сервера (расширенные) (SERVER-FILE)</p>
           <p>Лог-файл обновления /home/tc/storage/crystal-conf/logs/ccm.log</p>
@@ -1104,11 +1104,11 @@
           <div id="gallery"></div>
           <button class="btn">Отправить заявку</button>
         </fieldset>
-        <fieldset class="item column typeWork4 typeWork4-1">
+        <fieldset class="item column typeWork4 typeWork4-1" title="">
           <h4 class="title-anchor">Ознакомьтесь с инструкциями</h4>
           <legend>Ознакомьтесь с инструкциями представленными на <a href="https://crystals.atlassian.net/wiki/spaces/SR10SUPPORT/overview">портале поддержки продуктов CSI</a></legend>
         </fieldset>
-        <fieldset class="item column typeWork4 typeWork4-2">
+        <fieldset class="item column typeWork4 typeWork4-2" title="">
           <legend>Вы нашли необходимую документацию?</legend>
           <label>
             <input type="radio" name="tw4-2" value="typeWork4-2-yes">
@@ -1119,7 +1119,7 @@
             <div>Нет</div>
           </label>
         </fieldset>
-        <fieldset class="item column typeWork4 typeWork4-4">
+        <fieldset class="item column typeWork4 typeWork4-4" title="">
           <h4 class="title-anchor">Инструкция в рамках платных работ</h4>
           <legend>Инструкция  может быть создана  в рамках платных работ.</legend>
           <p>Согласны на выполнение работ на платной основе?</p>
@@ -1132,14 +1132,14 @@
             <div>Нет</div>
           </label>
         </fieldset>
-        <fieldset class="item column typeWork4 typeWork4-final">
+        <fieldset class="item column typeWork4 typeWork4-final" title="">
           <legend>Спасибо за Ваше обращение в CSI</legend>
         </fieldset>
-        <fieldset name="typeWork4" class="item typeWork4 typeWork4-6">
+        <fieldset name="typeWork4" class="item typeWork4 typeWork4-6" title="">
           <legend>Подробно опишите что должна содержать необходимая Вам документация </legend>
           <textarea></textarea>
         </fieldset>
-        <fieldset class="item column upload typeWork4 typeWork4-7">
+        <fieldset class="item column upload typeWork4 typeWork4-7" title="">
           <h4 class="title-anchor">Прикрепите файл</h4>
           <div id="drop-area">
             <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>
@@ -1149,12 +1149,12 @@
           <div id="gallery"></div>
           <button class="btn">Отправить заявку</button>
         </fieldset>
-        <fieldset class="item">
+        <fieldset class="item" title="">
           <button class="btn">Отправить заявку</button>
         </fieldset>
       </form>
       <form name="form2" class="tab-content" id="form-2">
-        <fieldset name="partnerContractor" class="item item1">
+        <fieldset name="partnerContractor" class="item item1" title="">
           <h4 class="title-anchor">Есть действующий договор подряда?</h4>
           <legend>Есть действующий договор подряда?</legend>
           <label>
@@ -1166,7 +1166,7 @@
             <div>Нет</div>
           </label>
         </fieldset>
-        <fieldset name="partnerContractor" class="item item2">
+        <fieldset name="partnerContractor" class="item item2" title="">
           <legend>Проблема у клиента по подрядному договору?</legend>
           <label>
             <input type="radio" name="contractProblem" value="Да">
@@ -1177,7 +1177,7 @@
             <div>Нет</div>
           </label>
         </fieldset>
-        <fieldset name="partnerContractor" class="item item3 partnerContractor-final">
+        <fieldset name="partnerContractor" class="item item3 partnerContractor-final" title="">
           <legend>Пожалуйста подайте дочернюю заявку на консультацию от родительской (заявка по проблеме клиента)</legend>
         </fieldset>
         <fieldset name="partnerContractor" class="item item4">
@@ -1185,53 +1185,53 @@
           <input type="text" name="inn" placeholder="ИНН">
           <label class="icon-search"></label>
         </fieldset>
-        <fieldset name="partnerContractor" class="item item5">
+        <fieldset name="partnerContractor" class="item item5" title="">
           <legend>Контрагент с ИНН ХХХХХХХХХХ не найден, пожалуйста зарегистрируйтесь.</legend>
           <div class="btn">Зарегистрироваться</div>
         </fieldset>
-        <fieldset class="item column item1">
+        <fieldset class="item column item1" title="">
           <h4 class="title-anchor">Укажите свой ИНН</h4>
           <legend>Укажите свой ИНН</legend>
           <input type="text" name="inn" placeholder="" required>
           <div class="btn">Заполнить по ИНН</div>
         </fieldset>
-        <fieldset class="item item2">
+        <fieldset class="item item2" title="">
           <legend>Укажите свой КПП</legend>
           <input type="text" name="kpp" placeholder="">
         </fieldset>
-        <fieldset class="item item3">
+        <fieldset class="item item3" title="">
           <h4 class="title-anchor">Укажите название компании</h4>
           <legend>Укажите название компании</legend>
           <input type="text" name="namecompany" placeholder="Без кавычек и ООО" required>
         </fieldset>
-        <fieldset class="item item4">
+        <fieldset class="item item4" title="">
           <legend>Полное юридическое имя компании</legend>
           <input type="text" name="fullnamelegally" placeholder="" required>
         </fieldset>
-        <fieldset class="item item5">
+        <fieldset class="item item5" title="">
           <h4 class="title-anchor">Юридический адрес</h4>
           <legend>Юридический адрес</legend>
           <input type="text" name="legaladdress" placeholder="" required>
         </fieldset>
-        <fieldset class="item item6">
+        <fieldset class="item item6" title="">
           <legend>Фактический адрес</legend>
           <input type="text" name="actualaddress" placeholder="" required>
         </fieldset>
-        <fieldset class="item item7">
+        <fieldset class="item item7" title="">
           <h4 class="title-anchor">Контактное лицо</h4>
           <legend>Контактное лицо</legend>
           <input type="text" name="contactperson" placeholder="Должность, ФИО руководителя" required>
         </fieldset>
-        <fieldset class="item item8">
+        <fieldset class="item item8" title="">
           <legend>Email</legend>
           <input type="email" name="email" placeholder="" required>
         </fieldset>
-        <fieldset class="item item9">
+        <fieldset class="item item9" title="">
           <h4 class="title-anchor">Телефон</h4>
           <legend>Телефон</legend>
           <input type="text" name="phone" placeholder="" required>
         </fieldset>
-        <fieldset class="item column upload item10">
+        <fieldset class="item column upload item10" title="">
           <legend>Вложить карточку компании с реквизитами</legend>
           <div id="drop-area">
             <label class="button" for="fileElem">Прикрепите файл<br>jpeg, jpg, pdf</label>

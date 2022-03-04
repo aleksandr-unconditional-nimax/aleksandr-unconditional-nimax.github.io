@@ -1,3 +1,4 @@
+const form1 = document.querySelector('#form-1');
 const step1form1 = document.querySelector('#form-1 .item1');
 const step2form1 = document.querySelector('#form-1 .item2');
 const step3form1 = document.querySelector('#form-1 .item3');
@@ -84,6 +85,56 @@ const offset = 50;
 
 let w = window.matchMedia("(min-width: 810px)");
 
+// form1.onsubmit = async (e) => {
+//   e.preventDefault();
+//   const formData = new FormData(form1);
+//   const values = [...formData.entries()];
+//   console.log(values);
+// };
+
+// function handleSubmit(event) {
+//   event.preventDefault();
+//   const data = new FormData(event.target);
+//   const value = Object.fromEntries(data.entries());
+//   console.log({ value });
+// }
+
+// function handleSubmit(event) {
+//   event.preventDefault();
+//   const data = new FormData(event.target);
+//   const formJSON = Object.fromEntries(data.entries());
+//   console.log(JSON.stringify(formJSON, null, 2));
+// }
+
+// form1.addEventListener('submit', handleSubmit);
+
+const form = document.getElementById("form");
+const inputs = document.querySelectorAll("input, textarea");
+const data = {};
+
+const handleInput = ({ target }) => {
+  const { name, value } = target;
+  const formElement = target.closest(".item");
+  const title = formElement.getAttribute("title");
+  data[name] = { title, value };
+};
+
+for (const input of inputs) {
+  input.addEventListener("input", handleInput);
+}
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  const formattedData = Object.values(data).filter(
+    (v) => v.value.trim().length > 0
+  );
+
+  console.log(JSON.stringify(formattedData, null, 2));
+  console.log(formattedData);
+};
+
+form1.addEventListener("submit", handleSubmit);
+
 step1form1.onclick = function() {
   step2form1.classList.add('active');
   if (w.matches) {
@@ -166,14 +217,14 @@ let hideTypeWork_4_4 = document.querySelectorAll(".typeWork4-4 ~ fieldset");
 let fieldsetItem = document.querySelectorAll('.item');
 let fieldsetItems = document.querySelectorAll('.item input[type="radio"]');
 
-fieldsetItem.forEach((n) => {
+fieldsetItem.forEach((n, i, a) => {
   n.addEventListener('click', () => {
     const scrollContainer = document.querySelector("nav ul");
     scrollContainer.scrollLeft = scrollContainer.scrollWidth;
   })
 });
 
-fieldsetItems.forEach((n) => {
+fieldsetItems.forEach((n, i, a) => {
   n.addEventListener('click', () => {
     if (n.closest('.item').classList.contains('active')) {
       let parent = n.closest('.item');
