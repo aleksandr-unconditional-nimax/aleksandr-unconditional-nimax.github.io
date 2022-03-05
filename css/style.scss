@@ -741,6 +741,26 @@ body.support-request-body {
   }
 }
 
+.legend-wrapper{
+  ol {
+    counter-reset: myCounter;
+    li {
+      font-size: 14px;
+      &:before {
+        counter-increment: myCounter;
+        content: counter(myCounter) '. ';
+        font-size: 14px;
+        line-height: 1.1;
+        color: var(--color1);
+        display: inline-block;
+        text-align: left;
+        height: auto;
+        width: auto;
+      }
+    }
+  }
+}
+
 @media(min-width:1890px){
   .support-request{
     grid-template-columns: 66vw auto;

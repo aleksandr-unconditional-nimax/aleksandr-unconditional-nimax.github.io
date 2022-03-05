@@ -1,4 +1,5 @@
 const form1 = document.querySelector('#form-1');
+const legendWrapper = document.querySelector('.legend-wrapper');
 const step1form1 = document.querySelector('#form-1 .item1');
 const step2form1 = document.querySelector('#form-1 .item2');
 const step3form1 = document.querySelector('#form-1 .item3');
@@ -85,55 +86,68 @@ const offset = 50;
 
 let w = window.matchMedia("(min-width: 810px)");
 
-// form1.onsubmit = async (e) => {
-//   e.preventDefault();
-//   const formData = new FormData(form1);
-//   const values = [...formData.entries()];
-//   console.log(values);
+const legendSubmit = (e) => {
+  e.preventDefault();
+  let itemLegend = document.querySelectorAll('.item.active');
+  let legend = "<ol class='legend'>";
+  let newLineLegend, title;
+
+  itemLegend.forEach((n) => {
+    title = n.querySelector('legend').textContent;
+    let values = [],
+    radioLabel,
+    selectText,
+    input = n.querySelectorAll('input[type="text"],input[type="tel"],input[type="email"]'),
+    select = n.querySelector('.select-option-selected'),
+    radio = n.querySelector('input[type="radio"]:checked ~ div');
+
+    if (input != null) {
+      Array.from(input).forEach(function(el) {values.push(el.value);});
+    }
+    else {
+      Array.from(input).forEach(function(el) {values.push('');});
+    }
+   
+    if (select != null) {selectText = select.textContent} else {selectText = ''}
+    if (radio != null) {radioLabel = radio.textContent} else {radioLabel = ''}
+    
+    newLineLegend = "<li>" + "[" + title + "]" + ": " + values + radioLabel + selectText + "</li>";
+    legend += newLineLegend;
+  });
+
+  legend += "</ol>";
+  legendWrapper.innerHTML = legend;
+};
+
+form1.addEventListener("submit", legendSubmit);
+form2.addEventListener("submit", legendSubmit);
+
+// const form = document.getElementById("form");
+// const inputs = document.querySelectorAll("input, textarea");
+// const data = {};
+
+// const handleInput = ({ target }) => {
+//   const { name, value } = target;
+//   const formElement = target.closest(".item");
+//   const title = formElement.getAttribute("title");
+//   data[name] = { title, value };
 // };
 
-// function handleSubmit(event) {
-//   event.preventDefault();
-//   const data = new FormData(event.target);
-//   const value = Object.fromEntries(data.entries());
-//   console.log({ value });
+// for (const input of inputs) {
+//   input.addEventListener("input", handleInput);
 // }
 
-// function handleSubmit(event) {
-//   event.preventDefault();
-//   const data = new FormData(event.target);
-//   const formJSON = Object.fromEntries(data.entries());
-//   console.log(JSON.stringify(formJSON, null, 2));
-// }
+// const handleSubmit = (e) => {
+//   e.preventDefault();
+//   const formattedData = Object.values(data).filter(
+//     (v) => v.value.trim().length > 0
+//   );
 
-// form1.addEventListener('submit', handleSubmit);
+//   console.log(JSON.stringify(formattedData, null, 2));
+//   console.log(formattedData);
+// };
 
-const form = document.getElementById("form");
-const inputs = document.querySelectorAll("input, textarea");
-const data = {};
-
-const handleInput = ({ target }) => {
-  const { name, value } = target;
-  const formElement = target.closest(".item");
-  const title = formElement.getAttribute("title");
-  data[name] = { title, value };
-};
-
-for (const input of inputs) {
-  input.addEventListener("input", handleInput);
-}
-
-const handleSubmit = (e) => {
-  e.preventDefault();
-  const formattedData = Object.values(data).filter(
-    (v) => v.value.trim().length > 0
-  );
-
-  console.log(JSON.stringify(formattedData, null, 2));
-  console.log(formattedData);
-};
-
-form1.addEventListener("submit", handleSubmit);
+// form1.addEventListener("submit", handleSubmit);
 
 step1form1.onclick = function() {
   step2form1.classList.add('active');
