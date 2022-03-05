@@ -1,4 +1,5 @@
 const form1 = document.querySelector('#form-1');
+const form2 = document.querySelector('#form-2');
 const legendWrapper = document.querySelector('.legend-wrapper');
 const step1form1 = document.querySelector('#form-1 .item1');
 const step2form1 = document.querySelector('#form-1 .item2');
@@ -89,15 +90,16 @@ let w = window.matchMedia("(min-width: 810px)");
 const legendSubmit = (e) => {
   e.preventDefault();
   let itemLegend = document.querySelectorAll('.item.active');
-  let legend = "<ol class='legend'>";
-  let newLineLegend, title;
+  let legend = "";
+  let legendBr = "";
+  let newLineLegend, newLineLegendBr, title;
 
   itemLegend.forEach((n) => {
     title = n.querySelector('legend').textContent;
     let values = [],
     radioLabel,
     selectText,
-    input = n.querySelectorAll('input[type="text"],input[type="tel"],input[type="email"]'),
+    input = n.querySelectorAll('input[type="text"],input[type="tel"],input[type="email"],textarea'),
     select = n.querySelector('.select-option-selected'),
     radio = n.querySelector('input[type="radio"]:checked ~ div');
 
@@ -112,11 +114,12 @@ const legendSubmit = (e) => {
     if (radio != null) {radioLabel = radio.textContent} else {radioLabel = ''}
     
     newLineLegend = "<li>" + "[" + title + "]" + ": " + values + radioLabel + selectText + "</li>";
+    newLineLegendBr = "[" + title + "]" + ": " + values + radioLabel + selectText + "\n";
     legend += newLineLegend;
+    legendBr += newLineLegendBr;
   });
-
-  legend += "</ol>";
   legendWrapper.innerHTML = legend;
+  console.log(legendBr);
 };
 
 form1.addEventListener("submit", legendSubmit);
