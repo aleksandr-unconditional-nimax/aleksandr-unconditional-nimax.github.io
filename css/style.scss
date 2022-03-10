@@ -150,6 +150,9 @@ body.support-request-body {
   legend{
     font-size: clamp(18px, 4vw, 24px);
     margin-bottom: 30px;
+    &.hidden{
+      display: none;
+    }
   }
 
   input[type=text],
