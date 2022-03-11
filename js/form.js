@@ -89,6 +89,7 @@ let w = window.matchMedia("(min-width: 810px)");
 
 const legendSubmit = (e) => {
   e.preventDefault();
+  let legendInput = document.querySelector('.legendInput'); 
   let itemLegend = document.querySelectorAll('.item.active');
   let legend = "";
   let legendBr = "";
@@ -119,7 +120,8 @@ const legendSubmit = (e) => {
     legendBr += newLineLegendBr;
   });
   legendWrapper.innerHTML = legend;
-  console.log(legendBr);
+  legendInput.value = legendBr;
+  console.log(legendInput.value);
 };
 
 form1.addEventListener("submit", legendSubmit);
